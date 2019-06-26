@@ -1,0 +1,5 @@
+C:\Users\FAREM-21\Desktop\MedicalControl+sql\CapaEntidades\bin\Debug\CapaEntidades.dll
+C:\Users\FAREM-21\Desktop\MedicalControl+sql\CapaEntidades\bin\Debug\CapaEntidades.pdb
+C:\Users\FAREM-21\Desktop\MedicalControl+sql\CapaEntidades\obj\Debug\CapaEntidades.csprojResolveAssemblyReference.cache
+C:\Users\FAREM-21\Desktop\MedicalControl+sql\CapaEntidades\obj\Debug\CapaEntidades.dll
+C:\Users\FAREM-21\Desktop\MedicalControl+sql\CapaEntidades\obj\Debug\CapaEntidades.pdb
