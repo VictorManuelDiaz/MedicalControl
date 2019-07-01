@@ -9,7 +9,7 @@ using System.Data;
 
 namespace CapaDatos
 {
-    class AccesoDatosDetalleServicios
+    public class AccesoDatosDetalleServicios
     {
         SqlConnection cnx; //conexion
         DetalleServicios DetSer = new DetalleServicios(); // capa entidades
@@ -138,7 +138,7 @@ namespace CapaDatos
 
         }
 
-        public int EditarServicio(DetalleServicios DetSe)
+        public int EditarDetServicios(DetalleServicios DetSe)
         {
             try
             {
@@ -173,7 +173,7 @@ namespace CapaDatos
         }
         //buscar comentarios
 
-        public List<DetalleServicios> BuscarDetServicio(string dato)
+        public List<DetalleServicios> BuscarDetServicios(string dato)
         {
             try
             {

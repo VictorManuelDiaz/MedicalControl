@@ -9,7 +9,7 @@ using System.Data; //agregar
 
 namespace CapaDatos
 {
-    class AccesoDatosMedicamentos
+    public class AccesoDatosMedicamentos
     {
 
         SqlConnection cnx; //conexion
@@ -20,7 +20,7 @@ namespace CapaDatos
         SqlDataReader dr = null;
         List<Medicamento> listaMedicamento = null;
 
-        public int InsertarServicios(Medicamento M)
+        public int InsertarMedicamentos(Medicamento M)
         {
             try
             {
@@ -139,7 +139,7 @@ namespace CapaDatos
 
         //editar comentarios
 
-        public int EditarMedicamentos(Medicamento me)
+        public int EditarMedicamento(Medicamento me)
         {
             try
             {
@@ -173,7 +173,7 @@ namespace CapaDatos
         }
         //buscar comentarios
 
-        public List<Medicamento> BuscarMedicamentos(string dato)
+        public List<Medicamento> BuscarMedicamento(string dato)
         {
             try
             {

@@ -9,7 +9,7 @@ using System.Data;
 
 namespace CapaDatos
 {
-    class AccesoDatosCuenta
+    public class AccesoDatosCuenta
     {
         SqlConnection cnx; //conexion
         Cuenta Cu = new Cuenta(); // capa entidades

@@ -9,7 +9,7 @@ using System.Data; //agregar
 
 namespace CapaDatos
 {
-    class AccesoDatosServicios
+    public class AccesoDatosServicios
     {
 
         SqlConnection cnx; //conexion
@@ -20,7 +20,7 @@ namespace CapaDatos
         SqlDataReader dr = null;
         List<Servicios> listaServicios = null;
 
-        public int InsertarServicios(Servicios Se)
+        public int InsertarServicio(Servicios Se)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace CapaDatos
             return indicador;
         }
 
-        public List<Servicios> ListarServicios()
+        public List<Servicios> ListarServicio()
         {
 
             try
@@ -101,7 +101,7 @@ namespace CapaDatos
 
         }
 
-        public int EliminarServicios(int IdServicio)
+        public int EliminarServicio(int IdServicio)
         {
 
             try

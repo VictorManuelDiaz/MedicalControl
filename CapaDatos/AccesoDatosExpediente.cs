@@ -10,7 +10,7 @@ using System.Data; //agregar
 
 namespace CapaDatos
 {
-    class AccesoDatosExpediente
+    public class AccesoDatosExpediente
     {
 
         SqlConnection cnx; //conexion

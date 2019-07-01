@@ -1,0 +1,42 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using CapaDatos;
+using CapaEntidades;
+
+namespace CapaNegocio
+{
+    class LogicaNegocioExpediente
+    {
+
+        AccesoDatosExpediente EXP = new AccesoDatosExpediente();
+
+        public int InsertarExpediente(Expediente ex)
+        {
+            return EXP.InsertarExpediente(ex);
+        }
+
+        public List<Expediente> ListarExpediente()
+        {
+            return EXP.ListarExpediente();
+        }
+
+        public int EliminarConsulta(int NumeroExpediente)
+        {
+            return EXP.EliminarExpediente(NumeroExpediente);
+        }
+
+        public int EditarExpediente(Expediente exp)
+        {
+            return EXP.EditarExpediente(exp);
+        }
+
+        public List<Expediente> BuscarExpediente(string dato)
+        {
+            return EXP.BuscarExpediente(dato);
+        } 
+        
+    }
+}

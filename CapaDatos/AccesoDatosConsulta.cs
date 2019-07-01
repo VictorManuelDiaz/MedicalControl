@@ -9,7 +9,7 @@ using System.Data;
 
 namespace CapaDatos
 {
-    class AccesoDatosConsulta
+    public class AccesoDatosConsulta
     {
         SqlConnection cnx; //conexion
         Consulta Consul = new Consulta(); // capa entidades
@@ -19,7 +19,7 @@ namespace CapaDatos
         SqlDataReader dr = null;
         List<Consulta> listaConsulta = null;
 
-        public int InsertarCita(Consulta ca)
+        public int InsertarConsulta(Consulta ca)
         {
             try
             {

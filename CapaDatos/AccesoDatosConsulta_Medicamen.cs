@@ -9,7 +9,7 @@ using System.Data; //agregar
 
 namespace CapaDatos
 {
-    class AccesoDatosConsulta_Medicamen
+    public class AccesoDatosConsulta_Medicamen
     {
         SqlConnection cnx; //conexion
         ConsultaMedicamento Med = new ConsultaMedicamento(); // capa entidades
@@ -51,7 +51,7 @@ namespace CapaDatos
             return indicador;
         }
 
-        public List<ConsultaMedicamento> ListarConMedicamento()
+        public List<ConsultaMedicamento> ListarConsultMedicamen()
         {
 
             try
@@ -97,7 +97,7 @@ namespace CapaDatos
 
         }
 
-        public int EliminarMedicamentos(int IdConMedica)
+        public int EliminarConsultMedicamen(int IdConMedica)
         {
 
             try
@@ -134,7 +134,7 @@ namespace CapaDatos
 
         //editar comentarios
 
-        public int EditarMedicamentos(ConsultaMedicamento CM)
+        public int EditarConsultMedicamen(ConsultaMedicamento CM)
         {
             try
             {
