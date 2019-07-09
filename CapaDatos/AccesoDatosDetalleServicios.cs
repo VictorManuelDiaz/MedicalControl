@@ -64,7 +64,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@IdDetServic", "");
                 cm.Parameters.AddWithValue("@Precio", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente","");
+                cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@IdServicios", "");
 
                 cm.CommandType = CommandType.StoredProcedure;

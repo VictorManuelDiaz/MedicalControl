@@ -8,7 +8,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    public class LogicaNegocioDetalleServicios
+    public class LogicaNegocioCuentas
     {
 
         AccesoDatosCuenta AC = new AccesoDatosCuenta();
@@ -33,9 +33,9 @@ namespace CapaNegocio
             return AC.EditarCuenta(cu);
         }
 
-        public List<Cuenta> BuscarCuenta(string dato) 
+        public List<Cuenta> BuscarCuenta(string nom,string contra) 
         {
-            return AC.BuscarCuenta(dato);
+            return AC.BuscarCuenta(nom,contra);
         }    
 
     }

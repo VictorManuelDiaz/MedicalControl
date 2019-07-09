@@ -69,7 +69,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@FechaConsul", "");
                 cm.Parameters.AddWithValue("@FechaRealCita", "");
                 cm.Parameters.AddWithValue("@HoraC", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente","");
+                cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
                 cm.CommandType = CommandType.StoredProcedure;

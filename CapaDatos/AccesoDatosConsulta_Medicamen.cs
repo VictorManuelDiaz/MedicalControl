@@ -60,8 +60,8 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();//conectar
                 cm = new SqlCommand("Consulta_Medicamen_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
-                cm.Parameters.AddWithValue("@IdConMedica","");
-                cm.Parameters.AddWithValue("@IdConsulta","");
+                cm.Parameters.AddWithValue("@IdConMedica", "");
+                cm.Parameters.AddWithValue("@IdConsulta", "");
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -165,6 +165,7 @@ namespace CapaDatos
             }
             return indicador;
         }
-        
+
     }
 }
+

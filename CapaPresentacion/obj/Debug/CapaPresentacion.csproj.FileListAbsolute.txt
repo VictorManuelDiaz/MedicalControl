@@ -1,0 +1,17 @@
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaPresentacion.exe.config
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaPresentacion.exe
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaPresentacion.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmInicioSesion.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.Resources.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.exe
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmPanelPrincipalAdmin.resources
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaEntidades.dll
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaNegocio.dll
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaDatos.dll
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaEntidades.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaNegocio.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaDatos.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmMedicos.resources

@@ -53,11 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
-      <Project>{db5f910d-77ba-486f-aecd-55bc687d2b3c}</Project>
+      <Project>{b8176834-2c52-4947-85a1-cc6bcb396189}</Project>
       <Name>CapaDatos</Name>
     </ProjectReference>
     <ProjectReference Include="..\CapaEntidades\CapaEntidades.csproj">
-      <Project>{300cd00b-4b1d-4ed5-b7b1-e468255215f5}</Project>
+      <Project>{f090f3c4-9372-4db0-be16-cab3b2d7a07b}</Project>
       <Name>CapaEntidades</Name>
     </ProjectReference>
   </ItemGroup>

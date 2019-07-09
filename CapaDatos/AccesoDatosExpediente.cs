@@ -13,11 +13,11 @@ namespace CapaDatos
     public class AccesoDatosExpediente
     {
 
-        SqlConnection cnx; //conexion
-        Expediente Exp= new Expediente(); // capa entidades
-        Conexion cn = new Conexion(); // conexion
-        SqlCommand cm = null; //Comandos sql
-        int indicador = 0; // variable indicador para comprobar CRUD para cargar datos
+        SqlConnection cnx;
+        Expediente Exp = new Expediente();
+        Conexion cn = new Conexion();
+        SqlCommand cm = null;
+        int indicador = 0;
         SqlDataReader dr = null;
         List<Expediente> listaExpediente = null;
 
@@ -29,7 +29,7 @@ namespace CapaDatos
                 cm = new SqlCommand("Expediente_Proced", cnx); //nombre del procedimiento SQL
                 cm.Parameters.AddWithValue("@b", 1); //valores que toman los parametros del procedimiento
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
-                cm.Parameters.AddWithValue("@MotivoConsulta",Ex.MotivoConsulta );
+                cm.Parameters.AddWithValue("@MotivoConsulta", Ex.MotivoConsulta);
                 cm.Parameters.AddWithValue("@TratamientoIndicado", Ex.TratamientoIndicado);
                 cm.Parameters.AddWithValue("@CedulaPac", Ex.CedulaPac);
                 cm.Parameters.AddWithValue("@NombrePac", Ex.NombrePac);
@@ -46,6 +46,31 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@ProcedenciaPac", Ex.ProcedenciaPac);
                 cm.Parameters.AddWithValue("@TelefonoPac", Ex.TelefonoPac);
                 cm.Parameters.AddWithValue("@EstadoCivilPac", Ex.EstadoCivilPac);
+                cm.Parameters.AddWithValue("@EnferICHepatitis", Ex.EnferICHepatitis);
+                cm.Parameters.AddWithValue("@EnferICSifilis", Ex.EnferICSifilis);
+                cm.Parameters.AddWithValue("@EnferICColera", Ex.EnferICColera);
+                cm.Parameters.AddWithValue("@EnferICTosferina", Ex.EnferICTosferina);
+                cm.Parameters.AddWithValue("@EnferICSarampion", Ex.EnferICSarampion);
+                cm.Parameters.AddWithValue("@EnferICVaricela", Ex.EnferICVaricela);
+                cm.Parameters.AddWithValue("@EnferICRubeola", Ex.EnferICRubeola);
+                cm.Parameters.AddWithValue("@EnferICPariotiditis", Ex.EnferICPariotiditis);
+                cm.Parameters.AddWithValue("@EnferICMeningitis", Ex.EnferICMeningitis);
+                cm.Parameters.AddWithValue("@EnferICImpetigo", Ex.EnferICImpetigo);
+                cm.Parameters.AddWithValue("@EnferICTifoidea", Ex.EnferICTifoidea);
+                cm.Parameters.AddWithValue("@EnferICMalaria", Ex.EnferICMalaria);
+                cm.Parameters.AddWithValue("@EnferICEscabiasis", Ex.EnferICEscabiasis);
+                cm.Parameters.AddWithValue("EnferICTina", Ex.EnferICTina);
+                cm.Parameters.AddWithValue("@EnferHAlergias", Ex.EnferHAlergias);
+                cm.Parameters.AddWithValue("@EnferHDiabetes", Ex.EnferHDiabetes);
+                cm.Parameters.AddWithValue("@EnferHHipertension", Ex.EnferHHipertension);
+                cm.Parameters.AddWithValue("@EnferHReumatica", Ex.EnferHReumatica);
+                cm.Parameters.AddWithValue("@EnferHRenales", Ex.EnferHRenales);
+                cm.Parameters.AddWithValue("@EnferHOculares", Ex.EnferHOculares);
+                cm.Parameters.AddWithValue("@EnferHCardiacas", Ex.EnferHCardiacas);
+                cm.Parameters.AddWithValue("@EnferHHepatica", Ex.EnferHHepatica);
+                cm.Parameters.AddWithValue("@EnferHMusculares", Ex.EnferHMusculares);
+                cm.Parameters.AddWithValue("@EnferHMalCongenitas", Ex.EnferHMalCongenitas);
+                cm.Parameters.AddWithValue("@EnferHDesorMentales", Ex.EnferHDesorMentales);
 
                 cm.CommandType = CommandType.StoredProcedure;// tipo de comando ejecutado
                 cnx.Open(); // abrir conexion de BD
@@ -96,6 +121,31 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@ProcedenciaPac", "");
                 cm.Parameters.AddWithValue("@TelefonoPac", "");
                 cm.Parameters.AddWithValue("@EstadoCivilPac", "");
+                cm.Parameters.AddWithValue("@EnferICHepatitis", "");
+                cm.Parameters.AddWithValue("@EnferICSifilis", "");
+                cm.Parameters.AddWithValue("@EnferICColera", "");
+                cm.Parameters.AddWithValue("@EnferICTosferina", "");
+                cm.Parameters.AddWithValue("@EnferICSarampion", "");
+                cm.Parameters.AddWithValue("@EnferICVaricela", "");
+                cm.Parameters.AddWithValue("@EnferICRubeola", "");
+                cm.Parameters.AddWithValue("@EnferICPariotiditis", "");
+                cm.Parameters.AddWithValue("@EnferICMeningitis", "");
+                cm.Parameters.AddWithValue("@EnferICImpetigo", "");
+                cm.Parameters.AddWithValue("@EnferICTifoidea", "");
+                cm.Parameters.AddWithValue("@EnferICMalaria", "");
+                cm.Parameters.AddWithValue("@EnferICEscabiasis", "");
+                cm.Parameters.AddWithValue("EnferICTina", "");
+                cm.Parameters.AddWithValue("@EnferHAlergias", "");
+                cm.Parameters.AddWithValue("@EnferHDiabetes", "");
+                cm.Parameters.AddWithValue("@EnferHHipertension", "");
+                cm.Parameters.AddWithValue("@EnferHReumatica", "");
+                cm.Parameters.AddWithValue("@EnferHRenales", "");
+                cm.Parameters.AddWithValue("@EnferHOculares", "");
+                cm.Parameters.AddWithValue("@EnferHCardiacas", "");
+                cm.Parameters.AddWithValue("@EnferHHepatica", "");
+                cm.Parameters.AddWithValue("@EnferHMusculares", "");
+                cm.Parameters.AddWithValue("@EnferHMalCongenitas", "");
+                cm.Parameters.AddWithValue("@EnferHDesorMentales", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -124,6 +174,31 @@ namespace CapaDatos
                     exp.ProcedenciaPac = dr["ProcedenciaPac"].ToString();
                     exp.TelefonoPac = dr["TelefonoPac"].ToString();
                     exp.EstadoCivilPac = dr["EstadoCivilPac"].ToString();
+                    exp.EnferICHepatitis = Convert.ToChar(dr["EnferICHepatitis"]);
+                    exp.EnferICSifilis = Convert.ToChar(dr["EnferICSifilis"]);
+                    exp.EnferICColera = Convert.ToChar(dr["EnferICColera"]);
+                    exp.EnferICTosferina = Convert.ToChar(dr["EnferICTosferina"]);
+                    exp.EnferICSarampion = Convert.ToChar(dr["EnferICSarampion"]);
+                    exp.EnferICVaricela = Convert.ToChar(dr["EnferICVaricela"]);
+                    exp.EnferICRubeola = Convert.ToChar(dr["EnferICRubeola"]);
+                    exp.EnferICPariotiditis = Convert.ToChar(dr["EnferICPariotiditis"]);
+                    exp.EnferICMeningitis = Convert.ToChar(dr["EnferICMeningitis"]);
+                    exp.EnferICImpetigo = Convert.ToChar(dr["EnferICImpetigo"]);
+                    exp.EnferICTifoidea = Convert.ToChar(dr["EnferICTifoidea"]);
+                    exp.EnferICMalaria = Convert.ToChar(dr["EnferICMalaria"]);
+                    exp.EnferICEscabiasis = Convert.ToChar(dr["EnferICEscabiasis"]);
+                    exp.EnferICTina = Convert.ToChar(dr["EnferICTina"]);
+                    exp.EnferHAlergias = Convert.ToChar(dr["EnferHAlergias"]);
+                    exp.EnferHDiabetes = Convert.ToChar(dr["EnferHDiabetes"]);
+                    exp.EnferHHipertension = Convert.ToChar(dr["EnferHHipertension"]);
+                    exp.EnferHReumatica = Convert.ToChar(dr["EnferHReumatica"]);
+                    exp.EnferHRenales = Convert.ToChar(dr["EnferHRenales"]);
+                    exp.EnferHOculares = Convert.ToChar(dr["EnferHOculares"]);
+                    exp.EnferHCardiacas = Convert.ToChar(dr["EnferHCardiacas"]);
+                    exp.EnferHHepatica = Convert.ToChar(dr["EnferHHepatica"]);
+                    exp.EnferHMusculares = Convert.ToChar(dr["EnferHMusculares"]);
+                    exp.EnferHMalCongenitas = Convert.ToChar(dr["EnferHMalCongenitas"]);
+                    exp.EnferHDesorMentales = Convert.ToChar(dr["EnferHDesorMentales"]);
 
                     listaExpediente.Add(exp); //agergar registros encontrados a la lista
 
@@ -156,23 +231,6 @@ namespace CapaDatos
                 cm = new SqlCommand("Expdiente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 2);
                 cm.Parameters.AddWithValue("@NumeroExpediente", NumeroExpediente);
-                cm.Parameters.AddWithValue("@MotivoConsulta", "");
-                cm.Parameters.AddWithValue("@TratamientoIndicado", "");
-                cm.Parameters.AddWithValue("@CedulaPac", "");
-                cm.Parameters.AddWithValue("@NombrePac", "");
-                cm.Parameters.AddWithValue("@ApellidosPac", "");
-                cm.Parameters.AddWithValue("@FechaNacimiento", "");
-                cm.Parameters.AddWithValue("@LugarNacimiento", "");
-                cm.Parameters.AddWithValue("@SexoPac", "");
-                cm.Parameters.AddWithValue("@EdadPac", "");
-                cm.Parameters.AddWithValue("@GrupoEtnico", "");
-                cm.Parameters.AddWithValue("@DireccionHabitualPac", "");
-                cm.Parameters.AddWithValue("@NombrePadre", "");
-                cm.Parameters.AddWithValue("@NombreMadre", "");
-                cm.Parameters.AddWithValue("@ReligionPac", "");
-                cm.Parameters.AddWithValue("@ProcedenciaPac", "");
-                cm.Parameters.AddWithValue("@TelefonoPac", "");
-                cm.Parameters.AddWithValue("@EstadoCivilPac", "");
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -224,6 +282,31 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@ProcedenciaPac", Exp.ProcedenciaPac);
                 cm.Parameters.AddWithValue("@TelefonoPac", Exp.TelefonoPac);
                 cm.Parameters.AddWithValue("@EstadoCivilPac", Exp.EstadoCivilPac);
+                cm.Parameters.AddWithValue("@EnferICHepatitis", "");
+                cm.Parameters.AddWithValue("@EnferICSifilis", "");
+                cm.Parameters.AddWithValue("@EnferICColera", "");
+                cm.Parameters.AddWithValue("@EnferICTosferina", "");
+                cm.Parameters.AddWithValue("@EnferICSarampion", "");
+                cm.Parameters.AddWithValue("@EnferICVaricela", "");
+                cm.Parameters.AddWithValue("@EnferICRubeola", "");
+                cm.Parameters.AddWithValue("@EnferICPariotiditis", "");
+                cm.Parameters.AddWithValue("@EnferICMeningitis", "");
+                cm.Parameters.AddWithValue("@EnferICImpetigo", "");
+                cm.Parameters.AddWithValue("@EnferICTifoidea", "");
+                cm.Parameters.AddWithValue("@EnferICMalaria", "");
+                cm.Parameters.AddWithValue("@EnferICEscabiasis", "");
+                cm.Parameters.AddWithValue("EnferICTina", "");
+                cm.Parameters.AddWithValue("@EnferHAlergias", "");
+                cm.Parameters.AddWithValue("@EnferHDiabetes", "");
+                cm.Parameters.AddWithValue("@EnferHHipertension", "");
+                cm.Parameters.AddWithValue("@EnferHReumatica", "");
+                cm.Parameters.AddWithValue("@EnferHRenales", "");
+                cm.Parameters.AddWithValue("@EnferHOculares", "");
+                cm.Parameters.AddWithValue("@EnferHCardiacas", "");
+                cm.Parameters.AddWithValue("@EnferHHepatica", "");
+                cm.Parameters.AddWithValue("@EnferHMusculares", "");
+                cm.Parameters.AddWithValue("@EnferHMalCongenitas", "");
+                cm.Parameters.AddWithValue("@EnferHDesorMentales", "");
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -273,6 +356,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@EstadoCivilPac", "");
 
 
+
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 dr = cm.ExecuteReader();
@@ -300,6 +384,31 @@ namespace CapaDatos
                     exp.ProcedenciaPac = dr["ProcedenciaPac"].ToString();
                     exp.TelefonoPac = dr["TelefonoPac"].ToString();
                     exp.EstadoCivilPac = dr["EstadoCivilPac"].ToString();
+                    exp.EnferICHepatitis = Convert.ToChar(dr["EnferICHepatitis"]);
+                    exp.EnferICSifilis = Convert.ToChar(dr["EnferICSifilis"]);
+                    exp.EnferICColera = Convert.ToChar(dr["EnferICColera"]);
+                    exp.EnferICTosferina = Convert.ToChar(dr["EnferICTosferina"]);
+                    exp.EnferICSarampion = Convert.ToChar(dr["EnferICSarampion"]);
+                    exp.EnferICVaricela = Convert.ToChar(dr["EnferICVaricela"]);
+                    exp.EnferICRubeola = Convert.ToChar(dr["EnferICRubeola"]);
+                    exp.EnferICPariotiditis = Convert.ToChar(dr["EnferICPariotiditis"]);
+                    exp.EnferICMeningitis = Convert.ToChar(dr["EnferICMeningitis"]);
+                    exp.EnferICImpetigo = Convert.ToChar(dr["EnferICImpetigo"]);
+                    exp.EnferICTifoidea = Convert.ToChar(dr["EnferICTifoidea"]);
+                    exp.EnferICMalaria = Convert.ToChar(dr["EnferICMalaria"]);
+                    exp.EnferICEscabiasis = Convert.ToChar(dr["EnferICEscabiasis"]);
+                    exp.EnferICTina = Convert.ToChar(dr["EnferICTina"]);
+                    exp.EnferHAlergias = Convert.ToChar(dr["EnferHAlergias"]);
+                    exp.EnferHDiabetes = Convert.ToChar(dr["EnferHDiabetes"]);
+                    exp.EnferHHipertension = Convert.ToChar(dr["EnferHHipertension"]);
+                    exp.EnferHReumatica = Convert.ToChar(dr["EnferHReumatica"]);
+                    exp.EnferHRenales = Convert.ToChar(dr["EnferHRenales"]);
+                    exp.EnferHOculares = Convert.ToChar(dr["EnferHOculares"]);
+                    exp.EnferHCardiacas = Convert.ToChar(dr["EnferHCardiacas"]);
+                    exp.EnferHHepatica = Convert.ToChar(dr["EnferHHepatica"]);
+                    exp.EnferHMusculares = Convert.ToChar(dr["EnferHMusculares"]);
+                    exp.EnferHMalCongenitas = Convert.ToChar(dr["EnferHMalCongenitas"]);
+                    exp.EnferHDesorMentales = Convert.ToChar(dr["EnferHDesorMentales"]);
                     listaExpediente.Add(exp); //agergar registros encontrados a la lista
 
                 }

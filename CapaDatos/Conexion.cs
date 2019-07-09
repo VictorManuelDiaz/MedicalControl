@@ -12,7 +12,7 @@ namespace CapaDatos
         public SqlConnection Conectar()
         {
             SqlConnection cn = new SqlConnection();
-            cn.ConnectionString = "Data Source =.\\VICTORDS - PC; Initial Catalog = BD_Proyecto; Integrated Security = True";
+            cn.ConnectionString = "Data Source=VICTORDS-PC;Initial Catalog=BD_Proyecto;Integrated Security=True;";
             return cn;
         }
     }

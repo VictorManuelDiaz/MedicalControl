@@ -33,8 +33,8 @@ namespace CapaDatos
 
                 cm.CommandType = CommandType.StoredProcedure;// tipo de comando ejecutado
                 cnx.Open(); // abrir conexion de BD
-                cm.ExecuteNonQuery(); // ejecución de consulta
-                indicador = 1; //valor del indicador
+                cm.ExecuteNonQuery();
+                indicador = 1;
             }
             catch (Exception e)
             {
@@ -74,20 +74,16 @@ namespace CapaDatos
 
                 while (dr.Read()) //Recorre cada registro
                 {
-
                     Cuenta Cu = new Cuenta();
 
                     Cu.IdCuenta = Convert.ToInt32(dr["IdCuenta"].ToString());
                     Cu.NombreCuenta = dr["NombreCuenta"].ToString();
                     Cu.Contrasena = dr["Contrasena"].ToString();
                     Cu.TipoCuenta = dr["TipoCuenta"].ToString();
-                    listaCuenta.Add(Cu); //agergar registros encontrados a la lista
-
+                    listaCuenta.Add(Cu);
                 }
 
             }
-
-
             catch (Exception e)
             {
                 e.Message.ToString();
@@ -97,7 +93,7 @@ namespace CapaDatos
             {
                 cm.Connection.Close();
             }
-            return listaCuenta; //regresa lista de registros
+            return listaCuenta;
 
         }
 
@@ -113,9 +109,8 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 2);
                 cm.Parameters.AddWithValue("@IdCuenta", IdCuenta);
                 cm.Parameters.AddWithValue("@NombreCuenta", "");
-                cm.Parameters.AddWithValue("@Contrasena","");
+                cm.Parameters.AddWithValue("@Contrasena", "");
                 cm.Parameters.AddWithValue("@TipoCuenta", "");
-
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 indicador = 1;
@@ -172,24 +167,22 @@ namespace CapaDatos
         }
         //buscar comentarios
 
-        public List<Cuenta> BuscarCuenta(string dato)
+        public List<Cuenta> BuscarCuenta(string nom, string contra)
         {
             try
             {
 
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Cuenta_Proced", cnx);
-                cm.Parameters.AddWithValue("@IdCuenta", "");
-                cm.Parameters.AddWithValue("@NombreCuenta",dato);
-                cm.Parameters.AddWithValue("@Contrasena", "");
-                cm.Parameters.AddWithValue("@TipoCuenta", "");
+                cm.Parameters.AddWithValue("@NombreCuenta", nom);
+                cm.Parameters.AddWithValue("@Contrasena", contra);
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 dr = cm.ExecuteReader();
                 listaCuenta = new List<Cuenta>();
 
-                while (dr.Read()) //Recorre cada registro
+                while (dr.Read())
                 {
 
                     Cuenta Cu = new Cuenta();
@@ -198,7 +191,7 @@ namespace CapaDatos
                     Cu.NombreCuenta = dr["NombreCuenta"].ToString();
                     Cu.Contrasena = dr["Contrasena"].ToString();
                     Cu.TipoCuenta = dr["TipoCuenta"].ToString();
-                    listaCuenta.Add(Cu); //agergar registros encontrados a la lista
+                    listaCuenta.Add(Cu);
 
                 }
 
@@ -206,7 +199,6 @@ namespace CapaDatos
             }
             catch (Exception e)
             {
-
                 e.Message.ToString();
                 listaCuenta = null;
             }

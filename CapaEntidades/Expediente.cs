@@ -26,6 +26,30 @@ namespace CapaEntidades
         public string ProcedenciaPac { get; set; }
         public string TelefonoPac { get; set; }
         public string EstadoCivilPac { get; set; }
-
+        public char EnferICHepatitis { get; set; }
+        public char EnferICSifilis { get; set; }
+        public char EnferICColera { get; set; }
+        public char EnferICTosferina { get; set; }
+        public char EnferICSarampion { get; set; }
+        public char EnferICVaricela { get; set; }
+        public char EnferICRubeola { get; set; }
+        public char EnferICPariotiditis { get; set; }
+        public char EnferICMeningitis { get; set; }
+        public char EnferICImpetigo { get; set; }
+        public char EnferICTifoidea { get; set; }
+        public char EnferICMalaria { get; set; }
+        public char EnferICEscabiasis { get; set; }
+        public char EnferICTina { get; set; }
+        public char EnferHAlergias { get; set; }
+        public char EnferHDiabetes { get; set; }
+        public char EnferHHipertension { get; set; }
+        public char EnferHReumatica { get; set; }
+        public char EnferHRenales { get; set; }
+        public char EnferHOculares { get; set; }
+        public char EnferHCardiacas { get; set; }
+        public char EnferHHepatica { get; set; }
+        public char EnferHMusculares { get; set; }
+        public char EnferHMalCongenitas { get; set; }
+        public char EnferHDesorMentales { get; set; }
     }
 }

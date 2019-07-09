@@ -62,8 +62,7 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();//conectar
                 cm = new SqlCommand("Especialidad_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
-                cm.Parameters.AddWithValue("@IdEspecialidad", "");
-                cm.Parameters.AddWithValue("@NombreEs", "");
+
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -191,14 +190,9 @@ namespace CapaDatos
                 {
 
                     Especialidad Esp = new Especialidad();
-
-                    Esp.IdEspecialidad = Convert.ToInt32(dr["IdEspecialidad"].ToString());
                     Esp.NombreEs = dr["NombreEs"].ToString();
-
                     listaEspecialidad.Add(Esp); //agergar registros encontrados a la lista
-
                 }
-
 
             }
             catch (Exception e)

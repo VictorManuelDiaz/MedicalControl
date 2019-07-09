@@ -97,7 +97,7 @@ namespace CapaDatos
             {
                 cm.Connection.Close();
             }
-            return listaMedicamento ; //regresa lista de registros
+            return listaMedicamento; //regresa lista de registros
 
         }
 
@@ -221,3 +221,4 @@ namespace CapaDatos
 
     }
 }
+

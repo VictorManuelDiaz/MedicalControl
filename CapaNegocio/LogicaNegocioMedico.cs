@@ -8,7 +8,7 @@ using CapaEntidades;
 
 namespace CapaNegocio
 {
-    class LogicaNegocioMedico
+    public class LogicaNegocioMedico
     {
 
         AccesoDatosMedico MED = new AccesoDatosMedico();

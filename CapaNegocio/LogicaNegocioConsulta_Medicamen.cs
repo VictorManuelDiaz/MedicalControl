@@ -33,12 +33,5 @@ namespace CapaNegocio
             return CONMED.EditarConsultMedicamen(CM);
         }
 
-
-        // este no poseemos un metodo en la capa de datos del metodo buscar
-        public List<ConsultaMedicamento> BuscarConsultaMedicamen(string dato)
-        {
-            return CONMED.BuscarConsultMedicamen(dato);
-        } 
-
     }
 }

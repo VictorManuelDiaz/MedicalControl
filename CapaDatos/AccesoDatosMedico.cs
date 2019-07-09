@@ -93,10 +93,10 @@ namespace CapaDatos
                     me.ApellidoM = dr["ApellidoM"].ToString();
                     me.IdEspecialidad = Convert.ToInt32(dr["IdEspecialidad"].ToString());
                     me.EmailM = dr["EmailM"].ToString();
-                    me.TelefonoM= dr["TelefonoM"].ToString();
+                    me.TelefonoM = dr["TelefonoM"].ToString();
                     me.CedulaM = dr["CedulaM"].ToString();
                     me.SexoM = dr["SexoM"].ToString();
-                    me.DireccionM= dr["DireccionM"].ToString();
+                    me.DireccionM = dr["DireccionM"].ToString();
                     listaMedico.Add(me); //agergar registros encontrados a la lista
 
                 }
@@ -113,7 +113,7 @@ namespace CapaDatos
             {
                 cm.Connection.Close();
             }
-            return listaMedico; //regresa lista de registros
+            return listaMedico;
 
         }
 
@@ -233,10 +233,10 @@ namespace CapaDatos
                     me.ApellidoM = dr["ApellidoM"].ToString();
                     me.IdEspecialidad = Convert.ToInt32(dr["IdEspecialidad"].ToString());
                     me.EmailM = dr["EmailM"].ToString();
-                    me.TelefonoM= dr["TelefonoM"].ToString();
+                    me.TelefonoM = dr["TelefonoM"].ToString();
                     me.CedulaM = dr["CedulaM"].ToString();
                     me.SexoM = dr["SexoM"].ToString();
-                    me.DireccionM= dr["DireccionM"].ToString();
+                    me.DireccionM = dr["DireccionM"].ToString();
                     listaMedico.Add(me); //agergar registros encontrados a la lista
 
                 }
@@ -257,3 +257,4 @@ namespace CapaDatos
         }
     }
 }
+

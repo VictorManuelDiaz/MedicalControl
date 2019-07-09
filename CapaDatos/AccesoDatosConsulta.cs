@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using CapaEntidades;
-using System.Data; 
+using System.Data;
 
 namespace CapaDatos
 {
