@@ -22,16 +22,17 @@ namespace CapaPresentacion
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
-                Cuenta ObjetoCuenta = new Cuenta();
-                if (LNCuen.BuscarCuenta(txtbxNomCuen.Text,txtbxContra.Text) ==null)
-                {
-                    frmPanelPrincipalAdmin PrinAdmin = new frmPanelPrincipalAdmin();
+                List<Cuenta> listaCuenta = LNCuen.BuscarCuenta(txtbxNomCuen.Text, txtbxContra.Text);
+                if (LNCuen.BuscarCuenta(txtbxNomCuen.Text, txtbxContra.Text)==null)
+                {*/
+                    MDIAdminPrincipal PrinAdmin = new MDIAdminPrincipal();
                     this.Hide();
                     PrinAdmin.ShowDialog();
                     this.Close();
-                }
+                /*}
                 else
                 {
                     txtbxNomCuen.Text = "";
@@ -44,7 +45,12 @@ namespace CapaPresentacion
                 MessageBox.Show("ERROR");
             }
 
-            
+            */
+        }
+
+        private void frmInicioSesion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

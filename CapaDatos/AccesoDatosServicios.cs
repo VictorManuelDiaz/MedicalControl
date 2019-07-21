@@ -12,11 +12,11 @@ namespace CapaDatos
     public class AccesoDatosServicios
     {
 
-        SqlConnection cnx; //conexion
-        Servicios Ser = new Servicios(); // capa entidades
-        Conexion cn = new Conexion(); // conexion
-        SqlCommand cm = null; //Comandos sql
-        int indicador = 0; // variable indicador para comprobar CRUD para cargar datos
+        SqlConnection cnx; 
+        Servicios Ser = new Servicios(); 
+        Conexion cn = new Conexion();
+        SqlCommand cm = null; 
+        int indicador = 0; 
         SqlDataReader dr = null;
         List<Servicios> listaServicios = null;
 

@@ -34,12 +34,14 @@
             this.consultasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.expedientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsInicio = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsInicio,
             this.medicosToolStripMenuItem,
             this.pacientesToolStripMenuItem,
             this.consultasToolStripMenuItem1,
@@ -84,6 +86,13 @@
             this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.cuentasToolStripMenuItem.Text = "Cuentas";
             // 
+            // tlsInicio
+            // 
+            this.tlsInicio.Name = "tlsInicio";
+            this.tlsInicio.Size = new System.Drawing.Size(48, 20);
+            this.tlsInicio.Text = "Inicio";
+            this.tlsInicio.Click += new System.EventHandler(this.tlsInicio_Click);
+            // 
             // frmPanelPrincipalAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,5 +118,6 @@
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem expedientesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cuentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tlsInicio;
     }
 }

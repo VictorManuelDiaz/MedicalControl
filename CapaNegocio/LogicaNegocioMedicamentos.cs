@@ -11,31 +11,31 @@ namespace CapaNegocio
     class LogicaNegocioMedicamentos
     {
 
-        AccesoDatosMedicamentos MED = new AccesoDatosMedicamentos();
+        AccesoDatosMedicamentos MEDI = new AccesoDatosMedicamentos();
 
-        public int InsertarMedicamentos(Medicamento me)
+        public int insertarMedicamentos(Medicamento Medi)
         {
-            return MED.InsertarMedicamentos(me);
+            return MEDI.InsertarMedicamentos(Medi);
         }
 
-        public List<Medicamento> ListarMedicamentos()
+        public List<Medicamento> listarMedicamentos()
         {
-            return MED.ListarMedicamentos();
+            return MEDI.ListarMedicamentos();
         }
 
-        public int EliminarMedicamentos(int IdMedica)
+        public int eliminarMedicamentos(int IdMedica)
         {
-            return MED.EliminarMedicamentos(IdMedica);
+            return MEDI.EliminarMedicamentos(IdMedica);
         }
 
-        public int EditarMedicamento(Medicamento Med)
+        public int editarMedicamento(Medicamento Medi)
         {
-            return MED.EditarMedicamento(Med);
+            return MEDI.EditarMedicamento(Medi);
         }
 
-        public List<Medicamento> BuscarMedicamento(string dato)
+        public List<Medicamento> buscarMedicamento(string dato)
         {
-            return MED.BuscarMedicamento(dato);
+            return MEDI.BuscarMedicamento(dato);
         } 
 
     }

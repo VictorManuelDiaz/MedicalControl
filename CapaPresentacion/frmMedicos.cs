@@ -23,62 +23,83 @@ namespace CapaPresentacion
             
             
         }
+        private void frmMedicos_Load(object sender, EventArgs e)
+        {
+            dataGridViewMedico.DataSource = LNMedico.listarMedico();
+            txtbxIdMedico.Visible = false;
+            lblIdMedico.Visible = false;
+            List<int> Espe = new List<int>();
+            Espe = LNEspe.ListarEspecialidad().Select(x => x.IdEspecialidad).ToList();
+            combobxEspe.DataSource = Espe;
 
+        }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            /*try
+            try
             {
                 if (btnRegistrar.Text == "Registrar")
                 {
                     Medico objetoMedico = new Medico();
-                    objetoMedico.NombreM = textBoxNombrer.Text;
-                    objetoRecurso.codigo = textBoxCodigo.Text;
-                    objetoRecurso.descripcion = textBoxDescripcion.Text;
-                    if (logicaNR.InsertarRecursos(objetoRecurso) > 0)
+                    objetoMedico.NombreM = txtbxNombM.Text;
+                    objetoMedico.ApellidoM = txtbxApellM.Text;
+                    objetoMedico.IdEspecialidad = Convert.ToInt32(combobxEspe.Text);
+                    objetoMedico.EmailM= txtbxCorreo.Text;
+                    objetoMedico.TelefonoM = txtbxCel.Text;
+                    objetoMedico.CedulaM = txtbxCed.Text;
+                    objetoMedico.SexoM = combobxSexo.Text;
+                    objetoMedico.Direccion = txtbxDirec.Text;
+
+                    if (LNMedico.insertarMedico(objetoMedico) > 0)
                     {
                         MessageBox.Show("Agregado con éxito");
-                        dataGridViewRecursos.DataSource = logicaNR.ListarRecursos();
-                        textBoxNombrer.Text = "";
-                        textBoxDescripcion.Text = "";
-                        textBoxCodigo.Text = "";
-                        tabRecursos.SelectedTab = tabPage2;
+                        dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                        txtbxNombM.Text = "";
+                        txtbxApellM.Text = "";
+                        txtbxCorreo.Text = "";
+                        txtbxCel.Text = "";
+                        txtbxCed.Text = "";
+                        txtbxDirec.Text = "";
+                        tabSolicitud.SelectedTab = tabPage2;
                     }
                     else { MessageBox.Show("Error al agregar Recurso"); }
                 }
-                if (buttonGuardar.Text == "Actualizar")
+                if (btnRegistrar.Text == "Actualizar")
                 {
-                    Recursos objetoRecurso = new Recursos();
-                    objetoRecurso.idrecursos = Convert.ToInt32(textBoxId.Text);
-                    objetoRecurso.nombrer = textBoxNombrer.Text;
-                    objetoRecurso.codigo = textBoxCodigo.Text;
-                    objetoRecurso.descripcion = textBoxDescripcion.Text;
-                    if (logicaNR.EditarRecursos(objetoRecurso) > 0)
+                    Medico objetoMedico = new Medico();
+                    objetoMedico.NombreM = txtbxNombM.Text;
+                    objetoMedico.ApellidoM = txtbxApellM.Text;
+                    objetoMedico.IdEspecialidad = Convert.ToInt32(combobxEspe.Text);
+                    objetoMedico.EmailM = txtbxCorreo.Text;
+                    objetoMedico.TelefonoM = txtbxCel.Text;
+                    objetoMedico.CedulaM = txtbxCed.Text;
+                    objetoMedico.SexoM = combobxSexo.Text;
+                    objetoMedico.Direccion = txtbxDirec.Text;
+
+                    if (LNMedico.editarMedico(objetoMedico) > 0)
                     {
                         MessageBox.Show("Actualizado con éxito");
-                        dataGridViewRecursos.DataSource = logicaNR.ListarRecursos();
-                        textBoxNombrer.Text = "";
-                        textBoxDescripcion.Text = "";
-                        textBoxCodigo.Text = "";
-                        tabRecursos.SelectedTab = tabPage2;
+                        dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                        dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                        txtbxNombM.Text = "";
+                        txtbxApellM.Text = "";
+                        txtbxCorreo.Text = "";
+                        txtbxCel.Text = "";
+                        txtbxCed.Text = "";
+                        txtbxDirec.Text = "";
+                        tabSolicitud.SelectedTab = tabPage2;
                     }
                     else
                     {
                         MessageBox.Show("Error al actualizar Recurso");
                     }
-                    buttonGuardar.Text = "Guardar";
+                    btnRegistrar.Text = "Registrar";
                 }
             }
             catch
             {
                 MessageBox.Show("ERROR");
-            }*/
-        }
-
-        private void frmMedicos_Load(object sender, EventArgs e)
-        {
-            combobxEspe.Items.Add(LNEspe.ListarEspecialidad());
-            dataGridViewMedico.DataSource = LNMedico.ListarMedico();
+            }
         }
     }
 }

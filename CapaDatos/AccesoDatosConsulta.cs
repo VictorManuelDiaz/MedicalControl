@@ -11,11 +11,11 @@ namespace CapaDatos
 {
     public class AccesoDatosConsulta
     {
-        SqlConnection cnx; //conexion
-        Consulta Consul = new Consulta(); // capa entidades
-        Conexion cn = new Conexion(); // conexion
-        SqlCommand cm = null; //Comandos sql
-        int indicador = 0; // variable indicador para comprobar CRUD para cargar datos
+        SqlConnection cnx;
+        Consulta Consul = new Consulta(); 
+        Conexion cn = new Conexion();
+        SqlCommand cm = null; 
+        int indicador = 0;
         SqlDataReader dr = null;
         List<Consulta> listaConsulta = null;
 
@@ -23,9 +23,9 @@ namespace CapaDatos
         {
             try
             {
-                SqlConnection cnx = cn.Conectar(); // conectar
-                cm = new SqlCommand("Consulta_Proced", cnx); //nombre del procedimiento SQL
-                cm.Parameters.AddWithValue("@b", 1); //valores que toman los parametros del procedimiento
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("Consulta_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@IdConsulta", "");
                 cm.Parameters.AddWithValue("@Fecha", ca.Fecha);
                 cm.Parameters.AddWithValue("@Hora", ca.Hora);
@@ -35,15 +35,15 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@NumeroExpediente", ca.NumeroExpediente);
                 cm.Parameters.AddWithValue("@IdMedico", ca.IdMedico);
 
-                cm.CommandType = CommandType.StoredProcedure;// tipo de comando ejecutado
-                cnx.Open(); // abrir conexion de BD
-                cm.ExecuteNonQuery(); // ejecución de consulta
-                indicador = 1; //valor del indicador
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                cm.ExecuteNonQuery();
+                indicador = 1;
             }
             catch (Exception e)
             {
 
-                e.Message.ToString(); //mostrar mensaje en caso de error
+                e.Message.ToString(); 
                 indicador = 0;
 
             }
@@ -51,7 +51,7 @@ namespace CapaDatos
             finally
             {
 
-                cm.Connection.Close(); //cierre de conexión
+                cm.Connection.Close();
 
             }
             return indicador;
@@ -63,7 +63,7 @@ namespace CapaDatos
             try
             {
 
-                SqlConnection cnx = cn.Conectar();//conectar
+                SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Consulta_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@IdConsulta", "");
@@ -78,13 +78,12 @@ namespace CapaDatos
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 dr = cm.ExecuteReader();
-                listaConsulta = new List<Consulta>(); //lista de comentarios
+                listaConsulta = new List<Consulta>();
 
-                while (dr.Read()) //Recorre cada registro
+                while (dr.Read())
                 {
 
                     Consulta Consul = new Consulta();
-
                     Consul.IdConsulta = Convert.ToInt32(dr["IdConsulta"].ToString());
                     Consul.Fecha = dr["Fecha"].ToString();
                     Consul.Hora = dr["Hora"].ToString();
@@ -93,10 +92,8 @@ namespace CapaDatos
                     Consul.Diagnostico = dr["Diagnostico"].ToString();
                     Consul.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
                     Consul.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
-                    listaConsulta.Add(Consul); //agergar registros encontrados a la lista
-
+                    listaConsulta.Add(Consul);
                 }
-
             }
 
 
@@ -109,7 +106,7 @@ namespace CapaDatos
             {
                 cm.Connection.Close();
             }
-            return listaConsulta; //regresa lista de registros
+            return listaConsulta;
 
         }
 
@@ -118,7 +115,6 @@ namespace CapaDatos
 
             try
             {
-
                 SqlConnection cnx = cn.Conectar();
 
                 cm = new SqlCommand("Consulta_Proced", cnx);
@@ -216,7 +212,7 @@ namespace CapaDatos
                 dr = cm.ExecuteReader();
                 listaConsulta = new List<Consulta>();
 
-                while (dr.Read()) //Recorre cada registro
+                while (dr.Read())
                 {
 
                     Consulta Consul = new Consulta();
@@ -229,7 +225,7 @@ namespace CapaDatos
                     Consul.Diagnostico = dr["Diagnostico"].ToString();
                     Consul.NumeroExpediente = Convert.ToInt32(dr["NuemroExpediente"].ToString());
                     Consul.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
-                    listaConsulta.Add(Consul); //agergar registros encontrados a la lista
+                    listaConsulta.Add(Consul);
 
                 }
 

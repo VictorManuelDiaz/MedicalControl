@@ -13,27 +13,27 @@ namespace CapaNegocio
 
         AccesoDatosMedico MED = new AccesoDatosMedico();
 
-        public int InsertarMedico(Medico ME)
+        public int insertarMedico(Medico Me)
         {
-            return MED.InsertarMedico(ME);
+            return MED.InsertarMedico(Me);
         }
 
-        public List<Medico> ListarMedico()
+        public List<Medico> listarMedico()
         {
             return MED.ListarMedico();
         }
 
-        public int EliminarMedico(int IdMedico)
+        public int eliminarMedico(int IdMedico)
         {
             return MED.EliminarMedico(IdMedico);
         }
 
-        public int EditarMedico(Medico Me)
+        public int editarMedico(Medico Me)
         {
             return MED.EditarMedico(Me);
         }
 
-        public List<Medico> BuscarMedico(string dato)
+        public List<Medico> buscarMedico(string dato)
         {
             return MED.BuscarMedico(dato);
         }

@@ -75,7 +75,6 @@ namespace CapaDatos
                 while (dr.Read()) //Recorre cada registro
                 {
                     Cuenta Cu = new Cuenta();
-
                     Cu.IdCuenta = Convert.ToInt32(dr["IdCuenta"].ToString());
                     Cu.NombreCuenta = dr["NombreCuenta"].ToString();
                     Cu.Contrasena = dr["Contrasena"].ToString();
@@ -113,6 +112,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TipoCuenta", "");
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
+                cm.ExecuteNonQuery();
                 indicador = 1;
             }
             catch (Exception e)
@@ -174,6 +174,7 @@ namespace CapaDatos
 
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Cuenta_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@NombreCuenta", nom);
                 cm.Parameters.AddWithValue("@Contrasena", contra);
 

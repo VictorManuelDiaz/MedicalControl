@@ -34,5 +34,10 @@ namespace CapaPresentacion
         {
             
         }
+
+        private void tlsInicio_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

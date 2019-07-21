@@ -15,3 +15,6 @@ E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaEntidades.pdb
 E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaNegocio.pdb
 E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaDatos.pdb
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmMedicos.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.MDIAdminPrincipal.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmCita.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmExpediente.resources

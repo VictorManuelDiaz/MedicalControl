@@ -12,11 +12,11 @@ namespace CapaDatos
     public class AccesoDatosCita
     {
 
-        SqlConnection cnx; //conexion
-        Cita Cit = new Cita(); // capa entidades
-        Conexion cn = new Conexion(); // conexion
-        SqlCommand cm = null; //Comandos sql
-        int indicador = 0; // variable indicador para comprobar CRUD para cargar datos
+        SqlConnection cnx;
+        Cita Cit = new Cita();
+        Conexion cn = new Conexion();
+        SqlCommand cm = null;
+        int indicador = 0;
         SqlDataReader dr = null;
         List<Cita> listaCita = null;
 
@@ -24,9 +24,9 @@ namespace CapaDatos
         {
             try
             {
-                SqlConnection cnx = cn.Conectar(); // conectar
-                cm = new SqlCommand("Cita_Proced", cnx); //nombre del procedimiento SQL
-                cm.Parameters.AddWithValue("@b", 1); //valores que toman los parametros del procedimiento
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("Cita_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@IdCita", "");
                 cm.Parameters.AddWithValue("@FechaConsul", ci.FechaConsul);
                 cm.Parameters.AddWithValue("@FechaRealCita", ci.FechaRealCita);
@@ -34,24 +34,20 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@NumeroExpediente", ci.NumeroExpediente);
                 cm.Parameters.AddWithValue("@IdMedico", ci.IdMedico);
 
-                cm.CommandType = CommandType.StoredProcedure;// tipo de comando ejecutado
-                cnx.Open(); // abrir conexion de BD
-                cm.ExecuteNonQuery(); // ejecución de consulta
-                indicador = 1; //valor del indicador
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                cm.ExecuteNonQuery(); 
+                indicador = 1;
             }
             catch (Exception e)
             {
-
-                e.Message.ToString(); //mostrar mensaje en caso de error
+                e.Message.ToString();
                 indicador = 0;
-
             }
 
             finally
             {
-
-                cm.Connection.Close(); //cierre de conexión
-
+                cm.Connection.Close(); 
             }
             return indicador;
         }
@@ -62,7 +58,7 @@ namespace CapaDatos
             try
             {
 
-                SqlConnection cnx = cn.Conectar();//conectar
+                SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Cita_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@IdCita", "");
@@ -75,9 +71,9 @@ namespace CapaDatos
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 dr = cm.ExecuteReader();
-                listaCita = new List<Cita>(); //lista de comentarios
+                listaCita = new List<Cita>();
 
-                while (dr.Read()) //Recorre cada registro
+                while (dr.Read())
                 {
 
                     Cita Cit = new Cita();
@@ -88,7 +84,7 @@ namespace CapaDatos
                     Cit.HoraC = dr["HoraC"].ToString();
                     Cit.NumeroExpediente = Convert.ToInt32(dr["NuemroExpediente"].ToString());
                     Cit.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
-                    listaCita.Add(Cit); //agergar registros encontrados a la lista
+                    listaCita.Add(Cit); 
 
                 }
 
@@ -104,13 +100,12 @@ namespace CapaDatos
             {
                 cm.Connection.Close();
             }
-            return listaCita; //regresa lista de registros
+            return listaCita;
 
         }
 
         public int EliminarCita(int IdCita)
         {
-
             try
             {
 
@@ -143,7 +138,6 @@ namespace CapaDatos
             }
 
             return indicador;
-
         }
 
         //editar cita
@@ -202,7 +196,7 @@ namespace CapaDatos
                 dr = cm.ExecuteReader();
                 listaCita = new List<Cita>();
 
-                while (dr.Read()) //Recorre cada registro
+                while (dr.Read()) 
                 {
 
                     Cita Cit = new Cita();
@@ -213,11 +207,9 @@ namespace CapaDatos
                     Cit.HoraC = dr["HoraC"].ToString();
                     Cit.NumeroExpediente = Convert.ToInt32(dr["NuemroExpediente"].ToString());
                     Cit.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
-                    listaCita.Add(Cit); //agergar registros encontrados a la lista
+                    listaCita.Add(Cit);
 
                 }
-
-
             }
             catch (Exception e)
             {
