@@ -28,9 +28,9 @@ namespace CapaPresentacion
             dataGridViewMedico.DataSource = LNMedico.listarMedico();
             txtbxIdMedico.Visible = false;
             lblIdMedico.Visible = false;
-            List<int> Espe = new List<int>();
-            Espe = LNEspe.ListarEspecialidad().Select(x => x.IdEspecialidad).ToList();
-            combobxEspe.DataSource = Espe;
+            //List<int> Espe = new List<int>();
+            //Espe = LNEspe.ListarEspecialidad().Select(x => x.IdEspecialidad).ToList();
+            //combobxEspe.DataSource = Espe;
 
         }
 

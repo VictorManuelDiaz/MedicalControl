@@ -120,5 +120,20 @@ namespace CapaPresentacion
             Cita.MdiParent = this;
             Cita.Show();
         }
+
+
+        private void tlsCuentas_Click_1(object sender, EventArgs e)
+        {
+            frmCuentas Cuentas = new frmCuentas();
+            Cuentas.MdiParent = this;
+            Cuentas.Show();
+        }
+
+        private void tlsPacientes_Click(object sender, EventArgs e)
+        {
+            frmPacientes Paci = new frmPacientes();
+            Paci.MdiParent = this;
+            Paci.Show();
+        }
     }
 }

@@ -77,6 +77,7 @@
             this.tlsPacientes.Name = "tlsPacientes";
             this.tlsPacientes.Size = new System.Drawing.Size(69, 20);
             this.tlsPacientes.Text = "Pacientes";
+            this.tlsPacientes.Click += new System.EventHandler(this.tlsPacientes_Click);
             // 
             // tlsCitas
             // 
@@ -97,6 +98,7 @@
             this.tlsCuentas.Name = "tlsCuentas";
             this.tlsCuentas.Size = new System.Drawing.Size(62, 20);
             this.tlsCuentas.Text = "Cuentas";
+            this.tlsCuentas.Click += new System.EventHandler(this.tlsCuentas_Click_1);
             // 
             // tlsSalir
             // 
