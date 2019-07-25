@@ -69,13 +69,13 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridViewMedico = new System.Windows.Forms.DataGridView();
+            this.dataGridViewExp = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabSolicitud.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSolicitud
@@ -102,7 +102,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(844, 561);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Nuevo médico";
+            this.tabPage1.Text = "Nuevo expediente";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tabPage1_MouseMove);
             // 
@@ -124,7 +124,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(257, 30);
+            this.label17.Location = new System.Drawing.Point(206, 30);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(148, 21);
             this.label17.TabIndex = 3;
@@ -546,24 +546,24 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridViewMedico);
+            this.tabPage2.Controls.Add(this.dataGridViewExp);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(844, 561);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Todos los médicos";
+            this.tabPage2.Text = "Todos los expedientes";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewMedico
+            // dataGridViewExp
             // 
-            this.dataGridViewMedico.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMedico.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewMedico.Location = new System.Drawing.Point(37, 23);
-            this.dataGridViewMedico.Name = "dataGridViewMedico";
-            this.dataGridViewMedico.Size = new System.Drawing.Size(702, 283);
-            this.dataGridViewMedico.TabIndex = 0;
+            this.dataGridViewExp.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewExp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewExp.GridColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewExp.Location = new System.Drawing.Point(9, 112);
+            this.dataGridViewExp.Name = "dataGridViewExp";
+            this.dataGridViewExp.Size = new System.Drawing.Size(826, 283);
+            this.dataGridViewExp.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -572,26 +572,28 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(844, 561);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Médicos en turno";
+            this.tabPage3.Text = "Expedientes de hoy";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // frmExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(850, 600);
             this.Controls.Add(this.tabSolicitud);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmExpediente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmExpediente";
+            this.Load += new System.EventHandler(this.frmExpediente_Load);
             this.tabSolicitud.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -618,7 +620,7 @@
         private System.Windows.Forms.TextBox txtbxCed;
         private System.Windows.Forms.ComboBox combobxSexo;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridViewMedico;
+        private System.Windows.Forms.DataGridView dataGridViewExp;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

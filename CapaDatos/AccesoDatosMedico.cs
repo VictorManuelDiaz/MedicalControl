@@ -35,7 +35,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TelefonoM", Med.TelefonoM);
                 cm.Parameters.AddWithValue("@CedulaM", Med.CedulaM);
                 cm.Parameters.AddWithValue("@SexoM", Med.SexoM);
-                cm.Parameters.AddWithValue("@Direccion", Med.Direccion);
+                cm.Parameters.AddWithValue("@DireccionM", Med.DireccionM);
 
                 cm.CommandType = CommandType.StoredProcedure;// tipo de comando ejecutado
                 cnx.Open();
@@ -77,7 +77,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TelefonoM", "");
                 cm.Parameters.AddWithValue("@CedulaM", "");
                 cm.Parameters.AddWithValue("@SexoM", "");
-                cm.Parameters.AddWithValue("@Direccion", "");
+                cm.Parameters.AddWithValue("@DireccionM", "");
                 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
@@ -97,7 +97,7 @@ namespace CapaDatos
                     me.TelefonoM = dr["TelefonoM"].ToString();
                     me.CedulaM = dr["CedulaM"].ToString();
                     me.SexoM = dr["SexoM"].ToString();
-                    me.Direccion = dr["Direccion"].ToString();
+                    me.DireccionM = dr["DireccionM"].ToString();
                     listaMedico.Add(me); //agergar registros encontrados a la lista
 
                 }
@@ -136,7 +136,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TelefonoM", "");
                 cm.Parameters.AddWithValue("@CedulaM", "");
                 cm.Parameters.AddWithValue("@SexoM", "");
-                cm.Parameters.AddWithValue("@Direccion", "");
+                cm.Parameters.AddWithValue("@DireccionM", "");
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -177,7 +177,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TelefonoM", Med.TelefonoM);
                 cm.Parameters.AddWithValue("@CedulaM", Med.CedulaM);
                 cm.Parameters.AddWithValue("@SexoM", "");
-                cm.Parameters.AddWithValue("@Direccion", Med.Direccion);
+                cm.Parameters.AddWithValue("@DireccionM", Med.DireccionM);
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -216,7 +216,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TelefonoM", "");
                 cm.Parameters.AddWithValue("@CedulaM", dato);
                 cm.Parameters.AddWithValue("@SexoM", "");
-                cm.Parameters.AddWithValue("@Direccion", "");
+                cm.Parameters.AddWithValue("@DireccionM", "");
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -237,7 +237,7 @@ namespace CapaDatos
                     me.TelefonoM = dr["TelefonoM"].ToString();
                     me.CedulaM = dr["CedulaM"].ToString();
                     me.SexoM = dr["SexoM"].ToString();
-                    me.Direccion = dr["Direccion"].ToString();
+                    me.DireccionM = dr["DireccionM"].ToString();
                     listaMedico.Add(me); //agergar registros encontrados a la lista
 
                 }

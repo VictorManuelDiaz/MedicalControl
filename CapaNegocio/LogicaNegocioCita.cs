@@ -8,7 +8,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class LogicaNegocioCita
+    public class LogicaNegocioCita
     {
         AccesoDatosCita CI = new AccesoDatosCita();
 

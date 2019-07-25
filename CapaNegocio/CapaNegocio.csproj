@@ -48,6 +48,7 @@
     <Compile Include="LogicaNegocioExpediente.cs" />
     <Compile Include="LogicaNegocioMedicamentos.cs" />
     <Compile Include="LogicaNegocioMedico.cs" />
+    <Compile Include="LogicaNegocioPaciente.cs" />
     <Compile Include="LogicaNegocioServicios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

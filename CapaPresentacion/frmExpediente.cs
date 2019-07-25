@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
+using CapaEntidades;
 
 namespace CapaPresentacion
 {
     public partial class frmExpediente : Form
     {
+        LogicaNegocioExpediente LNExp = new LogicaNegocioExpediente();
         public frmExpediente()
         {
             InitializeComponent();
@@ -21,5 +24,13 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void frmExpediente_Load(object sender, EventArgs e)
+        {
+            dataGridViewExp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewExp.DataSource = LNExp.ListarExpediente();
+        }
+
+        
     }
 }

@@ -30,10 +30,14 @@
         {
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridViewMedico = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCita = new System.Windows.Forms.DataGridView();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblIdMedico = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtbxIdMedico = new System.Windows.Forms.TextBox();
@@ -41,14 +45,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.tabCita = new System.Windows.Forms.TabControl();
             this.dateTimePickerFechConsul = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.tabCita = new System.Windows.Forms.TabControl();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCita)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabCita.SuspendLayout();
@@ -59,31 +59,31 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(847, 572);
+            this.tabPage3.Size = new System.Drawing.Size(844, 561);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Citas de hoy";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridViewMedico);
+            this.tabPage2.Controls.Add(this.dataGridViewCita);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(847, 572);
+            this.tabPage2.Size = new System.Drawing.Size(844, 561);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Todos las citas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewMedico
+            // dataGridViewCita
             // 
-            this.dataGridViewMedico.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMedico.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewMedico.Location = new System.Drawing.Point(37, 23);
-            this.dataGridViewMedico.Name = "dataGridViewMedico";
-            this.dataGridViewMedico.Size = new System.Drawing.Size(702, 283);
-            this.dataGridViewMedico.TabIndex = 0;
+            this.dataGridViewCita.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCita.GridColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewCita.Location = new System.Drawing.Point(37, 23);
+            this.dataGridViewCita.Name = "dataGridViewCita";
+            this.dataGridViewCita.Size = new System.Drawing.Size(702, 283);
+            this.dataGridViewCita.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -138,6 +138,43 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(466, 314);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.comboBox2.Location = new System.Drawing.Point(170, 263);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(293, 23);
+            this.comboBox2.TabIndex = 25;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.comboBox1.Location = new System.Drawing.Point(170, 211);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(293, 23);
+            this.comboBox1.TabIndex = 24;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(170, 159);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(293, 21);
+            this.textBox1.TabIndex = 23;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(170, 107);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(293, 23);
+            this.dateTimePicker1.TabIndex = 22;
             // 
             // lblIdMedico
             // 
@@ -214,6 +251,13 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Fecha cita";
             // 
+            // dateTimePickerFechConsul
+            // 
+            this.dateTimePickerFechConsul.Location = new System.Drawing.Point(170, 55);
+            this.dateTimePickerFechConsul.Name = "dateTimePickerFechConsul";
+            this.dateTimePickerFechConsul.Size = new System.Drawing.Size(293, 23);
+            this.dateTimePickerFechConsul.TabIndex = 21;
+            // 
             // tabCita
             // 
             this.tabCita.Controls.Add(this.tabPage1);
@@ -226,50 +270,6 @@
             this.tabCita.Size = new System.Drawing.Size(852, 589);
             this.tabCita.TabIndex = 1;
             // 
-            // dateTimePickerFechConsul
-            // 
-            this.dateTimePickerFechConsul.Location = new System.Drawing.Point(170, 55);
-            this.dateTimePickerFechConsul.Name = "dateTimePickerFechConsul";
-            this.dateTimePickerFechConsul.Size = new System.Drawing.Size(293, 23);
-            this.dateTimePickerFechConsul.TabIndex = 21;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(170, 107);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(293, 23);
-            this.dateTimePicker1.TabIndex = 22;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(170, 159);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 21);
-            this.textBox1.TabIndex = 23;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino"});
-            this.comboBox1.Location = new System.Drawing.Point(170, 211);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(293, 23);
-            this.comboBox1.TabIndex = 24;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino"});
-            this.comboBox2.Location = new System.Drawing.Point(170, 263);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(293, 23);
-            this.comboBox2.TabIndex = 25;
-            // 
             // frmCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,8 +281,9 @@
             this.Name = "frmCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCita";
+            this.Load += new System.EventHandler(this.frmCita_Load);
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCita)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -295,7 +296,7 @@
 
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridViewMedico;
+        private System.Windows.Forms.DataGridView dataGridViewCita;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;

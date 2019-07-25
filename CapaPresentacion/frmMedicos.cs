@@ -25,12 +25,13 @@ namespace CapaPresentacion
         }
         private void frmMedicos_Load(object sender, EventArgs e)
         {
+            dataGridViewMedico.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewMedico.DataSource = LNMedico.listarMedico();
             txtbxIdMedico.Visible = false;
             lblIdMedico.Visible = false;
-            //List<int> Espe = new List<int>();
-            //Espe = LNEspe.ListarEspecialidad().Select(x => x.IdEspecialidad).ToList();
-            //combobxEspe.DataSource = Espe;
+            List<int> Espe = new List<int>();
+            Espe = LNEspe.ListarEspecialidad().Select(x => x.IdEspecialidad).ToList();
+            combobxEspe.DataSource = Espe;
 
         }
 
@@ -47,8 +48,15 @@ namespace CapaPresentacion
                     objetoMedico.EmailM= txtbxCorreo.Text;
                     objetoMedico.TelefonoM = txtbxCel.Text;
                     objetoMedico.CedulaM = txtbxCed.Text;
-                    objetoMedico.SexoM = combobxSexo.Text;
-                    objetoMedico.Direccion = txtbxDirec.Text;
+                    if (combobxSexo.Text=="Femenino")
+                    {
+                        objetoMedico.SexoM = "F";
+                    }
+                    else
+                    {
+                        objetoMedico.SexoM = "M";
+                    }
+                    objetoMedico.DireccionM = txtbxDirec.Text;
 
                     if (LNMedico.insertarMedico(objetoMedico) > 0)
                     {
@@ -74,7 +82,7 @@ namespace CapaPresentacion
                     objetoMedico.TelefonoM = txtbxCel.Text;
                     objetoMedico.CedulaM = txtbxCed.Text;
                     objetoMedico.SexoM = combobxSexo.Text;
-                    objetoMedico.Direccion = txtbxDirec.Text;
+                    objetoMedico.DireccionM = txtbxDirec.Text;
 
                     if (LNMedico.editarMedico(objetoMedico) > 0)
                     {

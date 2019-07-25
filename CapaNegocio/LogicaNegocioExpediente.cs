@@ -8,7 +8,7 @@ using CapaEntidades;
 
 namespace CapaNegocio
 {
-    class LogicaNegocioExpediente
+    public class LogicaNegocioExpediente
     {
 
         AccesoDatosExpediente EXP = new AccesoDatosExpediente();
@@ -36,7 +36,7 @@ namespace CapaNegocio
         public List<Expediente> BuscarExpediente(string dato)
         {
             return EXP.BuscarExpediente(dato);
-        } 
-        
+        }
+
     }
 }

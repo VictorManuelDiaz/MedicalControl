@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
+using CapaEntidades;
 
 namespace CapaPresentacion
 {
     public partial class frmCuentas : Form
     {
+        LogicaNegocioCuentas LNCuentas = new LogicaNegocioCuentas();
         public frmCuentas()
         {
             InitializeComponent();
@@ -19,22 +22,10 @@ namespace CapaPresentacion
 
         private void frmCuentas_Load(object sender, EventArgs e)
         {
-
+            dataGridViewCuentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCuentas.DataSource = LNCuentas.ListarCuenta();
         }
 
-        private void frmCuentas_Scroll(object sender, ScrollEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

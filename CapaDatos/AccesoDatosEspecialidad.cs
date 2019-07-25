@@ -62,6 +62,8 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Especialidad_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
+                cm.Parameters.AddWithValue("@IdEspecialidad", "");
+                cm.Parameters.AddWithValue("@NombreEs", 3);
 
 
 

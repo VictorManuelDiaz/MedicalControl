@@ -20,6 +20,7 @@ namespace CapaDatos
         int indicador = 0;
         SqlDataReader dr = null;
         List<Expediente> listaExpediente = null;
+        List<Paciente> listaPaciente = null;
 
         public int InsertarExpediente(Expediente Ex)
         {
@@ -335,7 +336,8 @@ namespace CapaDatos
             {
 
                 SqlConnection cnx = cn.Conectar();
-                cm = new SqlCommand("Medico_Proced", cnx);
+                cm = new SqlCommand("Expediente_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@MotivoConsulta", "");
                 cm.Parameters.AddWithValue("@TratamientoIndicado", "");
@@ -427,6 +429,5 @@ namespace CapaDatos
             }
             return listaExpediente;
         }
-
     }
 }

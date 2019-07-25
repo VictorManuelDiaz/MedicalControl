@@ -175,8 +175,10 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Cuenta_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
+                cm.Parameters.AddWithValue("@IdCuenta", "");
                 cm.Parameters.AddWithValue("@NombreCuenta", nom);
                 cm.Parameters.AddWithValue("@Contrasena", contra);
+                cm.Parameters.AddWithValue("@TipoCuenta", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
