@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabSolicitud = new System.Windows.Forms.TabControl();
+            this.tabMedico = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,24 +53,28 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridViewMedico = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabSolicitud.SuspendLayout();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnElminar = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabMedico.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabSolicitud
+            // tabMedico
             // 
-            this.tabSolicitud.Controls.Add(this.tabPage1);
-            this.tabSolicitud.Controls.Add(this.tabPage2);
-            this.tabSolicitud.Controls.Add(this.tabPage3);
-            this.tabSolicitud.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabSolicitud.Location = new System.Drawing.Point(0, 12);
-            this.tabSolicitud.Name = "tabSolicitud";
-            this.tabSolicitud.SelectedIndex = 0;
-            this.tabSolicitud.Size = new System.Drawing.Size(852, 589);
-            this.tabSolicitud.TabIndex = 0;
+            this.tabMedico.Controls.Add(this.tabPage1);
+            this.tabMedico.Controls.Add(this.tabPage2);
+            this.tabMedico.Controls.Add(this.tabPage3);
+            this.tabMedico.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabMedico.Location = new System.Drawing.Point(0, 12);
+            this.tabMedico.Name = "tabMedico";
+            this.tabMedico.SelectedIndex = 0;
+            this.tabMedico.Size = new System.Drawing.Size(852, 589);
+            this.tabMedico.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -312,11 +316,15 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnEditar);
+            this.tabPage2.Controls.Add(this.btnElminar);
+            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.dataGridViewMedico);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(844, 559);
+            this.tabPage2.Size = new System.Drawing.Size(844, 561);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Todos los médicos";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -326,9 +334,9 @@
             this.dataGridViewMedico.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridViewMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMedico.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewMedico.Location = new System.Drawing.Point(37, 23);
+            this.dataGridViewMedico.Location = new System.Drawing.Point(30, 129);
             this.dataGridViewMedico.Name = "dataGridViewMedico";
-            this.dataGridViewMedico.Size = new System.Drawing.Size(702, 283);
+            this.dataGridViewMedico.Size = new System.Drawing.Size(781, 283);
             this.dataGridViewMedico.TabIndex = 0;
             // 
             // tabPage3
@@ -341,23 +349,63 @@
             this.tabPage3.Text = "Médicos en turno";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(549, 52);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 7;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnElminar
+            // 
+            this.btnElminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnElminar.Location = new System.Drawing.Point(650, 53);
+            this.btnElminar.Name = "btnElminar";
+            this.btnElminar.Size = new System.Drawing.Size(75, 23);
+            this.btnElminar.TabIndex = 6;
+            this.btnElminar.Text = "Eliminar";
+            this.btnElminar.UseVisualStyleBackColor = true;
+            this.btnElminar.Click += new System.EventHandler(this.btnElminar_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(192, 54);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(316, 23);
+            this.textBox4.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(120, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Buscar";
+            // 
             // frmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(850, 600);
-            this.Controls.Add(this.tabSolicitud);
+            this.Controls.Add(this.tabMedico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Médico";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
-            this.tabSolicitud.ResumeLayout(false);
+            this.tabMedico.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).EndInit();
             this.ResumeLayout(false);
 
@@ -367,7 +415,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabControl tabSolicitud;
+        private System.Windows.Forms.TabControl tabMedico;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblIdMedico;
@@ -389,5 +437,9 @@
         private System.Windows.Forms.ComboBox combobxSexo;
         private System.Windows.Forms.ComboBox combobxEspe;
         private System.Windows.Forms.DataGridView dataGridViewMedico;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnElminar;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -68,7 +68,7 @@ namespace CapaPresentacion
                         txtbxCel.Text = "";
                         txtbxCed.Text = "";
                         txtbxDirec.Text = "";
-                        tabSolicitud.SelectedTab = tabPage2;
+                        tabMedico.SelectedTab = tabPage2;
                     }
                     else { MessageBox.Show("Error al agregar Recurso"); }
                 }
@@ -95,7 +95,7 @@ namespace CapaPresentacion
                         txtbxCel.Text = "";
                         txtbxCed.Text = "";
                         txtbxDirec.Text = "";
-                        tabSolicitud.SelectedTab = tabPage2;
+                        tabMedico.SelectedTab = tabPage2;
                     }
                     else
                     {
@@ -107,6 +107,42 @@ namespace CapaPresentacion
             catch
             {
                 MessageBox.Show("ERROR");
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtbxIdMedico.Visible = true;
+            txtbxIdMedico.Enabled = true;
+            lblIdMedico.Visible = true;
+
+            txtbxIdMedico.Text = dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString();
+            txtbxNombM.Text = dataGridViewMedico.CurrentRow.Cells["NombreM"].Value.ToString();
+            txtbxApellM.Text = dataGridViewMedico.CurrentRow.Cells["ApellidoM"].Value.ToString();
+            combobxEspe.SelectedItem = dataGridViewMedico.CurrentRow.Cells["IdEspecialidad"].Value;
+            txtbxCorreo.Text = dataGridViewMedico.CurrentRow.Cells["EmailM"].Value.ToString();
+            txtbxCel.Text = dataGridViewMedico.CurrentRow.Cells["TelefonoM"].Value.ToString();
+            txtbxCed.Text = dataGridViewMedico.CurrentRow.Cells["CedulaM"].Value.ToString();
+            combobxSexo.SelectedItem = dataGridViewMedico.CurrentRow.Cells["SexoM"].Value;
+            txtbxDirec.Text = dataGridViewMedico.CurrentRow.Cells["DireccionM"].Value.ToString();
+            tabMedico.SelectedTab = tabPage1;
+            btnRegistrar.Text = "Actualizar";
+        }
+
+        private void btnElminar_Click(object sender, EventArgs e)
+        {
+            int codigoM = Convert.ToInt32(dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString());
+            try
+            {
+                if (LNMedico.eliminarMedico(codigoM) > 0)
+                {
+                    MessageBox.Show("Eliminado con éxito");
+                    dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR al eliminar Medico");
             }
         }
     }

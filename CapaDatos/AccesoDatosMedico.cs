@@ -16,7 +16,7 @@ namespace CapaDatos
         Medico Medic = new Medico(); // capa entidades
         Conexion cn = new Conexion(); // conexion
         SqlCommand cm = null; //Comandos sql
-        int indicador = 0; // variable indicador para comprobar CRUD para cargar datos
+        int indicador = 0; 
         SqlDataReader dr = null;
         List<Medico> listaMedico = null;
 
@@ -24,9 +24,9 @@ namespace CapaDatos
         {
             try
             {
-                SqlConnection cnx = cn.Conectar(); // conectar
-                cm = new SqlCommand("Medico_Proced", cnx); //nombre del procedimiento SQL
-                cm.Parameters.AddWithValue("@b", 1); //valores que toman los parametros del procedimiento
+                SqlConnection cnx = cn.Conectar(); 
+                cm = new SqlCommand("Medico_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@IdMedico", "");
                 cm.Parameters.AddWithValue("@NombreM", Med.NombreM);
                 cm.Parameters.AddWithValue("@ApellidoM", Med.ApellidoM);
@@ -36,6 +36,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@CedulaM", Med.CedulaM);
                 cm.Parameters.AddWithValue("@SexoM", Med.SexoM);
                 cm.Parameters.AddWithValue("@DireccionM", Med.DireccionM);
+
 
                 cm.CommandType = CommandType.StoredProcedure;// tipo de comando ejecutado
                 cnx.Open();
@@ -64,9 +65,9 @@ namespace CapaDatos
 
             try
             {
-                
+
                 SqlConnection cnx = cn.Conectar();//conectar
-                
+
                 cm = new SqlCommand("Medico_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@IdMedico", "");
@@ -78,7 +79,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@CedulaM", "");
                 cm.Parameters.AddWithValue("@SexoM", "");
                 cm.Parameters.AddWithValue("@DireccionM", "");
-                
+
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 dr = cm.ExecuteReader();
@@ -98,6 +99,7 @@ namespace CapaDatos
                     me.CedulaM = dr["CedulaM"].ToString();
                     me.SexoM = dr["SexoM"].ToString();
                     me.DireccionM = dr["DireccionM"].ToString();
+
                     listaMedico.Add(me); //agergar registros encontrados a la lista
 
                 }
@@ -207,7 +209,7 @@ namespace CapaDatos
 
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Medico_Proced", cnx);
-                cm.Parameters.AddWithValue("b", 5);
+                cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@IdMedico", "");
                 cm.Parameters.AddWithValue("@NombreM", dato);
                 cm.Parameters.AddWithValue("@ApellidoM", dato);
@@ -256,6 +258,7 @@ namespace CapaDatos
             }
             return listaMedico;
         }
+
     }
 }
 

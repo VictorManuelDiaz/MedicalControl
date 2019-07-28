@@ -104,6 +104,7 @@
             this.txtbxContra.Size = new System.Drawing.Size(314, 22);
             this.txtbxContra.TabIndex = 4;
             this.txtbxContra.UseSystemPasswordChar = true;
+            this.txtbxContra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbxContra_KeyPress);
             // 
             // lblErrorSesion
             // 

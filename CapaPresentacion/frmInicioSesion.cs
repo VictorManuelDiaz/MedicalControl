@@ -52,5 +52,14 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void txtbxContra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnEntrar.PerformClick();
+            }
+        }
+
     }
 }

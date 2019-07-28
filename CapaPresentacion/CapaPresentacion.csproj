@@ -76,12 +76,6 @@
     <Compile Include="frmPacientes.Designer.cs">
       <DependentUpon>frmPacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPanelPrincipalAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPanelPrincipalAdmin.Designer.cs">
-      <DependentUpon>frmPanelPrincipalAdmin.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMedicos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +104,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPacientes.resx">
       <DependentUpon>frmPacientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPanelPrincipalAdmin.resx">
-      <DependentUpon>frmPanelPrincipalAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMedicos.resx">
       <DependentUpon>frmMedicos.cs</DependentUpon>

@@ -166,8 +166,9 @@ namespace CapaDatos
                     exp.ApellidosPac = dr["ApellidoPac"].ToString();
                     exp.FechaNacimiento = dr["FechaNacimiento"].ToString();
                     exp.LugarNacimiento = dr["LugarNacimiento"].ToString();
+                    exp.SexoPac = dr["SexoPac"].ToString();
                     exp.EdadPac = Convert.ToInt32(dr["EdadPac"].ToString());
-                    exp.GrupoEtnico = Convert.ToInt32(dr["GrupoEtnico"].ToString());
+                    exp.GrupoEtnico =dr["GrupoEtnico"].ToString();
                     exp.DireccionHabitualPac = dr["DireccionHabitualPac"].ToString();
                     exp.NombrePadre = dr["NombrePadre"].ToString();
                     exp.NombreMadre = dr["NombreMadre"].ToString();
@@ -201,7 +202,7 @@ namespace CapaDatos
                     exp.EnferHMalCongenitas = Convert.ToChar(dr["EnferHMalCongenitas"]);
                     exp.EnferHDesorMentales = Convert.ToChar(dr["EnferHDesorMentales"]);
 
-                    listaExpediente.Add(exp); //agergar registros encontrados a la lista
+                    listaExpediente.Add(exp);
 
                 }
 
@@ -378,7 +379,7 @@ namespace CapaDatos
                     exp.FechaNacimiento = dr["FechaNacimiento"].ToString();
                     exp.LugarNacimiento = dr["LugarNacimiento"].ToString();
                     exp.EdadPac = Convert.ToInt32(dr["EdadPac"].ToString());
-                    exp.GrupoEtnico = Convert.ToInt32(dr["GrupoEtnico"].ToString());
+                    exp.GrupoEtnico = dr["GrupoEtnico"].ToString();
                     exp.DireccionHabitualPac = dr["DireccionHabitualPac"].ToString();
                     exp.NombrePadre = dr["NombrePadre"].ToString();
                     exp.NombreMadre = dr["NombreMadre"].ToString();
@@ -411,7 +412,7 @@ namespace CapaDatos
                     exp.EnferHMusculares = Convert.ToChar(dr["EnferHMusculares"]);
                     exp.EnferHMalCongenitas = Convert.ToChar(dr["EnferHMalCongenitas"]);
                     exp.EnferHDesorMentales = Convert.ToChar(dr["EnferHDesorMentales"]);
-                    listaExpediente.Add(exp); //agergar registros encontrados a la lista
+                    listaExpediente.Add(exp);
 
                 }
 

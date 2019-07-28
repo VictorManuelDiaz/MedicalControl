@@ -7,7 +7,6 @@ E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
-E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmPanelPrincipalAdmin.resources
 E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaEntidades.dll
 E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaNegocio.dll
 E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaDatos.dll

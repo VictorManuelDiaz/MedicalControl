@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cita.cs" />
+    <Compile Include="Complete.cs" />
     <Compile Include="Consulta.cs" />
     <Compile Include="ConsultaMedicamento.cs" />
     <Compile Include="Cuenta.cs" />

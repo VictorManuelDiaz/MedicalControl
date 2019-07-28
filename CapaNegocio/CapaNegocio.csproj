@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LogicaNegocioCita.cs" />
+    <Compile Include="LogicaNegocioComplete.cs" />
     <Compile Include="LogicaNegocioConsulta.cs" />
     <Compile Include="LogicaNegocioConsulta_Medicamen.cs" />
     <Compile Include="LogicaNegocioDetalleServicios.cs" />

@@ -36,6 +36,7 @@
             this.tlsCitas = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsExpedientes = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsCuentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsCuentasUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
@@ -45,9 +46,9 @@
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsInicio,
+            this.tlsCitas,
             this.tlsMedicos,
             this.tlsPacientes,
-            this.tlsCitas,
             this.tlsExpedientes,
             this.tlsCuentas,
             this.tlsSalir});
@@ -95,10 +96,18 @@
             // 
             // tlsCuentas
             // 
+            this.tlsCuentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsCuentasUsuario});
             this.tlsCuentas.Name = "tlsCuentas";
-            this.tlsCuentas.Size = new System.Drawing.Size(62, 20);
-            this.tlsCuentas.Text = "Cuentas";
-            this.tlsCuentas.Click += new System.EventHandler(this.tlsCuentas_Click_1);
+            this.tlsCuentas.Size = new System.Drawing.Size(106, 20);
+            this.tlsCuentas.Text = "Configuraciones";
+            // 
+            // tlsCuentasUsuario
+            // 
+            this.tlsCuentasUsuario.Name = "tlsCuentasUsuario";
+            this.tlsCuentasUsuario.Size = new System.Drawing.Size(175, 22);
+            this.tlsCuentasUsuario.Text = "Cuentas de usuario";
+            this.tlsCuentasUsuario.Click += new System.EventHandler(this.tlsCuentasUsuario_Click);
             // 
             // tlsSalir
             // 
@@ -137,6 +146,7 @@
         private System.Windows.Forms.ToolStripMenuItem tlsSalir;
         private System.Windows.Forms.ToolStripMenuItem tlsPacientes;
         private System.Windows.Forms.ToolStripMenuItem tlsInicio;
+        private System.Windows.Forms.ToolStripMenuItem tlsCuentasUsuario;
     }
 }
 

@@ -10,8 +10,8 @@ namespace CapaEntidades
     {
 
         public int IdCita { get; set; }
-        public string FechaConsul { get; set; }
-        public string FechaRealCita { get; set; }
+        public DateTime FechaConsul { get; set; }
+        public DateTime FechaRealCita { get; set; }
         public string HoraC { get; set; }
         public int NumeroExpediente { get; set; }
         public int IdMedico { get; set; }

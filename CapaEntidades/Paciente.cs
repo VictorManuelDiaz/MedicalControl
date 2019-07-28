@@ -18,7 +18,7 @@ namespace CapaEntidades
         public string LugarNacimiento { get; set; }
         public string SexoPac { get; set; }
         public int EdadPac { get; set; }
-        public int GrupoEtnico { get; set; }
+        public string GrupoEtnico { get; set; }
         public string DireccionHabitualPac { get; set; }
         public string NombrePadre { get; set; }
         public string NombreMadre { get; set; }

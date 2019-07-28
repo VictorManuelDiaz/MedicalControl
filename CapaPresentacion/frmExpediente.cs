@@ -18,19 +18,18 @@ namespace CapaPresentacion
         public frmExpediente()
         {
             InitializeComponent();
-        }
-
-        private void tabPage1_MouseMove(object sender, MouseEventArgs e)
-        {
-
+           
         }
 
         private void frmExpediente_Load(object sender, EventArgs e)
         {
-            dataGridViewExp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
             dataGridViewExp.DataSource = LNExp.ListarExpediente();
         }
 
-        
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

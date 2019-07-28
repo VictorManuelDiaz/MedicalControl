@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatosCita.cs" />
+    <Compile Include="AccesoDatosComplete.cs" />
     <Compile Include="AccesoDatosConsulta.cs" />
     <Compile Include="AccesoDatosConsulta_Medicamen.cs" />
     <Compile Include="AccesoDatosCuenta.cs" />

@@ -104,7 +104,7 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo expediente";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tabPage1_MouseMove);
+            
             // 
             // tableLayoutPanel2
             // 
@@ -124,7 +124,7 @@
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(206, 30);
+            this.label17.Location = new System.Drawing.Point(155, 30);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(148, 21);
             this.label17.TabIndex = 3;
@@ -139,6 +139,7 @@
             this.btnRegistrar.TabIndex = 2;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // tableLayoutPanel1
             // 

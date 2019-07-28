@@ -33,7 +33,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TratamientoIndicado", Ex.TratamientoIndicado);
                 cm.Parameters.AddWithValue("@CedulaPac", Ex.CedulaPac);
                 cm.Parameters.AddWithValue("@NombrePac", Ex.NombrePac);
-                cm.Parameters.AddWithValue("@ApellidoPac", Ex.ApellidosPac);
+                cm.Parameters.AddWithValue("@ApellidosPac", Ex.ApellidosPac);
                 cm.Parameters.AddWithValue("@FechaNacimiento", Ex.FechaNacimiento);
                 cm.Parameters.AddWithValue("@LugarNacimiento", Ex.LugarNacimiento);
                 cm.Parameters.AddWithValue("@SexoPac", Ex.SexoPac);
@@ -113,11 +113,12 @@ namespace CapaDatos
                     pac.TratamientoIndicado = dr["TratamientoIndicado"].ToString();
                     pac.CedulaPac = dr["CedulaPac"].ToString();
                     pac.NombrePac = dr["NombrePac"].ToString();
-                    pac.ApellidosPac = dr["ApellidoPac"].ToString();
+                    pac.ApellidosPac = dr["ApellidosPac"].ToString();
                     pac.FechaNacimiento = dr["FechaNacimiento"].ToString();
                     pac.LugarNacimiento = dr["LugarNacimiento"].ToString();
+                    pac.SexoPac = dr["SexoPac"].ToString();
                     pac.EdadPac = Convert.ToInt32(dr["EdadPac"].ToString());
-                    pac.GrupoEtnico = Convert.ToInt32(dr["GrupoEtnico"].ToString());
+                    pac.GrupoEtnico = dr["GrupoEtnico"].ToString();
                     pac.DireccionHabitualPac = dr["DireccionHabitualPac"].ToString();
                     pac.NombrePadre = dr["NombrePadre"].ToString();
                     pac.NombreMadre = dr["NombreMadre"].ToString();
@@ -277,7 +278,7 @@ namespace CapaDatos
                     pac.FechaNacimiento = dr["FechaNacimiento"].ToString();
                     pac.LugarNacimiento = dr["LugarNacimiento"].ToString();
                     pac.EdadPac = Convert.ToInt32(dr["EdadPac"].ToString());
-                    pac.GrupoEtnico = Convert.ToInt32(dr["GrupoEtnico"].ToString());
+                    pac.GrupoEtnico = dr["GrupoEtnico"].ToString();
                     pac.DireccionHabitualPac = dr["DireccionHabitualPac"].ToString();
                     pac.NombrePadre = dr["NombrePadre"].ToString();
                     pac.NombreMadre = dr["NombreMadre"].ToString();

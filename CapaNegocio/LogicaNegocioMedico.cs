@@ -37,6 +37,6 @@ namespace CapaNegocio
         {
             return MED.BuscarMedico(dato);
         }
-
+        
     }
 }

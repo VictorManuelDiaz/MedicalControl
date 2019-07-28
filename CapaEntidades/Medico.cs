@@ -18,6 +18,5 @@ namespace CapaEntidades
         public string CedulaM { get; set; }
         public string SexoM { get; set; }
         public string DireccionM { get; set; }
-
     }
 }

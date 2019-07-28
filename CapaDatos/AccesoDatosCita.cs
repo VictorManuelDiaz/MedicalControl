@@ -79,8 +79,8 @@ namespace CapaDatos
                     Cita Cit = new Cita();
 
                     Cit.IdCita = Convert.ToInt32(dr["IdCita"].ToString());
-                    Cit.FechaConsul = dr["FechaConsult"].ToString();
-                    Cit.FechaRealCita = dr["FechaRealCita"].ToString();
+                    Cit.FechaConsul = Convert.ToDateTime(dr["FechaConsult"].ToString());
+                    Cit.FechaRealCita =Convert.ToDateTime(dr["FechaRealCita"].ToString());
                     Cit.HoraC = dr["HoraC"].ToString();
                     Cit.NumeroExpediente = Convert.ToInt32(dr["NuemroExpediente"].ToString());
                     Cit.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
@@ -202,8 +202,8 @@ namespace CapaDatos
                     Cita Cit = new Cita();
 
                     Cit.IdCita = Convert.ToInt32(dr["IdCita"].ToString());
-                    Cit.FechaConsul = dr["FechaConsult"].ToString();
-                    Cit.FechaRealCita = dr["FechaRealCita"].ToString();
+                    Cit.FechaConsul = Convert.ToDateTime(dr["FechaConsult"].ToString());
+                    Cit.FechaRealCita = Convert.ToDateTime(dr["FechaRealCita"].ToString());
                     Cit.HoraC = dr["HoraC"].ToString();
                     Cit.NumeroExpediente = Convert.ToInt32(dr["NuemroExpediente"].ToString());
                     Cit.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
