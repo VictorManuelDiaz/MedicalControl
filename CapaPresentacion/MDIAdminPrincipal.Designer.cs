@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.tlsInicio = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsCitas = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsMedicos = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsPacientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlsCitas = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsExpedientes = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsCuentas = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsCuentasUsuario = new System.Windows.Forms.ToolStripMenuItem();
@@ -54,7 +54,7 @@
             this.tlsSalir});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(884, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1184, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -64,6 +64,13 @@
             this.tlsInicio.Size = new System.Drawing.Size(48, 20);
             this.tlsInicio.Text = "Inicio";
             this.tlsInicio.Click += new System.EventHandler(this.tlsInicio_Click);
+            // 
+            // tlsCitas
+            // 
+            this.tlsCitas.Name = "tlsCitas";
+            this.tlsCitas.Size = new System.Drawing.Size(45, 20);
+            this.tlsCitas.Text = "Citas";
+            this.tlsCitas.Click += new System.EventHandler(this.tlsCitas_Click);
             // 
             // tlsMedicos
             // 
@@ -79,13 +86,6 @@
             this.tlsPacientes.Size = new System.Drawing.Size(69, 20);
             this.tlsPacientes.Text = "Pacientes";
             this.tlsPacientes.Click += new System.EventHandler(this.tlsPacientes_Click);
-            // 
-            // tlsCitas
-            // 
-            this.tlsCitas.Name = "tlsCitas";
-            this.tlsCitas.Size = new System.Drawing.Size(45, 20);
-            this.tlsCitas.Text = "Citas";
-            this.tlsCitas.Click += new System.EventHandler(this.tlsCitas_Click);
             // 
             // tlsExpedientes
             // 
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 662);
+            this.ClientSize = new System.Drawing.Size(1184, 662);
             this.Controls.Add(this.menuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;

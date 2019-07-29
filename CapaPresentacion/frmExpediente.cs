@@ -21,15 +21,5 @@ namespace CapaPresentacion
            
         }
 
-        private void frmExpediente_Load(object sender, EventArgs e)
-        {
-            
-            dataGridViewExp.DataSource = LNExp.ListarExpediente();
-        }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -20,10 +20,5 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void frmPacientes_Load(object sender, EventArgs e)
-        {
-            dataGridViewPac.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewPac.DataSource = LNPac.ListarPaciente();
-        }
     }
 }

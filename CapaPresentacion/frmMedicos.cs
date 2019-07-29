@@ -68,7 +68,7 @@ namespace CapaPresentacion
                         txtbxCel.Text = "";
                         txtbxCed.Text = "";
                         txtbxDirec.Text = "";
-                        tabMedico.SelectedTab = tabPage2;
+                       
                     }
                     else { MessageBox.Show("Error al agregar Recurso"); }
                 }
@@ -95,7 +95,7 @@ namespace CapaPresentacion
                         txtbxCel.Text = "";
                         txtbxCed.Text = "";
                         txtbxDirec.Text = "";
-                        tabMedico.SelectedTab = tabPage2;
+                       
                     }
                     else
                     {
@@ -144,6 +144,16 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("ERROR al eliminar Medico");
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
