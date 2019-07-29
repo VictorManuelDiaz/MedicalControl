@@ -40,7 +40,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.combobxEspe = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblIdMedico = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtbxIdMedico = new System.Windows.Forms.TextBox();
             this.txtbxNombM = new System.Windows.Forms.TextBox();
@@ -56,6 +55,7 @@
             this.txtbxCed = new System.Windows.Forms.TextBox();
             this.txtbxDirec = new System.Windows.Forms.TextBox();
             this.combobxSexo = new System.Windows.Forms.ComboBox();
+            this.lblIdMedico = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabMedico.SuspendLayout();
@@ -223,17 +223,6 @@
             this.label9.TabIndex = 11;
             this.label9.Text = "Dirección:";
             // 
-            // lblIdMedico
-            // 
-            this.lblIdMedico.AutoSize = true;
-            this.lblIdMedico.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdMedico.ForeColor = System.Drawing.Color.Transparent;
-            this.lblIdMedico.Location = new System.Drawing.Point(3, 0);
-            this.lblIdMedico.Name = "lblIdMedico";
-            this.lblIdMedico.Size = new System.Drawing.Size(22, 17);
-            this.lblIdMedico.TabIndex = 0;
-            this.lblIdMedico.Text = "Id:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -381,6 +370,17 @@
             this.combobxSexo.Size = new System.Drawing.Size(121, 23);
             this.combobxSexo.TabIndex = 19;
             // 
+            // lblIdMedico
+            // 
+            this.lblIdMedico.AutoSize = true;
+            this.lblIdMedico.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdMedico.ForeColor = System.Drawing.Color.Transparent;
+            this.lblIdMedico.Location = new System.Drawing.Point(3, 0);
+            this.lblIdMedico.Name = "lblIdMedico";
+            this.lblIdMedico.Size = new System.Drawing.Size(22, 17);
+            this.lblIdMedico.TabIndex = 0;
+            this.lblIdMedico.Text = "Id:";
+            // 
             // btnRegistrar
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
@@ -399,7 +399,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1092, 561);
+            this.tabPage3.Size = new System.Drawing.Size(1103, 566);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Médicos en turno";
             this.tabPage3.UseVisualStyleBackColor = true;

@@ -12,9 +12,9 @@ namespace CapaNegocio
     {
         AccesoDatosPaciente Pac = new AccesoDatosPaciente();
 
-        public int InsertarPaciente(Expediente ex)
+        public int InsertarPaciente(Paciente pac)
         {
-            return Pac.InsertarPaciente(ex);
+            return Pac.InsertarPaciente(pac);
         }
 
         public List<Paciente> ListarPaciente()
@@ -27,7 +27,7 @@ namespace CapaNegocio
             return Pac.EliminarPaciente(NumeroExpediente);
         }
 
-        public int EditarExpediente(Paciente Pac)
+        public int EditarPaciente(Paciente Pac)
         {
             return this.Pac.EditarPaciente(Pac);
         }

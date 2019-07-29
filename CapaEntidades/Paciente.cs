@@ -9,8 +9,6 @@ namespace CapaEntidades
     public class Paciente
     {
         public int NumeroExpediente { get; set; }
-        public string MotivoConsulta { get; set; }
-        public string TratamientoIndicado { get; set; }
         public string CedulaPac { get; set; }
         public string NombrePac { get; set; }
         public string ApellidosPac { get; set; }

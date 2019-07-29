@@ -80,7 +80,7 @@ namespace CapaPresentacion
 
         private void MDIAdminPrincipal_Load(object sender, EventArgs e)
         {
-
+            Controls.OfType<MDIAdminPrincipal>().FirstOrDefault().BackColor = Color.White;
         }
 
         private void tlsMedicos_Click(object sender, EventArgs e)
@@ -134,5 +134,7 @@ namespace CapaPresentacion
             Cuentas.MdiParent = this;
             Cuentas.Show();
         }
+
+      
     }
 }

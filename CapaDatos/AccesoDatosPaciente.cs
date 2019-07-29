@@ -21,7 +21,7 @@ namespace CapaDatos
         SqlDataReader dr = null;
         List<Paciente> listaPaciente = null;
 
-        public int InsertarPaciente(Expediente Ex)
+        public int InsertarPaciente(Paciente Pac)
         {
             try
             {
@@ -29,23 +29,21 @@ namespace CapaDatos
                 cm = new SqlCommand("Paciente_Proced", cnx); //nombre del procedimiento SQL
                 cm.Parameters.AddWithValue("@b", 1); //valores que toman los parametros del procedimiento
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
-                cm.Parameters.AddWithValue("@MotivoConsulta", Ex.MotivoConsulta);
-                cm.Parameters.AddWithValue("@TratamientoIndicado", Ex.TratamientoIndicado);
-                cm.Parameters.AddWithValue("@CedulaPac", Ex.CedulaPac);
-                cm.Parameters.AddWithValue("@NombrePac", Ex.NombrePac);
-                cm.Parameters.AddWithValue("@ApellidosPac", Ex.ApellidosPac);
-                cm.Parameters.AddWithValue("@FechaNacimiento", Ex.FechaNacimiento);
-                cm.Parameters.AddWithValue("@LugarNacimiento", Ex.LugarNacimiento);
-                cm.Parameters.AddWithValue("@SexoPac", Ex.SexoPac);
-                cm.Parameters.AddWithValue("@EdadPac", Ex.EdadPac);
-                cm.Parameters.AddWithValue("@GrupoEtnico", Ex.GrupoEtnico);
-                cm.Parameters.AddWithValue("@DireccionHabitualPac", Ex.DireccionHabitualPac);
-                cm.Parameters.AddWithValue("@NombrePadre", Ex.NombrePadre);
-                cm.Parameters.AddWithValue("@NombreMadre", Ex.NombreMadre);
-                cm.Parameters.AddWithValue("@ReligionPac", Ex.ReligionPac);
-                cm.Parameters.AddWithValue("@ProcedenciaPac", Ex.ProcedenciaPac);
-                cm.Parameters.AddWithValue("@TelefonoPac", Ex.TelefonoPac);
-                cm.Parameters.AddWithValue("@EstadoCivilPac", Ex.EstadoCivilPac);
+                cm.Parameters.AddWithValue("@CedulaPac", Pac.CedulaPac);
+                cm.Parameters.AddWithValue("@NombrePac", Pac.NombrePac);
+                cm.Parameters.AddWithValue("@ApellidosPac", Pac.ApellidosPac);
+                cm.Parameters.AddWithValue("@FechaNacimiento", Pac.FechaNacimiento);
+                cm.Parameters.AddWithValue("@LugarNacimiento", Pac.LugarNacimiento);
+                cm.Parameters.AddWithValue("@SexoPac", Pac.SexoPac);
+                cm.Parameters.AddWithValue("@EdadPac", Pac.EdadPac);
+                cm.Parameters.AddWithValue("@GrupoEtnico", Pac.GrupoEtnico);
+                cm.Parameters.AddWithValue("@DireccionHabitualPac", Pac.DireccionHabitualPac);
+                cm.Parameters.AddWithValue("@NombrePadre", Pac.NombrePadre);
+                cm.Parameters.AddWithValue("@NombreMadre", Pac.NombreMadre);
+                cm.Parameters.AddWithValue("@ReligionPac", Pac.ReligionPac);
+                cm.Parameters.AddWithValue("@ProcedenciaPac", Pac.ProcedenciaPac);
+                cm.Parameters.AddWithValue("@TelefonoPac", Pac.TelefonoPac);
+                cm.Parameters.AddWithValue("@EstadoCivilPac", Pac.EstadoCivilPac);
                 
 
                 cm.CommandType = CommandType.StoredProcedure;// tipo de comando ejecutado
@@ -80,8 +78,6 @@ namespace CapaDatos
                 cm = new SqlCommand("Paciente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
-                cm.Parameters.AddWithValue("@MotivoConsulta", "");
-                cm.Parameters.AddWithValue("@TratamientoIndicado", "");
                 cm.Parameters.AddWithValue("@CedulaPac", "");
                 cm.Parameters.AddWithValue("@NombrePac", "");
                 cm.Parameters.AddWithValue("@ApellidosPac", "");
@@ -109,8 +105,6 @@ namespace CapaDatos
                     Paciente pac = new Paciente();
 
                     pac.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
-                    pac.MotivoConsulta = dr["MotivoConsulta"].ToString();
-                    pac.TratamientoIndicado = dr["TratamientoIndicado"].ToString();
                     pac.CedulaPac = dr["CedulaPac"].ToString();
                     pac.NombrePac = dr["NombrePac"].ToString();
                     pac.ApellidosPac = dr["ApellidosPac"].ToString();
@@ -192,8 +186,6 @@ namespace CapaDatos
                 cm = new SqlCommand("Paciente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
-                cm.Parameters.AddWithValue("@MotivoConsulta", "");
-                cm.Parameters.AddWithValue("@TratamientoIndicado", "");
                 cm.Parameters.AddWithValue("@CedulaPac", "");
                 cm.Parameters.AddWithValue("@NombrePac", Pac.NombrePac);
                 cm.Parameters.AddWithValue("@ApellidosPac", Pac.ApellidosPac);
@@ -239,8 +231,6 @@ namespace CapaDatos
                 cm = new SqlCommand("Paciente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
-                cm.Parameters.AddWithValue("@MotivoConsulta", "");
-                cm.Parameters.AddWithValue("@TratamientoIndicado", "");
                 cm.Parameters.AddWithValue("@CedulaPac", dato);
                 cm.Parameters.AddWithValue("@NombrePac", dato);
                 cm.Parameters.AddWithValue("@ApellidosPac", dato);
@@ -270,8 +260,6 @@ namespace CapaDatos
                     Paciente pac = new Paciente();
 
                     pac.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
-                    pac.MotivoConsulta = dr["MotivoConsulta"].ToString();
-                    pac.TratamientoIndicado = dr["TratamientoIndicado"].ToString();
                     pac.CedulaPac = dr["CedulaPac"].ToString();
                     pac.NombrePac = dr["NombrePac"].ToString();
                     pac.ApellidosPac = dr["ApellidoPac"].ToString();
