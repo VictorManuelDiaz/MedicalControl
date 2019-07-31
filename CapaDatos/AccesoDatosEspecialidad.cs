@@ -19,6 +19,7 @@ namespace CapaDatos
         int indicador = 0; 
         SqlDataReader dr = null;
         List<Especialidad> listaEspecialidad = null;
+        int IdEspecialidad;
 
         public int InsertarEspecialidad(Especialidad E)
         {
@@ -28,7 +29,7 @@ namespace CapaDatos
                 cm = new SqlCommand("Especialidad_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@IdEspecialidad", "");
-                cm.Parameters.AddWithValue("@NombreES", E.NombreEs);
+                cm.Parameters.AddWithValue("@NombreEs", E.NombreEs);
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -174,8 +175,9 @@ namespace CapaDatos
 
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Especialidad_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@IdEspecialidad", "");
-                cm.Parameters.AddWithValue("@NombreEspecialidad", dato);
+                cm.Parameters.AddWithValue("@NombreEs", dato);
 
 
 
@@ -207,5 +209,43 @@ namespace CapaDatos
             return listaEspecialidad;
         }
 
+        public int BuscarIdEspecialidad(string dato)
+        {
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("Especialidad_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 6);
+                cm.Parameters.AddWithValue("@IdEspecialidad", "");
+                cm.Parameters.AddWithValue("@NombreEs", dato);
+
+
+
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+
+                while (dr.Read())
+                {
+
+                    IdEspecialidad = Convert.ToInt32(dr["IdEspecialidad"].ToString());
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+                e.Message.ToString();
+                IdEspecialidad = 0;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return IdEspecialidad;
+        }
     }
 }

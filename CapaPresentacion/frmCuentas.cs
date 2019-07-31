@@ -22,8 +22,11 @@ namespace CapaPresentacion
 
         private void frmCuentas_Load(object sender, EventArgs e)
         {
-            dataGridViewCuentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCuentas.DataSource = LNCuentas.ListarCuenta();
+            dataGridViewCuentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            lblIdUsu.Visible = false;
+            txtbxUsu.Visible = false;
+            
         }
 
         

@@ -128,13 +128,18 @@ namespace CapaPresentacion
             Paci.Show();
         }
 
-        private void tlsCuentasUsuario_Click(object sender, EventArgs e)
+        private void tlsUsuarios_Click(object sender, EventArgs e)
         {
             frmCuentas Cuentas = new frmCuentas();
             Cuentas.MdiParent = this;
             Cuentas.Show();
         }
 
-      
+        private void tlsEspecialidades_Click(object sender, EventArgs e)
+        {
+            frmEspecialidad Especialidad = new frmEspecialidad();
+            Especialidad.MdiParent = this;
+            Especialidad.Show();
+        }
     }
 }

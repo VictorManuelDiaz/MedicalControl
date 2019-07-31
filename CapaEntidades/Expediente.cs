@@ -26,30 +26,30 @@ namespace CapaEntidades
         public string ProcedenciaPac { get; set; }
         public string TelefonoPac { get; set; }
         public string EstadoCivilPac { get; set; }
-        public char EnferICHepatitis { get; set; }
-        public char EnferICSifilis { get; set; }
-        public char EnferICColera { get; set; }
-        public char EnferICTosferina { get; set; }
-        public char EnferICSarampion { get; set; }
-        public char EnferICVaricela { get; set; }
-        public char EnferICRubeola { get; set; }
-        public char EnferICPariotiditis { get; set; }
-        public char EnferICMeningitis { get; set; }
-        public char EnferICImpetigo { get; set; }
-        public char EnferICTifoidea { get; set; }
-        public char EnferICMalaria { get; set; }
-        public char EnferICEscabiasis { get; set; }
-        public char EnferICTina { get; set; }
-        public char EnferHAlergias { get; set; }
-        public char EnferHDiabetes { get; set; }
-        public char EnferHHipertension { get; set; }
-        public char EnferHReumatica { get; set; }
-        public char EnferHRenales { get; set; }
-        public char EnferHOculares { get; set; }
-        public char EnferHCardiacas { get; set; }
-        public char EnferHHepatica { get; set; }
-        public char EnferHMusculares { get; set; }
-        public char EnferHMalCongenitas { get; set; }
-        public char EnferHDesorMentales { get; set; }
+        public string EnferICHepatitis { get; set; }
+        public string EnferICSifilis { get; set; }
+        public string EnferICColera { get; set; }
+        public string EnferICTosferina { get; set; }
+        public string EnferICSarampion { get; set; }
+        public string EnferICVaricela { get; set; }
+        public string EnferICRubeola { get; set; }
+        public string EnferICPariotiditis { get; set; }
+        public string EnferICMeningitis { get; set; }
+        public string EnferICImpetigo { get; set; }
+        public string EnferICTifoidea { get; set; }
+        public string EnferICMalaria { get; set; }
+        public string EnferICEscabiasis { get; set; }
+        public string EnferICTina { get; set; }
+        public string EnferHAlergias { get; set; }
+        public string EnferHDiabetes { get; set; }
+        public string EnferHHipertension { get; set; }
+        public string EnferHReumatica { get; set; }
+        public string EnferHRenales { get; set; }
+        public string EnferHOculares { get; set; }
+        public string EnferHCardiacas { get; set; }
+        public string EnferHHepatica { get; set; }
+        public string EnferHMusculares { get; set; }
+        public string EnferHMalCongenitas { get; set; }
+        public string EnferHDesorMentales { get; set; }
     }
 }

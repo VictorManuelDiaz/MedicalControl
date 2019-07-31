@@ -36,7 +36,12 @@ namespace CapaNegocio
         public List<Especialidad> BuscarEspecialidad(string dato)
         {
             return ES.BuscarEspecialidad(dato);
-        } 
+        }
+
+        public int BuscarIdEspecialidad(string dato)
+        {
+            return ES.BuscarIdEspecialidad(dato);
+        }
 
     }
 }

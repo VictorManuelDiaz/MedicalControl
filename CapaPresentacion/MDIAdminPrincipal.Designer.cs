@@ -36,7 +36,9 @@
             this.tlsPacientes = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsExpedientes = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsCuentas = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlsCuentasUsuario = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsServicios = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
@@ -97,17 +99,32 @@
             // tlsCuentas
             // 
             this.tlsCuentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tlsCuentasUsuario});
+            this.tlsEspecialidades,
+            this.tlsServicios,
+            this.tlsUsuarios});
             this.tlsCuentas.Name = "tlsCuentas";
             this.tlsCuentas.Size = new System.Drawing.Size(106, 20);
             this.tlsCuentas.Text = "Configuraciones";
             // 
-            // tlsCuentasUsuario
+            // tlsEspecialidades
             // 
-            this.tlsCuentasUsuario.Name = "tlsCuentasUsuario";
-            this.tlsCuentasUsuario.Size = new System.Drawing.Size(175, 22);
-            this.tlsCuentasUsuario.Text = "Cuentas de usuario";
-            this.tlsCuentasUsuario.Click += new System.EventHandler(this.tlsCuentasUsuario_Click);
+            this.tlsEspecialidades.Name = "tlsEspecialidades";
+            this.tlsEspecialidades.Size = new System.Drawing.Size(175, 22);
+            this.tlsEspecialidades.Text = "Especialidades";
+            this.tlsEspecialidades.Click += new System.EventHandler(this.tlsEspecialidades_Click);
+            // 
+            // tlsServicios
+            // 
+            this.tlsServicios.Name = "tlsServicios";
+            this.tlsServicios.Size = new System.Drawing.Size(175, 22);
+            this.tlsServicios.Text = "Servicios";
+            // 
+            // tlsUsuarios
+            // 
+            this.tlsUsuarios.Name = "tlsUsuarios";
+            this.tlsUsuarios.Size = new System.Drawing.Size(175, 22);
+            this.tlsUsuarios.Text = "Cuentas de usuario";
+            this.tlsUsuarios.Click += new System.EventHandler(this.tlsUsuarios_Click);
             // 
             // tlsSalir
             // 
@@ -147,7 +164,9 @@
         private System.Windows.Forms.ToolStripMenuItem tlsSalir;
         private System.Windows.Forms.ToolStripMenuItem tlsPacientes;
         private System.Windows.Forms.ToolStripMenuItem tlsInicio;
-        private System.Windows.Forms.ToolStripMenuItem tlsCuentasUsuario;
+        private System.Windows.Forms.ToolStripMenuItem tlsEspecialidades;
+        private System.Windows.Forms.ToolStripMenuItem tlsServicios;
+        private System.Windows.Forms.ToolStripMenuItem tlsUsuarios;
     }
 }
 

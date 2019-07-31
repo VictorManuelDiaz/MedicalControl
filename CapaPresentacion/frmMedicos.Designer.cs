@@ -51,13 +51,13 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtbxApellM = new System.Windows.Forms.TextBox();
             this.txtbxCorreo = new System.Windows.Forms.TextBox();
-            this.txtbxCel = new System.Windows.Forms.TextBox();
-            this.txtbxCed = new System.Windows.Forms.TextBox();
             this.txtbxDirec = new System.Windows.Forms.TextBox();
             this.combobxSexo = new System.Windows.Forms.ComboBox();
             this.lblIdMedico = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.maskedtxtbxCedMed = new System.Windows.Forms.MaskedTextBox();
+            this.maskedtxtbxTelefonoMed = new System.Windows.Forms.MaskedTextBox();
             this.tabMedico.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -163,13 +163,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(453, 566);
             this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.84475F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.15525F));
+            this.tableLayoutPanel1.Controls.Add(this.maskedtxtbxTelefonoMed, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.maskedtxtbxCedMed, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.combobxEspe, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 8);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
@@ -183,8 +184,6 @@
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtbxApellM, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.txtbxCorreo, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtbxCel, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.txtbxCed, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.txtbxDirec, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.combobxSexo, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.lblIdMedico, 0, 0);
@@ -200,9 +199,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(425, 412);
             this.tableLayoutPanel1.TabIndex = 1;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // combobxEspe
             // 
@@ -334,22 +333,6 @@
             this.txtbxCorreo.Size = new System.Drawing.Size(267, 21);
             this.txtbxCorreo.TabIndex = 14;
             // 
-            // txtbxCel
-            // 
-            this.txtbxCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxCel.Location = new System.Drawing.Point(155, 228);
-            this.txtbxCel.Name = "txtbxCel";
-            this.txtbxCel.Size = new System.Drawing.Size(267, 21);
-            this.txtbxCel.TabIndex = 15;
-            // 
-            // txtbxCed
-            // 
-            this.txtbxCed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxCed.Location = new System.Drawing.Point(155, 273);
-            this.txtbxCed.Name = "txtbxCed";
-            this.txtbxCed.Size = new System.Drawing.Size(267, 21);
-            this.txtbxCed.TabIndex = 16;
-            // 
             // txtbxDirec
             // 
             this.txtbxDirec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -404,6 +387,22 @@
             this.tabPage3.Text = "Médicos en turno";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // maskedtxtbxCedMed
+            // 
+            this.maskedtxtbxCedMed.Location = new System.Drawing.Point(155, 273);
+            this.maskedtxtbxCedMed.Mask = "000-000000-0000?";
+            this.maskedtxtbxCedMed.Name = "maskedtxtbxCedMed";
+            this.maskedtxtbxCedMed.Size = new System.Drawing.Size(267, 23);
+            this.maskedtxtbxCedMed.TabIndex = 51;
+            // 
+            // maskedtxtbxTelefonoMed
+            // 
+            this.maskedtxtbxTelefonoMed.Location = new System.Drawing.Point(155, 228);
+            this.maskedtxtbxTelefonoMed.Mask = "0000 0000";
+            this.maskedtxtbxTelefonoMed.Name = "maskedtxtbxTelefonoMed";
+            this.maskedtxtbxTelefonoMed.Size = new System.Drawing.Size(267, 23);
+            this.maskedtxtbxTelefonoMed.TabIndex = 52;
+            // 
             // frmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,8 +445,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtbxApellM;
         private System.Windows.Forms.TextBox txtbxCorreo;
-        private System.Windows.Forms.TextBox txtbxCel;
-        private System.Windows.Forms.TextBox txtbxCed;
         private System.Windows.Forms.TextBox txtbxDirec;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.ComboBox combobxSexo;
@@ -459,5 +456,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridViewMedico;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxCedMed;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxTelefonoMed;
     }
 }

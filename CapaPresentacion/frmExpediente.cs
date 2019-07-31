@@ -100,239 +100,239 @@ namespace CapaPresentacion
 
                     if (chkbxHepatitis.Checked==true)
                     {
-                        objetoExpediente.EnferICHepatitis = 'V';
+                        objetoExpediente.EnferICHepatitis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICHepatitis = 'F';
+                        objetoExpediente.EnferICHepatitis = "F";
                     }
 
                     if (chkbxSifilis.Checked == true)
                     {
-                        objetoExpediente.EnferICSifilis = 'V';
+                        objetoExpediente.EnferICSifilis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICSifilis = 'F';
+                        objetoExpediente.EnferICSifilis = "F";
                     }
 
                     if (chkbxColera.Checked == true)
                     {
-                        objetoExpediente.EnferICColera = 'V';
+                        objetoExpediente.EnferICColera = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICColera = 'F';
+                        objetoExpediente.EnferICColera = "F";
                     }
 
                     if (chkbxTosferina.Checked == true)
                     {
-                        objetoExpediente.EnferICTosferina = 'V';
+                        objetoExpediente.EnferICTosferina = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICTosferina = 'F';
+                        objetoExpediente.EnferICTosferina = "F";
                     }
 
                     if (chkbxSarampion.Checked == true)
                     {
-                        objetoExpediente.EnferICSarampion = 'V';
+                        objetoExpediente.EnferICSarampion = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICSarampion = 'F';
+                        objetoExpediente.EnferICSarampion = "F";
                     }
 
                     if (chkbxVaricela.Checked == true)
                     {
-                        objetoExpediente.EnferICVaricela = 'V';
+                        objetoExpediente.EnferICVaricela = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICVaricela = 'F';
+                        objetoExpediente.EnferICVaricela = "F";
                     }
 
                     if (chkbxRubeola.Checked == true)
                     {
-                        objetoExpediente.EnferICRubeola = 'V';
+                        objetoExpediente.EnferICRubeola = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICRubeola = 'F';
+                        objetoExpediente.EnferICRubeola = "F";
                     }
 
                     if (chkbxPariotiditis.Checked == true)
                     {
-                        objetoExpediente.EnferICPariotiditis = 'V';
+                        objetoExpediente.EnferICPariotiditis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICPariotiditis = 'F';
+                        objetoExpediente.EnferICPariotiditis = "F";
                     }
 
                     if (chkbxMeningitis.Checked == true)
                     {
-                        objetoExpediente.EnferICMeningitis = 'V';
+                        objetoExpediente.EnferICMeningitis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICMeningitis = 'F';
+                        objetoExpediente.EnferICMeningitis = "F";
                     }
 
                     if (chkbxImpetigo.Checked == true)
                     {
-                        objetoExpediente.EnferICImpetigo = 'V';
+                        objetoExpediente.EnferICImpetigo = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICImpetigo = 'F';
+                        objetoExpediente.EnferICImpetigo = "F";
                     }
 
                     if (chkbxFiebreTi.Checked == true)
                     {
-                        objetoExpediente.EnferICTifoidea = 'V';
+                        objetoExpediente.EnferICTifoidea = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICTifoidea = 'F';
+                        objetoExpediente.EnferICTifoidea = "F";
                     }
 
                     if (chkbxMalaria.Checked == true)
                     {
-                        objetoExpediente.EnferICMalaria = 'V';
+                        objetoExpediente.EnferICMalaria = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICMalaria = 'F';
+                        objetoExpediente.EnferICMalaria = "F";
                     }
 
                     if (chkbxEscabiasis.Checked == true)
                     {
-                        objetoExpediente.EnferICEscabiasis = 'V';
+                        objetoExpediente.EnferICEscabiasis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICEscabiasis = 'F';
+                        objetoExpediente.EnferICEscabiasis = "F";
                     }
 
                     if (chkbxTina.Checked == true)
                     {
-                        objetoExpediente.EnferICTina = 'V';
+                        objetoExpediente.EnferICTina = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICTina = 'F';
+                        objetoExpediente.EnferICTina = "F";
 
                     }
 
 
                     if (chkboxAlergias.Checked == true)
                     {
-                        objetoExpediente.EnferHAlergias = 'V';
+                        objetoExpediente.EnferHAlergias = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHAlergias = 'F';
+                        objetoExpediente.EnferHAlergias = "F";
 
                     }
 
                     if (chkbxDiabetes.Checked == true)
                     {
-                        objetoExpediente.EnferHDiabetes = 'V';
+                        objetoExpediente.EnferHDiabetes = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHDiabetes = 'F';
+                        objetoExpediente.EnferHDiabetes = "F";
 
                     }
 
                     if (chkbxHipertension.Checked == true)
                     {
-                        objetoExpediente.EnferHHipertension = 'V';
+                        objetoExpediente.EnferHHipertension = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHHipertension = 'F';
+                        objetoExpediente.EnferHHipertension = "F";
 
                     }
 
                     if (chkbxReumatica.Checked == true)
                     {
-                        objetoExpediente.EnferHReumatica = 'V';
+                        objetoExpediente.EnferHReumatica = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHReumatica = 'F';
+                        objetoExpediente.EnferHReumatica = "F";
 
                     }
 
                     if (chkbxRenales.Checked == true)
                     {
-                        objetoExpediente.EnferHRenales = 'V';
+                        objetoExpediente.EnferHRenales = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHRenales = 'F';
+                        objetoExpediente.EnferHRenales = "F";
 
                     }
 
                     if (chkbxOculares.Checked == true)
                     {
-                        objetoExpediente.EnferHOculares = 'V';
+                        objetoExpediente.EnferHOculares = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHOculares = 'F';
+                        objetoExpediente.EnferHOculares = "F";
 
                     }
 
                     if (chkbxCardiacas.Checked == true)
                     {
-                        objetoExpediente.EnferHCardiacas = 'V';
+                        objetoExpediente.EnferHCardiacas = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHCardiacas = 'F';
+                        objetoExpediente.EnferHCardiacas = "F";
 
                     }
 
                     if (chkbxHepatica.Checked == true)
                     {
-                        objetoExpediente.EnferHHepatica = 'V';
+                        objetoExpediente.EnferHHepatica = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHHepatica = 'F';
+                        objetoExpediente.EnferHHepatica = "F";
 
                     }
 
                     if (chkbxMusculares.Checked == true)
                     {
-                        objetoExpediente.EnferHMusculares = 'V';
+                        objetoExpediente.EnferHMusculares = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHMusculares = 'F';
+                        objetoExpediente.EnferHMusculares = "F";
 
                     }
 
                     if (chkbxMalConge.Checked == true)
                     {
-                        objetoExpediente.EnferHMalCongenitas = 'V';
+                        objetoExpediente.EnferHMalCongenitas = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHMalCongenitas = 'F';
+                        objetoExpediente.EnferHMalCongenitas = "F";
 
                     }
 
                     if (chkbxDesMentales.Checked == true)
                     {
-                        objetoExpediente.EnferHDesorMentales = 'V';
+                        objetoExpediente.EnferHDesorMentales = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHDesorMentales = 'F';
+                        objetoExpediente.EnferHDesorMentales = "F";
 
                     }
 
@@ -425,242 +425,241 @@ namespace CapaPresentacion
 
                     if (chkbxHepatitis.Checked == true)
                     {
-                        objetoExpediente.EnferICHepatitis = 'V';
+                        objetoExpediente.EnferICHepatitis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICHepatitis = 'F';
+                        objetoExpediente.EnferICHepatitis = "F";
                     }
 
                     if (chkbxSifilis.Checked == true)
                     {
-                        objetoExpediente.EnferICSifilis = 'V';
+                        objetoExpediente.EnferICSifilis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICSifilis = 'F';
+                        objetoExpediente.EnferICSifilis = "F";
                     }
 
                     if (chkbxColera.Checked == true)
                     {
-                        objetoExpediente.EnferICColera = 'V';
+                        objetoExpediente.EnferICColera = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICColera = 'F';
+                        objetoExpediente.EnferICColera = "F";
                     }
 
                     if (chkbxTosferina.Checked == true)
                     {
-                        objetoExpediente.EnferICTosferina = 'V';
+                        objetoExpediente.EnferICTosferina = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICTosferina = 'F';
+                        objetoExpediente.EnferICTosferina = "F";
                     }
 
                     if (chkbxSarampion.Checked == true)
                     {
-                        objetoExpediente.EnferICSarampion = 'V';
+                        objetoExpediente.EnferICSarampion = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICSarampion = 'F';
+                        objetoExpediente.EnferICSarampion = "F";
                     }
 
                     if (chkbxVaricela.Checked == true)
                     {
-                        objetoExpediente.EnferICVaricela = 'V';
+                        objetoExpediente.EnferICVaricela = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICVaricela = 'F';
+                        objetoExpediente.EnferICVaricela = "F";
                     }
 
                     if (chkbxRubeola.Checked == true)
                     {
-                        objetoExpediente.EnferICRubeola = 'V';
+                        objetoExpediente.EnferICRubeola = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICRubeola = 'F';
+                        objetoExpediente.EnferICRubeola = "F";
                     }
 
                     if (chkbxPariotiditis.Checked == true)
                     {
-                        objetoExpediente.EnferICPariotiditis = 'V';
+                        objetoExpediente.EnferICPariotiditis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICPariotiditis = 'F';
+                        objetoExpediente.EnferICPariotiditis = "F";
                     }
 
                     if (chkbxMeningitis.Checked == true)
                     {
-                        objetoExpediente.EnferICMeningitis = 'V';
+                        objetoExpediente.EnferICMeningitis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICMeningitis = 'F';
+                        objetoExpediente.EnferICMeningitis = "F";
                     }
 
                     if (chkbxImpetigo.Checked == true)
                     {
-                        objetoExpediente.EnferICImpetigo = 'V';
+                        objetoExpediente.EnferICImpetigo = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICImpetigo = 'F';
+                        objetoExpediente.EnferICImpetigo = "F";
                     }
 
                     if (chkbxFiebreTi.Checked == true)
                     {
-                        objetoExpediente.EnferICTifoidea = 'V';
+                        objetoExpediente.EnferICTifoidea = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICTifoidea = 'F';
+                        objetoExpediente.EnferICTifoidea = "F";
                     }
 
                     if (chkbxMalaria.Checked == true)
                     {
-                        objetoExpediente.EnferICMalaria = 'V';
+                        objetoExpediente.EnferICMalaria = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICMalaria = 'F';
+                        objetoExpediente.EnferICMalaria = "F";
                     }
 
                     if (chkbxEscabiasis.Checked == true)
                     {
-                        objetoExpediente.EnferICEscabiasis = 'V';
+                        objetoExpediente.EnferICEscabiasis = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICEscabiasis = 'F';
+                        objetoExpediente.EnferICEscabiasis = "F";
                     }
 
                     if (chkbxTina.Checked == true)
                     {
-                        objetoExpediente.EnferICTina = 'V';
+                        objetoExpediente.EnferICTina = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferICTina = 'F';
+                        objetoExpediente.EnferICTina = "F";
 
                     }
 
 
                     if (chkboxAlergias.Checked == true)
                     {
-                        objetoExpediente.EnferHAlergias = 'V';
+                        objetoExpediente.EnferHAlergias = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHAlergias = 'F';
+                        objetoExpediente.EnferHAlergias = "F";
 
                     }
 
                     if (chkbxDiabetes.Checked == true)
                     {
-                        objetoExpediente.EnferHDiabetes = 'V';
+                        objetoExpediente.EnferHDiabetes = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHDiabetes = 'F';
+                        objetoExpediente.EnferHDiabetes = "F";
 
                     }
 
                     if (chkbxHipertension.Checked == true)
                     {
-                        objetoExpediente.EnferHHipertension = 'V';
+                        objetoExpediente.EnferHHipertension = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHHipertension = 'F';
+                        objetoExpediente.EnferHHipertension = "F";
 
                     }
 
                     if (chkbxReumatica.Checked == true)
                     {
-                        objetoExpediente.EnferHReumatica = 'V';
+                        objetoExpediente.EnferHReumatica = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHReumatica = 'F';
+                        objetoExpediente.EnferHReumatica = "F";
 
                     }
 
                     if (chkbxRenales.Checked == true)
                     {
-                        objetoExpediente.EnferHRenales = 'V';
+                        objetoExpediente.EnferHRenales = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHRenales = 'F';
+                        objetoExpediente.EnferHRenales = "F";
 
                     }
 
                     if (chkbxOculares.Checked == true)
                     {
-                        objetoExpediente.EnferHOculares = 'V';
+                        objetoExpediente.EnferHOculares = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHOculares = 'F';
+                        objetoExpediente.EnferHOculares = "F";
 
                     }
 
                     if (chkbxCardiacas.Checked == true)
                     {
-                        objetoExpediente.EnferHCardiacas = 'V';
+                        objetoExpediente.EnferHCardiacas = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHCardiacas = 'F';
+                        objetoExpediente.EnferHCardiacas = "F";
 
                     }
 
                     if (chkbxHepatica.Checked == true)
                     {
-                        objetoExpediente.EnferHHepatica = 'V';
+                        objetoExpediente.EnferHHepatica = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHHepatica = 'F';
+                        objetoExpediente.EnferHHepatica = "F";
 
                     }
 
                     if (chkbxMusculares.Checked == true)
                     {
-                        objetoExpediente.EnferHMusculares = 'V';
+                        objetoExpediente.EnferHMusculares = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHMusculares = 'F';
+                        objetoExpediente.EnferHMusculares = "F";
 
                     }
 
                     if (chkbxMalConge.Checked == true)
                     {
-                        objetoExpediente.EnferHMalCongenitas = 'V';
+                        objetoExpediente.EnferHMalCongenitas = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHMalCongenitas = 'F';
+                        objetoExpediente.EnferHMalCongenitas = "F";
 
                     }
 
                     if (chkbxDesMentales.Checked == true)
                     {
-                        objetoExpediente.EnferHDesorMentales = 'V';
+                        objetoExpediente.EnferHDesorMentales = "V";
                     }
                     else
                     {
-                        objetoExpediente.EnferHDesorMentales = 'F';
+                        objetoExpediente.EnferHDesorMentales = "F";
 
                     }
-
 
 
 
@@ -725,6 +724,6 @@ namespace CapaPresentacion
             }
         }
 
-    
+       
     }
 }

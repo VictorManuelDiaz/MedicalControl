@@ -29,8 +29,8 @@ namespace CapaPresentacion
             dataGridViewMedico.DataSource = LNMedico.listarMedico();
             txtbxIdMedico.Visible = false;
             lblIdMedico.Visible = false;
-            List<int> Espe = new List<int>();
-            Espe = LNEspe.ListarEspecialidad().Select(x => x.IdEspecialidad).ToList();
+            List<string> Espe = new List<string>();
+            Espe = LNEspe.ListarEspecialidad().Select(x => x.NombreEs).ToList();
             combobxEspe.DataSource = Espe;
 
         }
@@ -44,10 +44,10 @@ namespace CapaPresentacion
                     Medico objetoMedico = new Medico();
                     objetoMedico.NombreM = txtbxNombM.Text;
                     objetoMedico.ApellidoM = txtbxApellM.Text;
-                    objetoMedico.IdEspecialidad = Convert.ToInt32(combobxEspe.Text);
+                    objetoMedico.IdEspecialidad = LNEspe.BuscarIdEspecialidad(combobxEspe.Text);
                     objetoMedico.EmailM= txtbxCorreo.Text;
-                    objetoMedico.TelefonoM = txtbxCel.Text;
-                    objetoMedico.CedulaM = txtbxCed.Text;
+                    objetoMedico.TelefonoM = maskedtxtbxTelefonoMed.Text;
+                    objetoMedico.CedulaM = maskedtxtbxCedMed.Text;
                     if (combobxSexo.Text=="Femenino")
                     {
                         objetoMedico.SexoM = "F";
@@ -65,8 +65,8 @@ namespace CapaPresentacion
                         txtbxNombM.Text = "";
                         txtbxApellM.Text = "";
                         txtbxCorreo.Text = "";
-                        txtbxCel.Text = "";
-                        txtbxCed.Text = "";
+                        maskedtxtbxTelefonoMed.Text = "";
+                        maskedtxtbxCedMed.Text = "";
                         txtbxDirec.Text = "";
                        
                     }
@@ -77,10 +77,10 @@ namespace CapaPresentacion
                     Medico objetoMedico = new Medico();
                     objetoMedico.NombreM = txtbxNombM.Text;
                     objetoMedico.ApellidoM = txtbxApellM.Text;
-                    objetoMedico.IdEspecialidad = Convert.ToInt32(combobxEspe.Text);
+                    objetoMedico.IdEspecialidad = LNEspe.BuscarIdEspecialidad(combobxEspe.Text);
                     objetoMedico.EmailM = txtbxCorreo.Text;
-                    objetoMedico.TelefonoM = txtbxCel.Text;
-                    objetoMedico.CedulaM = txtbxCed.Text;
+                    objetoMedico.TelefonoM = maskedtxtbxTelefonoMed.Text;
+                    objetoMedico.CedulaM = maskedtxtbxCedMed.Text;
                     objetoMedico.SexoM = combobxSexo.Text;
                     objetoMedico.DireccionM = txtbxDirec.Text;
 
@@ -92,8 +92,8 @@ namespace CapaPresentacion
                         txtbxNombM.Text = "";
                         txtbxApellM.Text = "";
                         txtbxCorreo.Text = "";
-                        txtbxCel.Text = "";
-                        txtbxCed.Text = "";
+                        maskedtxtbxTelefonoMed.Text = "";
+                        maskedtxtbxCedMed.Text = "";
                         txtbxDirec.Text = "";
                        
                     }
@@ -121,8 +121,8 @@ namespace CapaPresentacion
             txtbxApellM.Text = dataGridViewMedico.CurrentRow.Cells["ApellidoM"].Value.ToString();
             combobxEspe.SelectedItem = dataGridViewMedico.CurrentRow.Cells["IdEspecialidad"].Value;
             txtbxCorreo.Text = dataGridViewMedico.CurrentRow.Cells["EmailM"].Value.ToString();
-            txtbxCel.Text = dataGridViewMedico.CurrentRow.Cells["TelefonoM"].Value.ToString();
-            txtbxCed.Text = dataGridViewMedico.CurrentRow.Cells["CedulaM"].Value.ToString();
+            maskedtxtbxTelefonoMed.Text = dataGridViewMedico.CurrentRow.Cells["TelefonoM"].Value.ToString();
+            maskedtxtbxCedMed.Text = dataGridViewMedico.CurrentRow.Cells["CedulaM"].Value.ToString();
             combobxSexo.SelectedItem = dataGridViewMedico.CurrentRow.Cells["SexoM"].Value;
             txtbxDirec.Text = dataGridViewMedico.CurrentRow.Cells["DireccionM"].Value.ToString();
             tabMedico.SelectedTab = tabPage1;
@@ -146,14 +146,6 @@ namespace CapaPresentacion
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
