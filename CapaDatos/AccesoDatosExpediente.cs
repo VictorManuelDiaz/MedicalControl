@@ -20,7 +20,6 @@ namespace CapaDatos
         int indicador = 0;
         SqlDataReader dr = null;
         List<Expediente> listaExpediente = null;
-        List<Paciente> listaPaciente = null;
 
         public int InsertarExpediente(Expediente Ex)
         {
@@ -135,7 +134,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@EnferICTifoidea", "");
                 cm.Parameters.AddWithValue("@EnferICMalaria", "");
                 cm.Parameters.AddWithValue("@EnferICEscabiasis", "");
-                cm.Parameters.AddWithValue("EnferICTina", "");
+                cm.Parameters.AddWithValue("@EnferICTina", "");
                 cm.Parameters.AddWithValue("@EnferHAlergias", "");
                 cm.Parameters.AddWithValue("@EnferHDiabetes", "");
                 cm.Parameters.AddWithValue("@EnferHHipertension", "");
