@@ -22,13 +22,99 @@ namespace CapaPresentacion
 
         private void frmCuentas_Load(object sender, EventArgs e)
         {
+
             dataGridViewCuentas.DataSource = LNCuentas.ListarCuenta();
             dataGridViewCuentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            lblIdUsu.Visible = false;
-            txtbxUsu.Visible = false;
+            lblIdCuen.Visible = false;
+            txtbxIdCuen.Visible = false;
             
         }
 
-        
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (btnRegistrar.Text == "Registrar")
+                {
+                    Cuenta objetoCuenta = new Cuenta();
+                    if (txtbxContra.Text==txtbxConf.Text)
+                    {
+                        objetoCuenta.NombreCuenta = txtbxNomCuen.Text;
+                        objetoCuenta.Contrasena = txtbxContra.Text;
+                        objetoCuenta.TipoCuenta = cmbbxTipo.Text;
+                        if (LNCuentas.InsertarCuenta(objetoCuenta) > 0)
+                        {
+                            MessageBox.Show("Agregado con éxito");
+                            dataGridViewCuentas.DataSource = LNCuentas.ListarCuenta();
+                            txtbxNomCuen.Text = "";
+                            txtbxContra.Text = "";
+                            txtbxConf.Text = "";
+                            cmbbxTipo.Text = "";
+
+                        }
+                        else { MessageBox.Show("Error al agregar Recurso"); }
+                    }
+                    else
+                    {
+                        lblFalloConf.Visible = true;
+                    }
+                }
+                if (btnRegistrar.Text == "Actualizar")
+                {
+
+                    Cuenta objetoCuenta = new Cuenta();
+                    if (txtbxContra.Text == txtbxConf.Text)
+                    {
+                        objetoCuenta.Contrasena = txtbxContra.Text;
+                        if (LNCuentas.EditarCuenta(objetoCuenta) > 0)
+                        {
+                            MessageBox.Show("Actualizado con éxito");
+                            dataGridViewCuentas.DataSource = LNCuentas.ListarCuenta();
+                            txtbxNomCuen.Text = "";
+                            txtbxContra.Text = "";
+                            txtbxConf.Text = "";
+                            cmbbxTipo.Text = "";
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al actualizar la cuenta");
+                        }
+
+                    }
+                    else
+                    {
+                        lblFalloConf.Visible = true;
+                    }
+                    btnRegistrar.Text = "Registrar";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR");
+            }
+        }
+
+        private void btnEditarCuenta_Click(object sender, EventArgs e)
+        {
+            txtbxIdCuen.Visible = true;
+            txtbxIdCuen.Enabled = false;
+            lblIdCuen.Visible = true;
+            txtbxNomCuen.Enabled = false;
+            cmbbxTipo.Enabled = false;
+            lblContra.Text = "Nueva contraseña";
+
+            txtbxIdCuen.Text = dataGridViewCuentas.CurrentRow.Cells["IdCuenta"].Value.ToString();
+            txtbxNomCuen.Text = dataGridViewCuentas.CurrentRow.Cells["NombreCuenta"].Value.ToString();
+            cmbbxTipo.Text= dataGridViewCuentas.CurrentRow.Cells["TipoCuenta"].Value.ToString();
+            
+            btnRegistrar.Text = "Actualizar";
+        }
+
+        private void txtbxBuscCuenta_OnTextChange(object sender, EventArgs e)
+        {
+            List<Cuenta> listaCuenta = LNCuentas.BuscarCuenta(txtbxBuscCuenta.text);
+            dataGridViewCuentas.DataSource = listaCuenta;
+        }
     }
 }
+

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEspecialidad));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridViewEspecial = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,6 +43,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.bunifuTextbox = new Bunifu.Framework.UI.BunifuTextbox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspecial)).BeginInit();
@@ -64,11 +64,10 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.tabPage2.Controls.Add(this.bunifuTextbox);
             this.tabPage2.Controls.Add(this.dataGridViewEspecial);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -106,24 +105,6 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Eliminar";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(89, 42);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(405, 20);
-            this.textBox4.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(17, 42);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 16);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Buscar";
             // 
             // panel1
             // 
@@ -227,6 +208,19 @@
             this.label2.TabIndex = 1;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bunifuTextbox
+            // 
+            this.bunifuTextbox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuTextbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox.BackgroundImage")));
+            this.bunifuTextbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox.Icon")));
+            this.bunifuTextbox.Location = new System.Drawing.Point(106, 29);
+            this.bunifuTextbox.Name = "bunifuTextbox";
+            this.bunifuTextbox.Size = new System.Drawing.Size(399, 42);
+            this.bunifuTextbox.TabIndex = 11;
+            this.bunifuTextbox.text = "";
+            // 
             // frmEspecialidad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,8 +252,6 @@
         private System.Windows.Forms.DataGridView dataGridViewEspecial;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
@@ -269,5 +261,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox;
     }
 }

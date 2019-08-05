@@ -17,7 +17,6 @@ namespace CapaPresentacion
         LogicaNegocioCita LNCita = new LogicaNegocioCita();
         LogicaNegocioExpediente LNExp = new LogicaNegocioExpediente();
         LogicaNegocioMedico LNMed = new LogicaNegocioMedico();
-        LogicaNegocioComplete LNCom = new LogicaNegocioComplete();
         public frmCita()
         {
             InitializeComponent();
@@ -33,7 +32,7 @@ namespace CapaPresentacion
             comboBoxIdMed.DataSource = Medico;
 
             List<int> NumEx = new List<int>();
-            NumEx = LNExp.ListarExpediente().Select(x => x.NumeroExpediente).ToList();
+            NumEx = LNExp.ListarExpediente().Select(x => x.IdExpediente).ToList();
             comboBoxNumExp.DataSource = NumEx;
         }
 
@@ -47,9 +46,9 @@ namespace CapaPresentacion
                     objetoCita.FechaConsul = DateTime.Now;
                     objetoCita.FechaRealCita= dateTimePickerRealCita.Value;
                     objetoCita.HoraC = maskedTextBoxHoraC.Text;
-                    objetoCita.NumeroExpediente = 1;
+                    objetoCita.IdExpediente = 1;
                     //objetoCita.NumeroExpediente = Convert.ToInt32(comboBoxNumExp.Text);
-                    objetoCita.IdMedico = LNCom.buscarMedicoPorId(comboBoxIdMed.Text);
+                    objetoCita.IdMedico = LNMed.buscarMedicoPorId(comboBoxIdMed.Text);
 
                     if (LNCita.InsertarCita(objetoCita) > 0)
                     {
@@ -67,7 +66,7 @@ namespace CapaPresentacion
                     objetoCita.FechaConsul = DateTime.Now;
                     objetoCita.FechaRealCita = dateTimePickerRealCita.Value;
                     objetoCita.HoraC = maskedTextBoxHoraC.Text;
-                    objetoCita.NumeroExpediente = 1;
+                    objetoCita.IdExpediente = 1;
                     //objetoCita.NumeroExpediente = Convert.ToInt32(comboBoxNumExp.Text);
                     
 

@@ -11,7 +11,7 @@ namespace CapaEntidades
 
         public int IdDetServic { get; set; }
         public double Precio { get; set; }
-        public int NumeroExpediente { get; set; }
+        public int IdExpediente { get; set; }
         public int IdServicios { get; set; }
 
     }

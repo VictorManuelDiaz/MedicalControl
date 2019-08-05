@@ -28,7 +28,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 1); //valores que toman los parametros del procedimiento
                 cm.Parameters.AddWithValue("@IdDetServic", "");
                 cm.Parameters.AddWithValue("@Precio", DetSe.Precio);
-                cm.Parameters.AddWithValue("@NumeroExpediente", DetSe.NumeroExpediente);
+                cm.Parameters.AddWithValue("@IdExpediente", DetSe.IdExpediente);
                 cm.Parameters.AddWithValue("@IdServicios", DetSe.IdServicios);
 
                 cm.CommandType = CommandType.StoredProcedure;// tipo de comando ejecutado
@@ -64,7 +64,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 3);
                 cm.Parameters.AddWithValue("@IdDetServic", "");
                 cm.Parameters.AddWithValue("@Precio", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@IdServicios", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -79,8 +79,8 @@ namespace CapaDatos
 
                     DetSer.IdDetServic = Convert.ToInt32(dr["IdDetServic"].ToString());
                     DetSer.Precio = Convert.ToDouble(dr["Precio"].ToString());
-                    DetSer.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
-                    DetSer.NumeroExpediente = Convert.ToInt32(dr["IdServicios"].ToString());
+                    DetSer.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    DetSer.IdServicios = Convert.ToInt32(dr["IdServicios"].ToString());
 
                     listaDetServicios.Add(DetSer); //agergar registros encontrados a la lista
 
@@ -114,7 +114,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 2);
                 cm.Parameters.AddWithValue("@IdDetServic", "");
                 cm.Parameters.AddWithValue("@Precio", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@IdServicios", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -148,7 +148,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 4);
                 cm.Parameters.AddWithValue("@IdDetServic", "");
                 cm.Parameters.AddWithValue("@Precio", DetSe.Precio);
-                cm.Parameters.AddWithValue("@NumeroExpediente", DetSe.NumeroExpediente);
+                cm.Parameters.AddWithValue("@IdExpediente", DetSe.IdExpediente);
                 cm.Parameters.AddWithValue("@IdServicios", DetSe.IdServicios);
 
 
@@ -182,7 +182,7 @@ namespace CapaDatos
                 cm = new SqlCommand("DetalleServicios_Proced", cnx);
                 cm.Parameters.AddWithValue("@IdDetServic", "");
                 cm.Parameters.AddWithValue("@Precio", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@IdServicios", "");
 
 
@@ -199,8 +199,8 @@ namespace CapaDatos
 
                     DetSer.IdDetServic = Convert.ToInt32(dr["IdDetServic"].ToString());
                     DetSer.Precio = Convert.ToDouble(dr["Precio"].ToString());
-                    DetSer.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
-                    DetSer.NumeroExpediente = Convert.ToInt32(dr["IdServicios"].ToString());
+                    DetSer.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    DetSer.IdServicios = Convert.ToInt32(dr["IdServicios"].ToString());
 
                     listaDetServicios.Add(DetSer); //agergar registros encontrados a la lista
 

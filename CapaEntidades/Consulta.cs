@@ -15,7 +15,7 @@ namespace CapaEntidades
         public string Costo { get; set; }
         public string Sintomas { get; set; }
         public string Diagnostico { get; set; }
-        public int NumeroExpediente { get; set; }
+        public int IdExpediente { get; set; }
         public int IdMedico { get; set; }
 
     }

@@ -28,12 +28,13 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar(); // conectar
                 cm = new SqlCommand("Expediente_Proced", cnx); //nombre del procedimiento SQL
                 cm.Parameters.AddWithValue("@b", 1); //valores que toman los parametros del procedimiento
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
+                cm.Parameters.AddWithValue("@NumeroExpediente", Ex.NumeroExpediente);
                 cm.Parameters.AddWithValue("@MotivoConsulta", Ex.MotivoConsulta);
                 cm.Parameters.AddWithValue("@TratamientoIndicado", Ex.TratamientoIndicado);
                 cm.Parameters.AddWithValue("@CedulaPac", Ex.CedulaPac);
                 cm.Parameters.AddWithValue("@NombrePac", Ex.NombrePac);
-                cm.Parameters.AddWithValue("@ApellidoPac", Ex.ApellidosPac);
+                cm.Parameters.AddWithValue("@ApellidosPac", Ex.ApellidosPac);
                 cm.Parameters.AddWithValue("@FechaNacimiento", Ex.FechaNacimiento);
                 cm.Parameters.AddWithValue("@LugarNacimiento", Ex.LugarNacimiento);
                 cm.Parameters.AddWithValue("@SexoPac", Ex.SexoPac);
@@ -59,7 +60,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@EnferICTifoidea", Ex.EnferICTifoidea);
                 cm.Parameters.AddWithValue("@EnferICMalaria", Ex.EnferICMalaria);
                 cm.Parameters.AddWithValue("@EnferICEscabiasis", Ex.EnferICEscabiasis);
-                cm.Parameters.AddWithValue("EnferICTina", Ex.EnferICTina);
+                cm.Parameters.AddWithValue("@EnferICTina", Ex.EnferICTina);
                 cm.Parameters.AddWithValue("@EnferHAlergias", Ex.EnferHAlergias);
                 cm.Parameters.AddWithValue("@EnferHDiabetes", Ex.EnferHDiabetes);
                 cm.Parameters.AddWithValue("@EnferHHipertension", Ex.EnferHHipertension);
@@ -103,6 +104,7 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();//conectar
                 cm = new SqlCommand("Expediente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@MotivoConsulta", "");
                 cm.Parameters.AddWithValue("@TratamientoIndicado", "");
@@ -157,7 +159,8 @@ namespace CapaDatos
 
                     Expediente exp = new Expediente();
 
-                    exp.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
+                    exp.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    exp.NumeroExpediente = dr["NumeroExpediente"].ToString();
                     exp.MotivoConsulta = dr["MotivoConsulta"].ToString();
                     exp.TratamientoIndicado = dr["TratamientoIndicado"].ToString();
                     exp.CedulaPac = dr["CedulaPac"].ToString();
@@ -231,7 +234,7 @@ namespace CapaDatos
 
                 cm = new SqlCommand("Expdiente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 2);
-                cm.Parameters.AddWithValue("@NumeroExpediente", NumeroExpediente);
+                cm.Parameters.AddWithValue("@IdExpediente", NumeroExpediente);
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -265,6 +268,7 @@ namespace CapaDatos
 
                 cm = new SqlCommand("Expediente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@MotivoConsulta", "");
                 cm.Parameters.AddWithValue("@TratamientoIndicado", "");
@@ -338,6 +342,7 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Expediente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@MotivoConsulta", "");
                 cm.Parameters.AddWithValue("@TratamientoIndicado", "");
@@ -369,7 +374,8 @@ namespace CapaDatos
 
                     Expediente exp = new Expediente();
 
-                    exp.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
+                    exp.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    exp.NumeroExpediente = dr["NumeroExpediente"].ToString();
                     exp.MotivoConsulta = dr["MotivoConsulta"].ToString();
                     exp.TratamientoIndicado = dr["TratamientoIndicado"].ToString();
                     exp.CedulaPac = dr["CedulaPac"].ToString();

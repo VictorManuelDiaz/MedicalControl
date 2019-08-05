@@ -31,7 +31,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@FechaConsul", ci.FechaConsul);
                 cm.Parameters.AddWithValue("@FechaRealCita", ci.FechaRealCita);
                 cm.Parameters.AddWithValue("@HoraC", ci.HoraC);
-                cm.Parameters.AddWithValue("@NumeroExpediente", ci.NumeroExpediente);
+                cm.Parameters.AddWithValue("@IdExpediente", ci.IdExpediente);
                 cm.Parameters.AddWithValue("@IdMedico", ci.IdMedico);
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -65,7 +65,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@FechaConsul", "");
                 cm.Parameters.AddWithValue("@FechaRealCita", "");
                 cm.Parameters.AddWithValue("@HoraC", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -79,10 +79,10 @@ namespace CapaDatos
                     Cita Cit = new Cita();
 
                     Cit.IdCita = Convert.ToInt32(dr["IdCita"].ToString());
-                    Cit.FechaConsul = Convert.ToDateTime(dr["FechaConsult"].ToString());
+                    Cit.FechaConsul = Convert.ToDateTime(dr["FechaConsul"].ToString());
                     Cit.FechaRealCita =Convert.ToDateTime(dr["FechaRealCita"].ToString());
                     Cit.HoraC = dr["HoraC"].ToString();
-                    Cit.NumeroExpediente = Convert.ToInt32(dr["NuemroExpediente"].ToString());
+                    Cit.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
                     Cit.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
                     listaCita.Add(Cit); 
 
@@ -117,7 +117,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@FechaConsul", "");
                 cm.Parameters.AddWithValue("@FechaRealCita", "");
                 cm.Parameters.AddWithValue("@HoraC", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -154,7 +154,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@FechaConsul", "");
                 cm.Parameters.AddWithValue("@FechaRealCita", ci.FechaRealCita);
                 cm.Parameters.AddWithValue("@HoraC", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", ci.NumeroExpediente);
+                cm.Parameters.AddWithValue("@IdExpediente", ci.IdExpediente);
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -188,7 +188,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@FechaConsul", "");
                 cm.Parameters.AddWithValue("@FechaRealCita", dato);
                 cm.Parameters.AddWithValue("@HoraC", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", dato);
+                cm.Parameters.AddWithValue("@IdExpediente", dato);
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -205,7 +205,7 @@ namespace CapaDatos
                     Cit.FechaConsul = Convert.ToDateTime(dr["FechaConsult"].ToString());
                     Cit.FechaRealCita = Convert.ToDateTime(dr["FechaRealCita"].ToString());
                     Cit.HoraC = dr["HoraC"].ToString();
-                    Cit.NumeroExpediente = Convert.ToInt32(dr["NuemroExpediente"].ToString());
+                    Cit.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
                     Cit.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
                     listaCita.Add(Cit);
 

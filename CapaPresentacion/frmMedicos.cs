@@ -45,10 +45,10 @@ namespace CapaPresentacion
                     objetoMedico.NombreM = txtbxNombM.Text;
                     objetoMedico.ApellidoM = txtbxApellM.Text;
                     objetoMedico.IdEspecialidad = LNEspe.BuscarIdEspecialidad(combobxEspe.Text);
-                    objetoMedico.EmailM= txtbxCorreo.Text;
+                    objetoMedico.EmailM = txtbxCorreo.Text;
                     objetoMedico.TelefonoM = maskedtxtbxTelefonoMed.Text;
                     objetoMedico.CedulaM = maskedtxtbxCedMed.Text;
-                    if (combobxSexo.Text=="Femenino")
+                    if (combobxSexo.Text == "Femenino")
                     {
                         objetoMedico.SexoM = "F";
                     }
@@ -68,7 +68,7 @@ namespace CapaPresentacion
                         maskedtxtbxTelefonoMed.Text = "";
                         maskedtxtbxCedMed.Text = "";
                         txtbxDirec.Text = "";
-                       
+
                     }
                     else { MessageBox.Show("Error al agregar Recurso"); }
                 }
@@ -88,14 +88,15 @@ namespace CapaPresentacion
                     {
                         MessageBox.Show("Actualizado con éxito");
                         dataGridViewMedico.DataSource = LNMedico.listarMedico();
-                        dataGridViewMedico.DataSource = LNMedico.listarMedico();
                         txtbxNombM.Text = "";
                         txtbxApellM.Text = "";
                         txtbxCorreo.Text = "";
                         maskedtxtbxTelefonoMed.Text = "";
                         maskedtxtbxCedMed.Text = "";
                         txtbxDirec.Text = "";
-                       
+                        lblIdMedico.Visible = false;
+                        txtbxIdMedico.Visible = false;
+
                     }
                     else
                     {
@@ -110,10 +111,16 @@ namespace CapaPresentacion
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void txtbxBuscMed_OnTextChange(object sender, EventArgs e)
+        {
+            List<Medico> listaMed = LNMedico.buscarMedico(txtbxBuscMed.text);
+            dataGridViewMedico.DataSource = listaMed;
+        }
+
+        private void btnEditarMed_Click(object sender, EventArgs e)
         {
             txtbxIdMedico.Visible = true;
-            txtbxIdMedico.Enabled = true;
+            txtbxIdMedico.Enabled = false;
             lblIdMedico.Visible = true;
 
             txtbxIdMedico.Text = dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString();
@@ -125,11 +132,10 @@ namespace CapaPresentacion
             maskedtxtbxCedMed.Text = dataGridViewMedico.CurrentRow.Cells["CedulaM"].Value.ToString();
             combobxSexo.SelectedItem = dataGridViewMedico.CurrentRow.Cells["SexoM"].Value;
             txtbxDirec.Text = dataGridViewMedico.CurrentRow.Cells["DireccionM"].Value.ToString();
-            tabMedico.SelectedTab = tabPage1;
             btnRegistrar.Text = "Actualizar";
         }
 
-        private void btnElminar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             int codigoM = Convert.ToInt32(dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString());
             try
@@ -145,7 +151,5 @@ namespace CapaPresentacion
                 MessageBox.Show("ERROR al eliminar Medico");
             }
         }
-
-        
     }
 }

@@ -85,10 +85,18 @@ namespace CapaPresentacion
 
         private void tlsMedicos_Click(object sender, EventArgs e)
         {
-            frmMedicos Medicos = new frmMedicos();
-            Medicos.MdiParent = this;
-            Medicos.Text = "Ventana " + childFormNumber++;
-            Medicos.Show();
+            if (Application.OpenForms["frmMedicos"] != null)
+            {
+                Application.OpenForms["frmMedicos"].Activate();
+            }
+            else
+            {
+                frmMedicos Medicos = new frmMedicos();
+                Medicos.MdiParent = this;
+                Medicos.Text = "Ventana " + childFormNumber++;
+                Medicos.Show();
+            }
+            
         }
 
         private void tlsSalir_Click(object sender, EventArgs e)
@@ -101,9 +109,17 @@ namespace CapaPresentacion
 
         private void tlsCitas_Click(object sender, EventArgs e)
         {
-            frmCita Cita = new frmCita();
-            Cita.MdiParent = this;
-            Cita.Show();
+            if (Application.OpenForms["frmCita"] != null)
+            {
+                Application.OpenForms["frmCita"].Activate();
+            }
+            else
+            {
+                frmCita Cita = new frmCita();
+                Cita.MdiParent = this;
+                Cita.Show();
+            }
+            
         }
 
         private void tlsInicio_Click(object sender, EventArgs e)
@@ -116,30 +132,61 @@ namespace CapaPresentacion
 
         private void tlsExpedientes_Click(object sender, EventArgs e)
         {
-            frmExpediente Cita = new frmExpediente();
-            Cita.MdiParent = this;
-            Cita.Show();
+            if (Application.OpenForms["frmExpediente"] != null)
+            {
+                Application.OpenForms["frmExpediente"].Activate();
+            }
+            else
+            {
+                frmExpediente Cita = new frmExpediente();
+                Cita.MdiParent = this;
+                Cita.Show();
+            }
         }
 
         private void tlsPacientes_Click(object sender, EventArgs e)
         {
-            frmPacientes Paci = new frmPacientes();
-            Paci.MdiParent = this;
-            Paci.Show();
+            if (Application.OpenForms["frmPacientes"] != null)
+            {
+                Application.OpenForms["frmPacientes"].Activate();
+            }
+            else
+            {
+                frmPacientes Paci = new frmPacientes();
+                Paci.MdiParent = this;
+                Paci.Show();
+            }
+            
         }
 
         private void tlsUsuarios_Click(object sender, EventArgs e)
         {
-            frmCuentas Cuentas = new frmCuentas();
-            Cuentas.MdiParent = this;
-            Cuentas.Show();
+            if (Application.OpenForms["frmCuentas"] != null)
+            {
+                Application.OpenForms["frmCuentas"].Activate();
+            }
+            else
+            {
+                frmCuentas Cuentas = new frmCuentas();
+                Cuentas.MdiParent = this;
+                Cuentas.Show();
+            }
+            
         }
 
         private void tlsEspecialidades_Click(object sender, EventArgs e)
         {
-            frmEspecialidad Especialidad = new frmEspecialidad();
-            Especialidad.MdiParent = this;
-            Especialidad.Show();
+            if (Application.OpenForms["frmEspecialidad"] != null)
+            {
+                Application.OpenForms["frmEspecialidad"].Activate();
+            }
+            else
+            {
+                frmEspecialidad Especialidad = new frmEspecialidad();
+                Especialidad.MdiParent = this;
+                Especialidad.Show();
+            }
+            
         }
     }
 }

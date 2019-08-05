@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatosCita.cs" />
-    <Compile Include="AccesoDatosComplete.cs" />
     <Compile Include="AccesoDatosConsulta.cs" />
     <Compile Include="AccesoDatosConsulta_Medicamen.cs" />
     <Compile Include="AccesoDatosCuenta.cs" />

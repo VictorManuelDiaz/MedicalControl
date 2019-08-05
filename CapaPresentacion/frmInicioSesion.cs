@@ -20,13 +20,16 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void frmInicioSesion_Load(object sender, EventArgs e)
         {
             
+        }
 
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
             try
             {
-                if (LNCuen.BuscarCuenta(txtbxNomCuen.Text, txtbxContra.Text).Count > 0)
+                if (LNCuen.ValidarCuenta(txtbxNomCuen.Text, txtbxContrasena.Text).Count > 0)
                 {
                     MDIAdminPrincipal PrinAdmin = new MDIAdminPrincipal();
                     this.Hide();
@@ -36,7 +39,7 @@ namespace CapaPresentacion
                 else
                 {
                     txtbxNomCuen.Text = "";
-                    txtbxContra.Text = "";
+                    txtbxContrasena.Text = "";
                     lblErrorSesion.Visible = true;
                 }
             }
@@ -44,22 +47,14 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("ERROR");
             }
-
-
         }
 
-        private void frmInicioSesion_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtbxContra_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtbxContrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                btnEntrar.PerformClick();
+                btnEntrar_Click(sender, e);
             }
         }
-
     }
 }

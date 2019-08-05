@@ -8,7 +8,8 @@ namespace CapaEntidades
 {
     public class Expediente
     {
-        public int NumeroExpediente { get; set; }
+        public int IdExpediente { get; set; }
+        public string NumeroExpediente { get; set; }
         public string MotivoConsulta { get; set; }
         public string TratamientoIndicado { get; set; }
         public string CedulaPac { get; set; }

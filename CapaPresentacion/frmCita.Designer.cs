@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCita));
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewCita = new System.Windows.Forms.DataGridView();
@@ -50,6 +49,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tabCita = new System.Windows.Forms.TabControl();
+            this.bunifuTextbox = new Bunifu.Framework.UI.BunifuTextbox();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCita)).BeginInit();
@@ -83,8 +83,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.textBox10);
-            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.bunifuTextbox);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnElminar);
             this.panel2.Controls.Add(this.dataGridViewCita);
@@ -92,24 +91,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(625, 566);
             this.panel2.TabIndex = 4;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(163, 56);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(316, 23);
-            this.textBox10.TabIndex = 21;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(91, 56);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 16);
-            this.label18.TabIndex = 20;
-            this.label18.Text = "Buscar:";
             // 
             // btnEditar
             // 
@@ -300,6 +281,19 @@
             this.tabCita.Size = new System.Drawing.Size(1113, 594);
             this.tabCita.TabIndex = 1;
             // 
+            // bunifuTextbox
+            // 
+            this.bunifuTextbox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuTextbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox.BackgroundImage")));
+            this.bunifuTextbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox.Icon")));
+            this.bunifuTextbox.Location = new System.Drawing.Point(97, 28);
+            this.bunifuTextbox.Name = "bunifuTextbox";
+            this.bunifuTextbox.Size = new System.Drawing.Size(402, 39);
+            this.bunifuTextbox.TabIndex = 20;
+            this.bunifuTextbox.text = "";
+            // 
             // frmCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,7 +308,6 @@
             this.Load += new System.EventHandler(this.frmCita_Load);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCita)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -343,10 +336,9 @@
         private System.Windows.Forms.MaskedTextBox maskedTextBoxHoraC;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnElminar;
         private System.Windows.Forms.DataGridView dataGridViewCita;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExpediente));
             this.tabSolicitud = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -36,42 +37,44 @@
             this.lblDatosgenerales = new System.Windows.Forms.Label();
             this.PanelDatosPer = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.maskedtxtbxCedPac = new System.Windows.Forms.MaskedTextBox();
             this.cmbbxEstCivil = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.maskedtxtbxTelefonoPac = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtbxProcedenciaPac = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.cbxReligionPac = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.cbxReligionPac = new System.Windows.Forms.ComboBox();
             this.txtbxNombreMa = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtbxNombrePa = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtbxNombrePa = new System.Windows.Forms.TextBox();
             this.txtbxDirhabiPac = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.cmbbxGrupoEt = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtbxEdadPac = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtbxEdadPac = new System.Windows.Forms.TextBox();
             this.cmbbxSexoPac = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtbxLugarNac = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.mtxtbxFechaNac = new System.Windows.Forms.MaskedTextBox();
             this.txtbxApellidosPac = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtbxNombrePac = new System.Windows.Forms.TextBox();
+            this.maskedtxtbxCedPac = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtbxTrataIndiPac = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.txtbxMotiConsul = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblNumExp = new System.Windows.Forms.Label();
             this.txtbxNumeroExp = new System.Windows.Forms.TextBox();
-            this.lblIdMedico = new System.Windows.Forms.Label();
-            this.mtxtbxFechaNac = new System.Windows.Forms.MaskedTextBox();
-            this.cmbbxGrupoEt = new System.Windows.Forms.ComboBox();
-            this.maskedtxtbxTelefonoPac = new System.Windows.Forms.MaskedTextBox();
+            this.lblIDExpe = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbxTrataIndiPac = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblEnfermedadIC = new System.Windows.Forms.Label();
             this.PanelEnfermedadIC = new System.Windows.Forms.Panel();
@@ -108,8 +111,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.bunifuTextbox = new Bunifu.Framework.UI.BunifuTextbox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewExp = new System.Windows.Forms.DataGridView();
@@ -160,9 +162,9 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel3.Controls.Add(this.flowLayoutPanel1);
-            this.panel3.Location = new System.Drawing.Point(564, -1);
+            this.panel3.Location = new System.Drawing.Point(615, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(536, 567);
+            this.panel3.Size = new System.Drawing.Size(485, 567);
             this.panel3.TabIndex = 4;
             // 
             // flowLayoutPanel1
@@ -179,7 +181,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel5);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 20);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(516, 541);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(465, 541);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // panel1
@@ -187,7 +189,7 @@
             this.panel1.Controls.Add(this.lblDatosgenerales);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(491, 52);
+            this.panel1.Size = new System.Drawing.Size(439, 52);
             this.panel1.TabIndex = 6;
             // 
             // lblDatosgenerales
@@ -197,7 +199,7 @@
             this.lblDatosgenerales.BackColor = System.Drawing.Color.MidnightBlue;
             this.lblDatosgenerales.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosgenerales.ForeColor = System.Drawing.Color.White;
-            this.lblDatosgenerales.Location = new System.Drawing.Point(186, 0);
+            this.lblDatosgenerales.Location = new System.Drawing.Point(160, 0);
             this.lblDatosgenerales.Name = "lblDatosgenerales";
             this.lblDatosgenerales.Size = new System.Drawing.Size(148, 21);
             this.lblDatosgenerales.TabIndex = 3;
@@ -209,7 +211,7 @@
             this.PanelDatosPer.Controls.Add(this.tableLayoutPanel2);
             this.PanelDatosPer.Location = new System.Drawing.Point(3, 61);
             this.PanelDatosPer.Name = "PanelDatosPer";
-            this.PanelDatosPer.Size = new System.Drawing.Size(491, 658);
+            this.PanelDatosPer.Size = new System.Drawing.Size(439, 722);
             this.PanelDatosPer.TabIndex = 12;
             this.PanelDatosPer.Visible = false;
             // 
@@ -218,74 +220,68 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.89183F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.10817F));
-            this.tableLayoutPanel2.Controls.Add(this.maskedtxtbxCedPac, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.cmbbxEstCivil, 1, 17);
-            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 17);
-            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 16);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxProcedenciaPac, 1, 15);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 15);
-            this.tableLayoutPanel2.Controls.Add(this.cbxReligionPac, 1, 14);
-            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 14);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxNombreMa, 1, 13);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 13);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxNombrePa, 1, 12);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 0, 12);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxDirhabiPac, 1, 11);
-            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 11);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 10);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxEdadPac, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 9);
-            this.tableLayoutPanel2.Controls.Add(this.cmbbxSexoPac, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxLugarNac, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxApellidosPac, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxNombrePac, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxTrataIndiPac, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxMotiConsul, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtbxNumeroExp, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblIdMedico, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.mtxtbxFechaNac, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.cmbbxGrupoEt, 1, 10);
-            this.tableLayoutPanel2.Controls.Add(this.maskedtxtbxTelefonoPac, 1, 16);
+            this.tableLayoutPanel2.Controls.Add(this.cmbbxEstCivil, 1, 18);
+            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 18);
+            this.tableLayoutPanel2.Controls.Add(this.maskedtxtbxTelefonoPac, 1, 17);
+            this.tableLayoutPanel2.Controls.Add(this.label15, 0, 17);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxProcedenciaPac, 1, 16);
+            this.tableLayoutPanel2.Controls.Add(this.label14, 0, 16);
+            this.tableLayoutPanel2.Controls.Add(this.label13, 0, 15);
+            this.tableLayoutPanel2.Controls.Add(this.cbxReligionPac, 1, 15);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxNombreMa, 1, 14);
+            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 14);
+            this.tableLayoutPanel2.Controls.Add(this.label11, 0, 13);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxNombrePa, 1, 13);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxDirhabiPac, 1, 12);
+            this.tableLayoutPanel2.Controls.Add(this.label10, 0, 12);
+            this.tableLayoutPanel2.Controls.Add(this.cmbbxGrupoEt, 1, 11);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 11);
+            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 10);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxEdadPac, 1, 10);
+            this.tableLayoutPanel2.Controls.Add(this.cmbbxSexoPac, 1, 9);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 9);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxLugarNac, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.label7, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.mtxtbxFechaNac, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxApellidosPac, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxNombrePac, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.maskedtxtbxCedPac, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label6, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.label17, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxMotiConsul, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lblNumExp, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxNumeroExp, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblIDExpe, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtbxTrataIndiPac, 1, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(20, 15);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 19;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555554F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882075F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.886782F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.555555F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(453, 623);
             this.tableLayoutPanel2.TabIndex = 0;
-            // 
-            // maskedtxtbxCedPac
-            // 
-            this.maskedtxtbxCedPac.Location = new System.Drawing.Point(151, 190);
-            this.maskedtxtbxCedPac.Mask = "000-000000-0000?";
-            this.maskedtxtbxCedPac.Name = "maskedtxtbxCedPac";
-            this.maskedtxtbxCedPac.Size = new System.Drawing.Size(268, 23);
-            this.maskedtxtbxCedPac.TabIndex = 50;
             // 
             // cmbbxEstCivil
             // 
@@ -295,7 +291,7 @@
             "Casado",
             "Viudo",
             "Divorciado"});
-            this.cmbbxEstCivil.Location = new System.Drawing.Point(151, 568);
+            this.cmbbxEstCivil.Location = new System.Drawing.Point(151, 595);
             this.cmbbxEstCivil.Name = "cmbbxEstCivil";
             this.cmbbxEstCivil.Size = new System.Drawing.Size(121, 23);
             this.cmbbxEstCivil.TabIndex = 48;
@@ -305,18 +301,26 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(3, 565);
+            this.label16.Location = new System.Drawing.Point(3, 592);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(76, 17);
             this.label16.TabIndex = 47;
             this.label16.Text = "Estado civil:";
+            // 
+            // maskedtxtbxTelefonoPac
+            // 
+            this.maskedtxtbxTelefonoPac.Location = new System.Drawing.Point(151, 568);
+            this.maskedtxtbxTelefonoPac.Mask = "0000 0000";
+            this.maskedtxtbxTelefonoPac.Name = "maskedtxtbxTelefonoPac";
+            this.maskedtxtbxTelefonoPac.Size = new System.Drawing.Size(268, 23);
+            this.maskedtxtbxTelefonoPac.TabIndex = 51;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(3, 538);
+            this.label15.Location = new System.Drawing.Point(3, 565);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(107, 17);
             this.label15.TabIndex = 45;
@@ -325,7 +329,7 @@
             // txtbxProcedenciaPac
             // 
             this.txtbxProcedenciaPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxProcedenciaPac.Location = new System.Drawing.Point(151, 514);
+            this.txtbxProcedenciaPac.Location = new System.Drawing.Point(151, 541);
             this.txtbxProcedenciaPac.Name = "txtbxProcedenciaPac";
             this.txtbxProcedenciaPac.Size = new System.Drawing.Size(268, 21);
             this.txtbxProcedenciaPac.TabIndex = 44;
@@ -335,40 +339,40 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(3, 511);
+            this.label14.Location = new System.Drawing.Point(3, 538);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(82, 17);
             this.label14.TabIndex = 43;
             this.label14.Text = "Procedencia:";
-            // 
-            // cbxReligionPac
-            // 
-            this.cbxReligionPac.FormattingEnabled = true;
-            this.cbxReligionPac.Items.AddRange(new object[] {
-            "Católica",
-            "Evangélica",
-            "Cristiana",
-            "Otra"});
-            this.cbxReligionPac.Location = new System.Drawing.Point(151, 487);
-            this.cbxReligionPac.Name = "cbxReligionPac";
-            this.cbxReligionPac.Size = new System.Drawing.Size(121, 23);
-            this.cbxReligionPac.TabIndex = 42;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(3, 484);
+            this.label13.Location = new System.Drawing.Point(3, 511);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 17);
             this.label13.TabIndex = 41;
             this.label13.Text = "Religión:";
             // 
+            // cbxReligionPac
+            // 
+            this.cbxReligionPac.FormattingEnabled = true;
+            this.cbxReligionPac.Items.AddRange(new object[] {
+            "Católica",
+            "Cristiana",
+            "Evangélica",
+            "Otra"});
+            this.cbxReligionPac.Location = new System.Drawing.Point(151, 514);
+            this.cbxReligionPac.Name = "cbxReligionPac";
+            this.cbxReligionPac.Size = new System.Drawing.Size(121, 23);
+            this.cbxReligionPac.TabIndex = 42;
+            // 
             // txtbxNombreMa
             // 
             this.txtbxNombreMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNombreMa.Location = new System.Drawing.Point(151, 460);
+            this.txtbxNombreMa.Location = new System.Drawing.Point(151, 487);
             this.txtbxNombreMa.Name = "txtbxNombreMa";
             this.txtbxNombreMa.Size = new System.Drawing.Size(268, 21);
             this.txtbxNombreMa.TabIndex = 40;
@@ -378,38 +382,38 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(3, 457);
+            this.label12.Location = new System.Drawing.Point(3, 484);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(102, 17);
             this.label12.TabIndex = 39;
             this.label12.Text = "Nombre madre:";
-            // 
-            // txtbxNombrePa
-            // 
-            this.txtbxNombrePa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNombrePa.Location = new System.Drawing.Point(151, 433);
-            this.txtbxNombrePa.Name = "txtbxNombrePa";
-            this.txtbxNombrePa.Size = new System.Drawing.Size(268, 21);
-            this.txtbxNombrePa.TabIndex = 38;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(3, 430);
+            this.label11.Location = new System.Drawing.Point(3, 457);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(99, 17);
             this.label11.TabIndex = 37;
             this.label11.Text = "Nombre padre:";
             // 
+            // txtbxNombrePa
+            // 
+            this.txtbxNombrePa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxNombrePa.Location = new System.Drawing.Point(151, 460);
+            this.txtbxNombrePa.Name = "txtbxNombrePa";
+            this.txtbxNombrePa.Size = new System.Drawing.Size(268, 21);
+            this.txtbxNombrePa.TabIndex = 38;
+            // 
             // txtbxDirhabiPac
             // 
             this.txtbxDirhabiPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxDirhabiPac.Location = new System.Drawing.Point(151, 406);
+            this.txtbxDirhabiPac.Location = new System.Drawing.Point(151, 433);
             this.txtbxDirhabiPac.Multiline = true;
             this.txtbxDirhabiPac.Name = "txtbxDirhabiPac";
-            this.txtbxDirhabiPac.Size = new System.Drawing.Size(268, 21);
+            this.txtbxDirhabiPac.Size = new System.Drawing.Size(268, 17);
             this.txtbxDirhabiPac.TabIndex = 36;
             // 
             // label10
@@ -417,49 +421,67 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(3, 403);
+            this.label10.Location = new System.Drawing.Point(3, 430);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 17);
             this.label10.TabIndex = 35;
             this.label10.Text = "Dirección habitual:";
+            // 
+            // cmbbxGrupoEt
+            // 
+            this.cmbbxGrupoEt.FormattingEnabled = true;
+            this.cmbbxGrupoEt.Items.AddRange(new object[] {
+            "Mestizo",
+            "Náhualt",
+            "Chorotegas",
+            "Creoles",
+            "Rama",
+            "Sumos",
+            "Garífunas",
+            "Miskitos",
+            "Otros"});
+            this.cmbbxGrupoEt.Location = new System.Drawing.Point(151, 406);
+            this.cmbbxGrupoEt.Name = "cmbbxGrupoEt";
+            this.cmbbxGrupoEt.Size = new System.Drawing.Size(121, 23);
+            this.cmbbxGrupoEt.TabIndex = 34;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 376);
+            this.label1.Location = new System.Drawing.Point(3, 403);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 33;
             this.label1.Text = "Grupo étnico:";
-            // 
-            // txtbxEdadPac
-            // 
-            this.txtbxEdadPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxEdadPac.Location = new System.Drawing.Point(151, 352);
-            this.txtbxEdadPac.Name = "txtbxEdadPac";
-            this.txtbxEdadPac.Size = new System.Drawing.Size(268, 21);
-            this.txtbxEdadPac.TabIndex = 32;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(3, 349);
+            this.label9.Location = new System.Drawing.Point(3, 376);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 17);
             this.label9.TabIndex = 31;
             this.label9.Text = "Edad:";
             // 
+            // txtbxEdadPac
+            // 
+            this.txtbxEdadPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxEdadPac.Location = new System.Drawing.Point(151, 379);
+            this.txtbxEdadPac.Name = "txtbxEdadPac";
+            this.txtbxEdadPac.Size = new System.Drawing.Size(268, 21);
+            this.txtbxEdadPac.TabIndex = 32;
+            // 
             // cmbbxSexoPac
             // 
             this.cmbbxSexoPac.FormattingEnabled = true;
             this.cmbbxSexoPac.Items.AddRange(new object[] {
-            "F",
-            "M"});
-            this.cmbbxSexoPac.Location = new System.Drawing.Point(151, 325);
+            "Femenino",
+            "Masculino"});
+            this.cmbbxSexoPac.Location = new System.Drawing.Point(151, 352);
             this.cmbbxSexoPac.Name = "cmbbxSexoPac";
             this.cmbbxSexoPac.Size = new System.Drawing.Size(121, 23);
             this.cmbbxSexoPac.TabIndex = 30;
@@ -469,7 +491,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 322);
+            this.label3.Location = new System.Drawing.Point(3, 349);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 17);
             this.label3.TabIndex = 29;
@@ -478,7 +500,7 @@
             // txtbxLugarNac
             // 
             this.txtbxLugarNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxLugarNac.Location = new System.Drawing.Point(151, 298);
+            this.txtbxLugarNac.Location = new System.Drawing.Point(151, 325);
             this.txtbxLugarNac.Name = "txtbxLugarNac";
             this.txtbxLugarNac.Size = new System.Drawing.Size(268, 21);
             this.txtbxLugarNac.TabIndex = 28;
@@ -488,7 +510,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 295);
+            this.label7.Location = new System.Drawing.Point(3, 322);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(111, 17);
             this.label7.TabIndex = 27;
@@ -499,45 +521,61 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(3, 268);
+            this.label4.Location = new System.Drawing.Point(3, 295);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(111, 17);
             this.label4.TabIndex = 25;
             this.label4.Text = "Fecha nacimiento:";
             // 
+            // mtxtbxFechaNac
+            // 
+            this.mtxtbxFechaNac.Location = new System.Drawing.Point(151, 298);
+            this.mtxtbxFechaNac.Mask = "0000-00-00";
+            this.mtxtbxFechaNac.Name = "mtxtbxFechaNac";
+            this.mtxtbxFechaNac.Size = new System.Drawing.Size(268, 23);
+            this.mtxtbxFechaNac.TabIndex = 49;
+            // 
             // txtbxApellidosPac
             // 
             this.txtbxApellidosPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxApellidosPac.Location = new System.Drawing.Point(151, 244);
+            this.txtbxApellidosPac.Location = new System.Drawing.Point(151, 271);
             this.txtbxApellidosPac.Name = "txtbxApellidosPac";
             this.txtbxApellidosPac.Size = new System.Drawing.Size(268, 21);
             this.txtbxApellidosPac.TabIndex = 24;
+            // 
+            // txtbxNombrePac
+            // 
+            this.txtbxNombrePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxNombrePac.Location = new System.Drawing.Point(151, 244);
+            this.txtbxNombrePac.Name = "txtbxNombrePac";
+            this.txtbxNombrePac.Size = new System.Drawing.Size(268, 21);
+            this.txtbxNombrePac.TabIndex = 22;
+            // 
+            // maskedtxtbxCedPac
+            // 
+            this.maskedtxtbxCedPac.Location = new System.Drawing.Point(151, 217);
+            this.maskedtxtbxCedPac.Mask = "000-000000-0000?";
+            this.maskedtxtbxCedPac.Name = "maskedtxtbxCedPac";
+            this.maskedtxtbxCedPac.Size = new System.Drawing.Size(268, 23);
+            this.maskedtxtbxCedPac.TabIndex = 50;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(3, 241);
+            this.label6.Location = new System.Drawing.Point(3, 268);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 17);
             this.label6.TabIndex = 23;
             this.label6.Text = "Apellidos:";
-            // 
-            // txtbxNombrePac
-            // 
-            this.txtbxNombrePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNombrePac.Location = new System.Drawing.Point(151, 217);
-            this.txtbxNombrePac.Name = "txtbxNombrePac";
-            this.txtbxNombrePac.Size = new System.Drawing.Size(268, 21);
-            this.txtbxNombrePac.TabIndex = 22;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(3, 214);
+            this.label5.Location = new System.Drawing.Point(3, 241);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 17);
             this.label5.TabIndex = 14;
@@ -548,28 +586,18 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 187);
+            this.label8.Location = new System.Drawing.Point(3, 214);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 17);
             this.label8.TabIndex = 11;
             this.label8.Text = "Cédula:";
-            // 
-            // txtbxTrataIndiPac
-            // 
-            this.txtbxTrataIndiPac.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtbxTrataIndiPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxTrataIndiPac.Location = new System.Drawing.Point(151, 110);
-            this.txtbxTrataIndiPac.Multiline = true;
-            this.txtbxTrataIndiPac.Name = "txtbxTrataIndiPac";
-            this.txtbxTrataIndiPac.Size = new System.Drawing.Size(299, 61);
-            this.txtbxTrataIndiPac.TabIndex = 8;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(3, 107);
+            this.label17.Location = new System.Drawing.Point(3, 134);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(135, 17);
             this.label17.TabIndex = 7;
@@ -577,77 +605,73 @@
             // 
             // txtbxMotiConsul
             // 
-            this.txtbxMotiConsul.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtbxMotiConsul.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxMotiConsul.Location = new System.Drawing.Point(151, 30);
+            this.txtbxMotiConsul.Location = new System.Drawing.Point(151, 57);
             this.txtbxMotiConsul.Multiline = true;
             this.txtbxMotiConsul.Name = "txtbxMotiConsul";
-            this.txtbxMotiConsul.Size = new System.Drawing.Size(299, 61);
-            this.txtbxMotiConsul.TabIndex = 6;
+            this.txtbxMotiConsul.Size = new System.Drawing.Size(268, 60);
+            this.txtbxMotiConsul.TabIndex = 53;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(3, 27);
+            this.label2.Location = new System.Drawing.Point(3, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Motivo consulta:";
             // 
+            // lblNumExp
+            // 
+            this.lblNumExp.AutoSize = true;
+            this.lblNumExp.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumExp.ForeColor = System.Drawing.Color.White;
+            this.lblNumExp.Location = new System.Drawing.Point(3, 27);
+            this.lblNumExp.Name = "lblNumExp";
+            this.lblNumExp.Size = new System.Drawing.Size(127, 17);
+            this.lblNumExp.TabIndex = 0;
+            this.lblNumExp.Text = "Número expediente:";
+            // 
             // txtbxNumeroExp
             // 
-            this.txtbxNumeroExp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtbxNumeroExp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNumeroExp.Location = new System.Drawing.Point(151, 3);
+            this.txtbxNumeroExp.Location = new System.Drawing.Point(151, 30);
             this.txtbxNumeroExp.Name = "txtbxNumeroExp";
-            this.txtbxNumeroExp.Size = new System.Drawing.Size(299, 22);
-            this.txtbxNumeroExp.TabIndex = 4;
+            this.txtbxNumeroExp.Size = new System.Drawing.Size(268, 23);
+            this.txtbxNumeroExp.TabIndex = 54;
             // 
-            // lblIdMedico
+            // lblIDExpe
             // 
-            this.lblIdMedico.AutoSize = true;
-            this.lblIdMedico.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdMedico.ForeColor = System.Drawing.Color.White;
-            this.lblIdMedico.Location = new System.Drawing.Point(3, 0);
-            this.lblIdMedico.Name = "lblIdMedico";
-            this.lblIdMedico.Size = new System.Drawing.Size(127, 17);
-            this.lblIdMedico.TabIndex = 0;
-            this.lblIdMedico.Text = "Número expediente:";
+            this.lblIDExpe.AutoSize = true;
+            this.lblIDExpe.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDExpe.ForeColor = System.Drawing.Color.White;
+            this.lblIDExpe.Location = new System.Drawing.Point(3, 0);
+            this.lblIDExpe.Name = "lblIDExpe";
+            this.lblIDExpe.Size = new System.Drawing.Size(91, 17);
+            this.lblIDExpe.TabIndex = 55;
+            this.lblIDExpe.Text = "ID Expediente:";
             // 
-            // mtxtbxFechaNac
+            // textBox1
             // 
-            this.mtxtbxFechaNac.Location = new System.Drawing.Point(151, 271);
-            this.mtxtbxFechaNac.Mask = "0000-00-00";
-            this.mtxtbxFechaNac.Name = "mtxtbxFechaNac";
-            this.mtxtbxFechaNac.Size = new System.Drawing.Size(268, 23);
-            this.mtxtbxFechaNac.TabIndex = 49;
+            this.textBox1.Location = new System.Drawing.Point(151, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(268, 23);
+            this.textBox1.TabIndex = 56;
             // 
-            // cmbbxGrupoEt
+            // txtbxTrataIndiPac
             // 
-            this.cmbbxGrupoEt.FormattingEnabled = true;
-            this.cmbbxGrupoEt.Items.AddRange(new object[] {
-            "Mestizo"});
-            this.cmbbxGrupoEt.Location = new System.Drawing.Point(151, 379);
-            this.cmbbxGrupoEt.Name = "cmbbxGrupoEt";
-            this.cmbbxGrupoEt.Size = new System.Drawing.Size(121, 23);
-            this.cmbbxGrupoEt.TabIndex = 34;
-            // 
-            // maskedtxtbxTelefonoPac
-            // 
-            this.maskedtxtbxTelefonoPac.Location = new System.Drawing.Point(151, 541);
-            this.maskedtxtbxTelefonoPac.Mask = "0000 0000";
-            this.maskedtxtbxTelefonoPac.Name = "maskedtxtbxTelefonoPac";
-            this.maskedtxtbxTelefonoPac.Size = new System.Drawing.Size(268, 23);
-            this.maskedtxtbxTelefonoPac.TabIndex = 51;
+            this.txtbxTrataIndiPac.Location = new System.Drawing.Point(151, 137);
+            this.txtbxTrataIndiPac.Multiline = true;
+            this.txtbxTrataIndiPac.Name = "txtbxTrataIndiPac";
+            this.txtbxTrataIndiPac.Size = new System.Drawing.Size(268, 62);
+            this.txtbxTrataIndiPac.TabIndex = 52;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lblEnfermedadIC);
-            this.panel4.Location = new System.Drawing.Point(3, 725);
+            this.panel4.Location = new System.Drawing.Point(3, 789);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(491, 52);
+            this.panel4.Size = new System.Drawing.Size(439, 52);
             this.panel4.TabIndex = 12;
             // 
             // lblEnfermedadIC
@@ -657,7 +681,7 @@
             this.lblEnfermedadIC.BackColor = System.Drawing.Color.MidnightBlue;
             this.lblEnfermedadIC.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnfermedadIC.ForeColor = System.Drawing.Color.White;
-            this.lblEnfermedadIC.Location = new System.Drawing.Point(104, 0);
+            this.lblEnfermedadIC.Location = new System.Drawing.Point(78, 0);
             this.lblEnfermedadIC.Name = "lblEnfermedadIC";
             this.lblEnfermedadIC.Size = new System.Drawing.Size(306, 21);
             this.lblEnfermedadIC.TabIndex = 4;
@@ -667,9 +691,9 @@
             // PanelEnfermedadIC
             // 
             this.PanelEnfermedadIC.Controls.Add(this.Panellayout1);
-            this.PanelEnfermedadIC.Location = new System.Drawing.Point(3, 783);
+            this.PanelEnfermedadIC.Location = new System.Drawing.Point(3, 847);
             this.PanelEnfermedadIC.Name = "PanelEnfermedadIC";
-            this.PanelEnfermedadIC.Size = new System.Drawing.Size(491, 518);
+            this.PanelEnfermedadIC.Size = new System.Drawing.Size(439, 518);
             this.PanelEnfermedadIC.TabIndex = 5;
             this.PanelEnfermedadIC.Visible = false;
             // 
@@ -883,9 +907,9 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.lblEnfermedadH);
-            this.panel6.Location = new System.Drawing.Point(3, 1307);
+            this.panel6.Location = new System.Drawing.Point(3, 1371);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(491, 52);
+            this.panel6.Size = new System.Drawing.Size(439, 52);
             this.panel6.TabIndex = 13;
             // 
             // lblEnfermedadH
@@ -895,7 +919,7 @@
             this.lblEnfermedadH.BackColor = System.Drawing.Color.MidnightBlue;
             this.lblEnfermedadH.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnfermedadH.ForeColor = System.Drawing.Color.White;
-            this.lblEnfermedadH.Location = new System.Drawing.Point(145, 0);
+            this.lblEnfermedadH.Location = new System.Drawing.Point(119, 0);
             this.lblEnfermedadH.Name = "lblEnfermedadH";
             this.lblEnfermedadH.Size = new System.Drawing.Size(234, 21);
             this.lblEnfermedadH.TabIndex = 4;
@@ -905,9 +929,9 @@
             // PanelEnfermedadH
             // 
             this.PanelEnfermedadH.Controls.Add(this.tableLayoutPanel1);
-            this.PanelEnfermedadH.Location = new System.Drawing.Point(3, 1365);
+            this.PanelEnfermedadH.Location = new System.Drawing.Point(3, 1429);
             this.PanelEnfermedadH.Name = "PanelEnfermedadH";
-            this.PanelEnfermedadH.Size = new System.Drawing.Size(491, 516);
+            this.PanelEnfermedadH.Size = new System.Drawing.Size(439, 516);
             this.PanelEnfermedadH.TabIndex = 12;
             this.PanelEnfermedadH.Visible = false;
             // 
@@ -1079,9 +1103,9 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btnRegistrar);
-            this.panel5.Location = new System.Drawing.Point(3, 1887);
+            this.panel5.Location = new System.Drawing.Point(3, 1951);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(491, 100);
+            this.panel5.Size = new System.Drawing.Size(439, 100);
             this.panel5.TabIndex = 12;
             // 
             // btnRegistrar
@@ -1091,7 +1115,7 @@
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(-3, 0);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(494, 49);
+            this.btnRegistrar.Size = new System.Drawing.Size(442, 49);
             this.btnRegistrar.TabIndex = 5;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
@@ -1100,33 +1124,27 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.textBox8);
-            this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.bunifuTextbox);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnElminar);
             this.panel2.Controls.Add(this.dataGridViewExp);
             this.panel2.Location = new System.Drawing.Point(-3, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(569, 736);
+            this.panel2.Size = new System.Drawing.Size(620, 736);
             this.panel2.TabIndex = 6;
             // 
-            // textBox8
+            // bunifuTextbox
             // 
-            this.textBox8.Location = new System.Drawing.Point(138, 57);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(316, 23);
-            this.textBox8.TabIndex = 11;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(66, 57);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(60, 16);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "Buscar:";
+            this.bunifuTextbox.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuTextbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox.BackgroundImage")));
+            this.bunifuTextbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox.ForeColor = System.Drawing.Color.White;
+            this.bunifuTextbox.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox.Icon")));
+            this.bunifuTextbox.Location = new System.Drawing.Point(15, 31);
+            this.bunifuTextbox.Name = "bunifuTextbox";
+            this.bunifuTextbox.Size = new System.Drawing.Size(389, 42);
+            this.bunifuTextbox.TabIndex = 10;
+            this.bunifuTextbox.text = "";
             // 
             // btnEditar
             // 
@@ -1150,11 +1168,11 @@
             // 
             // dataGridViewExp
             // 
-            this.dataGridViewExp.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewExp.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
             this.dataGridViewExp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExp.Location = new System.Drawing.Point(13, 118);
+            this.dataGridViewExp.Location = new System.Drawing.Point(30, 118);
             this.dataGridViewExp.Name = "dataGridViewExp";
-            this.dataGridViewExp.Size = new System.Drawing.Size(548, 328);
+            this.dataGridViewExp.Size = new System.Drawing.Size(566, 328);
             this.dataGridViewExp.TabIndex = 0;
             // 
             // tabPage3
@@ -1207,7 +1225,6 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
             this.ResumeLayout(false);
 
@@ -1222,11 +1239,9 @@
         private System.Windows.Forms.DataGridView dataGridViewExp;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnElminar;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblDatosgenerales;
-        private System.Windows.Forms.Label lblIdMedico;
+        private System.Windows.Forms.Label lblNumExp;
         private System.Windows.Forms.TableLayoutPanel Panellayout1;
         private System.Windows.Forms.CheckBox chkbxTina;
         private System.Windows.Forms.CheckBox chkbxHepatitis;
@@ -1267,10 +1282,7 @@
         private System.Windows.Forms.CheckBox chkbxMalConge;
         private System.Windows.Forms.CheckBox chkbxDesMentales;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox txtbxMotiConsul;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtbxNumeroExp;
-        private System.Windows.Forms.TextBox txtbxTrataIndiPac;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtbxApellidosPac;
         private System.Windows.Forms.Label label6;
@@ -1302,5 +1314,11 @@
         private System.Windows.Forms.MaskedTextBox mtxtbxFechaNac;
         private System.Windows.Forms.MaskedTextBox maskedtxtbxCedPac;
         private System.Windows.Forms.MaskedTextBox maskedtxtbxTelefonoPac;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox;
+        private System.Windows.Forms.TextBox txtbxTrataIndiPac;
+        private System.Windows.Forms.TextBox txtbxMotiConsul;
+        private System.Windows.Forms.TextBox txtbxNumeroExp;
+        private System.Windows.Forms.Label lblIDExpe;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

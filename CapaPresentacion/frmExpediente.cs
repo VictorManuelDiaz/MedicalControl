@@ -35,7 +35,7 @@ namespace CapaPresentacion
 
         private void frmExpediente_Load(object sender, EventArgs e)
         {
-
+            dataGridViewExp.DataSource = LNExp.ListarExpediente();
         }
 
         private void lblEnfermedadIC_Click(object sender, EventArgs e)
@@ -69,8 +69,7 @@ namespace CapaPresentacion
                 if (btnRegistrar.Text == "Registrar")
                 {
                     Expediente objetoExpediente= new Expediente ();
-
-                    objetoExpediente.NumeroExpediente = Convert.ToInt32(txtbxNumeroExp.Text);
+                    objetoExpediente.NumeroExpediente = txtbxNumeroExp.Text;
                     objetoExpediente.MotivoConsulta = txtbxMotiConsul.Text;
                     objetoExpediente.TratamientoIndicado = txtbxTrataIndiPac.Text;
                     objetoExpediente.CedulaPac = maskedtxtbxCedPac.Text;
@@ -394,8 +393,7 @@ namespace CapaPresentacion
                 if (btnRegistrar.Text == "Actualizar")
                 {
                     Expediente objetoExpediente = new Expediente();
-
-                    objetoExpediente.NumeroExpediente = Convert.ToInt32(txtbxNumeroExp.Text);
+                    objetoExpediente.NumeroExpediente = txtbxNumeroExp.Text;
                     objetoExpediente.MotivoConsulta = txtbxMotiConsul.Text;
                     objetoExpediente.TratamientoIndicado = txtbxTrataIndiPac.Text;
                     objetoExpediente.CedulaPac = maskedtxtbxCedPac.Text;
@@ -724,6 +722,6 @@ namespace CapaPresentacion
             }
         }
 
-       
+        
     }
 }

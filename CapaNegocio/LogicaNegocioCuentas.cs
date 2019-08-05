@@ -33,9 +33,13 @@ namespace CapaNegocio
             return AC.EditarCuenta(cu);
         }
 
-        public List<Cuenta> BuscarCuenta(string nom,string contra) 
+        public List<Cuenta> ValidarCuenta(string nom, string contra)
         {
-            return AC.BuscarCuenta(nom,contra);
+            return AC.ValidarCuenta(nom,contra);
+        }
+        public List<Cuenta> BuscarCuenta(string nom) 
+        {
+            return AC.BuscarCuenta(nom);
         }    
 
     }

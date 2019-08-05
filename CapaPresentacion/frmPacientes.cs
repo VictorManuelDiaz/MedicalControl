@@ -32,6 +32,7 @@ namespace CapaPresentacion
                 if (btnRegistrar.Text == "Registrar")
                 {
                     Paciente objetoPaciente = new Paciente();
+                    objetoPaciente.NumeroExpediente = txtbxNumExp.Text;
                     objetoPaciente.CedulaPac = maskedtxtbxCed.Text;
                     objetoPaciente.NombrePac = txtbxNom.Text;
                     objetoPaciente.ApellidosPac = txtbxApell.Text;
@@ -59,24 +60,28 @@ namespace CapaPresentacion
                     {
                         MessageBox.Show("Agregado con éxito");
                         dataGridViewPac.DataSource = LNPac.ListarPaciente();
+                        txtbxNumExp.Text = "";
                         maskedtxtbxCed.Text = "";
                         txtbxNom.Text = "";
                         txtbxApell.Text = "";
                         maskedtxtbxFecNac.Text = "";
                         txtbxNac.Text = "";
                         txtbxEdad.Text = "";
+                        cmbbxEtnia.Text = "";
                         txtbxDire.Text = "";
                         txtbxPadre.Text = "";
                         txtbxMadre.Text = "";
                         txtbxProced.Text = "";
                         maskedtxtbxTele.Text = "";
+                        cmbbxCivil.Text = "";
 
                     }
-                    else { MessageBox.Show("Error al agregar Recurso"); }
+                    else { MessageBox.Show("Error al agregar Paciente"); }
                 }
                 if (btnRegistrar.Text == "Actualizar")
                 {
                     Paciente objetoPaciente = new Paciente();
+                    objetoPaciente.NumeroExpediente = txtbxNumExp.Text;
                     objetoPaciente.CedulaPac = maskedtxtbxCed.Text;
                     objetoPaciente.NombrePac = txtbxNom.Text;
                     objetoPaciente.ApellidosPac = txtbxApell.Text;
@@ -104,12 +109,14 @@ namespace CapaPresentacion
                     {
                         MessageBox.Show("Actualizado con éxito");
                         dataGridViewPac.DataSource = LNPac.ListarPaciente();
+                        txtbxNumExp.Text = "";
                         maskedtxtbxCed.Text = "";
                         txtbxNom.Text = "";
                         txtbxApell.Text = "";
                         maskedtxtbxFecNac.Text = "";
                         txtbxNac.Text = "";
                         txtbxEdad.Text = "";
+                        cmbbxEtnia.Text = "";
                         txtbxDire.Text = "";
                         txtbxPadre.Text = "";
                         txtbxMadre.Text = "";
@@ -119,7 +126,7 @@ namespace CapaPresentacion
                     }
                     else
                     {
-                        MessageBox.Show("Error al actualizar Recurso");
+                        MessageBox.Show("Error al actualizar Paciente");
                     }
                     btnRegistrar.Text = "Registrar";
                 }
@@ -130,6 +137,5 @@ namespace CapaPresentacion
             }
         }
 
-        
     }
 }

@@ -167,7 +167,7 @@ namespace CapaDatos
         }
         //buscar comentarios
 
-        public List<Cuenta> BuscarCuenta(string nom, string contra)
+        public List<Cuenta> ValidarCuenta(string nom,string contra)
         {
             try
             {
@@ -178,6 +178,50 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@IdCuenta", "");
                 cm.Parameters.AddWithValue("@NombreCuenta", nom);
                 cm.Parameters.AddWithValue("@Contrasena", contra);
+                cm.Parameters.AddWithValue("@TipoCuenta", "");
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaCuenta = new List<Cuenta>();
+
+                while (dr.Read())
+                {
+
+                    Cuenta Cu = new Cuenta();
+
+                    Cu.IdCuenta = Convert.ToInt32(dr["IdCuenta"].ToString());
+                    Cu.NombreCuenta = dr["NombreCuenta"].ToString();
+                    Cu.Contrasena = dr["Contrasena"].ToString();
+                    Cu.TipoCuenta = dr["TipoCuenta"].ToString();
+                    listaCuenta.Add(Cu);
+
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaCuenta = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaCuenta;
+        }
+        public List<Cuenta> BuscarCuenta(string nom)
+        {
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("Cuenta_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 6);
+                cm.Parameters.AddWithValue("@IdCuenta", "");
+                cm.Parameters.AddWithValue("@NombreCuenta", nom);
+                cm.Parameters.AddWithValue("@Contrasena", "");
                 cm.Parameters.AddWithValue("@TipoCuenta", "");
 
                 cm.CommandType = CommandType.StoredProcedure;

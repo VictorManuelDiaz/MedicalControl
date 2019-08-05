@@ -32,7 +32,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@Costo", ca.Costo);
                 cm.Parameters.AddWithValue("@Sintomas", ca.Sintomas);
                 cm.Parameters.AddWithValue("@Diagnostico", ca.Diagnostico);
-                cm.Parameters.AddWithValue("@NumeroExpediente", ca.NumeroExpediente);
+                cm.Parameters.AddWithValue("@IdExpediente", ca.IdExpediente);
                 cm.Parameters.AddWithValue("@IdMedico", ca.IdMedico);
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -72,7 +72,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@Costo", "");
                 cm.Parameters.AddWithValue("@Sintomas", "");
                 cm.Parameters.AddWithValue("@Diagnostico", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -90,7 +90,7 @@ namespace CapaDatos
                     Consul.Costo = dr["Costo"].ToString();
                     Consul.Sintomas = dr["Sintomas"].ToString();
                     Consul.Diagnostico = dr["Diagnostico"].ToString();
-                    Consul.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
+                    Consul.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
                     Consul.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
                     listaConsulta.Add(Consul);
                 }
@@ -125,7 +125,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@Costo", "");
                 cm.Parameters.AddWithValue("@Sintomas", "");
                 cm.Parameters.AddWithValue("@Diagnostico", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
 
@@ -166,7 +166,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@Costo", ca.Costo);
                 cm.Parameters.AddWithValue("@Sintomas", ca.Sintomas);
                 cm.Parameters.AddWithValue("@Diagnostico", ca.Diagnostico);
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
 
@@ -203,7 +203,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@Costo", "");
                 cm.Parameters.AddWithValue("@Sintomas", "");
                 cm.Parameters.AddWithValue("@Diagnostico", "");
-                cm.Parameters.AddWithValue("@NumeroExpediente", dato);
+                cm.Parameters.AddWithValue("@IdExpediente", dato);
                 cm.Parameters.AddWithValue("@IdMedico", "");
 
 
@@ -223,7 +223,7 @@ namespace CapaDatos
                     Consul.Costo = dr["Costo"].ToString();
                     Consul.Sintomas = dr["Sintomas"].ToString();
                     Consul.Diagnostico = dr["Diagnostico"].ToString();
-                    Consul.NumeroExpediente = Convert.ToInt32(dr["NuemroExpediente"].ToString());
+                    Consul.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
                     Consul.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
                     listaConsulta.Add(Consul);
 

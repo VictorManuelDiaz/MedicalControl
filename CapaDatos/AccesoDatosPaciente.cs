@@ -27,8 +27,9 @@ namespace CapaDatos
             {
                 SqlConnection cnx = cn.Conectar(); // conectar
                 cm = new SqlCommand("Paciente_Proced", cnx); //nombre del procedimiento SQL
-                cm.Parameters.AddWithValue("@b", 1); //valores que toman los parametros del procedimiento
-                cm.Parameters.AddWithValue("@NumeroExpediente", "");
+                cm.Parameters.AddWithValue("@b", 1);
+                cm.Parameters.AddWithValue("@IdExpediente", "");
+                cm.Parameters.AddWithValue("@NumeroExpediente", Pac.NumeroExpediente);
                 cm.Parameters.AddWithValue("@CedulaPac", Pac.CedulaPac);
                 cm.Parameters.AddWithValue("@NombrePac", Pac.NombrePac);
                 cm.Parameters.AddWithValue("@ApellidosPac", Pac.ApellidosPac);
@@ -77,6 +78,7 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();//conectar
                 cm = new SqlCommand("Paciente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 3);
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@CedulaPac", "");
                 cm.Parameters.AddWithValue("@NombrePac", "");
@@ -104,7 +106,8 @@ namespace CapaDatos
 
                     Paciente pac = new Paciente();
 
-                    pac.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
+                    pac.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    pac.NumeroExpediente = dr["NumeroExpediente"].ToString();
                     pac.CedulaPac = dr["CedulaPac"].ToString();
                     pac.NombrePac = dr["NombrePac"].ToString();
                     pac.ApellidosPac = dr["ApellidosPac"].ToString();
@@ -151,7 +154,7 @@ namespace CapaDatos
 
                 cm = new SqlCommand("Paciente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 2);
-                cm.Parameters.AddWithValue("@NumeroExpediente", NumeroPac);
+                cm.Parameters.AddWithValue("@IdExpediente", NumeroPac);
 
 
                 cm.CommandType = CommandType.StoredProcedure;
@@ -185,6 +188,7 @@ namespace CapaDatos
 
                 cm = new SqlCommand("Paciente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@CedulaPac", "");
                 cm.Parameters.AddWithValue("@NombrePac", Pac.NombrePac);
@@ -230,6 +234,7 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Paciente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
+                cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@CedulaPac", dato);
                 cm.Parameters.AddWithValue("@NombrePac", dato);
@@ -259,7 +264,8 @@ namespace CapaDatos
 
                     Paciente pac = new Paciente();
 
-                    pac.NumeroExpediente = Convert.ToInt32(dr["NumeroExpediente"].ToString());
+                    pac.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    pac.NumeroExpediente = dr["NumeroExpediente"].ToString();
                     pac.CedulaPac = dr["CedulaPac"].ToString();
                     pac.NombrePac = dr["NombrePac"].ToString();
                     pac.ApellidosPac = dr["ApellidoPac"].ToString();
