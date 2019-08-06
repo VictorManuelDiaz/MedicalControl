@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaNegocio;
+using CapaEntidades;
 
 namespace CapaPresentacion
 {
@@ -23,6 +24,23 @@ namespace CapaPresentacion
         {
             dataGridViewEspecial.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
+        }
+
+        private void txtbxBuscar_Click(object sender, EventArgs e)
+        {
+            List<Especialidad> listaEspe = LNEsp.BuscarEspecialidad(txtbxBuscar.text);
+            dataGridViewEspecial.DataSource = listaEspe;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtbxIdEspe.Visible = true;
+            txtbxIdEspe.Enabled = false;
+            lblIdEspe.Visible = true;
+
+            txtbxNombreEspe.Text = dataGridViewEspecial.CurrentRow.Cells["NombreEs"].Value.ToString();
+            btnRegistrar.Text = "Actualizar";
+
         }
     }
 }

@@ -23,6 +23,8 @@ namespace CapaPresentacion
         private void frmPacientes_Load(object sender, EventArgs e)
         {
             dataGridViewPac.DataSource = LNPac.ListarPaciente();
+            txtbxIdExp.Visible = false;
+            lblIdExp.Visible = false;
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -134,6 +136,57 @@ namespace CapaPresentacion
             catch
             {
                 MessageBox.Show("ERROR");
+            }
+        }
+
+        private void txtbxBuscPaciente_Click(object sender, EventArgs e)
+        {
+            List<Paciente> listaPac = LNPac.BuscarPaciente(txtbxBuscPaciente.text);
+            dataGridViewPac.DataSource = listaPac;
+        }
+
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtbxIdExp.Visible = true;
+            txtbxIdExp.Enabled = false;
+            lblIdExp.Visible = true;
+
+            txtbxIdExp.Text = dataGridViewPac.CurrentRow.Cells["IdExpediente"].Value.ToString();
+            txtbxNumExp.Text = dataGridViewPac.CurrentRow.Cells["NumeroExpediente"].Value.ToString();
+            maskedtxtbxCed.Text = dataGridViewPac.CurrentRow.Cells["CedulaPac"].Value.ToString();
+            txtbxNom.Text = dataGridViewPac.CurrentRow.Cells["NombrePac"].Value.ToString();
+            txtbxApell.Text = dataGridViewPac.CurrentRow.Cells["ApellidosPac"].Value.ToString();
+            maskedtxtbxFecNac.Text = dataGridViewPac.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
+            txtbxNac.Text = dataGridViewPac.CurrentRow.Cells["LugarNacimiento"].Value.ToString();
+            cmbbxSexo.SelectedItem = dataGridViewPac.CurrentRow.Cells["SexoPac"].Value;
+            txtbxEdad.Text = dataGridViewPac.CurrentRow.Cells["EdadPac"].Value.ToString();
+            cmbbxEtnia.SelectedItem = dataGridViewPac.CurrentRow.Cells["GrupoEtnico"].Value;
+            txtbxDire.Text = dataGridViewPac.CurrentRow.Cells["DireccionhabitualPac"].Value.ToString();
+            txtbxPadre.Text = dataGridViewPac.CurrentRow.Cells["NombrePadre"].Value.ToString();
+            txtbxMadre.Text = dataGridViewPac.CurrentRow.Cells["NombreMadre"].Value.ToString();
+            cmbbxRelig.SelectedItem = dataGridViewPac.CurrentRow.Cells["ReligionPac"].Value;
+            txtbxProced.Text = dataGridViewPac.CurrentRow.Cells["ProcedenciaPac"].Value.ToString();
+            maskedtxtbxTele.Text = dataGridViewPac.CurrentRow.Cells["TelefonoPac"].Value.ToString();
+            cmbbxCivil.SelectedItem = dataGridViewPac.CurrentRow.Cells["EstadoCivilPac"].Value;
+
+            btnRegistrar.Text = "Actualizar";
+        }
+
+        private void btnElminar_Click(object sender, EventArgs e)
+        {
+            int codigoP = Convert.ToInt32(dataGridViewPac.CurrentRow.Cells["IdPaciente"].Value.ToString());
+            try
+            {
+                if (LNPac.EliminarPaciente(codigoP) > 0)
+                {
+                    MessageBox.Show("Eliminado con éxito");
+                    dataGridViewPac.DataSource = LNPac.ListarPaciente();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR al eliminar Paciente");
             }
         }
 

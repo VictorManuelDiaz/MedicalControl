@@ -32,6 +32,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewCita = new System.Windows.Forms.DataGridView();
@@ -41,7 +46,7 @@
             this.comboBoxIdMed = new System.Windows.Forms.ComboBox();
             this.comboBoxNumExp = new System.Windows.Forms.ComboBox();
             this.dateTimePickerRealCita = new System.Windows.Forms.DateTimePicker();
-            this.lblIdMedico = new System.Windows.Forms.Label();
+            this.lblIdCita = new System.Windows.Forms.Label();
             this.txtbxIdCita = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,9 +54,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.tabCita = new System.Windows.Forms.TabControl();
-            this.bunifuTextbox = new Bunifu.Framework.UI.BunifuTextbox();
             this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCita)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,7 +89,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.bunifuTextbox);
+            this.panel2.Controls.Add(this.bunifuFlatButton2);
+            this.panel2.Controls.Add(this.bunifuFlatButton1);
+            this.panel2.Controls.Add(this.bunifuImageButton2);
+            this.panel2.Controls.Add(this.txtbxBuscar);
+            this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnElminar);
             this.panel2.Controls.Add(this.dataGridViewCita);
@@ -92,25 +102,137 @@
             this.panel2.Size = new System.Drawing.Size(625, 566);
             this.panel2.TabIndex = 4;
             // 
+            // bunifuFlatButton2
+            // 
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 0;
+            this.bunifuFlatButton2.ButtonText = "Editar";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = global::CapaPresentacion.Properties.Resources.document;
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(398, 481);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(123, 62);
+            this.bunifuFlatButton2.TabIndex = 22;
+            this.bunifuFlatButton2.Text = "Editar";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "Eliminar";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = global::CapaPresentacion.Properties.Resources.recycle_bin__1_;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(72, 481);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(152, 70);
+            this.bunifuFlatButton1.TabIndex = 21;
+            this.bunifuFlatButton1.Text = "Eliminar";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(317, 457);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 15;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // txtbxBuscar
+            // 
+            this.txtbxBuscar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtbxBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.BackgroundImage")));
+            this.txtbxBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtbxBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtbxBuscar.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.Icon")));
+            this.txtbxBuscar.Location = new System.Drawing.Point(97, 28);
+            this.txtbxBuscar.Name = "txtbxBuscar";
+            this.txtbxBuscar.Size = new System.Drawing.Size(411, 39);
+            this.txtbxBuscar.TabIndex = 20;
+            this.txtbxBuscar.text = "";
+            this.txtbxBuscar.Click += new System.EventHandler(this.txtbxBuscar_Click);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(262, 454);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 14;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Tag = "";
+            this.bunifuImageButton1.Zoom = 10;
+            // 
             // btnEditar
             // 
+            this.btnEditar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEditar.BackgroundImage")));
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(163, 481);
+            this.btnEditar.Location = new System.Drawing.Point(86, 457);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 19;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnElminar
             // 
             this.btnElminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElminar.Location = new System.Drawing.Point(404, 481);
+            this.btnElminar.Location = new System.Drawing.Point(414, 457);
             this.btnElminar.Name = "btnElminar";
             this.btnElminar.Size = new System.Drawing.Size(75, 23);
             this.btnElminar.TabIndex = 18;
             this.btnElminar.Text = "Eliminar";
             this.btnElminar.UseVisualStyleBackColor = true;
+            this.btnElminar.Click += new System.EventHandler(this.btnElminar_Click);
             // 
             // dataGridViewCita
             // 
@@ -140,7 +262,7 @@
             this.tableLayoutPanel1.Controls.Add(this.comboBoxIdMed, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.comboBoxNumExp, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.dateTimePickerRealCita, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblIdMedico, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblIdCita, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtbxIdCita, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 2);
@@ -193,16 +315,16 @@
             this.dateTimePickerRealCita.Size = new System.Drawing.Size(286, 23);
             this.dateTimePickerRealCita.TabIndex = 22;
             // 
-            // lblIdMedico
+            // lblIdCita
             // 
-            this.lblIdMedico.AutoSize = true;
-            this.lblIdMedico.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdMedico.ForeColor = System.Drawing.Color.White;
-            this.lblIdMedico.Location = new System.Drawing.Point(3, 0);
-            this.lblIdMedico.Name = "lblIdMedico";
-            this.lblIdMedico.Size = new System.Drawing.Size(22, 17);
-            this.lblIdMedico.TabIndex = 0;
-            this.lblIdMedico.Text = "Id:";
+            this.lblIdCita.AutoSize = true;
+            this.lblIdCita.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdCita.ForeColor = System.Drawing.Color.White;
+            this.lblIdCita.Location = new System.Drawing.Point(3, 0);
+            this.lblIdCita.Name = "lblIdCita";
+            this.lblIdCita.Size = new System.Drawing.Size(22, 17);
+            this.lblIdCita.TabIndex = 0;
+            this.lblIdCita.Text = "Id:";
             // 
             // txtbxIdCita
             // 
@@ -281,19 +403,6 @@
             this.tabCita.Size = new System.Drawing.Size(1113, 594);
             this.tabCita.TabIndex = 1;
             // 
-            // bunifuTextbox
-            // 
-            this.bunifuTextbox.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuTextbox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox.BackgroundImage")));
-            this.bunifuTextbox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox.ForeColor = System.Drawing.Color.White;
-            this.bunifuTextbox.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox.Icon")));
-            this.bunifuTextbox.Location = new System.Drawing.Point(97, 28);
-            this.bunifuTextbox.Name = "bunifuTextbox";
-            this.bunifuTextbox.Size = new System.Drawing.Size(402, 39);
-            this.bunifuTextbox.TabIndex = 20;
-            this.bunifuTextbox.text = "";
-            // 
             // frmCita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,6 +417,8 @@
             this.Load += new System.EventHandler(this.frmCita_Load);
             this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCita)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -323,7 +434,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblIdMedico;
+        private System.Windows.Forms.Label lblIdCita;
         private System.Windows.Forms.TextBox txtbxIdCita;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -339,6 +450,10 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnElminar;
         private System.Windows.Forms.DataGridView dataGridViewCita;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox;
+        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscar;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
     }
 }

@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuentas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuentas));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtbxBuscCuenta = new Bunifu.Framework.UI.BunifuTextbox();
             this.dataGridViewCuentas = new System.Windows.Forms.DataGridView();
             this.btnEditarCuenta = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnEliminarCuenta = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.tablepanelCuenta = new System.Windows.Forms.TableLayoutPanel();
@@ -58,11 +57,16 @@
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtbxBuscCuenta = new Bunifu.Framework.UI.BunifuTextbox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCuentas)).BeginInit();
             this.panel1.SuspendLayout();
             this.tablepanelCuenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -78,10 +82,12 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.tabPage2.Controls.Add(this.bunifuImageButton2);
+            this.tabPage2.Controls.Add(this.bunifuImageButton1);
             this.tabPage2.Controls.Add(this.txtbxBuscCuenta);
             this.tabPage2.Controls.Add(this.dataGridViewCuentas);
             this.tabPage2.Controls.Add(this.btnEditarCuenta);
-            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.btnEliminarCuenta);
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -90,20 +96,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1100, 574);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Nueva Cuenta";
-            // 
-            // txtbxBuscCuenta
-            // 
-            this.txtbxBuscCuenta.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtbxBuscCuenta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscCuenta.BackgroundImage")));
-            this.txtbxBuscCuenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtbxBuscCuenta.ForeColor = System.Drawing.Color.White;
-            this.txtbxBuscCuenta.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscCuenta.Icon")));
-            this.txtbxBuscCuenta.Location = new System.Drawing.Point(106, 31);
-            this.txtbxBuscCuenta.Name = "txtbxBuscCuenta";
-            this.txtbxBuscCuenta.Size = new System.Drawing.Size(420, 42);
-            this.txtbxBuscCuenta.TabIndex = 11;
-            this.txtbxBuscCuenta.text = "";
-            this.txtbxBuscCuenta.OnTextChange += new System.EventHandler(this.txtbxBuscCuenta_OnTextChange);
             // 
             // dataGridViewCuentas
             // 
@@ -156,15 +148,16 @@
             this.btnEditarCuenta.UseVisualStyleBackColor = true;
             this.btnEditarCuenta.Click += new System.EventHandler(this.btnEditarCuenta_Click);
             // 
-            // button2
+            // btnEliminarCuenta
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(14, 507);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEliminarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCuenta.Location = new System.Drawing.Point(14, 507);
+            this.btnEliminarCuenta.Name = "btnEliminarCuenta";
+            this.btnEliminarCuenta.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarCuenta.TabIndex = 8;
+            this.btnEliminarCuenta.Text = "Eliminar";
+            this.btnEliminarCuenta.UseVisualStyleBackColor = true;
+            this.btnEliminarCuenta.Click += new System.EventHandler(this.btnEliminarCuenta_Click);
             // 
             // panel1
             // 
@@ -385,6 +378,46 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 421);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(265, 496);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 13;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(210, 496);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 12;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+            // txtbxBuscCuenta
+            // 
+            this.txtbxBuscCuenta.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtbxBuscCuenta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscCuenta.BackgroundImage")));
+            this.txtbxBuscCuenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtbxBuscCuenta.ForeColor = System.Drawing.Color.White;
+            this.txtbxBuscCuenta.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscCuenta.Icon")));
+            this.txtbxBuscCuenta.Location = new System.Drawing.Point(106, 31);
+            this.txtbxBuscCuenta.Name = "txtbxBuscCuenta";
+            this.txtbxBuscCuenta.Size = new System.Drawing.Size(420, 42);
+            this.txtbxBuscCuenta.TabIndex = 11;
+            this.txtbxBuscCuenta.text = "";
+            this.txtbxBuscCuenta.OnTextChange += new System.EventHandler(this.txtbxBuscCuenta_OnTextChange);
+            // 
             // frmCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,6 +438,8 @@
             this.panel1.PerformLayout();
             this.tablepanelCuenta.ResumeLayout(false);
             this.tablepanelCuenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -418,7 +453,7 @@
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnEditarCuenta;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEliminarCuenta;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtbxIdCuen;
         private System.Windows.Forms.TextBox txtbxNomCuen;
@@ -436,5 +471,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbxContraActual;
         private System.Windows.Forms.DataGridView dataGridViewCuentas;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

@@ -722,6 +722,19 @@ namespace CapaPresentacion
             }
         }
 
-        
+        private void txtbxBuscar_Click(object sender, EventArgs e)
+        {
+            List<Expediente> listaExpe = LNExp.BuscarExpediente(txtbxBuscar.text);
+            dataGridViewExp.DataSource = listaExpe;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtbxIdExpe.Visible = true;
+            txtbxIdExpe.Enabled = false;
+            lblIdExpe.Visible = true;
+
+
+        }
     }
 }

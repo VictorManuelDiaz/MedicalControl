@@ -100,7 +100,7 @@ namespace CapaPresentacion
                     }
                     else
                     {
-                        MessageBox.Show("Error al actualizar Recurso");
+                        MessageBox.Show("Error al actualizar Medico");
                     }
                     btnRegistrar.Text = "Registrar";
                 }

@@ -115,6 +115,23 @@ namespace CapaPresentacion
             List<Cuenta> listaCuenta = LNCuentas.BuscarCuenta(txtbxBuscCuenta.text);
             dataGridViewCuentas.DataSource = listaCuenta;
         }
+
+        private void btnEliminarCuenta_Click(object sender, EventArgs e)
+        {
+            int codigoCuenta = Convert.ToInt32(dataGridViewCuentas.CurrentRow.Cells["IdCuenta"].Value.ToString());
+            try
+            {
+                if (LNCuentas.EliminarCuenta(codigoCuenta) > 0)
+                {
+                    MessageBox.Show("Eliminado con éxito");
+                    dataGridViewCuentas.DataSource = LNCuentas.ListarCuenta();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR al eliminar cuenta");
+            }
+        }
     }
 }
 

@@ -32,7 +32,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtbxBuscMed = new Bunifu.Framework.UI.BunifuTextbox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewPac = new System.Windows.Forms.DataGridView();
@@ -71,16 +70,21 @@
             this.maskedtxtbxCed = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblIdExp = new System.Windows.Forms.Label();
             this.txtbxIdExp = new System.Windows.Forms.TextBox();
             this.txtbxNumExp = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtbxBuscPaciente = new Bunifu.Framework.UI.BunifuTextbox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -108,7 +112,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.txtbxBuscMed);
+            this.panel2.Controls.Add(this.bunifuImageButton2);
+            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.Controls.Add(this.txtbxBuscPaciente);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnElminar);
             this.panel2.Controls.Add(this.dataGridViewPac);
@@ -116,20 +122,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(727, 568);
             this.panel2.TabIndex = 7;
-            // 
-            // txtbxBuscMed
-            // 
-            this.txtbxBuscMed.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtbxBuscMed.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscMed.BackgroundImage")));
-            this.txtbxBuscMed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtbxBuscMed.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxBuscMed.ForeColor = System.Drawing.Color.White;
-            this.txtbxBuscMed.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscMed.Icon")));
-            this.txtbxBuscMed.Location = new System.Drawing.Point(12, 40);
-            this.txtbxBuscMed.Name = "txtbxBuscMed";
-            this.txtbxBuscMed.Size = new System.Drawing.Size(262, 30);
-            this.txtbxBuscMed.TabIndex = 17;
-            this.txtbxBuscMed.text = "";
             // 
             // btnEditar
             // 
@@ -140,6 +132,7 @@
             this.btnEditar.TabIndex = 14;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnElminar
             // 
@@ -150,6 +143,7 @@
             this.btnElminar.TabIndex = 13;
             this.btnElminar.Text = "Eliminar";
             this.btnElminar.UseVisualStyleBackColor = true;
+            this.btnElminar.Click += new System.EventHandler(this.btnElminar_Click);
             // 
             // dataGridViewPac
             // 
@@ -231,7 +225,7 @@
             this.tableLayoutPanel1.Controls.Add(this.maskedtxtbxCed, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label17, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label18, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblIdExp, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtbxIdExp, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtbxNumExp, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 47);
@@ -552,15 +546,15 @@
             this.label17.TabIndex = 1;
             this.label17.Text = "Num Expediente:";
             // 
-            // label18
+            // lblIdExp
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label18.Location = new System.Drawing.Point(3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(91, 17);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "ID Expediente:";
+            this.lblIdExp.AutoSize = true;
+            this.lblIdExp.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.lblIdExp.Location = new System.Drawing.Point(3, 0);
+            this.lblIdExp.Name = "lblIdExp";
+            this.lblIdExp.Size = new System.Drawing.Size(91, 17);
+            this.lblIdExp.TabIndex = 1;
+            this.lblIdExp.Text = "ID Expediente:";
             // 
             // txtbxIdExp
             // 
@@ -586,6 +580,47 @@
             this.tabPage1.Text = "Pacientes de hoy";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(368, 479);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 19;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(313, 479);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 18;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+            // txtbxBuscPaciente
+            // 
+            this.txtbxBuscPaciente.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtbxBuscPaciente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscPaciente.BackgroundImage")));
+            this.txtbxBuscPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtbxBuscPaciente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxBuscPaciente.ForeColor = System.Drawing.Color.White;
+            this.txtbxBuscPaciente.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscPaciente.Icon")));
+            this.txtbxBuscPaciente.Location = new System.Drawing.Point(12, 40);
+            this.txtbxBuscPaciente.Name = "txtbxBuscPaciente";
+            this.txtbxBuscPaciente.Size = new System.Drawing.Size(262, 30);
+            this.txtbxBuscPaciente.TabIndex = 17;
+            this.txtbxBuscPaciente.text = "";
+            this.txtbxBuscPaciente.Click += new System.EventHandler(this.txtbxBuscPaciente_Click);
+            // 
             // frmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -606,6 +641,8 @@
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -653,10 +690,12 @@
         private System.Windows.Forms.TextBox txtbxProced;
         private System.Windows.Forms.ComboBox cmbbxCivil;
         private System.Windows.Forms.MaskedTextBox maskedtxtbxCed;
-        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscMed;
+        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscPaciente;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblIdExp;
         private System.Windows.Forms.TextBox txtbxIdExp;
         private System.Windows.Forms.TextBox txtbxNumExp;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

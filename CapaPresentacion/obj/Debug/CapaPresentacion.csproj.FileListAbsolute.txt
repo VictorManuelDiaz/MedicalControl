@@ -20,3 +20,4 @@ E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmExpedien
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmCuentas.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmPacientes.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmEspecialidad.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.resources
