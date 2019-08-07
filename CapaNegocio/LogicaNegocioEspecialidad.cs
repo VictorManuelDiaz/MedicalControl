@@ -28,7 +28,7 @@ namespace CapaNegocio
             return ES.EliminarEspecialidad(IdEspecialidad);
         }
 
-        public int EditarCita(Especialidad Esp)
+        public int EditarEspecialidad(Especialidad Esp)
         {
             return ES.EditarEspecialidad(Esp);
         }

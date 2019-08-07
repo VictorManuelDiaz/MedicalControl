@@ -30,14 +30,56 @@ namespace CapaPresentacion
             
         }
 
+        
+
+        private void btnEliminarCuenta_Click(object sender, EventArgs e)
+        {
+            int codigoCuenta = Convert.ToInt32(dataGridViewCuentas.CurrentRow.Cells["IdCuenta"].Value.ToString());
+            try
+            {
+                if (LNCuentas.EliminarCuenta(codigoCuenta) > 0)
+                {
+                    MessageBox.Show("Eliminado con éxito");
+                    dataGridViewCuentas.DataSource = LNCuentas.ListarCuenta();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR al eliminar cuenta");
+            }
+        }
+
+        private void txtbxBuscCuenta_OnTextChange(object sender, EventArgs e)
+        {
+            List<Cuenta> listaCuenta = LNCuentas.BuscarCuenta(txtbxBuscCuenta.text);
+            dataGridViewCuentas.DataSource = listaCuenta;
+        }
+
+        private void btnEditarCuenta_Click(object sender, EventArgs e)
+        {
+            txtbxIdCuen.Visible = true;
+            txtbxIdCuen.Enabled = false;
+            lblIdCuen.Visible = true;
+            txtbxNomCuen.Enabled = false;
+            cmbbxTipo.Enabled = false;
+            lblContra.Text = "Nueva contraseña";
+
+            txtbxIdCuen.Text = dataGridViewCuentas.CurrentRow.Cells["IdCuenta"].Value.ToString();
+            txtbxNomCuen.Text = dataGridViewCuentas.CurrentRow.Cells["NombreCuenta"].Value.ToString();
+            cmbbxTipo.Text = dataGridViewCuentas.CurrentRow.Cells["TipoCuenta"].Value.ToString();
+
+            btnRegistrar.Text = "Actualizar";
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 if (btnRegistrar.Text == "Registrar")
                 {
                     Cuenta objetoCuenta = new Cuenta();
-                    if (txtbxContra.Text==txtbxConf.Text)
+                    if (txtbxContra.Text == txtbxConf.Text)
                     {
                         objetoCuenta.NombreCuenta = txtbxNomCuen.Text;
                         objetoCuenta.Contrasena = txtbxContra.Text;
@@ -92,45 +134,7 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("ERROR");
             }
-        }
 
-        private void btnEditarCuenta_Click(object sender, EventArgs e)
-        {
-            txtbxIdCuen.Visible = true;
-            txtbxIdCuen.Enabled = false;
-            lblIdCuen.Visible = true;
-            txtbxNomCuen.Enabled = false;
-            cmbbxTipo.Enabled = false;
-            lblContra.Text = "Nueva contraseña";
-
-            txtbxIdCuen.Text = dataGridViewCuentas.CurrentRow.Cells["IdCuenta"].Value.ToString();
-            txtbxNomCuen.Text = dataGridViewCuentas.CurrentRow.Cells["NombreCuenta"].Value.ToString();
-            cmbbxTipo.Text= dataGridViewCuentas.CurrentRow.Cells["TipoCuenta"].Value.ToString();
-            
-            btnRegistrar.Text = "Actualizar";
-        }
-
-        private void txtbxBuscCuenta_OnTextChange(object sender, EventArgs e)
-        {
-            List<Cuenta> listaCuenta = LNCuentas.BuscarCuenta(txtbxBuscCuenta.text);
-            dataGridViewCuentas.DataSource = listaCuenta;
-        }
-
-        private void btnEliminarCuenta_Click(object sender, EventArgs e)
-        {
-            int codigoCuenta = Convert.ToInt32(dataGridViewCuentas.CurrentRow.Cells["IdCuenta"].Value.ToString());
-            try
-            {
-                if (LNCuentas.EliminarCuenta(codigoCuenta) > 0)
-                {
-                    MessageBox.Show("Eliminado con éxito");
-                    dataGridViewCuentas.DataSource = LNCuentas.ListarCuenta();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("ERROR al eliminar cuenta");
-            }
         }
     }
 }

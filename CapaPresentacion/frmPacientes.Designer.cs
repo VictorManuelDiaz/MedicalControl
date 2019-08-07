@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPacientes));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtbxBuscPaciente = new Bunifu.Framework.UI.BunifuTextbox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewPac = new System.Windows.Forms.DataGridView();
@@ -73,60 +72,43 @@
             this.lblIdExp = new System.Windows.Forms.Label();
             this.txtbxIdExp = new System.Windows.Forms.TextBox();
             this.txtbxNumExp = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.txtbxBuscPaciente = new Bunifu.Framework.UI.BunifuTextbox();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(-4, 11);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1109, 600);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1101, 574);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Nuevo Paciente";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.bunifuImageButton2);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Controls.Add(this.txtbxBuscPaciente);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnElminar);
             this.panel2.Controls.Add(this.dataGridViewPac);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(0, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 568);
-            this.panel2.TabIndex = 7;
+            this.panel2.Size = new System.Drawing.Size(727, 504);
+            this.panel2.TabIndex = 9;
+            // 
+            // txtbxBuscPaciente
+            // 
+            this.txtbxBuscPaciente.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtbxBuscPaciente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscPaciente.BackgroundImage")));
+            this.txtbxBuscPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtbxBuscPaciente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbxBuscPaciente.ForeColor = System.Drawing.Color.White;
+            this.txtbxBuscPaciente.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscPaciente.Icon")));
+            this.txtbxBuscPaciente.Location = new System.Drawing.Point(181, 35);
+            this.txtbxBuscPaciente.Name = "txtbxBuscPaciente";
+            this.txtbxBuscPaciente.Size = new System.Drawing.Size(262, 30);
+            this.txtbxBuscPaciente.TabIndex = 17;
+            this.txtbxBuscPaciente.text = "";
+            this.txtbxBuscPaciente.OnTextChange += new System.EventHandler(this.txtbxBuscPaciente_OnTextChange);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(214, 485);
+            this.btnEditar.Location = new System.Drawing.Point(3, 457);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 14;
@@ -137,7 +119,7 @@
             // btnElminar
             // 
             this.btnElminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElminar.Location = new System.Drawing.Point(455, 485);
+            this.btnElminar.Location = new System.Drawing.Point(100, 457);
             this.btnElminar.Name = "btnElminar";
             this.btnElminar.Size = new System.Drawing.Size(75, 23);
             this.btnElminar.TabIndex = 13;
@@ -147,28 +129,30 @@
             // 
             // dataGridViewPac
             // 
-            this.dataGridViewPac.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
+            this.dataGridViewPac.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dataGridViewPac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewPac.Location = new System.Drawing.Point(6, 96);
+            this.dataGridViewPac.Location = new System.Drawing.Point(6, 90);
             this.dataGridViewPac.Name = "dataGridViewPac";
             this.dataGridViewPac.Size = new System.Drawing.Size(715, 343);
             this.dataGridViewPac.TabIndex = 12;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(727, 0);
+            this.panel1.Location = new System.Drawing.Point(727, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 568);
-            this.panel1.TabIndex = 6;
+            this.panel1.Size = new System.Drawing.Size(374, 504);
+            this.panel1.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(106, 17);
             this.label1.Name = "label1";
@@ -178,7 +162,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(14, 523);
@@ -570,132 +554,73 @@
             this.txtbxNumExp.Size = new System.Drawing.Size(200, 20);
             this.txtbxNumExp.TabIndex = 20;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1101, 574);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "Pacientes de hoy";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(368, 479);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 19;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(313, 479);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 18;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // txtbxBuscPaciente
-            // 
-            this.txtbxBuscPaciente.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtbxBuscPaciente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscPaciente.BackgroundImage")));
-            this.txtbxBuscPaciente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtbxBuscPaciente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxBuscPaciente.ForeColor = System.Drawing.Color.White;
-            this.txtbxBuscPaciente.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscPaciente.Icon")));
-            this.txtbxBuscPaciente.Location = new System.Drawing.Point(12, 40);
-            this.txtbxBuscPaciente.Name = "txtbxBuscPaciente";
-            this.txtbxBuscPaciente.Size = new System.Drawing.Size(262, 30);
-            this.txtbxBuscPaciente.TabIndex = 17;
-            this.txtbxBuscPaciente.text = "";
-            this.txtbxBuscPaciente.Click += new System.EventHandler(this.txtbxBuscPaciente_Click);
-            // 
             // frmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1100, 600);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1100, 500);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.frmPacientes_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtbxNom;
-        private System.Windows.Forms.TextBox txtbxApell;
-        private System.Windows.Forms.TextBox txtbxNac;
-        private System.Windows.Forms.TextBox txtbxDire;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtbxEdad;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button btnRegistrar;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscPaciente;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnElminar;
         private System.Windows.Forms.DataGridView dataGridViewPac;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.MaskedTextBox maskedtxtbxFecNac;
-        private System.Windows.Forms.MaskedTextBox maskedtxtbxTele;
-        private System.Windows.Forms.ComboBox cmbbxSexo;
-        private System.Windows.Forms.ComboBox cmbbxRelig;
-        private System.Windows.Forms.TextBox txtbxMadre;
-        private System.Windows.Forms.TextBox txtbxPadre;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cmbbxEtnia;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtbxProced;
         private System.Windows.Forms.ComboBox cmbbxCivil;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxTele;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtbxProced;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbbxRelig;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtbxMadre;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtbxPadre;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox txtbxDire;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbbxEtnia;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtbxEdad;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox cmbbxSexo;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtbxNac;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxFecNac;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtbxApell;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtbxNom;
         private System.Windows.Forms.MaskedTextBox maskedtxtbxCed;
-        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscPaciente;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lblIdExp;
         private System.Windows.Forms.TextBox txtbxIdExp;
         private System.Windows.Forms.TextBox txtbxNumExp;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }

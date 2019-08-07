@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuentas));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridViewCuentas = new System.Windows.Forms.DataGridView();
-            this.btnEditarCuenta = new System.Windows.Forms.Button();
-            this.btnEliminarCuenta = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.tablepanelCuenta = new System.Windows.Forms.TableLayoutPanel();
@@ -55,127 +47,49 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtbxContraActual = new System.Windows.Forms.TextBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridViewCuentas = new System.Windows.Forms.DataGridView();
+            this.btnEditarCuenta = new System.Windows.Forms.Button();
             this.txtbxBuscCuenta = new Bunifu.Framework.UI.BunifuTextbox();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCuentas)).BeginInit();
+            this.btnEliminarCuenta = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.tablepanelCuenta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCuentas)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tableLayoutPanel1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-4, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1108, 600);
-            this.tabControl1.TabIndex = 0;
-            this.tabControl1.Tag = "";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.tabPage2.Controls.Add(this.bunifuImageButton2);
-            this.tabPage2.Controls.Add(this.bunifuImageButton1);
-            this.tabPage2.Controls.Add(this.txtbxBuscCuenta);
-            this.tabPage2.Controls.Add(this.dataGridViewCuentas);
-            this.tabPage2.Controls.Add(this.btnEditarCuenta);
-            this.tabPage2.Controls.Add(this.btnEliminarCuenta);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.label2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1100, 574);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Nueva Cuenta";
-            // 
-            // dataGridViewCuentas
-            // 
-            this.dataGridViewCuentas.BackgroundColor = System.Drawing.Color.SlateBlue;
-            this.dataGridViewCuentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewCuentas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCuentas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCuentas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewCuentas.EnableHeadersVisualStyles = false;
-            this.dataGridViewCuentas.GridColor = System.Drawing.Color.White;
-            this.dataGridViewCuentas.Location = new System.Drawing.Point(12, 93);
-            this.dataGridViewCuentas.Name = "dataGridViewCuentas";
-            this.dataGridViewCuentas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Indigo;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewCuentas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.dataGridViewCuentas.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewCuentas.Size = new System.Drawing.Size(674, 385);
-            this.dataGridViewCuentas.TabIndex = 10;
-            // 
-            // btnEditarCuenta
-            // 
-            this.btnEditarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCuenta.Location = new System.Drawing.Point(106, 506);
-            this.btnEditarCuenta.Name = "btnEditarCuenta";
-            this.btnEditarCuenta.Size = new System.Drawing.Size(75, 23);
-            this.btnEditarCuenta.TabIndex = 9;
-            this.btnEditarCuenta.Text = "Editar";
-            this.btnEditarCuenta.UseVisualStyleBackColor = true;
-            this.btnEditarCuenta.Click += new System.EventHandler(this.btnEditarCuenta_Click);
-            // 
-            // btnEliminarCuenta
-            // 
-            this.btnEliminarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCuenta.Location = new System.Drawing.Point(14, 507);
-            this.btnEliminarCuenta.Name = "btnEliminarCuenta";
-            this.btnEliminarCuenta.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarCuenta.TabIndex = 8;
-            this.btnEliminarCuenta.Text = "Eliminar";
-            this.btnEliminarCuenta.UseVisualStyleBackColor = true;
-            this.btnEliminarCuenta.Click += new System.EventHandler(this.btnEliminarCuenta_Click);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(57, 90);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 421);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tablepanelCuenta);
             this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Location = new System.Drawing.Point(701, 0);
+            this.panel1.Location = new System.Drawing.Point(697, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(403, 568);
-            this.panel1.TabIndex = 5;
+            this.panel1.Size = new System.Drawing.Size(403, 500);
+            this.panel1.TabIndex = 15;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(118, 54);
+            this.label6.Location = new System.Drawing.Point(122, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(159, 16);
             this.label6.TabIndex = 7;
@@ -199,7 +113,7 @@
             this.tablepanelCuenta.Controls.Add(this.txtbxNomCuen, 1, 1);
             this.tablepanelCuenta.Controls.Add(this.label1, 0, 2);
             this.tablepanelCuenta.Controls.Add(this.txtbxContraActual, 1, 2);
-            this.tablepanelCuenta.Location = new System.Drawing.Point(19, 89);
+            this.tablepanelCuenta.Location = new System.Drawing.Point(23, 58);
             this.tablepanelCuenta.Name = "tablepanelCuenta";
             this.tablepanelCuenta.RowCount = 7;
             this.tablepanelCuenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28592F));
@@ -341,11 +255,11 @@
             // btnRegistrar
             // 
             this.btnRegistrar.AutoEllipsis = true;
-            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(19, 456);
+            this.btnRegistrar.Location = new System.Drawing.Point(19, 353);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(361, 35);
             this.btnRegistrar.TabIndex = 4;
@@ -353,125 +267,109 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // label2
+            // panel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(369, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 24);
-            this.label2.TabIndex = 1;
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Controls.Add(this.dataGridViewCuentas);
+            this.panel2.Controls.Add(this.btnEditarCuenta);
+            this.panel2.Controls.Add(this.txtbxBuscCuenta);
+            this.panel2.Controls.Add(this.btnEliminarCuenta);
+            this.panel2.Location = new System.Drawing.Point(-1, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(698, 500);
+            this.panel2.TabIndex = 16;
             // 
-            // tableLayoutPanel1
+            // dataGridViewCuentas
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(57, 90);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(316, 421);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.dataGridViewCuentas.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.dataGridViewCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCuentas.Location = new System.Drawing.Point(3, 112);
+            this.dataGridViewCuentas.Name = "dataGridViewCuentas";
+            this.dataGridViewCuentas.Size = new System.Drawing.Size(692, 276);
+            this.dataGridViewCuentas.TabIndex = 12;
             // 
-            // bunifuImageButton2
+            // btnEditarCuenta
             // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(265, 496);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 13;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(210, 496);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 12;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.btnEditarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarCuenta.Location = new System.Drawing.Point(95, 416);
+            this.btnEditarCuenta.Name = "btnEditarCuenta";
+            this.btnEditarCuenta.Size = new System.Drawing.Size(75, 23);
+            this.btnEditarCuenta.TabIndex = 9;
+            this.btnEditarCuenta.Text = "Editar";
+            this.btnEditarCuenta.UseVisualStyleBackColor = true;
+            this.btnEditarCuenta.Click += new System.EventHandler(this.btnEditarCuenta_Click);
             // 
             // txtbxBuscCuenta
             // 
-            this.txtbxBuscCuenta.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtbxBuscCuenta.BackColor = System.Drawing.Color.CornflowerBlue;
             this.txtbxBuscCuenta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscCuenta.BackgroundImage")));
             this.txtbxBuscCuenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtbxBuscCuenta.ForeColor = System.Drawing.Color.White;
             this.txtbxBuscCuenta.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscCuenta.Icon")));
-            this.txtbxBuscCuenta.Location = new System.Drawing.Point(106, 31);
+            this.txtbxBuscCuenta.Location = new System.Drawing.Point(86, 27);
             this.txtbxBuscCuenta.Name = "txtbxBuscCuenta";
             this.txtbxBuscCuenta.Size = new System.Drawing.Size(420, 42);
             this.txtbxBuscCuenta.TabIndex = 11;
             this.txtbxBuscCuenta.text = "";
             this.txtbxBuscCuenta.OnTextChange += new System.EventHandler(this.txtbxBuscCuenta_OnTextChange);
             // 
+            // btnEliminarCuenta
+            // 
+            this.btnEliminarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCuenta.Location = new System.Drawing.Point(3, 417);
+            this.btnEliminarCuenta.Name = "btnEliminarCuenta";
+            this.btnEliminarCuenta.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarCuenta.TabIndex = 8;
+            this.btnEliminarCuenta.Text = "Eliminar";
+            this.btnEliminarCuenta.UseVisualStyleBackColor = true;
+            this.btnEliminarCuenta.Click += new System.EventHandler(this.btnEliminarCuenta_Click);
+            // 
             // frmCuentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1100, 600);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(1100, 500);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCuentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cuentas";
             this.Load += new System.EventHandler(this.frmCuentas_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCuentas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tablepanelCuenta.ResumeLayout(false);
             this.tablepanelCuenta.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCuentas)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TableLayoutPanel tablepanelCuenta;
-        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnEditarCuenta;
-        private System.Windows.Forms.Button btnEliminarCuenta;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtbxIdCuen;
-        private System.Windows.Forms.TextBox txtbxNomCuen;
-        private System.Windows.Forms.TextBox txtbxContra;
-        private System.Windows.Forms.TextBox txtbxConf;
+        private System.Windows.Forms.TableLayoutPanel tablepanelCuenta;
+        private System.Windows.Forms.Label lblIdCuen;
+        private System.Windows.Forms.Label lblFalloConf;
         private System.Windows.Forms.ComboBox cmbbxTipo;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblContra;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblIdCuen;
+        private System.Windows.Forms.TextBox txtbxConf;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscCuenta;
-        private System.Windows.Forms.Label lblFalloConf;
+        private System.Windows.Forms.TextBox txtbxContra;
+        private System.Windows.Forms.Label lblContra;
+        private System.Windows.Forms.TextBox txtbxIdCuen;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtbxNomCuen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbxContraActual;
+        private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridViewCuentas;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Button btnEditarCuenta;
+        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscCuenta;
+        private System.Windows.Forms.Button btnEliminarCuenta;
     }
 }

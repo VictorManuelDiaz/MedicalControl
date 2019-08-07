@@ -188,5 +188,11 @@ namespace CapaPresentacion
             }
             
         }
+
+        private void picturebxCerrar_Click(object sender, EventArgs e)
+        {
+            Dispose(true);
+            Application.Exit();
+        }
     }
 }

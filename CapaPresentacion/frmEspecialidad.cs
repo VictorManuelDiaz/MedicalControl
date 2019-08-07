@@ -26,11 +26,6 @@ namespace CapaPresentacion
             dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
         }
 
-        private void txtbxBuscar_Click(object sender, EventArgs e)
-        {
-            List<Especialidad> listaEspe = LNEsp.BuscarEspecialidad(txtbxBuscar.text);
-            dataGridViewEspecial.DataSource = listaEspe;
-        }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -38,8 +33,63 @@ namespace CapaPresentacion
             txtbxIdEspe.Enabled = false;
             lblIdEspe.Visible = true;
 
-            txtbxNombreEspe.Text = dataGridViewEspecial.CurrentRow.Cells["NombreEs"].Value.ToString();
+            txtbxIdEspe.Text = dataGridViewEspecial.CurrentRow.Cells["IdEspecialidad"].Value.ToString();
+            txtbxNombreEs.Text = dataGridViewEspecial.CurrentRow.Cells["NombreEs"].Value.ToString();
             btnRegistrar.Text = "Actualizar";
+        }
+
+        private void txtbxBuscar_OnTextChange(object sender, EventArgs e)
+        {
+            List<Especialidad> listaEspe = LNEsp.BuscarEspecialidad(txtbxBuscar.text);
+            dataGridViewEspecial.DataSource = listaEspe;
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (btnRegistrar.Text == "Registrar")
+                {
+                    Especialidad objetoEspecialidad = new Especialidad();
+                    objetoEspecialidad.NombreEs = txtbxNombreEs.Text;
+                    
+                   
+
+                    if (LNEsp.InsertarEspecialidad(objetoEspecialidad) > 0)
+                    {
+                        MessageBox.Show("Agregado con éxito");
+                        dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
+                        txtbxNombreEs.Text = "";
+
+
+                    }
+                    else { MessageBox.Show("Error al agregar especialidad"); }
+                }
+                if (btnRegistrar.Text == "Actualizar")
+                {
+                    Especialidad objetoMedico = new Especialidad();
+                    objetoMedico.NombreEs = txtbxNombreEs.Text;
+                   
+
+                    if (LNEsp.EditarEspecialidad(objetoMedico) > 0)
+                    {
+                        MessageBox.Show("Actualizado con éxito");
+                        dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
+                        txtbxNombreEs.Text = "";
+                       
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al actualizar especialidad");
+                    }
+                    btnRegistrar.Text = "Registrar";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR");
+            }
 
         }
     }

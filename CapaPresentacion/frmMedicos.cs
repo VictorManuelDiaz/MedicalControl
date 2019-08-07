@@ -35,8 +35,57 @@ namespace CapaPresentacion
 
         }
 
+
+        private void btnEditarMed_Click(object sender, EventArgs e)
+        {
+
+            txtbxIdMedico.Visible = true;
+            txtbxIdMedico.Enabled = false;
+            lblIdMedico.Visible = true;
+
+            txtbxIdMedico.Text = dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString();
+            txtbxNombM.Text = dataGridViewMedico.CurrentRow.Cells["NombreM"].Value.ToString();
+            txtbxApellM.Text = dataGridViewMedico.CurrentRow.Cells["ApellidoM"].Value.ToString();
+            combobxEspe.SelectedItem = dataGridViewMedico.CurrentRow.Cells["IdEspecialidad"].Value;
+            txtbxCorreo.Text = dataGridViewMedico.CurrentRow.Cells["EmailM"].Value.ToString();
+            maskedtxtbxTelefonoMed.Text = dataGridViewMedico.CurrentRow.Cells["TelefonoM"].Value.ToString();
+            maskedtxtbxCedMed.Text = dataGridViewMedico.CurrentRow.Cells["CedulaM"].Value.ToString();
+            combobxSexo.SelectedItem = dataGridViewMedico.CurrentRow.Cells["SexoM"].Value;
+            txtbxDirec.Text = dataGridViewMedico.CurrentRow.Cells["DireccionM"].Value.ToString();
+            btnRegistrar.Text = "Actualizar";
+
+        }
+
+        private void txtbxBuscMed_OnTextChange(object sender, EventArgs e)
+        {
+
+            List<Medico> listaMed = LNMedico.buscarMedico(txtbxBuscMed.text);
+            dataGridViewMedico.DataSource = listaMed;
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+            int codigoM = Convert.ToInt32(dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString());
+            try
+            {
+                if (LNMedico.eliminarMedico(codigoM) > 0)
+                {
+                    MessageBox.Show("Eliminado con éxito");
+                    dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR al eliminar Medico");
+            }
+
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 if (btnRegistrar.Text == "Registrar")
@@ -109,47 +158,7 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("ERROR");
             }
-        }
 
-        private void txtbxBuscMed_OnTextChange(object sender, EventArgs e)
-        {
-            List<Medico> listaMed = LNMedico.buscarMedico(txtbxBuscMed.text);
-            dataGridViewMedico.DataSource = listaMed;
-        }
-
-        private void btnEditarMed_Click(object sender, EventArgs e)
-        {
-            txtbxIdMedico.Visible = true;
-            txtbxIdMedico.Enabled = false;
-            lblIdMedico.Visible = true;
-
-            txtbxIdMedico.Text = dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString();
-            txtbxNombM.Text = dataGridViewMedico.CurrentRow.Cells["NombreM"].Value.ToString();
-            txtbxApellM.Text = dataGridViewMedico.CurrentRow.Cells["ApellidoM"].Value.ToString();
-            combobxEspe.SelectedItem = dataGridViewMedico.CurrentRow.Cells["IdEspecialidad"].Value;
-            txtbxCorreo.Text = dataGridViewMedico.CurrentRow.Cells["EmailM"].Value.ToString();
-            maskedtxtbxTelefonoMed.Text = dataGridViewMedico.CurrentRow.Cells["TelefonoM"].Value.ToString();
-            maskedtxtbxCedMed.Text = dataGridViewMedico.CurrentRow.Cells["CedulaM"].Value.ToString();
-            combobxSexo.SelectedItem = dataGridViewMedico.CurrentRow.Cells["SexoM"].Value;
-            txtbxDirec.Text = dataGridViewMedico.CurrentRow.Cells["DireccionM"].Value.ToString();
-            btnRegistrar.Text = "Actualizar";
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            int codigoM = Convert.ToInt32(dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString());
-            try
-            {
-                if (LNMedico.eliminarMedico(codigoM) > 0)
-                {
-                    MessageBox.Show("Eliminado con éxito");
-                    dataGridViewMedico.DataSource = LNMedico.listarMedico();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("ERROR al eliminar Medico");
-            }
         }
     }
 }

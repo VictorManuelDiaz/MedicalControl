@@ -111,14 +111,14 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewExp = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.labels1 = new System.Windows.Forms.Label();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.tabSolicitud.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -134,9 +134,9 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSolicitud
@@ -152,6 +152,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
@@ -160,11 +161,10 @@
             this.tabPage1.Size = new System.Drawing.Size(1100, 566);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nuevo expediente";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel3.Controls.Add(this.flowLayoutPanel1);
             this.panel3.Location = new System.Drawing.Point(615, -1);
             this.panel3.Name = "panel3";
@@ -200,7 +200,7 @@
             // 
             this.lblDatosgenerales.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDatosgenerales.AutoSize = true;
-            this.lblDatosgenerales.BackColor = System.Drawing.Color.MidnightBlue;
+            this.lblDatosgenerales.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblDatosgenerales.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatosgenerales.ForeColor = System.Drawing.Color.White;
             this.lblDatosgenerales.Location = new System.Drawing.Point(160, 0);
@@ -682,7 +682,7 @@
             // 
             this.lblEnfermedadIC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEnfermedadIC.AutoSize = true;
-            this.lblEnfermedadIC.BackColor = System.Drawing.Color.MidnightBlue;
+            this.lblEnfermedadIC.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblEnfermedadIC.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnfermedadIC.ForeColor = System.Drawing.Color.White;
             this.lblEnfermedadIC.Location = new System.Drawing.Point(78, 0);
@@ -920,7 +920,7 @@
             // 
             this.lblEnfermedadH.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEnfermedadH.AutoSize = true;
-            this.lblEnfermedadH.BackColor = System.Drawing.Color.MidnightBlue;
+            this.lblEnfermedadH.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblEnfermedadH.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEnfermedadH.ForeColor = System.Drawing.Color.White;
             this.lblEnfermedadH.Location = new System.Drawing.Point(119, 0);
@@ -1114,7 +1114,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(-3, 0);
@@ -1127,7 +1127,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Controls.Add(this.bunifuImageButton2);
             this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Controls.Add(this.txtbxBuscar);
@@ -1138,6 +1138,46 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(620, 736);
             this.panel2.TabIndex = 6;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(298, 473);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 15;
+            this.bunifuImageButton2.TabStop = false;
+            this.bunifuImageButton2.Zoom = 10;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(243, 473);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 14;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            // 
+            // txtbxBuscar
+            // 
+            this.txtbxBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtbxBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.BackgroundImage")));
+            this.txtbxBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtbxBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtbxBuscar.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.Icon")));
+            this.txtbxBuscar.Location = new System.Drawing.Point(15, 31);
+            this.txtbxBuscar.Name = "txtbxBuscar";
+            this.txtbxBuscar.Size = new System.Drawing.Size(395, 42);
+            this.txtbxBuscar.TabIndex = 10;
+            this.txtbxBuscar.text = "";
+            this.txtbxBuscar.Click += new System.EventHandler(this.txtbxBuscar_Click);
             // 
             // btnEditar
             // 
@@ -1162,7 +1202,7 @@
             // 
             // dataGridViewExp
             // 
-            this.dataGridViewExp.BackgroundColor = System.Drawing.Color.DarkSlateBlue;
+            this.dataGridViewExp.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dataGridViewExp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewExp.Location = new System.Drawing.Point(30, 118);
             this.dataGridViewExp.Name = "dataGridViewExp";
@@ -1171,13 +1211,13 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
             this.tabPage3.Location = new System.Drawing.Point(4, 24);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(1100, 566);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Expedientes de hoy";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // labels1
             // 
@@ -1185,46 +1225,6 @@
             this.labels1.Name = "labels1";
             this.labels1.Size = new System.Drawing.Size(100, 23);
             this.labels1.TabIndex = 0;
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(298, 473);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 15;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(243, 473);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 14;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
-            // txtbxBuscar
-            // 
-            this.txtbxBuscar.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtbxBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.BackgroundImage")));
-            this.txtbxBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtbxBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtbxBuscar.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.Icon")));
-            this.txtbxBuscar.Location = new System.Drawing.Point(15, 31);
-            this.txtbxBuscar.Name = "txtbxBuscar";
-            this.txtbxBuscar.Size = new System.Drawing.Size(389, 42);
-            this.txtbxBuscar.TabIndex = 10;
-            this.txtbxBuscar.text = "";
-            this.txtbxBuscar.Click += new System.EventHandler(this.txtbxBuscar_Click);
             // 
             // frmExpediente
             // 
@@ -1259,9 +1259,9 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
             this.ResumeLayout(false);
 
         }

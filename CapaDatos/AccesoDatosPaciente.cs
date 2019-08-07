@@ -228,17 +228,18 @@ namespace CapaDatos
 
         public List<Paciente> BuscarPaciente(string dato)
         {
+
             try
             {
 
-                SqlConnection cnx = cn.Conectar();
+                SqlConnection cnx = cn.Conectar();//conectar
                 cm = new SqlCommand("Paciente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@IdExpediente", "");
                 cm.Parameters.AddWithValue("@NumeroExpediente", "");
                 cm.Parameters.AddWithValue("@CedulaPac", dato);
                 cm.Parameters.AddWithValue("@NombrePac", dato);
-                cm.Parameters.AddWithValue("@ApellidosPac", dato);
+                cm.Parameters.AddWithValue("@ApellidosPac","");
                 cm.Parameters.AddWithValue("@FechaNacimiento", "");
                 cm.Parameters.AddWithValue("@LugarNacimiento", "");
                 cm.Parameters.AddWithValue("@SexoPac", "");
@@ -252,12 +253,10 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TelefonoPac", "");
                 cm.Parameters.AddWithValue("@EstadoCivilPac", "");
 
-
-
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 dr = cm.ExecuteReader();
-                listaPaciente = new List<Paciente>();
+                listaPaciente = new List<Paciente>(); //lista de comentarios
 
                 while (dr.Read()) //Recorre cada registro
                 {
@@ -268,9 +267,10 @@ namespace CapaDatos
                     pac.NumeroExpediente = dr["NumeroExpediente"].ToString();
                     pac.CedulaPac = dr["CedulaPac"].ToString();
                     pac.NombrePac = dr["NombrePac"].ToString();
-                    pac.ApellidosPac = dr["ApellidoPac"].ToString();
+                    pac.ApellidosPac = dr["ApellidosPac"].ToString();
                     pac.FechaNacimiento = dr["FechaNacimiento"].ToString();
                     pac.LugarNacimiento = dr["LugarNacimiento"].ToString();
+                    pac.SexoPac = dr["SexoPac"].ToString();
                     pac.EdadPac = Convert.ToInt32(dr["EdadPac"].ToString());
                     pac.GrupoEtnico = dr["GrupoEtnico"].ToString();
                     pac.DireccionHabitualPac = dr["DireccionHabitualPac"].ToString();
@@ -280,16 +280,16 @@ namespace CapaDatos
                     pac.ProcedenciaPac = dr["ProcedenciaPac"].ToString();
                     pac.TelefonoPac = dr["TelefonoPac"].ToString();
                     pac.EstadoCivilPac = dr["EstadoCivilPac"].ToString();
-                    
+
                     listaPaciente.Add(pac); //agergar registros encontrados a la lista
 
                 }
 
-
             }
+
+
             catch (Exception e)
             {
-
                 e.Message.ToString();
                 listaPaciente = null;
             }
@@ -297,7 +297,8 @@ namespace CapaDatos
             {
                 cm.Connection.Close();
             }
-            return listaPaciente;
+            return listaPaciente; //regresa lista de registros
+
         }
 
     }

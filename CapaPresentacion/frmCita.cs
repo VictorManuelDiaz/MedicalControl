@@ -36,15 +36,59 @@ namespace CapaPresentacion
             comboBoxNumExp.DataSource = NumEx;
         }
 
+        
+
+
+        private void btnElminar_Click(object sender, EventArgs e)
+        {
+            int codigoCita = Convert.ToInt32(dataGridViewCita.CurrentRow.Cells["IdCita"].Value.ToString());
+            try
+            {
+                if (LNCita.EliminarCita(codigoCita) > 0)
+                {
+                    MessageBox.Show("Eliminado con éxito");
+                    dataGridViewCita.DataSource = LNCita.ListarCita();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR al eliminar cita");
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+            txtbxIdCita.Visible = true;
+            txtbxIdCita.Enabled = false;
+            lblIdCita.Visible = true;
+
+            txtbxIdCita.Text = dataGridViewCita.CurrentRow.Cells["Idcita"].Value.ToString();
+            dateTimePickerRealCita.Text = dataGridViewCita.CurrentRow.Cells["FechaRealCita"].Value.ToString();
+            maskedTextBoxHoraC.Text = dataGridViewCita.CurrentRow.Cells["HoraC"].Value.ToString();
+            comboBoxNumExp.Text = dataGridViewCita.CurrentRow.Cells["IdExpediente"].Value.ToString();
+            comboBoxIdMed.Text = dataGridViewCita.CurrentRow.Cells["IdMedico"].Value.ToString();
+            btnRegistrar.Text = "Actualizar";
+
+        }
+
+        private void txtbxBuscar_OnTextChange(object sender, EventArgs e)
+        {
+
+            List<Cita> listaCita = LNCita.BuscarCita(txtbxBuscar.text);
+            dataGridViewCita.DataSource = listaCita;
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
+
             try
             {
                 if (btnRegistrar.Text == "Registrar")
                 {
                     Cita objetoCita = new Cita();
                     objetoCita.FechaConsul = DateTime.Now;
-                    objetoCita.FechaRealCita= dateTimePickerRealCita.Value;
+                    objetoCita.FechaRealCita = dateTimePickerRealCita.Value;
                     objetoCita.HoraC = maskedTextBoxHoraC.Text;
                     objetoCita.IdExpediente = 1;
                     //objetoCita.NumeroExpediente = Convert.ToInt32(comboBoxNumExp.Text);
@@ -68,7 +112,7 @@ namespace CapaPresentacion
                     objetoCita.HoraC = maskedTextBoxHoraC.Text;
                     objetoCita.IdExpediente = 1;
                     //objetoCita.NumeroExpediente = Convert.ToInt32(comboBoxNumExp.Text);
-                    
+
 
                     if (LNCita.EditarCita(objetoCita) > 0)
                     {
@@ -88,42 +132,7 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("ERROR");
             }
-        }
 
-        private void txtbxBuscar_Click(object sender, EventArgs e)
-        {
-            List<Cita> listaCita = LNCita.BuscarCita(txtbxBuscar.text);
-            dataGridViewCita.DataSource = listaCita;
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            txtbxIdCita.Visible = true;
-            txtbxIdCita.Enabled = false;
-            lblIdCita.Visible = true;
-
-            dateTimePickerRealCita.Text = dataGridViewCita.CurrentRow.Cells["FechaRealCita"].Value.ToString();
-            maskedTextBoxHoraC.Text = dataGridViewCita.CurrentRow.Cells["HoraC"].Value.ToString();
-            comboBoxNumExp.Text = dataGridViewCita.CurrentRow.Cells["IdExpediente"].Value.ToString();
-            comboBoxIdMed.Text = dataGridViewCita.CurrentRow.Cells["IdMedico"].Value.ToString();
-            btnRegistrar.Text = "Actualizar";
-        }
-
-        private void btnElminar_Click(object sender, EventArgs e)
-        {
-            int codigoCita = Convert.ToInt32(dataGridViewCita.CurrentRow.Cells["IdCita"].Value.ToString());
-            try
-            {
-                if (LNCita.EliminarCita(codigoCita) > 0)
-                {
-                    MessageBox.Show("Eliminado con éxito");
-                    dataGridViewCita.DataSource = LNCita.ListarCita();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("ERROR al eliminar cita");
-            }
         }
     }
 }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
-            this.tabMedico = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnEditarMed = new System.Windows.Forms.Button();
             this.txtbxBuscMed = new Bunifu.Framework.UI.BunifuTextbox();
@@ -57,60 +55,28 @@
             this.combobxSexo = new System.Windows.Forms.ComboBox();
             this.lblIdMedico = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.tabMedico.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tabMedico
-            // 
-            this.tabMedico.Controls.Add(this.tabPage1);
-            this.tabMedico.Controls.Add(this.tabPage3);
-            this.tabMedico.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabMedico.Location = new System.Drawing.Point(-6, 12);
-            this.tabMedico.Name = "tabMedico";
-            this.tabMedico.SelectedIndex = 0;
-            this.tabMedico.Size = new System.Drawing.Size(1111, 594);
-            this.tabMedico.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1103, 566);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Nuevo médico";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.panel2.Controls.Add(this.bunifuImageButton2);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel2.Controls.Add(this.btnEditarMed);
             this.panel2.Controls.Add(this.txtbxBuscMed);
             this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.dataGridViewMedico);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(-19, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(653, 566);
-            this.panel2.TabIndex = 4;
+            this.panel2.Size = new System.Drawing.Size(653, 500);
+            this.panel2.TabIndex = 6;
             // 
             // btnEditarMed
             // 
             this.btnEditarMed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarMed.Location = new System.Drawing.Point(14, 515);
+            this.btnEditarMed.Location = new System.Drawing.Point(31, 455);
             this.btnEditarMed.Name = "btnEditarMed";
             this.btnEditarMed.Size = new System.Drawing.Size(75, 23);
             this.btnEditarMed.TabIndex = 17;
@@ -120,13 +86,13 @@
             // 
             // txtbxBuscMed
             // 
-            this.txtbxBuscMed.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtbxBuscMed.BackColor = System.Drawing.Color.CornflowerBlue;
             this.txtbxBuscMed.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscMed.BackgroundImage")));
             this.txtbxBuscMed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtbxBuscMed.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxBuscMed.ForeColor = System.Drawing.Color.White;
             this.txtbxBuscMed.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscMed.Icon")));
-            this.txtbxBuscMed.Location = new System.Drawing.Point(14, 31);
+            this.txtbxBuscMed.Location = new System.Drawing.Point(127, 37);
             this.txtbxBuscMed.Name = "txtbxBuscMed";
             this.txtbxBuscMed.Size = new System.Drawing.Size(262, 30);
             this.txtbxBuscMed.TabIndex = 16;
@@ -136,7 +102,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(116, 515);
+            this.btnEliminar.Location = new System.Drawing.Point(133, 455);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 8;
@@ -146,12 +112,12 @@
             // 
             // dataGridViewMedico
             // 
-            this.dataGridViewMedico.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridViewMedico.BackgroundColor = System.Drawing.Color.CornflowerBlue;
             this.dataGridViewMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMedico.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewMedico.Location = new System.Drawing.Point(12, 84);
+            this.dataGridViewMedico.Location = new System.Drawing.Point(31, 102);
             this.dataGridViewMedico.Name = "dataGridViewMedico";
-            this.dataGridViewMedico.Size = new System.Drawing.Size(632, 411);
+            this.dataGridViewMedico.Size = new System.Drawing.Size(613, 323);
             this.dataGridViewMedico.TabIndex = 1;
             // 
             // panel1
@@ -159,13 +125,13 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Location = new System.Drawing.Point(650, 0);
+            this.panel1.Location = new System.Drawing.Point(633, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(453, 566);
-            this.panel1.TabIndex = 3;
+            this.panel1.Size = new System.Drawing.Size(467, 502);
+            this.panel1.TabIndex = 5;
             // 
             // tableLayoutPanel1
             // 
@@ -190,7 +156,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtbxDirec, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.combobxSexo, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.lblIdMedico, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(9, 34);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 15);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -211,7 +177,7 @@
             this.maskedtxtbxTelefonoMed.Location = new System.Drawing.Point(155, 228);
             this.maskedtxtbxTelefonoMed.Mask = "0000 0000";
             this.maskedtxtbxTelefonoMed.Name = "maskedtxtbxTelefonoMed";
-            this.maskedtxtbxTelefonoMed.Size = new System.Drawing.Size(267, 23);
+            this.maskedtxtbxTelefonoMed.Size = new System.Drawing.Size(267, 20);
             this.maskedtxtbxTelefonoMed.TabIndex = 52;
             // 
             // maskedtxtbxCedMed
@@ -219,7 +185,7 @@
             this.maskedtxtbxCedMed.Location = new System.Drawing.Point(155, 273);
             this.maskedtxtbxCedMed.Mask = "000-000000-0000?";
             this.maskedtxtbxCedMed.Name = "maskedtxtbxCedMed";
-            this.maskedtxtbxCedMed.Size = new System.Drawing.Size(267, 23);
+            this.maskedtxtbxCedMed.Size = new System.Drawing.Size(267, 20);
             this.maskedtxtbxCedMed.TabIndex = 51;
             // 
             // combobxEspe
@@ -227,7 +193,7 @@
             this.combobxEspe.FormattingEnabled = true;
             this.combobxEspe.Location = new System.Drawing.Point(155, 138);
             this.combobxEspe.Name = "combobxEspe";
-            this.combobxEspe.Size = new System.Drawing.Size(121, 23);
+            this.combobxEspe.Size = new System.Drawing.Size(121, 21);
             this.combobxEspe.TabIndex = 20;
             // 
             // label9
@@ -369,7 +335,7 @@
             "Masculino"});
             this.combobxSexo.Location = new System.Drawing.Point(155, 318);
             this.combobxSexo.Name = "combobxSexo";
-            this.combobxSexo.Size = new System.Drawing.Size(121, 23);
+            this.combobxSexo.Size = new System.Drawing.Size(121, 21);
             this.combobxSexo.TabIndex = 19;
             // 
             // lblIdMedico
@@ -385,10 +351,10 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRegistrar.Location = new System.Drawing.Point(9, 491);
+            this.btnRegistrar.Location = new System.Drawing.Point(30, 447);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(422, 33);
             this.btnRegistrar.TabIndex = 2;
@@ -396,74 +362,41 @@
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1103, 566);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Médicos en turno";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(290, 507);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 19;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(235, 507);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 18;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            // 
             // frmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1100, 600);
-            this.Controls.Add(this.tabMedico);
+            this.ClientSize = new System.Drawing.Size(1100, 500);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Médico";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
-            this.tabMedico.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabControl tabMedico;
+
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btnEditarMed;
+        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscMed;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.DataGridView dataGridViewMedico;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxTelefonoMed;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxCedMed;
+        private System.Windows.Forms.ComboBox combobxEspe;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblIdMedico;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtbxIdMedico;
         private System.Windows.Forms.TextBox txtbxNombM;
@@ -476,18 +409,8 @@
         private System.Windows.Forms.TextBox txtbxApellM;
         private System.Windows.Forms.TextBox txtbxCorreo;
         private System.Windows.Forms.TextBox txtbxDirec;
-        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.ComboBox combobxSexo;
-        private System.Windows.Forms.ComboBox combobxEspe;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.DataGridView dataGridViewMedico;
-        private System.Windows.Forms.MaskedTextBox maskedtxtbxCedMed;
-        private System.Windows.Forms.MaskedTextBox maskedtxtbxTelefonoMed;
-        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscMed;
-        private System.Windows.Forms.Button btnEditarMed;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Label lblIdMedico;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }
