@@ -83,7 +83,6 @@ namespace CapaPresentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (btnRegistrar.Text == "Registrar")
@@ -192,7 +191,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("ERROR");
             }
-
         }
     }
 }

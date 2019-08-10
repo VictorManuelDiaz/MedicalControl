@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExpediente));
-            this.tabSolicitud = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.labels1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,7 +43,7 @@
             this.txtbxProcedenciaPac = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.cbxReligionPac = new System.Windows.Forms.ComboBox();
+            this.cmbbxReligionPac = new System.Windows.Forms.ComboBox();
             this.txtbxNombreMa = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -60,7 +59,7 @@
             this.txtbxLugarNac = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.mtxtbxFechaNac = new System.Windows.Forms.MaskedTextBox();
+            this.maskedtxtbxFechaNac = new System.Windows.Forms.MaskedTextBox();
             this.txtbxApellidosPac = new System.Windows.Forms.TextBox();
             this.txtbxNombrePac = new System.Windows.Forms.TextBox();
             this.maskedtxtbxCedPac = new System.Windows.Forms.MaskedTextBox();
@@ -109,18 +108,12 @@
             this.chkbxMalConge = new System.Windows.Forms.CheckBox();
             this.chkbxDesMentales = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewExp = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.labels1 = new System.Windows.Forms.Label();
-            this.tabSolicitud.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -134,42 +127,24 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabSolicitud
+            // labels1
             // 
-            this.tabSolicitud.Controls.Add(this.tabPage1);
-            this.tabSolicitud.Controls.Add(this.tabPage3);
-            this.tabSolicitud.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabSolicitud.Location = new System.Drawing.Point(-4, 12);
-            this.tabSolicitud.Name = "tabSolicitud";
-            this.tabSolicitud.SelectedIndex = 0;
-            this.tabSolicitud.Size = new System.Drawing.Size(1108, 594);
-            this.tabSolicitud.TabIndex = 1;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.Controls.Add(this.panel3);
-            this.tabPage1.Controls.Add(this.panel2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1100, 566);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Nuevo expediente";
+            this.labels1.Location = new System.Drawing.Point(0, 0);
+            this.labels1.Name = "labels1";
+            this.labels1.Size = new System.Drawing.Size(100, 23);
+            this.labels1.TabIndex = 0;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel3.Controls.Add(this.flowLayoutPanel1);
-            this.panel3.Location = new System.Drawing.Point(615, -1);
+            this.panel3.Location = new System.Drawing.Point(617, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(485, 567);
-            this.panel3.TabIndex = 4;
+            this.panel3.Size = new System.Drawing.Size(485, 502);
+            this.panel3.TabIndex = 7;
             // 
             // flowLayoutPanel1
             // 
@@ -185,7 +160,7 @@
             this.flowLayoutPanel1.Controls.Add(this.panel5);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 20);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(465, 541);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(465, 479);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // panel1
@@ -231,7 +206,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtbxProcedenciaPac, 1, 16);
             this.tableLayoutPanel2.Controls.Add(this.label14, 0, 16);
             this.tableLayoutPanel2.Controls.Add(this.label13, 0, 15);
-            this.tableLayoutPanel2.Controls.Add(this.cbxReligionPac, 1, 15);
+            this.tableLayoutPanel2.Controls.Add(this.cmbbxReligionPac, 1, 15);
             this.tableLayoutPanel2.Controls.Add(this.txtbxNombreMa, 1, 14);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 14);
             this.tableLayoutPanel2.Controls.Add(this.label11, 0, 13);
@@ -247,7 +222,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtbxLugarNac, 1, 8);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 8);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 7);
-            this.tableLayoutPanel2.Controls.Add(this.mtxtbxFechaNac, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.maskedtxtbxFechaNac, 1, 7);
             this.tableLayoutPanel2.Controls.Add(this.txtbxApellidosPac, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.txtbxNombrePac, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.maskedtxtbxCedPac, 1, 4);
@@ -262,7 +237,7 @@
             this.tableLayoutPanel2.Controls.Add(this.lblIdExpe, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtbxIdExpe, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtbxTrataIndiPac, 1, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(20, 15);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(9, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 19;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882075F));
@@ -284,7 +259,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882076F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(453, 623);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(413, 623);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // cmbbxEstCivil
@@ -295,9 +270,9 @@
             "Casado",
             "Viudo",
             "Divorciado"});
-            this.cmbbxEstCivil.Location = new System.Drawing.Point(151, 595);
+            this.cmbbxEstCivil.Location = new System.Drawing.Point(138, 595);
             this.cmbbxEstCivil.Name = "cmbbxEstCivil";
-            this.cmbbxEstCivil.Size = new System.Drawing.Size(121, 23);
+            this.cmbbxEstCivil.Size = new System.Drawing.Size(121, 21);
             this.cmbbxEstCivil.TabIndex = 48;
             // 
             // label16
@@ -313,10 +288,10 @@
             // 
             // maskedtxtbxTelefonoPac
             // 
-            this.maskedtxtbxTelefonoPac.Location = new System.Drawing.Point(151, 568);
+            this.maskedtxtbxTelefonoPac.Location = new System.Drawing.Point(138, 568);
             this.maskedtxtbxTelefonoPac.Mask = "0000 0000";
             this.maskedtxtbxTelefonoPac.Name = "maskedtxtbxTelefonoPac";
-            this.maskedtxtbxTelefonoPac.Size = new System.Drawing.Size(268, 23);
+            this.maskedtxtbxTelefonoPac.Size = new System.Drawing.Size(268, 20);
             this.maskedtxtbxTelefonoPac.TabIndex = 51;
             // 
             // label15
@@ -333,7 +308,7 @@
             // txtbxProcedenciaPac
             // 
             this.txtbxProcedenciaPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxProcedenciaPac.Location = new System.Drawing.Point(151, 541);
+            this.txtbxProcedenciaPac.Location = new System.Drawing.Point(138, 541);
             this.txtbxProcedenciaPac.Name = "txtbxProcedenciaPac";
             this.txtbxProcedenciaPac.Size = new System.Drawing.Size(268, 21);
             this.txtbxProcedenciaPac.TabIndex = 44;
@@ -360,23 +335,23 @@
             this.label13.TabIndex = 41;
             this.label13.Text = "Religión:";
             // 
-            // cbxReligionPac
+            // cmbbxReligionPac
             // 
-            this.cbxReligionPac.FormattingEnabled = true;
-            this.cbxReligionPac.Items.AddRange(new object[] {
+            this.cmbbxReligionPac.FormattingEnabled = true;
+            this.cmbbxReligionPac.Items.AddRange(new object[] {
             "Católica",
             "Cristiana",
             "Evangélica",
             "Otra"});
-            this.cbxReligionPac.Location = new System.Drawing.Point(151, 514);
-            this.cbxReligionPac.Name = "cbxReligionPac";
-            this.cbxReligionPac.Size = new System.Drawing.Size(121, 23);
-            this.cbxReligionPac.TabIndex = 42;
+            this.cmbbxReligionPac.Location = new System.Drawing.Point(138, 514);
+            this.cmbbxReligionPac.Name = "cmbbxReligionPac";
+            this.cmbbxReligionPac.Size = new System.Drawing.Size(121, 21);
+            this.cmbbxReligionPac.TabIndex = 42;
             // 
             // txtbxNombreMa
             // 
             this.txtbxNombreMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNombreMa.Location = new System.Drawing.Point(151, 487);
+            this.txtbxNombreMa.Location = new System.Drawing.Point(138, 487);
             this.txtbxNombreMa.Name = "txtbxNombreMa";
             this.txtbxNombreMa.Size = new System.Drawing.Size(268, 21);
             this.txtbxNombreMa.TabIndex = 40;
@@ -406,7 +381,7 @@
             // txtbxNombrePa
             // 
             this.txtbxNombrePa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNombrePa.Location = new System.Drawing.Point(151, 460);
+            this.txtbxNombrePa.Location = new System.Drawing.Point(138, 460);
             this.txtbxNombrePa.Name = "txtbxNombrePa";
             this.txtbxNombrePa.Size = new System.Drawing.Size(268, 21);
             this.txtbxNombrePa.TabIndex = 38;
@@ -414,7 +389,7 @@
             // txtbxDirhabiPac
             // 
             this.txtbxDirhabiPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxDirhabiPac.Location = new System.Drawing.Point(151, 433);
+            this.txtbxDirhabiPac.Location = new System.Drawing.Point(138, 433);
             this.txtbxDirhabiPac.Multiline = true;
             this.txtbxDirhabiPac.Name = "txtbxDirhabiPac";
             this.txtbxDirhabiPac.Size = new System.Drawing.Size(268, 17);
@@ -444,9 +419,9 @@
             "Garífunas",
             "Miskitos",
             "Otros"});
-            this.cmbbxGrupoEt.Location = new System.Drawing.Point(151, 406);
+            this.cmbbxGrupoEt.Location = new System.Drawing.Point(138, 406);
             this.cmbbxGrupoEt.Name = "cmbbxGrupoEt";
-            this.cmbbxGrupoEt.Size = new System.Drawing.Size(121, 23);
+            this.cmbbxGrupoEt.Size = new System.Drawing.Size(121, 21);
             this.cmbbxGrupoEt.TabIndex = 34;
             // 
             // label1
@@ -474,7 +449,7 @@
             // txtbxEdadPac
             // 
             this.txtbxEdadPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxEdadPac.Location = new System.Drawing.Point(151, 379);
+            this.txtbxEdadPac.Location = new System.Drawing.Point(138, 379);
             this.txtbxEdadPac.Name = "txtbxEdadPac";
             this.txtbxEdadPac.Size = new System.Drawing.Size(268, 21);
             this.txtbxEdadPac.TabIndex = 32;
@@ -485,9 +460,9 @@
             this.cmbbxSexoPac.Items.AddRange(new object[] {
             "Femenino",
             "Masculino"});
-            this.cmbbxSexoPac.Location = new System.Drawing.Point(151, 352);
+            this.cmbbxSexoPac.Location = new System.Drawing.Point(138, 352);
             this.cmbbxSexoPac.Name = "cmbbxSexoPac";
-            this.cmbbxSexoPac.Size = new System.Drawing.Size(121, 23);
+            this.cmbbxSexoPac.Size = new System.Drawing.Size(121, 21);
             this.cmbbxSexoPac.TabIndex = 30;
             // 
             // label3
@@ -504,7 +479,7 @@
             // txtbxLugarNac
             // 
             this.txtbxLugarNac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxLugarNac.Location = new System.Drawing.Point(151, 325);
+            this.txtbxLugarNac.Location = new System.Drawing.Point(138, 325);
             this.txtbxLugarNac.Name = "txtbxLugarNac";
             this.txtbxLugarNac.Size = new System.Drawing.Size(268, 21);
             this.txtbxLugarNac.TabIndex = 28;
@@ -531,18 +506,18 @@
             this.label4.TabIndex = 25;
             this.label4.Text = "Fecha nacimiento:";
             // 
-            // mtxtbxFechaNac
+            // maskedtxtbxFechaNac
             // 
-            this.mtxtbxFechaNac.Location = new System.Drawing.Point(151, 298);
-            this.mtxtbxFechaNac.Mask = "0000-00-00";
-            this.mtxtbxFechaNac.Name = "mtxtbxFechaNac";
-            this.mtxtbxFechaNac.Size = new System.Drawing.Size(268, 23);
-            this.mtxtbxFechaNac.TabIndex = 49;
+            this.maskedtxtbxFechaNac.Location = new System.Drawing.Point(138, 298);
+            this.maskedtxtbxFechaNac.Mask = "0000-00-00";
+            this.maskedtxtbxFechaNac.Name = "maskedtxtbxFechaNac";
+            this.maskedtxtbxFechaNac.Size = new System.Drawing.Size(268, 20);
+            this.maskedtxtbxFechaNac.TabIndex = 49;
             // 
             // txtbxApellidosPac
             // 
             this.txtbxApellidosPac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxApellidosPac.Location = new System.Drawing.Point(151, 271);
+            this.txtbxApellidosPac.Location = new System.Drawing.Point(138, 271);
             this.txtbxApellidosPac.Name = "txtbxApellidosPac";
             this.txtbxApellidosPac.Size = new System.Drawing.Size(268, 21);
             this.txtbxApellidosPac.TabIndex = 24;
@@ -550,17 +525,17 @@
             // txtbxNombrePac
             // 
             this.txtbxNombrePac.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNombrePac.Location = new System.Drawing.Point(151, 244);
+            this.txtbxNombrePac.Location = new System.Drawing.Point(138, 244);
             this.txtbxNombrePac.Name = "txtbxNombrePac";
             this.txtbxNombrePac.Size = new System.Drawing.Size(268, 21);
             this.txtbxNombrePac.TabIndex = 22;
             // 
             // maskedtxtbxCedPac
             // 
-            this.maskedtxtbxCedPac.Location = new System.Drawing.Point(151, 217);
+            this.maskedtxtbxCedPac.Location = new System.Drawing.Point(138, 217);
             this.maskedtxtbxCedPac.Mask = "000-000000-0000?";
             this.maskedtxtbxCedPac.Name = "maskedtxtbxCedPac";
-            this.maskedtxtbxCedPac.Size = new System.Drawing.Size(268, 23);
+            this.maskedtxtbxCedPac.Size = new System.Drawing.Size(268, 20);
             this.maskedtxtbxCedPac.TabIndex = 50;
             // 
             // label6
@@ -603,13 +578,13 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(3, 134);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(135, 17);
+            this.label17.Size = new System.Drawing.Size(82, 34);
             this.label17.TabIndex = 7;
             this.label17.Text = "Tratamiento Indicado:";
             // 
             // txtbxMotiConsul
             // 
-            this.txtbxMotiConsul.Location = new System.Drawing.Point(151, 57);
+            this.txtbxMotiConsul.Location = new System.Drawing.Point(138, 57);
             this.txtbxMotiConsul.Multiline = true;
             this.txtbxMotiConsul.Name = "txtbxMotiConsul";
             this.txtbxMotiConsul.Size = new System.Drawing.Size(268, 60);
@@ -639,9 +614,9 @@
             // 
             // txtbxNumeroExp
             // 
-            this.txtbxNumeroExp.Location = new System.Drawing.Point(151, 30);
+            this.txtbxNumeroExp.Location = new System.Drawing.Point(138, 30);
             this.txtbxNumeroExp.Name = "txtbxNumeroExp";
-            this.txtbxNumeroExp.Size = new System.Drawing.Size(268, 23);
+            this.txtbxNumeroExp.Size = new System.Drawing.Size(268, 20);
             this.txtbxNumeroExp.TabIndex = 54;
             // 
             // lblIdExpe
@@ -657,14 +632,14 @@
             // 
             // txtbxIdExpe
             // 
-            this.txtbxIdExpe.Location = new System.Drawing.Point(151, 3);
+            this.txtbxIdExpe.Location = new System.Drawing.Point(138, 3);
             this.txtbxIdExpe.Name = "txtbxIdExpe";
-            this.txtbxIdExpe.Size = new System.Drawing.Size(268, 23);
+            this.txtbxIdExpe.Size = new System.Drawing.Size(268, 20);
             this.txtbxIdExpe.TabIndex = 56;
             // 
             // txtbxTrataIndiPac
             // 
-            this.txtbxTrataIndiPac.Location = new System.Drawing.Point(151, 137);
+            this.txtbxTrataIndiPac.Location = new System.Drawing.Point(138, 137);
             this.txtbxTrataIndiPac.Multiline = true;
             this.txtbxTrataIndiPac.Name = "txtbxTrataIndiPac";
             this.txtbxTrataIndiPac.Size = new System.Drawing.Size(268, 62);
@@ -1114,56 +1089,50 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(-3, 0);
+            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegistrar.BorderRadius = 3;
+            this.btnRegistrar.ButtonText = "Registrar";
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
+            this.btnRegistrar.Iconimage_right = null;
+            this.btnRegistrar.Iconimage_right_Selected = null;
+            this.btnRegistrar.Iconimage_Selected = null;
+            this.btnRegistrar.IconMarginLeft = 0;
+            this.btnRegistrar.IconMarginRight = 0;
+            this.btnRegistrar.IconRightVisible = true;
+            this.btnRegistrar.IconRightZoom = 0D;
+            this.btnRegistrar.IconVisible = true;
+            this.btnRegistrar.IconZoom = 50D;
+            this.btnRegistrar.IsTab = false;
+            this.btnRegistrar.Location = new System.Drawing.Point(88, 20);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(442, 49);
-            this.btnRegistrar.TabIndex = 5;
+            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRegistrar.selected = false;
+            this.btnRegistrar.Size = new System.Drawing.Size(291, 48);
+            this.btnRegistrar.TabIndex = 25;
             this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
+            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.bunifuImageButton2);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
             this.panel2.Controls.Add(this.txtbxBuscar);
             this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.btnElminar);
             this.panel2.Controls.Add(this.dataGridViewExp);
-            this.panel2.Location = new System.Drawing.Point(-3, 1);
+            this.panel2.Location = new System.Drawing.Point(-2, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(620, 736);
-            this.panel2.TabIndex = 6;
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuImageButton2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton2.Image")));
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(298, 473);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 15;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(243, 473);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(49, 45);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 14;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.panel2.Size = new System.Drawing.Size(620, 502);
+            this.panel2.TabIndex = 8;
             // 
             // txtbxBuscar
             // 
@@ -1172,17 +1141,17 @@
             this.txtbxBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtbxBuscar.ForeColor = System.Drawing.Color.White;
             this.txtbxBuscar.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.Icon")));
-            this.txtbxBuscar.Location = new System.Drawing.Point(15, 31);
+            this.txtbxBuscar.Location = new System.Drawing.Point(138, 32);
             this.txtbxBuscar.Name = "txtbxBuscar";
-            this.txtbxBuscar.Size = new System.Drawing.Size(395, 42);
+            this.txtbxBuscar.Size = new System.Drawing.Size(316, 42);
             this.txtbxBuscar.TabIndex = 10;
             this.txtbxBuscar.text = "";
-            this.txtbxBuscar.Click += new System.EventHandler(this.txtbxBuscar_Click);
+            this.txtbxBuscar.OnTextChange += new System.EventHandler(this.txtbxBuscar_OnTextChange);
             // 
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(138, 482);
+            this.btnEditar.Location = new System.Drawing.Point(138, 405);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 23);
             this.btnEditar.TabIndex = 9;
@@ -1193,53 +1162,38 @@
             // btnElminar
             // 
             this.btnElminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElminar.Location = new System.Drawing.Point(379, 482);
+            this.btnElminar.Location = new System.Drawing.Point(379, 405);
             this.btnElminar.Name = "btnElminar";
             this.btnElminar.Size = new System.Drawing.Size(75, 23);
             this.btnElminar.TabIndex = 8;
             this.btnElminar.Text = "Eliminar";
             this.btnElminar.UseVisualStyleBackColor = true;
+            this.btnElminar.Click += new System.EventHandler(this.btnElminar_Click);
             // 
             // dataGridViewExp
             // 
-            this.dataGridViewExp.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.dataGridViewExp.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewExp.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewExp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewExp.Location = new System.Drawing.Point(30, 118);
             this.dataGridViewExp.Name = "dataGridViewExp";
-            this.dataGridViewExp.Size = new System.Drawing.Size(566, 328);
+            this.dataGridViewExp.Size = new System.Drawing.Size(566, 281);
             this.dataGridViewExp.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1100, 566);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Expedientes de hoy";
-            // 
-            // labels1
-            // 
-            this.labels1.Location = new System.Drawing.Point(0, 0);
-            this.labels1.Name = "labels1";
-            this.labels1.Size = new System.Drawing.Size(100, 23);
-            this.labels1.TabIndex = 0;
             // 
             // frmExpediente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1100, 600);
-            this.Controls.Add(this.tabSolicitud);
+            this.ClientSize = new System.Drawing.Size(1100, 500);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmExpediente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmExpediente";
             this.Load += new System.EventHandler(this.frmExpediente_Load);
-            this.tabSolicitud.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -1259,25 +1213,60 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabSolicitud;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridViewExp;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnElminar;
+        private System.Windows.Forms.Label labels1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDatosgenerales;
+        private System.Windows.Forms.Panel PanelDatosPer;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ComboBox cmbbxEstCivil;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxTelefonoPac;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtbxProcedenciaPac;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbbxReligionPac;
+        private System.Windows.Forms.TextBox txtbxNombreMa;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtbxNombrePa;
+        private System.Windows.Forms.TextBox txtbxDirhabiPac;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox cmbbxGrupoEt;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtbxEdadPac;
+        private System.Windows.Forms.ComboBox cmbbxSexoPac;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtbxLugarNac;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxFechaNac;
+        private System.Windows.Forms.TextBox txtbxApellidosPac;
+        private System.Windows.Forms.TextBox txtbxNombrePac;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxCedPac;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtbxMotiConsul;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNumExp;
+        private System.Windows.Forms.TextBox txtbxNumeroExp;
+        private System.Windows.Forms.Label lblIdExpe;
+        private System.Windows.Forms.TextBox txtbxIdExpe;
+        private System.Windows.Forms.TextBox txtbxTrataIndiPac;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label lblEnfermedadIC;
+        private System.Windows.Forms.Panel PanelEnfermedadIC;
         private System.Windows.Forms.TableLayoutPanel Panellayout1;
         private System.Windows.Forms.CheckBox chkbxTina;
         private System.Windows.Forms.CheckBox chkbxHepatitis;
@@ -1293,15 +1282,6 @@
         private System.Windows.Forms.CheckBox chkbxFiebreTi;
         private System.Windows.Forms.CheckBox chkbxMalaria;
         private System.Windows.Forms.CheckBox chkbxEscabiasis;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel PanelDatosPer;
-        private System.Windows.Forms.Label labels1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblEnfermedadIC;
-        private System.Windows.Forms.Panel PanelEnfermedadIC;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblEnfermedadH;
         private System.Windows.Forms.Panel PanelEnfermedadH;
@@ -1317,46 +1297,12 @@
         private System.Windows.Forms.CheckBox chkbxMusculares;
         private System.Windows.Forms.CheckBox chkbxMalConge;
         private System.Windows.Forms.CheckBox chkbxDesMentales;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtbxApellidosPac;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtbxNombrePac;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtbxDirhabiPac;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmbbxGrupoEt;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtbxEdadPac;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbbxSexoPac;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtbxLugarNac;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtbxNombreMa;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtbxNombrePa;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cmbbxEstCivil;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtbxProcedenciaPac;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cbxReligionPac;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.MaskedTextBox mtxtbxFechaNac;
-        private System.Windows.Forms.MaskedTextBox maskedtxtbxCedPac;
-        private System.Windows.Forms.MaskedTextBox maskedtxtbxTelefonoPac;
+        private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuTextbox txtbxBuscar;
-        private System.Windows.Forms.TextBox txtbxTrataIndiPac;
-        private System.Windows.Forms.TextBox txtbxMotiConsul;
-        private System.Windows.Forms.TextBox txtbxNumeroExp;
-        private System.Windows.Forms.Label lblIdExpe;
-        private System.Windows.Forms.TextBox txtbxIdExpe;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnElminar;
+        private System.Windows.Forms.DataGridView dataGridViewExp;
+        private System.Windows.Forms.Panel panel5;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
     }
 }

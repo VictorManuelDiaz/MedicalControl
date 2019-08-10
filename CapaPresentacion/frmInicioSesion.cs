@@ -59,8 +59,22 @@ namespace CapaPresentacion
 
         private void picturebxCerrar_Click(object sender, EventArgs e)
         {
-            Dispose(true);
-            Application.Exit();
+            if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
+            {
+                Dispose(true);
+                Application.Exit();
+            }
+        }
+
+        private DialogResult PreClosingConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Está seguro que quiere cerrar la aplicación?",
+                "Cerrar la Aplicación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
         }
     }
 }

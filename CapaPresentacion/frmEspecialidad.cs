@@ -22,21 +22,14 @@ namespace CapaPresentacion
 
         private void frmEspecialidad_Load(object sender, EventArgs e)
         {
+            txtbxIdEspe.Visible = false;
+            lblIdEspe.Visible = false;
             dataGridViewEspecial.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
         }
 
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            txtbxIdEspe.Visible = true;
-            txtbxIdEspe.Enabled = false;
-            lblIdEspe.Visible = true;
-
-            txtbxIdEspe.Text = dataGridViewEspecial.CurrentRow.Cells["IdEspecialidad"].Value.ToString();
-            txtbxNombreEs.Text = dataGridViewEspecial.CurrentRow.Cells["NombreEs"].Value.ToString();
-            btnRegistrar.Text = "Actualizar";
-        }
+        
 
         private void txtbxBuscar_OnTextChange(object sender, EventArgs e)
         {
@@ -46,15 +39,14 @@ namespace CapaPresentacion
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (btnRegistrar.Text == "Registrar")
                 {
                     Especialidad objetoEspecialidad = new Especialidad();
                     objetoEspecialidad.NombreEs = txtbxNombreEs.Text;
-                    
-                   
+
+
 
                     if (LNEsp.InsertarEspecialidad(objetoEspecialidad) > 0)
                     {
@@ -70,14 +62,15 @@ namespace CapaPresentacion
                 {
                     Especialidad objetoMedico = new Especialidad();
                     objetoMedico.NombreEs = txtbxNombreEs.Text;
-                   
+
 
                     if (LNEsp.EditarEspecialidad(objetoMedico) > 0)
                     {
                         MessageBox.Show("Actualizado con éxito");
                         dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
                         txtbxNombreEs.Text = "";
-                       
+                        txtbxIdEspe.Visible = false;
+                        lblIdEspe.Visible = false;
                     }
                     else
                     {
@@ -91,6 +84,17 @@ namespace CapaPresentacion
                 MessageBox.Show("ERROR");
             }
 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            txtbxIdEspe.Visible = true;
+            txtbxIdEspe.Enabled = false;
+            lblIdEspe.Visible = true;
+
+            txtbxIdEspe.Text = dataGridViewEspecial.CurrentRow.Cells["IdEspecialidad"].Value.ToString();
+            txtbxNombreEs.Text = dataGridViewEspecial.CurrentRow.Cells["NombreEs"].Value.ToString();
+            btnRegistrar.Text = "Actualizar";
         }
     }
 }

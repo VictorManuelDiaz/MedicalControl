@@ -1,0 +1,13 @@
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaPresentacion.exe.config
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.csprojResolveAssemblyReference.cache
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.Consultas.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmCita.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmCuentas.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmEspecialidad.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmExpediente.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmInicioSesion.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmPacientes.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmMedicos.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.MDIAdminPrincipal.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.Properties.Resources.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.csproj.GenerateResource.Cache

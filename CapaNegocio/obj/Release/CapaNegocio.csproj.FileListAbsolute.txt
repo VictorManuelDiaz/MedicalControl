@@ -1,0 +1,9 @@
+E:\GitHub\MedicalControl\CapaNegocio\bin\Release\CapaNegocio.dll
+E:\GitHub\MedicalControl\CapaNegocio\bin\Release\CapaNegocio.pdb
+E:\GitHub\MedicalControl\CapaNegocio\bin\Release\CapaDatos.dll
+E:\GitHub\MedicalControl\CapaNegocio\bin\Release\CapaEntidades.dll
+E:\GitHub\MedicalControl\CapaNegocio\bin\Release\CapaDatos.pdb
+E:\GitHub\MedicalControl\CapaNegocio\bin\Release\CapaEntidades.pdb
+E:\GitHub\MedicalControl\CapaNegocio\obj\Release\CapaNegocio.csprojResolveAssemblyReference.cache
+E:\GitHub\MedicalControl\CapaNegocio\obj\Release\CapaNegocio.dll
+E:\GitHub\MedicalControl\CapaNegocio\obj\Release\CapaNegocio.pdb

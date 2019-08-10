@@ -146,9 +146,6 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@b", 4);
                 cm.Parameters.AddWithValue("@IdEspecialidad", "");
                 cm.Parameters.AddWithValue("@NombreEs", es.NombreEs);
-
-
-
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 cm.ExecuteNonQuery();
@@ -179,9 +176,6 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@IdEspecialidad", "");
                 cm.Parameters.AddWithValue("@NombreEs", dato);
 
-
-
-
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 dr = cm.ExecuteReader();
@@ -191,6 +185,7 @@ namespace CapaDatos
                 {
 
                     Especialidad Esp = new Especialidad();
+                    Esp.IdEspecialidad = Convert.ToInt32(dr["IdEspecialidad"].ToString());
                     Esp.NombreEs = dr["NombreEs"].ToString();
                     listaEspecialidad.Add(Esp);
                 }

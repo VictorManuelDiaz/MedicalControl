@@ -46,7 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCita)).BeginInit();
             this.panel1.SuspendLayout();
@@ -62,7 +62,7 @@
             this.panel2.Controls.Add(this.dataGridViewCita);
             this.panel2.Location = new System.Drawing.Point(-3, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(629, 503);
+            this.panel2.Size = new System.Drawing.Size(638, 503);
             this.panel2.TabIndex = 6;
             // 
             // txtbxBuscar
@@ -104,21 +104,22 @@
             // 
             // dataGridViewCita
             // 
-            this.dataGridViewCita.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.dataGridViewCita.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewCita.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCita.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCita.Location = new System.Drawing.Point(7, 108);
+            this.dataGridViewCita.Location = new System.Drawing.Point(21, 108);
             this.dataGridViewCita.Name = "dataGridViewCita";
-            this.dataGridViewCita.Size = new System.Drawing.Size(619, 291);
+            this.dataGridViewCita.Size = new System.Drawing.Size(592, 291);
             this.dataGridViewCita.TabIndex = 17;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Location = new System.Drawing.Point(622, -2);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Location = new System.Drawing.Point(632, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(478, 503);
+            this.panel1.Size = new System.Drawing.Size(468, 503);
             this.panel1.TabIndex = 5;
             // 
             // tableLayoutPanel1
@@ -136,7 +137,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 105);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(34, 105);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -145,12 +146,12 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(454, 314);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(405, 314);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // maskedTextBoxHoraC
             // 
-            this.maskedTextBoxHoraC.Location = new System.Drawing.Point(165, 127);
+            this.maskedTextBoxHoraC.Location = new System.Drawing.Point(148, 127);
             this.maskedTextBoxHoraC.Mask = "00:00";
             this.maskedTextBoxHoraC.Name = "maskedTextBoxHoraC";
             this.maskedTextBoxHoraC.Size = new System.Drawing.Size(118, 20);
@@ -163,24 +164,24 @@
             this.comboBoxIdMed.Items.AddRange(new object[] {
             "Femenino",
             "Masculino"});
-            this.comboBoxIdMed.Location = new System.Drawing.Point(165, 251);
+            this.comboBoxIdMed.Location = new System.Drawing.Point(148, 251);
             this.comboBoxIdMed.Name = "comboBoxIdMed";
-            this.comboBoxIdMed.Size = new System.Drawing.Size(286, 21);
+            this.comboBoxIdMed.Size = new System.Drawing.Size(254, 21);
             this.comboBoxIdMed.TabIndex = 25;
             // 
             // comboBoxNumExp
             // 
             this.comboBoxNumExp.FormattingEnabled = true;
-            this.comboBoxNumExp.Location = new System.Drawing.Point(165, 189);
+            this.comboBoxNumExp.Location = new System.Drawing.Point(148, 189);
             this.comboBoxNumExp.Name = "comboBoxNumExp";
-            this.comboBoxNumExp.Size = new System.Drawing.Size(286, 21);
+            this.comboBoxNumExp.Size = new System.Drawing.Size(254, 21);
             this.comboBoxNumExp.TabIndex = 24;
             // 
             // dateTimePickerRealCita
             // 
-            this.dateTimePickerRealCita.Location = new System.Drawing.Point(165, 65);
+            this.dateTimePickerRealCita.Location = new System.Drawing.Point(148, 65);
             this.dateTimePickerRealCita.Name = "dateTimePickerRealCita";
-            this.dateTimePickerRealCita.Size = new System.Drawing.Size(286, 20);
+            this.dateTimePickerRealCita.Size = new System.Drawing.Size(254, 20);
             this.dateTimePickerRealCita.TabIndex = 22;
             // 
             // lblIdCita
@@ -198,9 +199,9 @@
             // 
             this.txtbxIdCita.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtbxIdCita.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxIdCita.Location = new System.Drawing.Point(165, 3);
+            this.txtbxIdCita.Location = new System.Drawing.Point(148, 3);
             this.txtbxIdCita.Name = "txtbxIdCita";
-            this.txtbxIdCita.Size = new System.Drawing.Size(286, 22);
+            this.txtbxIdCita.Size = new System.Drawing.Size(254, 22);
             this.txtbxIdCita.TabIndex = 3;
             // 
             // label4
@@ -249,15 +250,37 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegistrar.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(203, 425);
+            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegistrar.BorderRadius = 3;
+            this.btnRegistrar.ButtonText = "Registrar";
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
+            this.btnRegistrar.Iconimage_right = null;
+            this.btnRegistrar.Iconimage_right_Selected = null;
+            this.btnRegistrar.Iconimage_Selected = null;
+            this.btnRegistrar.IconMarginLeft = 0;
+            this.btnRegistrar.IconMarginRight = 0;
+            this.btnRegistrar.IconRightVisible = true;
+            this.btnRegistrar.IconRightZoom = 0D;
+            this.btnRegistrar.IconVisible = true;
+            this.btnRegistrar.IconZoom = 50D;
+            this.btnRegistrar.IsTab = false;
+            this.btnRegistrar.Location = new System.Drawing.Point(103, 438);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(90, 33);
-            this.btnRegistrar.TabIndex = 2;
+            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRegistrar.selected = false;
+            this.btnRegistrar.Size = new System.Drawing.Size(291, 48);
+            this.btnRegistrar.TabIndex = 23;
             this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
+            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frmCita
@@ -269,6 +292,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCita";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCita";
@@ -301,6 +325,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnRegistrar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
     }
 }

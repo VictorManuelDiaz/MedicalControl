@@ -1,0 +1,5 @@
+E:\GitHub\MedicalControl\CapaEntidades\bin\Release\CapaEntidades.dll
+E:\GitHub\MedicalControl\CapaEntidades\bin\Release\CapaEntidades.pdb
+E:\GitHub\MedicalControl\CapaEntidades\obj\Release\CapaEntidades.csprojResolveAssemblyReference.cache
+E:\GitHub\MedicalControl\CapaEntidades\obj\Release\CapaEntidades.dll
+E:\GitHub\MedicalControl\CapaEntidades\obj\Release\CapaEntidades.pdb

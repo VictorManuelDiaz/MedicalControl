@@ -101,10 +101,38 @@ namespace CapaPresentacion
 
         private void tlsSalir_Click(object sender, EventArgs e)
         {
-            frmInicioSesion InicioS = new frmInicioSesion();
-            this.Hide();
-            InicioS.ShowDialog();
-            this.Close();
+
+            if (PreLogoutConfirmation() == System.Windows.Forms.DialogResult.Yes)
+            {
+                frmInicioSesion InicioS = new frmInicioSesion();
+                this.Hide();
+                InicioS.ShowDialog();
+                this.Close();
+            }
+
+        }
+
+        private DialogResult PreLogoutConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Está seguro que quiere Cerrar sesión?",
+                "Cerrar la Aplicación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
+
+        private DialogResult PreClosingConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Está seguro que quiere cerrar la aplicación?",
+                "Cerrar la Aplicación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
         }
 
         private void tlsCitas_Click(object sender, EventArgs e)
@@ -191,8 +219,12 @@ namespace CapaPresentacion
 
         private void picturebxCerrar_Click(object sender, EventArgs e)
         {
-            Dispose(true);
-            Application.Exit();
+
+            if (PreClosingConfirmation() == System.Windows.Forms.DialogResult.Yes)
+            {
+                Dispose(true);
+                Application.Exit();
+            }
         }
     }
 }

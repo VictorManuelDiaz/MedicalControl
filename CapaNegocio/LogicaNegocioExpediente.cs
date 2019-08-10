@@ -23,7 +23,7 @@ namespace CapaNegocio
             return EXP.ListarExpediente();
         }
 
-        public int EliminarConsulta(int NumeroExpediente)
+      public int EliminarExpediente(int NumeroExpediente)
         {
             return EXP.EliminarExpediente(NumeroExpediente);
         }

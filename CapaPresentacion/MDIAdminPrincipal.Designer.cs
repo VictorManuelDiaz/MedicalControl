@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIAdminPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.tlsInicio = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsCitas = new System.Windows.Forms.ToolStripMenuItem();
@@ -185,6 +186,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MDIAdminPrincipal";

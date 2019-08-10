@@ -339,7 +339,7 @@ namespace CapaDatos
             try
             {
 
-                SqlConnection cnx = cn.Conectar();
+                SqlConnection cnx = cn.Conectar();//conectar
                 cm = new SqlCommand("Expediente_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@IdExpediente", "");
@@ -348,7 +348,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@TratamientoIndicado", "");
                 cm.Parameters.AddWithValue("@CedulaPac", dato);
                 cm.Parameters.AddWithValue("@NombrePac", dato);
-                cm.Parameters.AddWithValue("@ApellidosPac", dato);
+                cm.Parameters.AddWithValue("@ApellidosPac", "");
                 cm.Parameters.AddWithValue("@FechaNacimiento", "");
                 cm.Parameters.AddWithValue("@LugarNacimiento", "");
                 cm.Parameters.AddWithValue("@SexoPac", "");
@@ -361,13 +361,36 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@ProcedenciaPac", "");
                 cm.Parameters.AddWithValue("@TelefonoPac", "");
                 cm.Parameters.AddWithValue("@EstadoCivilPac", "");
-
-
+                cm.Parameters.AddWithValue("@EnferICHepatitis", "");
+                cm.Parameters.AddWithValue("@EnferICSifilis", "");
+                cm.Parameters.AddWithValue("@EnferICColera", "");
+                cm.Parameters.AddWithValue("@EnferICTosferina", "");
+                cm.Parameters.AddWithValue("@EnferICSarampion", "");
+                cm.Parameters.AddWithValue("@EnferICVaricela", "");
+                cm.Parameters.AddWithValue("@EnferICRubeola", "");
+                cm.Parameters.AddWithValue("@EnferICPariotiditis", "");
+                cm.Parameters.AddWithValue("@EnferICMeningitis", "");
+                cm.Parameters.AddWithValue("@EnferICImpetigo", "");
+                cm.Parameters.AddWithValue("@EnferICTifoidea", "");
+                cm.Parameters.AddWithValue("@EnferICMalaria", "");
+                cm.Parameters.AddWithValue("@EnferICEscabiasis", "");
+                cm.Parameters.AddWithValue("@EnferICTina", "");
+                cm.Parameters.AddWithValue("@EnferHAlergias", "");
+                cm.Parameters.AddWithValue("@EnferHDiabetes", "");
+                cm.Parameters.AddWithValue("@EnferHHipertension", "");
+                cm.Parameters.AddWithValue("@EnferHReumatica", "");
+                cm.Parameters.AddWithValue("@EnferHRenales", "");
+                cm.Parameters.AddWithValue("@EnferHOculares", "");
+                cm.Parameters.AddWithValue("@EnferHCardiacas", "");
+                cm.Parameters.AddWithValue("@EnferHHepatica", "");
+                cm.Parameters.AddWithValue("@EnferHMusculares", "");
+                cm.Parameters.AddWithValue("@EnferHMalCongenitas", "");
+                cm.Parameters.AddWithValue("@EnferHDesorMentales", "");
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();
                 dr = cm.ExecuteReader();
-                listaExpediente = new List<Expediente>();
+                listaExpediente = new List<Expediente>(); //lista de comentarios
 
                 while (dr.Read()) //Recorre cada registro
                 {
@@ -380,9 +403,10 @@ namespace CapaDatos
                     exp.TratamientoIndicado = dr["TratamientoIndicado"].ToString();
                     exp.CedulaPac = dr["CedulaPac"].ToString();
                     exp.NombrePac = dr["NombrePac"].ToString();
-                    exp.ApellidosPac = dr["ApellidoPac"].ToString();
+                    exp.ApellidosPac = dr["ApellidosPac"].ToString();
                     exp.FechaNacimiento = dr["FechaNacimiento"].ToString();
                     exp.LugarNacimiento = dr["LugarNacimiento"].ToString();
+                    exp.SexoPac = dr["SexoPac"].ToString();
                     exp.EdadPac = Convert.ToInt32(dr["EdadPac"].ToString());
                     exp.GrupoEtnico = dr["GrupoEtnico"].ToString();
                     exp.DireccionHabitualPac = dr["DireccionHabitualPac"].ToString();
@@ -422,11 +446,11 @@ namespace CapaDatos
 
                 }
 
-
             }
+
+
             catch (Exception e)
             {
-
                 e.Message.ToString();
                 listaExpediente = null;
             }
@@ -434,7 +458,7 @@ namespace CapaDatos
             {
                 cm.Connection.Close();
             }
-            return listaExpediente;
+            return listaExpediente; //regresa lista de registros
         }
     }
 }

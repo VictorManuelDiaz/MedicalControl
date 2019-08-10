@@ -281,17 +281,18 @@
             // 
             // dataGridViewCuentas
             // 
-            this.dataGridViewCuentas.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.dataGridViewCuentas.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewCuentas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCuentas.Location = new System.Drawing.Point(3, 112);
+            this.dataGridViewCuentas.Location = new System.Drawing.Point(21, 112);
             this.dataGridViewCuentas.Name = "dataGridViewCuentas";
-            this.dataGridViewCuentas.Size = new System.Drawing.Size(692, 276);
+            this.dataGridViewCuentas.Size = new System.Drawing.Size(659, 276);
             this.dataGridViewCuentas.TabIndex = 12;
             // 
             // btnEditarCuenta
             // 
             this.btnEditarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCuenta.Location = new System.Drawing.Point(95, 416);
+            this.btnEditarCuenta.Location = new System.Drawing.Point(117, 416);
             this.btnEditarCuenta.Name = "btnEditarCuenta";
             this.btnEditarCuenta.Size = new System.Drawing.Size(75, 23);
             this.btnEditarCuenta.TabIndex = 9;
@@ -316,7 +317,7 @@
             // btnEliminarCuenta
             // 
             this.btnEliminarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCuenta.Location = new System.Drawing.Point(3, 417);
+            this.btnEliminarCuenta.Location = new System.Drawing.Point(25, 417);
             this.btnEliminarCuenta.Name = "btnEliminarCuenta";
             this.btnEliminarCuenta.Size = new System.Drawing.Size(75, 23);
             this.btnEliminarCuenta.TabIndex = 8;
@@ -333,6 +334,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCuentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cuentas";
