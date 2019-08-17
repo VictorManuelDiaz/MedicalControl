@@ -151,9 +151,9 @@ namespace CapaDatos
                 cm = new SqlCommand("Cita_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
                 cm.Parameters.AddWithValue("@IdCita", ci.IdCita);
-                cm.Parameters.AddWithValue("@FechaConsul", "");
+                cm.Parameters.AddWithValue("@FechaConsul", ci.FechaConsul);
                 cm.Parameters.AddWithValue("@FechaRealCita", ci.FechaRealCita);
-                cm.Parameters.AddWithValue("@HoraC", "");
+                cm.Parameters.AddWithValue("@HoraC", ci.HoraC);
                 cm.Parameters.AddWithValue("@IdExpediente", ci.IdExpediente);
                 cm.Parameters.AddWithValue("@IdMedico", "");
 

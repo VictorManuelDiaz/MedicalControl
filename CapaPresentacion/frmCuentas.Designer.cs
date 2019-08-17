@@ -46,16 +46,18 @@
             this.txtbxNomCuen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbxContraActual = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridViewCuentas = new System.Windows.Forms.DataGridView();
-            this.btnEditarCuenta = new System.Windows.Forms.Button();
             this.txtbxBuscCuenta = new Bunifu.Framework.UI.BunifuTextbox();
-            this.btnEliminarCuenta = new System.Windows.Forms.Button();
+            this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.tablepanelCuenta.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCuentas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -76,9 +78,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tablepanelCuenta);
-            this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Location = new System.Drawing.Point(697, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(403, 500);
@@ -113,7 +115,7 @@
             this.tablepanelCuenta.Controls.Add(this.txtbxNomCuen, 1, 1);
             this.tablepanelCuenta.Controls.Add(this.label1, 0, 2);
             this.tablepanelCuenta.Controls.Add(this.txtbxContraActual, 1, 2);
-            this.tablepanelCuenta.Location = new System.Drawing.Point(23, 58);
+            this.tablepanelCuenta.Location = new System.Drawing.Point(23, 65);
             this.tablepanelCuenta.Name = "tablepanelCuenta";
             this.tablepanelCuenta.RowCount = 7;
             this.tablepanelCuenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28592F));
@@ -252,28 +254,13 @@
             this.txtbxContraActual.Size = new System.Drawing.Size(197, 20);
             this.txtbxContraActual.TabIndex = 1;
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.AutoEllipsis = true;
-            this.btnRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(19, 353);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(361, 35);
-            this.btnRegistrar.TabIndex = 4;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Controls.Add(this.btnEliminar);
+            this.panel2.Controls.Add(this.btnEditar);
             this.panel2.Controls.Add(this.dataGridViewCuentas);
-            this.panel2.Controls.Add(this.btnEditarCuenta);
             this.panel2.Controls.Add(this.txtbxBuscCuenta);
-            this.panel2.Controls.Add(this.btnEliminarCuenta);
             this.panel2.Location = new System.Drawing.Point(-1, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(698, 500);
@@ -289,17 +276,6 @@
             this.dataGridViewCuentas.Size = new System.Drawing.Size(659, 276);
             this.dataGridViewCuentas.TabIndex = 12;
             // 
-            // btnEditarCuenta
-            // 
-            this.btnEditarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarCuenta.Location = new System.Drawing.Point(117, 416);
-            this.btnEditarCuenta.Name = "btnEditarCuenta";
-            this.btnEditarCuenta.Size = new System.Drawing.Size(75, 23);
-            this.btnEditarCuenta.TabIndex = 9;
-            this.btnEditarCuenta.Text = "Editar";
-            this.btnEditarCuenta.UseVisualStyleBackColor = true;
-            this.btnEditarCuenta.Click += new System.EventHandler(this.btnEditarCuenta_Click);
-            // 
             // txtbxBuscCuenta
             // 
             this.txtbxBuscCuenta.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -307,23 +283,75 @@
             this.txtbxBuscCuenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtbxBuscCuenta.ForeColor = System.Drawing.Color.White;
             this.txtbxBuscCuenta.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscCuenta.Icon")));
-            this.txtbxBuscCuenta.Location = new System.Drawing.Point(86, 27);
+            this.txtbxBuscCuenta.Location = new System.Drawing.Point(24, 51);
             this.txtbxBuscCuenta.Name = "txtbxBuscCuenta";
-            this.txtbxBuscCuenta.Size = new System.Drawing.Size(420, 42);
+            this.txtbxBuscCuenta.Size = new System.Drawing.Size(366, 42);
             this.txtbxBuscCuenta.TabIndex = 11;
             this.txtbxBuscCuenta.text = "";
             this.txtbxBuscCuenta.OnTextChange += new System.EventHandler(this.txtbxBuscCuenta_OnTextChange);
             // 
-            // btnEliminarCuenta
+            // btnEliminar
             // 
-            this.btnEliminarCuenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCuenta.Location = new System.Drawing.Point(25, 417);
-            this.btnEliminarCuenta.Name = "btnEliminarCuenta";
-            this.btnEliminarCuenta.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarCuenta.TabIndex = 8;
-            this.btnEliminarCuenta.Text = "Eliminar";
-            this.btnEliminarCuenta.UseVisualStyleBackColor = true;
-            this.btnEliminarCuenta.Click += new System.EventHandler(this.btnEliminarCuenta_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageActive = null;
+            this.btnEliminar.Location = new System.Drawing.Point(77, 405);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 30);
+            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEliminar.TabIndex = 29;
+            this.btnEliminar.TabStop = false;
+            this.btnEliminar.Zoom = 10;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageActive = null;
+            this.btnEditar.Location = new System.Drawing.Point(22, 405);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 30);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditar.TabIndex = 28;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegistrar.BorderRadius = 3;
+            this.btnRegistrar.ButtonText = "Registrar";
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
+            this.btnRegistrar.Iconimage_right = null;
+            this.btnRegistrar.Iconimage_right_Selected = null;
+            this.btnRegistrar.Iconimage_Selected = null;
+            this.btnRegistrar.IconMarginLeft = 0;
+            this.btnRegistrar.IconMarginRight = 0;
+            this.btnRegistrar.IconRightVisible = true;
+            this.btnRegistrar.IconRightZoom = 0D;
+            this.btnRegistrar.IconVisible = true;
+            this.btnRegistrar.IconZoom = 50D;
+            this.btnRegistrar.IsTab = false;
+            this.btnRegistrar.Location = new System.Drawing.Point(57, 382);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRegistrar.selected = false;
+            this.btnRegistrar.Size = new System.Drawing.Size(291, 48);
+            this.btnRegistrar.TabIndex = 23;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
+            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click_1);
             // 
             // frmCuentas
             // 
@@ -345,6 +373,8 @@
             this.tablepanelCuenta.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCuentas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,11 +397,11 @@
         private System.Windows.Forms.TextBox txtbxNomCuen;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbxContraActual;
-        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridViewCuentas;
-        private System.Windows.Forms.Button btnEditarCuenta;
         private Bunifu.Framework.UI.BunifuTextbox txtbxBuscCuenta;
-        private System.Windows.Forms.Button btnEliminarCuenta;
+        private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
     }
 }

@@ -308,7 +308,7 @@ GO
 
 
 
-CREATE PROCEDURE CompleteNom_Proced
+CREATE PROCEDURE IdMedico_Proced
 
 	@b INT,
 	@NombreCom VARCHAR(70)
@@ -319,6 +319,19 @@ BEGIN
 
 	IF @b=1
 	SELECT IdMedico FROM Medico WHERE (Medico.NombreM+' '+Medico.ApellidoM)=@NombreCom
+
+END
+GO
+
+CREATE PROCEDURE NombreMedico_Proced
+
+	@IdMedico INT
+
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT NombreM, ApellidoM FROM Medico WHERE Medico.IdMedico=@IdMedico
 
 END
 GO
@@ -817,6 +830,19 @@ BEGIN
 END
 GO
 
+
+
+CREATE PROCEDURE RespaldoBD_Proced
+	
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	BACKUP DATABASE [bd_proyecto]
+	TO DISK= N'E:\Backup\rbd_MC.back'
+	WITH CHECKSUM;
+END
+GO
 
 
 -----------------------------------------------------------------------------------------------------------------------

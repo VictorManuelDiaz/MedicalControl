@@ -20,7 +20,7 @@ namespace CapaDatos
         SqlDataReader dr = null;
         List<Medico> listaMedico = null;
         int IdMedico;
-
+        string NombreMed;
         public int InsertarMedico(Medico Med)
         {
             try
@@ -261,13 +261,13 @@ namespace CapaDatos
             return listaMedico;
         }
 
-        public int BuscarMedicoPorId(string dato)
+        public int BuscarIdPorMedico(string dato)
         {
             try
             {
 
                 SqlConnection cnx = cn.Conectar();
-                cm = new SqlCommand("CompleteNom_Proced", cnx);
+                cm = new SqlCommand("IdMedico_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 1);
                 cm.Parameters.AddWithValue("@NombreCom", dato);
 
@@ -293,6 +293,38 @@ namespace CapaDatos
                 cm.Connection.Close();
             }
             return IdMedico;
+        }
+
+        public string BuscarMedicoPorId(int dato)
+        {
+            try
+            {
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("NombreMedico_Proced", cnx);
+                cm.Parameters.AddWithValue("@IdMedico", dato);
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+
+                while (dr.Read()) //Recorre cada registro
+                {
+
+                    NombreMed =dr["NombreM"].ToString() +" "+ dr["ApellidoM"].ToString();
+                }
+
+            }
+            catch (Exception e)
+            {
+
+                e.Message.ToString();
+                NombreMed = "";
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return NombreMed;
         }
 
     }

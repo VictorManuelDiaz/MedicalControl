@@ -40,6 +40,8 @@
             this.tlsEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsServicios = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsUsuarios = new System.Windows.Forms.ToolStripMenuItem();
+            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsRespaldo = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -61,6 +63,7 @@
             this.tlsPacientes,
             this.tlsExpedientes,
             this.tlsCuentas,
+            this.mantenimientoToolStripMenuItem,
             this.tlsSalir});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -133,6 +136,21 @@
             this.tlsUsuarios.Size = new System.Drawing.Size(175, 22);
             this.tlsUsuarios.Text = "Cuentas de usuario";
             this.tlsUsuarios.Click += new System.EventHandler(this.tlsUsuarios_Click);
+            // 
+            // mantenimientoToolStripMenuItem
+            // 
+            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsRespaldo});
+            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
+            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            // 
+            // tlsRespaldo
+            // 
+            this.tlsRespaldo.Name = "tlsRespaldo";
+            this.tlsRespaldo.Size = new System.Drawing.Size(152, 22);
+            this.tlsRespaldo.Text = "Respaldo BD";
+            this.tlsRespaldo.Click += new System.EventHandler(this.tlsRespaldo_Click);
             // 
             // tlsSalir
             // 
@@ -221,6 +239,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picturebxCerrar;
+        private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tlsRespaldo;
     }
 }
 

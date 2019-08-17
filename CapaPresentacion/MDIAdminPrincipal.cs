@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaNegocio;
 
 namespace CapaPresentacion
 {
     public partial class MDIAdminPrincipal : Form
     {
         private int childFormNumber = 0;
-
+        LogicaNegocioRespaldo LNRes = new LogicaNegocioRespaldo();
         public MDIAdminPrincipal()
         {
             InitializeComponent();
@@ -224,6 +225,22 @@ namespace CapaPresentacion
             {
                 Dispose(true);
                 Application.Exit();
+            }
+        }
+
+        private void tlsRespaldo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (LNRes.respaldarBD() > 0)
+                {
+                    MessageBox.Show("Respaldo realizado con éxito");
+                }
+            }
+            catch
+            {
+
+                MessageBox.Show("Error al realizar el respaldo");
             }
         }
     }

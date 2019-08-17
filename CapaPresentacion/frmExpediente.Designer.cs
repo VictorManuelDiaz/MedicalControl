@@ -111,9 +111,9 @@
             this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewExp = new System.Windows.Forms.DataGridView();
+            this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -128,6 +128,8 @@
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.SuspendLayout();
             // 
             // labels1
@@ -1125,9 +1127,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.txtbxBuscar);
+            this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnEditar);
-            this.panel2.Controls.Add(this.btnElminar);
+            this.panel2.Controls.Add(this.txtbxBuscar);
             this.panel2.Controls.Add(this.dataGridViewExp);
             this.panel2.Location = new System.Drawing.Point(-2, 0);
             this.panel2.Name = "panel2";
@@ -1141,34 +1143,12 @@
             this.txtbxBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtbxBuscar.ForeColor = System.Drawing.Color.White;
             this.txtbxBuscar.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.Icon")));
-            this.txtbxBuscar.Location = new System.Drawing.Point(138, 32);
+            this.txtbxBuscar.Location = new System.Drawing.Point(34, 58);
             this.txtbxBuscar.Name = "txtbxBuscar";
             this.txtbxBuscar.Size = new System.Drawing.Size(316, 42);
             this.txtbxBuscar.TabIndex = 10;
             this.txtbxBuscar.text = "";
             this.txtbxBuscar.OnTextChange += new System.EventHandler(this.txtbxBuscar_OnTextChange);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(138, 405);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 9;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnElminar
-            // 
-            this.btnElminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElminar.Location = new System.Drawing.Point(379, 405);
-            this.btnElminar.Name = "btnElminar";
-            this.btnElminar.Size = new System.Drawing.Size(75, 23);
-            this.btnElminar.TabIndex = 8;
-            this.btnElminar.Text = "Eliminar";
-            this.btnElminar.UseVisualStyleBackColor = true;
-            this.btnElminar.Click += new System.EventHandler(this.btnElminar_Click);
             // 
             // dataGridViewExp
             // 
@@ -1179,6 +1159,34 @@
             this.dataGridViewExp.Name = "dataGridViewExp";
             this.dataGridViewExp.Size = new System.Drawing.Size(566, 281);
             this.dataGridViewExp.TabIndex = 0;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageActive = null;
+            this.btnEliminar.Location = new System.Drawing.Point(89, 409);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 30);
+            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEliminar.TabIndex = 29;
+            this.btnEliminar.TabStop = false;
+            this.btnEliminar.Zoom = 10;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageActive = null;
+            this.btnEditar.Location = new System.Drawing.Point(34, 409);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 30);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditar.TabIndex = 28;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // frmExpediente
             // 
@@ -1214,6 +1222,8 @@
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1299,10 +1309,10 @@
         private System.Windows.Forms.CheckBox chkbxDesMentales;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuTextbox txtbxBuscar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnElminar;
         private System.Windows.Forms.DataGridView dataGridViewExp;
         private System.Windows.Forms.Panel panel5;
         private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
+        private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
     }
 }

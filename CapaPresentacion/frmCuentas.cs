@@ -30,9 +30,14 @@ namespace CapaPresentacion
             
         }
 
-        
 
-        private void btnEliminarCuenta_Click(object sender, EventArgs e)
+        private void txtbxBuscCuenta_OnTextChange(object sender, EventArgs e)
+        {
+            List<Cuenta> listaCuenta = LNCuentas.BuscarCuenta(txtbxBuscCuenta.text);
+            dataGridViewCuentas.DataSource = listaCuenta;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
             int codigoCuenta = Convert.ToInt32(dataGridViewCuentas.CurrentRow.Cells["IdCuenta"].Value.ToString());
             try
@@ -49,13 +54,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void txtbxBuscCuenta_OnTextChange(object sender, EventArgs e)
-        {
-            List<Cuenta> listaCuenta = LNCuentas.BuscarCuenta(txtbxBuscCuenta.text);
-            dataGridViewCuentas.DataSource = listaCuenta;
-        }
-
-        private void btnEditarCuenta_Click(object sender, EventArgs e)
+        private void btnEditar_Click(object sender, EventArgs e)
         {
             txtbxIdCuen.Visible = true;
             txtbxIdCuen.Enabled = false;
@@ -71,9 +70,8 @@ namespace CapaPresentacion
             btnRegistrar.Text = "Actualizar";
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click_1(object sender, EventArgs e)
         {
-
             try
             {
                 if (btnRegistrar.Text == "Registrar")

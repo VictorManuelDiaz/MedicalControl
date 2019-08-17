@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
             this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnEntrar = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -40,16 +41,15 @@
             this.txtbxContrasena = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtbxNomCuen = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picturebxCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picturebxCerrar = new System.Windows.Forms.PictureBox();
-            this.btnEntrar = new Bunifu.Framework.UI.BunifuTileButton();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -74,6 +74,27 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(456, 56);
             this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnEntrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.color = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.colorActive = System.Drawing.Color.CornflowerBlue;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
+            this.btnEntrar.ImagePosition = 21;
+            this.btnEntrar.ImageZoom = 50;
+            this.btnEntrar.LabelPosition = 35;
+            this.btnEntrar.LabelText = "Entrar";
+            this.btnEntrar.Location = new System.Drawing.Point(164, 6);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(128, 44);
+            this.btnEntrar.TabIndex = 0;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // bunifuElipse1
             // 
@@ -143,7 +164,7 @@
             this.txtbxContrasena.BorderThickness = 3;
             this.txtbxContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtbxContrasena.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtbxContrasena.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtbxContrasena.ForeColor = System.Drawing.SystemColors.Info;
             this.txtbxContrasena.isPassword = true;
             this.txtbxContrasena.Location = new System.Drawing.Point(157, 62);
             this.txtbxContrasena.Margin = new System.Windows.Forms.Padding(4);
@@ -161,7 +182,7 @@
             this.txtbxNomCuen.BorderThickness = 3;
             this.txtbxNomCuen.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtbxNomCuen.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtbxNomCuen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtbxNomCuen.ForeColor = System.Drawing.SystemColors.Info;
             this.txtbxNomCuen.isPassword = false;
             this.txtbxNomCuen.Location = new System.Drawing.Point(157, 4);
             this.txtbxNomCuen.Margin = new System.Windows.Forms.Padding(4);
@@ -179,6 +200,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1184, 36);
             this.panel1.TabIndex = 4;
+            // 
+            // picturebxCerrar
+            // 
+            this.picturebxCerrar.Image = global::CapaPresentacion.Properties.Resources.cancel1;
+            this.picturebxCerrar.Location = new System.Drawing.Point(1152, 9);
+            this.picturebxCerrar.Name = "picturebxCerrar";
+            this.picturebxCerrar.Size = new System.Drawing.Size(23, 17);
+            this.picturebxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebxCerrar.TabIndex = 0;
+            this.picturebxCerrar.TabStop = false;
+            this.picturebxCerrar.Click += new System.EventHandler(this.picturebxCerrar_Click);
             // 
             // panel2
             // 
@@ -199,42 +231,11 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // picturebxCerrar
-            // 
-            this.picturebxCerrar.Image = global::CapaPresentacion.Properties.Resources.cancel1;
-            this.picturebxCerrar.Location = new System.Drawing.Point(1152, 9);
-            this.picturebxCerrar.Name = "picturebxCerrar";
-            this.picturebxCerrar.Size = new System.Drawing.Size(23, 17);
-            this.picturebxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picturebxCerrar.TabIndex = 0;
-            this.picturebxCerrar.TabStop = false;
-            this.picturebxCerrar.Click += new System.EventHandler(this.picturebxCerrar_Click);
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnEntrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.color = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.colorActive = System.Drawing.Color.CornflowerBlue;
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
-            this.btnEntrar.ImagePosition = 21;
-            this.btnEntrar.ImageZoom = 50;
-            this.btnEntrar.LabelPosition = 35;
-            this.btnEntrar.LabelText = "Entrar";
-            this.btnEntrar.Location = new System.Drawing.Point(164, 6);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(6);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(128, 44);
-            this.btnEntrar.TabIndex = 0;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 662);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
@@ -251,9 +252,9 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

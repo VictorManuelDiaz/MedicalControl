@@ -31,10 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPacientes));
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtbxBuscPaciente = new Bunifu.Framework.UI.BunifuTextbox();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnElminar = new System.Windows.Forms.Button();
             this.dataGridViewPac = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -72,19 +71,22 @@
             this.lblIdExp = new System.Windows.Forms.Label();
             this.txtbxIdExp = new System.Windows.Forms.TextBox();
             this.txtbxNumExp = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.txtbxBuscPaciente);
+            this.panel2.Controls.Add(this.btnEliminar);
             this.panel2.Controls.Add(this.btnEditar);
-            this.panel2.Controls.Add(this.btnElminar);
+            this.panel2.Controls.Add(this.txtbxBuscPaciente);
             this.panel2.Controls.Add(this.dataGridViewPac);
             this.panel2.Location = new System.Drawing.Point(0, -2);
             this.panel2.Name = "panel2";
@@ -105,28 +107,6 @@
             this.txtbxBuscPaciente.TabIndex = 17;
             this.txtbxBuscPaciente.text = "";
             this.txtbxBuscPaciente.OnTextChange += new System.EventHandler(this.txtbxBuscPaciente_OnTextChange);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(3, 457);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 14;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnElminar
-            // 
-            this.btnElminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElminar.Location = new System.Drawing.Point(100, 457);
-            this.btnElminar.Name = "btnElminar";
-            this.btnElminar.Size = new System.Drawing.Size(75, 23);
-            this.btnElminar.TabIndex = 13;
-            this.btnElminar.Text = "Eliminar";
-            this.btnElminar.UseVisualStyleBackColor = true;
-            this.btnElminar.Click += new System.EventHandler(this.btnElminar_Click);
             // 
             // dataGridViewPac
             // 
@@ -151,6 +131,41 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(374, 504);
             this.panel1.TabIndex = 8;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegistrar.BorderRadius = 3;
+            this.btnRegistrar.ButtonText = "Registrar";
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
+            this.btnRegistrar.Iconimage_right = null;
+            this.btnRegistrar.Iconimage_right_Selected = null;
+            this.btnRegistrar.Iconimage_Selected = null;
+            this.btnRegistrar.IconMarginLeft = 0;
+            this.btnRegistrar.IconMarginRight = 0;
+            this.btnRegistrar.IconRightVisible = true;
+            this.btnRegistrar.IconRightZoom = 0D;
+            this.btnRegistrar.IconVisible = true;
+            this.btnRegistrar.IconZoom = 50D;
+            this.btnRegistrar.IsTab = false;
+            this.btnRegistrar.Location = new System.Drawing.Point(47, 689);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRegistrar.selected = false;
+            this.btnRegistrar.Size = new System.Drawing.Size(291, 48);
+            this.btnRegistrar.TabIndex = 25;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
+            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // panel3
             // 
@@ -551,40 +566,33 @@
             this.txtbxNumExp.Size = new System.Drawing.Size(200, 20);
             this.txtbxNumExp.TabIndex = 20;
             // 
-            // btnRegistrar
+            // btnEliminar
             // 
-            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
-            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegistrar.BorderRadius = 3;
-            this.btnRegistrar.ButtonText = "Registrar";
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
-            this.btnRegistrar.Iconimage_right = null;
-            this.btnRegistrar.Iconimage_right_Selected = null;
-            this.btnRegistrar.Iconimage_Selected = null;
-            this.btnRegistrar.IconMarginLeft = 0;
-            this.btnRegistrar.IconMarginRight = 0;
-            this.btnRegistrar.IconRightVisible = true;
-            this.btnRegistrar.IconRightZoom = 0D;
-            this.btnRegistrar.IconVisible = true;
-            this.btnRegistrar.IconZoom = 50D;
-            this.btnRegistrar.IsTab = false;
-            this.btnRegistrar.Location = new System.Drawing.Point(47, 689);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
-            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRegistrar.selected = false;
-            this.btnRegistrar.Size = new System.Drawing.Size(291, 48);
-            this.btnRegistrar.TabIndex = 25;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
-            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageActive = null;
+            this.btnEliminar.Location = new System.Drawing.Point(83, 448);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 30);
+            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEliminar.TabIndex = 29;
+            this.btnEliminar.TabStop = false;
+            this.btnEliminar.Zoom = 10;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageActive = null;
+            this.btnEditar.Location = new System.Drawing.Point(28, 448);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 30);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditar.TabIndex = 28;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // frmPacientes
             // 
@@ -606,6 +614,8 @@
             this.panel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -614,8 +624,6 @@
 
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuTextbox txtbxBuscPaciente;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnElminar;
         private System.Windows.Forms.DataGridView dataGridViewPac;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
@@ -656,5 +664,7 @@
         private System.Windows.Forms.TextBox txtbxNumExp;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
+        private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
     }
 }

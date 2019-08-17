@@ -37,7 +37,11 @@ namespace CapaNegocio
         {
             return MED.BuscarMedico(dato);
         }
-        public int buscarMedicoPorId(string dato)
+        public int buscarIdPorMedico(string dato)
+        {
+            return MED.BuscarIdPorMedico(dato);
+        }
+        public string buscarMedicoPorId(int dato)
         {
             return MED.BuscarMedicoPorId(dato);
         }
