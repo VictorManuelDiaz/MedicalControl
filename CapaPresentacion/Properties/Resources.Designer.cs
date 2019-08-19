@@ -173,6 +173,16 @@ namespace CapaPresentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_White1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo White1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_whiteandblack {
             get {
                 object obj = ResourceManager.GetObject("Logo whiteandblack", resourceCulture);

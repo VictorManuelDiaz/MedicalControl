@@ -82,6 +82,6 @@ namespace CapaPresentacion
             this.Close();
         }
 
-        
+       
     }
 }

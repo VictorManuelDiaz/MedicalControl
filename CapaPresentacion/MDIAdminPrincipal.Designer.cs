@@ -35,6 +35,7 @@
             this.tlsCitas = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsMedicos = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsPacientes = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsExpedientes = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsConfiguraciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,11 +49,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.picturebxCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tlsConsultas = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -102,6 +105,12 @@
             this.tlsPacientes.Text = "Pacientes";
             this.tlsPacientes.Click += new System.EventHandler(this.tlsPacientes_Click);
             // 
+            // tlsConsultas
+            // 
+            this.tlsConsultas.Name = "tlsConsultas";
+            this.tlsConsultas.Size = new System.Drawing.Size(71, 20);
+            this.tlsConsultas.Text = "Consultas";
+            // 
             // tlsExpedientes
             // 
             this.tlsExpedientes.Name = "tlsExpedientes";
@@ -150,7 +159,7 @@
             // tlsRespaldo
             // 
             this.tlsRespaldo.Name = "tlsRespaldo";
-            this.tlsRespaldo.Size = new System.Drawing.Size(152, 22);
+            this.tlsRespaldo.Size = new System.Drawing.Size(140, 22);
             this.tlsRespaldo.Text = "Respaldo BD";
             this.tlsRespaldo.Click += new System.EventHandler(this.tlsRespaldo_Click);
             // 
@@ -169,6 +178,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.picturebxCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -197,11 +208,26 @@
             this.panel2.Size = new System.Drawing.Size(1185, 24);
             this.panel2.TabIndex = 6;
             // 
-            // tlsConsultas
+            // pictureBox2
             // 
-            this.tlsConsultas.Name = "tlsConsultas";
-            this.tlsConsultas.Size = new System.Drawing.Size(71, 20);
-            this.tlsConsultas.Text = "Consultas";
+            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Logo_White1;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(53, 10);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(99, 16);
+            this.lblTitulo.TabIndex = 4;
+            this.lblTitulo.Text = "Medical control";
             // 
             // MDIAdminPrincipal
             // 
@@ -222,9 +248,11 @@
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -250,6 +278,8 @@
         private System.Windows.Forms.ToolStripMenuItem tlsMantenimiento;
         private System.Windows.Forms.ToolStripMenuItem tlsRespaldo;
         private System.Windows.Forms.ToolStripMenuItem tlsConsultas;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
 

@@ -96,6 +96,7 @@ namespace CapaPresentacion
 
         private void tlsMedicos_Click(object sender, EventArgs e)
         {
+            lblTitulo.Text = "Médicos";
             if (Application.OpenForms["frmMedicos"] != null)
             {
                 Application.OpenForms["frmMedicos"].Activate();
@@ -148,6 +149,7 @@ namespace CapaPresentacion
 
         private void tlsCitas_Click(object sender, EventArgs e)
         {
+            lblTitulo.Text = "Citas";
             if (Application.OpenForms["frmCita"] != null)
             {
                 Application.OpenForms["frmCita"].Activate();
@@ -163,6 +165,7 @@ namespace CapaPresentacion
 
         private void tlsInicio_Click(object sender, EventArgs e)
         {
+            lblTitulo.Text = "Medical control";
             foreach (Form childForm in MdiChildren)
             {
                 childForm.Close();
@@ -171,6 +174,7 @@ namespace CapaPresentacion
 
         private void tlsExpedientes_Click(object sender, EventArgs e)
         {
+            lblTitulo.Text = "Expedientes";
             if (Application.OpenForms["frmExpediente"] != null)
             {
                 Application.OpenForms["frmExpediente"].Activate();
@@ -185,6 +189,7 @@ namespace CapaPresentacion
 
         private void tlsPacientes_Click(object sender, EventArgs e)
         {
+            lblTitulo.Text = "Pacientes";
             if (Application.OpenForms["frmPacientes"] != null)
             {
                 Application.OpenForms["frmPacientes"].Activate();
@@ -200,6 +205,7 @@ namespace CapaPresentacion
 
         private void tlsUsuarios_Click(object sender, EventArgs e)
         {
+            lblTitulo.Text = "Cuentas";
             if (Application.OpenForms["frmCuentas"] != null)
             {
                 Application.OpenForms["frmCuentas"].Activate();
@@ -215,6 +221,7 @@ namespace CapaPresentacion
 
         private void tlsEspecialidades_Click(object sender, EventArgs e)
         {
+            lblTitulo.Text = "Especialidades";
             if (Application.OpenForms["frmEspecialidad"] != null)
             {
                 Application.OpenForms["frmEspecialidad"].Activate();
@@ -240,11 +247,14 @@ namespace CapaPresentacion
 
         private void tlsRespaldo_Click(object sender, EventArgs e)
         {
+            string ateriorTitulo=lblTitulo.Text;
+            lblTitulo.Text = "Respaldo Base de datos";
             try
             {
                 if (LNRes.respaldarBD() > 0)
                 {
                     MessageBox.Show("Respaldo realizado con éxito");
+                    lblTitulo.Text = ateriorTitulo;
                 }
             }
             catch

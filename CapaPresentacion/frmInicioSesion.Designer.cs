@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
-            this.label3 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnEntrar = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -40,28 +40,19 @@
             this.txtbxContrasena = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtbxNomCuen = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.picturebxCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picturebxCerrar = new System.Windows.Forms.PictureBox();
-            this.btnEntrar = new Bunifu.Framework.UI.BunifuTileButton();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(836, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Inicio de sesión";
             // 
             // tableLayoutPanel3
             // 
@@ -74,6 +65,27 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(456, 56);
             this.tableLayoutPanel3.TabIndex = 3;
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btnEntrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.color = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.colorActive = System.Drawing.Color.CornflowerBlue;
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
+            this.btnEntrar.ImagePosition = 21;
+            this.btnEntrar.ImageZoom = 50;
+            this.btnEntrar.LabelPosition = 35;
+            this.btnEntrar.LabelText = "Entrar";
+            this.btnEntrar.Location = new System.Drawing.Point(164, 6);
+            this.btnEntrar.Margin = new System.Windows.Forms.Padding(6);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(128, 44);
+            this.btnEntrar.TabIndex = 0;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // bunifuElipse1
             // 
@@ -173,12 +185,46 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.picturebxCerrar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1184, 36);
             this.panel1.TabIndex = 4;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Logo_White1;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(53, 10);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(82, 16);
+            this.lblTitulo.TabIndex = 2;
+            this.lblTitulo.Text = "Inicio sesión";
+            // 
+            // picturebxCerrar
+            // 
+            this.picturebxCerrar.Image = global::CapaPresentacion.Properties.Resources.cancel1;
+            this.picturebxCerrar.Location = new System.Drawing.Point(1152, 9);
+            this.picturebxCerrar.Name = "picturebxCerrar";
+            this.picturebxCerrar.Size = new System.Drawing.Size(23, 17);
+            this.picturebxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebxCerrar.TabIndex = 0;
+            this.picturebxCerrar.TabStop = false;
+            this.picturebxCerrar.Click += new System.EventHandler(this.picturebxCerrar_Click);
             // 
             // panel2
             // 
@@ -199,45 +245,12 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // picturebxCerrar
-            // 
-            this.picturebxCerrar.Image = global::CapaPresentacion.Properties.Resources.cancel1;
-            this.picturebxCerrar.Location = new System.Drawing.Point(1152, 9);
-            this.picturebxCerrar.Name = "picturebxCerrar";
-            this.picturebxCerrar.Size = new System.Drawing.Size(23, 17);
-            this.picturebxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picturebxCerrar.TabIndex = 0;
-            this.picturebxCerrar.TabStop = false;
-            this.picturebxCerrar.Click += new System.EventHandler(this.picturebxCerrar_Click);
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnEntrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.color = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.colorActive = System.Drawing.Color.CornflowerBlue;
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
-            this.btnEntrar.ImagePosition = 21;
-            this.btnEntrar.ImageZoom = 50;
-            this.btnEntrar.LabelPosition = 35;
-            this.btnEntrar.LabelText = "Entrar";
-            this.btnEntrar.Location = new System.Drawing.Point(164, 6);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(6);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(128, 44);
-            this.btnEntrar.TabIndex = 0;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
-            // 
             // frmInicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 662);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel3);
@@ -252,16 +265,16 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Bunifu.Framework.UI.BunifuTileButton btnEntrar;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
@@ -275,6 +288,8 @@
         private System.Windows.Forms.PictureBox picturebxCerrar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
 
