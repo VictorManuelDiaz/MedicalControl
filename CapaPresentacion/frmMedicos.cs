@@ -48,59 +48,151 @@ namespace CapaPresentacion
 
         
 
+        
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (PreEliminarConfirmation()==System.Windows.Forms.DialogResult.Yes)
+            {
+                int codigoM = Convert.ToInt32(dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString());
+                try
+                {
+                    if (LNMedico.eliminarMedico(codigoM) > 0)
+                    {
+                        MessageBox.Show("Eliminado con éxito");
+                        dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("ERROR al eliminar Medico");
+                }
+            }
+            
+        }
+
+        
+
+        private DialogResult PreGuardarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Seguro que quiere registrar este médico?",
+                "Registrar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
+        private DialogResult PreEliminarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Seguro que quiere eliminar este médico?",
+                "Eliminar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
+
+        private DialogResult PreEditarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Seguro que quiere actualizar este médico?",
+                "Actualizar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             try
             {
                 if (btnRegistrar.Text == "Registrar")
                 {
-                    Medico objetoMedico = new Medico();
-                    objetoMedico.NombreM = txtbxNombM.Text;
-                    objetoMedico.ApellidoM = txtbxApellM.Text;
-                    objetoMedico.IdEspecialidad = LNEspe.BuscarIdEspecialidad(combobxEspe.Text);
-                    objetoMedico.EmailM = txtbxCorreo.Text;
-                    objetoMedico.TelefonoM = maskedtxtbxTelefonoMed.Text;
-                    objetoMedico.CedulaM = maskedtxtbxCedMed.Text;
-                    if (combobxSexo.Text == "Femenino")
+                    if (PreGuardarConfirmation() == System.Windows.Forms.DialogResult.Yes)
                     {
-                        objetoMedico.SexoM = "F";
+                        Medico objetoMedico = new Medico();
+                        objetoMedico.NombreM = txtbxNombM.Text;
+                        objetoMedico.ApellidoM = txtbxApellM.Text;
+                        objetoMedico.IdEspecialidad = LNEspe.BuscarIdEspecialidad(combobxEspe.Text);
+                        objetoMedico.EmailM = txtbxCorreo.Text;
+                        objetoMedico.TelefonoM = maskedtxtbxTelefonoMed.Text;
+                        objetoMedico.CedulaM = maskedtxtbxCedMed.Text;
+                        if (combobxSexo.Text == "Femenino")
+                        {
+                            objetoMedico.SexoM = "F";
+                        }
+                        else
+                        {
+                            objetoMedico.SexoM = "M";
+                        }
+                        objetoMedico.DireccionM = txtbxDirec.Text;
+
+                        if (LNMedico.insertarMedico(objetoMedico) > 0)
+                        {
+                            MessageBox.Show("Agregado con éxito");
+                            dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                            txtbxNombM.Text = "";
+                            txtbxApellM.Text = "";
+                            txtbxCorreo.Text = "";
+                            maskedtxtbxTelefonoMed.Text = "";
+                            maskedtxtbxCedMed.Text = "";
+                            txtbxDirec.Text = "";
+
+                        }
+                        else { MessageBox.Show("Error al agregar Recurso"); }
                     }
                     else
                     {
-                        objetoMedico.SexoM = "M";
-                    }
-                    objetoMedico.DireccionM = txtbxDirec.Text;
-
-                    if (LNMedico.insertarMedico(objetoMedico) > 0)
-                    {
-                        MessageBox.Show("Agregado con éxito");
-                        dataGridViewMedico.DataSource = LNMedico.listarMedico();
                         txtbxNombM.Text = "";
                         txtbxApellM.Text = "";
                         txtbxCorreo.Text = "";
                         maskedtxtbxTelefonoMed.Text = "";
                         maskedtxtbxCedMed.Text = "";
                         txtbxDirec.Text = "";
-
                     }
-                    else { MessageBox.Show("Error al agregar Recurso"); }
+
                 }
                 if (btnRegistrar.Text == "Actualizar")
                 {
-                    Medico objetoMedico = new Medico();
-                    objetoMedico.NombreM = txtbxNombM.Text;
-                    objetoMedico.ApellidoM = txtbxApellM.Text;
-                    objetoMedico.IdEspecialidad = LNEspe.BuscarIdEspecialidad(combobxEspe.Text);
-                    objetoMedico.EmailM = txtbxCorreo.Text;
-                    objetoMedico.TelefonoM = maskedtxtbxTelefonoMed.Text;
-                    objetoMedico.CedulaM = maskedtxtbxCedMed.Text;
-                    objetoMedico.SexoM = combobxSexo.Text;
-                    objetoMedico.DireccionM = txtbxDirec.Text;
-
-                    if (LNMedico.editarMedico(objetoMedico) > 0)
+                    if (PreEditarConfirmation() == System.Windows.Forms.DialogResult.Yes)
                     {
-                        MessageBox.Show("Actualizado con éxito");
-                        dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                        Medico objetoMedico = new Medico();
+                        objetoMedico.NombreM = txtbxNombM.Text;
+                        objetoMedico.ApellidoM = txtbxApellM.Text;
+                        objetoMedico.IdEspecialidad = LNEspe.BuscarIdEspecialidad(combobxEspe.Text);
+                        objetoMedico.EmailM = txtbxCorreo.Text;
+                        objetoMedico.TelefonoM = maskedtxtbxTelefonoMed.Text;
+                        objetoMedico.CedulaM = maskedtxtbxCedMed.Text;
+                        objetoMedico.SexoM = combobxSexo.Text;
+                        objetoMedico.DireccionM = txtbxDirec.Text;
+
+                        if (LNMedico.editarMedico(objetoMedico) > 0)
+                        {
+                            MessageBox.Show("Actualizado con éxito");
+                            dataGridViewMedico.DataSource = LNMedico.listarMedico();
+                            txtbxNombM.Text = "";
+                            txtbxApellM.Text = "";
+                            txtbxCorreo.Text = "";
+                            maskedtxtbxTelefonoMed.Text = "";
+                            maskedtxtbxCedMed.Text = "";
+                            txtbxDirec.Text = "";
+                            lblIdMedico.Visible = false;
+                            txtbxIdMedico.Visible = false;
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al actualizar Medico");
+                        }
+                        btnRegistrar.Text = "Registrar";
+                    }
+                    else
+                    {
                         txtbxNombM.Text = "";
                         txtbxApellM.Text = "";
                         txtbxCorreo.Text = "";
@@ -109,36 +201,12 @@ namespace CapaPresentacion
                         txtbxDirec.Text = "";
                         lblIdMedico.Visible = false;
                         txtbxIdMedico.Visible = false;
-
                     }
-                    else
-                    {
-                        MessageBox.Show("Error al actualizar Medico");
-                    }
-                    btnRegistrar.Text = "Registrar";
                 }
             }
             catch
             {
                 MessageBox.Show("ERROR");
-            }
-
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            int codigoM = Convert.ToInt32(dataGridViewMedico.CurrentRow.Cells["IdMedico"].Value.ToString());
-            try
-            {
-                if (LNMedico.eliminarMedico(codigoM) > 0)
-                {
-                    MessageBox.Show("Eliminado con éxito");
-                    dataGridViewMedico.DataSource = LNMedico.listarMedico();
-                }
-            }
-            catch
-            {
-                MessageBox.Show("ERROR al eliminar Medico");
             }
         }
 

@@ -18,6 +18,8 @@ namespace CapaDatos
         int indicador = 0; // variable indicador para comprobar CRUD para cargar datos
         SqlDataReader dr = null;
         List<Cuenta> listaCuenta = null;
+        string Usuario = "";
+        int IdCuenta = 0;
 
         public int InsertarCuenta(Cuenta cu)
         {
@@ -211,6 +213,39 @@ namespace CapaDatos
             }
             return listaCuenta;
         }
+
+        public string ObtenerTipoUsuario(string nom, string contra)
+        {
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("TipoCuenta_Proced", cnx);
+                cm.Parameters.AddWithValue("@NombreCuenta", nom);
+                cm.Parameters.AddWithValue("@Contrasena", contra);
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    Usuario = dr["TipoCuenta"].ToString();
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                Usuario = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return Usuario;
+        }
         public List<Cuenta> BuscarCuenta(string nom)
         {
             try
@@ -255,5 +290,82 @@ namespace CapaDatos
             }
             return listaCuenta;
         }
+
+        public List<Cuenta> ListarCuentaUsuario()
+        {
+
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();//conectar
+                cm = new SqlCommand("Cuenta_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 7);
+                cm.Parameters.AddWithValue("@IdCuenta", "");
+                cm.Parameters.AddWithValue("@NombreCuenta", "");
+                cm.Parameters.AddWithValue("@Contrasena", "");
+                cm.Parameters.AddWithValue("@TipoCuenta", "");
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaCuenta = new List<Cuenta>(); //lista de comentarios
+
+                while (dr.Read()) //Recorre cada registro
+                {
+                    Cuenta Cu = new Cuenta();
+                    Cu.IdCuenta = Convert.ToInt32(dr["IdCuenta"].ToString());
+                    Cu.NombreCuenta = dr["NombreCuenta"].ToString();
+                    Cu.Contrasena = dr["Contrasena"].ToString();
+                    Cu.TipoCuenta = dr["TipoCuenta"].ToString();
+                    listaCuenta.Add(Cu);
+                }
+
+            }
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaCuenta = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaCuenta;
+        }
+        public int BuscarIdCuenta(string nom)
+        {
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("BuscarIdCuenta_Proced", cnx);
+                cm.Parameters.AddWithValue("@NombreCuenta", nom);
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                while (dr.Read())
+                {
+
+                    Cuenta Cu = new Cuenta();
+
+                    IdCuenta = Convert.ToInt32(dr["IdCuenta"].ToString());
+
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                IdCuenta = 0;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return IdCuenta;
+        }
+
     }
 }

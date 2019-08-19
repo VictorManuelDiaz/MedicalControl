@@ -43,40 +43,60 @@ namespace CapaPresentacion
             {
                 if (btnRegistrar.Text == "Registrar")
                 {
-                    Especialidad objetoEspecialidad = new Especialidad();
-                    objetoEspecialidad.NombreEs = txtbxNombreEs.Text;
 
-
-
-                    if (LNEsp.InsertarEspecialidad(objetoEspecialidad) > 0)
+                    if (PreGuardarConfirmation()== System.Windows.Forms.DialogResult.Yes)
                     {
-                        MessageBox.Show("Agregado con éxito");
-                        dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
-                        txtbxNombreEs.Text = "";
+                        Especialidad objetoEspecialidad = new Especialidad();
+                        objetoEspecialidad.NombreEs = txtbxNombreEs.Text;
 
 
+
+                        if (LNEsp.InsertarEspecialidad(objetoEspecialidad) > 0)
+                        {
+                            MessageBox.Show("Agregado con éxito");
+                            dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
+                            txtbxNombreEs.Text = "";
+
+
+                        }
+                        else { MessageBox.Show("Error al agregar especialidad"); }
                     }
-                    else { MessageBox.Show("Error al agregar especialidad"); }
+                    else
+                    {
+                        txtbxNombreEs.Text = "";
+                    }
+                    
                 }
                 if (btnRegistrar.Text == "Actualizar")
                 {
-                    Especialidad objetoMedico = new Especialidad();
-                    objetoMedico.NombreEs = txtbxNombreEs.Text;
 
-
-                    if (LNEsp.EditarEspecialidad(objetoMedico) > 0)
+                    if (PreEditarConfirmation()==System.Windows.Forms.DialogResult.Yes)
                     {
-                        MessageBox.Show("Actualizado con éxito");
-                        dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
+                        Especialidad objetoMedico = new Especialidad();
+                        objetoMedico.NombreEs = txtbxNombreEs.Text;
+
+
+                        if (LNEsp.EditarEspecialidad(objetoMedico) > 0)
+                        {
+                            MessageBox.Show("Actualizado con éxito");
+                            dataGridViewEspecial.DataSource = LNEsp.ListarEspecialidad();
+                            txtbxNombreEs.Text = "";
+                            txtbxIdEspe.Visible = false;
+                            lblIdEspe.Visible = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al actualizar especialidad");
+                        }
+                        btnRegistrar.Text = "Registrar";
+                    }
+                    else
+                    {
                         txtbxNombreEs.Text = "";
                         txtbxIdEspe.Visible = false;
                         lblIdEspe.Visible = false;
                     }
-                    else
-                    {
-                        MessageBox.Show("Error al actualizar especialidad");
-                    }
-                    btnRegistrar.Text = "Registrar";
+                    
                 }
             }
             catch
@@ -96,5 +116,41 @@ namespace CapaPresentacion
             txtbxNombreEs.Text = dataGridViewEspecial.CurrentRow.Cells["NombreEs"].Value.ToString();
             btnRegistrar.Text = "Actualizar";
         }
+
+
+        private DialogResult PreGuardarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Está seguro que quiere registrar esta especialidad?",
+                "Cerrar la Aplicación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
+        private DialogResult PreEliminarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Está seguro que quiere eliminar esta especialidad?",
+                "Cerrar la Aplicación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
+
+        private DialogResult PreEditarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Está seguro que quiere guardar los cambios realizados en especialidad?",
+                "Cerrar la Aplicación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
     }
 }

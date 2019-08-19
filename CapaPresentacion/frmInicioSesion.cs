@@ -31,10 +31,7 @@ namespace CapaPresentacion
             {
                 if (LNCuen.ValidarCuenta(txtbxNomCuen.Text, txtbxContrasena.Text).Count > 0)
                 {
-                    MDIAdminPrincipal PrinAdmin = new MDIAdminPrincipal();
-                    this.Hide();
-                    PrinAdmin.ShowDialog();
-                    this.Close();
+                    ValidarTipoUsuario();
                 }
                 else
                 {
@@ -75,6 +72,14 @@ namespace CapaPresentacion
                 MessageBoxIcon.Question);
 
             return res;
+        }
+
+        private void ValidarTipoUsuario()
+        {
+            MDIAdminPrincipal PrinAdmin = new MDIAdminPrincipal(LNCuen.ObtenerTipoUsuario(txtbxNomCuen.Text, txtbxContrasena.Text));
+            this.Hide();
+            PrinAdmin.ShowDialog();
+            this.Close();
         }
 
         

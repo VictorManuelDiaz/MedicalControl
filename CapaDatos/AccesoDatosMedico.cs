@@ -327,6 +327,65 @@ namespace CapaDatos
             return NombreMed;
         }
 
+        public List<Medico> BuscarMedicoCuenta()
+        {
+            
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("Medico_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 6);
+                cm.Parameters.AddWithValue("@IdMedico", "");
+                cm.Parameters.AddWithValue("@NombreM", "");
+                cm.Parameters.AddWithValue("@ApellidoM", "");
+                cm.Parameters.AddWithValue("@IdEspecialidad", "");
+                cm.Parameters.AddWithValue("@EmailM", "");
+                cm.Parameters.AddWithValue("@TelefonoM", "");
+                cm.Parameters.AddWithValue("@CedulaM", "");
+                cm.Parameters.AddWithValue("@SexoM", "");
+                cm.Parameters.AddWithValue("@DireccionM", "");
+
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaMedico = new List<Medico>();
+
+                while (dr.Read()) //Recorre cada registro
+                {
+
+                    Medico me = new Medico();
+
+                    me.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
+                    me.NombreM = dr["NombreM"].ToString();
+                    me.ApellidoM = dr["ApellidoM"].ToString();
+                    me.IdEspecialidad = Convert.ToInt32(dr["IdEspecialidad"].ToString());
+                    me.EmailM = dr["EmailM"].ToString();
+                    me.TelefonoM = dr["TelefonoM"].ToString();
+                    me.CedulaM = dr["CedulaM"].ToString();
+                    me.SexoM = dr["SexoM"].ToString();
+                    me.DireccionM = dr["DireccionM"].ToString();
+
+                    listaMedico.Add(me);
+
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+                e.Message.ToString();
+                listaMedico = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaMedico;
+        }
+
     }
 }
 

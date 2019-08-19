@@ -46,6 +46,17 @@ CONSTRAINT SexoCheck CHECK (SexoM='F' OR SexoM='M')
 );
 
 
+CREATE TABLE Usuario (
+
+IdCuenta INT,
+IdMedico INT,
+FOREIGN KEY (IdCuenta) REFERENCES Cuenta (IdCuenta),
+FOREIGN KEY (IdMedico) REFERENCES Medico (IdMedico)
+
+);
+
+
+
 CREATE TABLE Expediente (
 
 IdExpediente INT PRIMARY KEY IDENTITY (1,1),
@@ -213,7 +224,40 @@ BEGIN
 	UPDATE Cuenta SET Cuenta.Contrasena=@Contrasena WHERE Cuenta.IdCuenta=@IdCuenta;
 
 	IF @b=5
+	SELECT * FROM Cuenta WHERE Cuenta.NombreCuenta=@NombreCuenta AND Cuenta.Contrasena=@Contrasena;
+
+	IF @b=6
 	SELECT * FROM Cuenta WHERE Cuenta.NombreCuenta LIKE '%' + @NombreCuenta + '%';
+
+	IF @b=7
+	SELECT * FROM Cuenta 
+	WHERE (Cuenta.IdCuenta NOT IN (SELECT IdCuenta FROM Usuario))
+	AND Cuenta.TipoCuenta='Estándar'
+END
+GO
+
+
+CREATE PROCEDURE BuscarIdCuenta_Proced
+
+	@NombreCuenta VARCHAR (30)
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT IdCuenta FROM Cuenta WHERE Cuenta.NombreCuenta=@NombreCuenta;
+END
+GO
+
+CREATE PROCEDURE TipoCuenta_Proced
+
+	@NombreCuenta VARCHAR (30), 
+	@Contrasena VARCHAR (20)
+
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT TipoCuenta FROM Cuenta WHERE Cuenta.NombreCuenta=@NombreCuenta AND Cuenta.Contrasena=@Contrasena;
 
 END
 GO
@@ -303,12 +347,44 @@ BEGIN
 	Medico.ApellidoM LIKE '%' + @ApellidoM + '%' OR
 	Medico.CedulaM LIKE '%' + @CedulaM + '%'
 
+
+	IF @b=6
+	SELECT * FROM Medico WHERE (Medico.IdMedico NOT IN (SELECT IdMedico FROM Usuario));
+END
+GO
+
+CREATE PROCEDURE Usuario_Proced
+
+	@b INT,
+	@IdCuenta INT,
+	@IdMedico INT
+
+AS
+BEGIN
+	SET NOCOUNT ON;
+
+	IF @b=1
+	INSERT INTO Usuario VALUES (
+									@IdCuenta,
+									@IdMedico
+								);
+
+	IF @b=2
+	DELETE FROM Usuario WHERE Usuario.IdMedico=@IdMedico;
+
+	IF @b=3
+	SELECT * FROM Usuario;
+
+	IF @b=4
+	UPDATE Usuario SET Usuario.IdMedico=@IdMedico
+	WHERE Usuario.IdCuenta=@IdCuenta;
+
 END
 GO
 
 
 
-CREATE PROCEDURE IdMedico_Proced
+alter PROCEDURE IdMedico_Proced
 
 	@b INT,
 	@NombreCom VARCHAR(70)
@@ -318,6 +394,9 @@ BEGIN
 	SET NOCOUNT ON;
 
 	IF @b=1
+	SELECT IdMedico FROM Medico WHERE (Medico.NombreM+' '+Medico.ApellidoM)=@NombreCom;
+
+	IF @b=2
 	SELECT IdMedico FROM Medico WHERE (Medico.NombreM+' '+Medico.ApellidoM)=@NombreCom
 
 END
@@ -855,6 +934,9 @@ INSERT INTO Cuenta VALUES ('victor22','123','Administrador'),
 						  ('medico','321','Estándar')
 
 
+INSERT INTO Usuario VALUES (3,1)
+
+
 INSERT INTO Especialidad VALUES ('Cardiología'),
 								('Ginecología'),
 								('Pediatría'),
@@ -865,6 +947,9 @@ INSERT INTO Expediente VALUES ('1234','Dolor de cabeza','Reposo','121-110909-000
 
 INSERT INTO Medico VALUES ('Josh','González',1,'tumedico@gmail.com','88888887','121-110909-9900E','M','Casa de habitación'),
 						  ('Gina','Sepulveda',3,'medicogeneral@gmail.com','88899900','121-230912-8811G','F','Barrio Rubén Darío')
+
+INSERT INTO Cita VALUES ('2019-09-09','2019-09-10','10:38:39',1,1),
+						('2019-10-08','2019-10-09','12:40:55',2,2)
 
 INSERT INTO Cita VALUES ('2019-09-09','2019-09-10','10:38:39',1,1),
 						('2019-10-08','2019-10-09','12:40:55',2,2)

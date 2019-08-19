@@ -36,11 +36,11 @@
             this.tlsMedicos = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsPacientes = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsExpedientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlsCuentas = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsConfiguraciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsServicios = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsUsuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.mantenimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsRespaldo = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -48,6 +48,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.picturebxCerrar = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tlsConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
@@ -61,9 +62,10 @@
             this.tlsCitas,
             this.tlsMedicos,
             this.tlsPacientes,
+            this.tlsConsultas,
             this.tlsExpedientes,
-            this.tlsCuentas,
-            this.mantenimientoToolStripMenuItem,
+            this.tlsConfiguraciones,
+            this.tlsMantenimiento,
             this.tlsSalir});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -107,15 +109,15 @@
             this.tlsExpedientes.Text = "Expedientes";
             this.tlsExpedientes.Click += new System.EventHandler(this.tlsExpedientes_Click);
             // 
-            // tlsCuentas
+            // tlsConfiguraciones
             // 
-            this.tlsCuentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsConfiguraciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsEspecialidades,
             this.tlsServicios,
             this.tlsUsuarios});
-            this.tlsCuentas.Name = "tlsCuentas";
-            this.tlsCuentas.Size = new System.Drawing.Size(106, 20);
-            this.tlsCuentas.Text = "Configuraciones";
+            this.tlsConfiguraciones.Name = "tlsConfiguraciones";
+            this.tlsConfiguraciones.Size = new System.Drawing.Size(106, 20);
+            this.tlsConfiguraciones.Text = "Configuraciones";
             // 
             // tlsEspecialidades
             // 
@@ -137,13 +139,13 @@
             this.tlsUsuarios.Text = "Cuentas de usuario";
             this.tlsUsuarios.Click += new System.EventHandler(this.tlsUsuarios_Click);
             // 
-            // mantenimientoToolStripMenuItem
+            // tlsMantenimiento
             // 
-            this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tlsMantenimiento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsRespaldo});
-            this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
-            this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
-            this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
+            this.tlsMantenimiento.Name = "tlsMantenimiento";
+            this.tlsMantenimiento.Size = new System.Drawing.Size(101, 20);
+            this.tlsMantenimiento.Text = "Mantenimiento";
             // 
             // tlsRespaldo
             // 
@@ -195,6 +197,12 @@
             this.panel2.Size = new System.Drawing.Size(1185, 24);
             this.panel2.TabIndex = 6;
             // 
+            // tlsConsultas
+            // 
+            this.tlsConsultas.Name = "tlsConsultas";
+            this.tlsConsultas.Size = new System.Drawing.Size(71, 20);
+            this.tlsConsultas.Text = "Consultas";
+            // 
             // MDIAdminPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,7 +235,7 @@
         private System.Windows.Forms.ToolStripMenuItem tlsMedicos;
         private System.Windows.Forms.ToolStripMenuItem tlsCitas;
         private System.Windows.Forms.ToolStripMenuItem tlsExpedientes;
-        private System.Windows.Forms.ToolStripMenuItem tlsCuentas;
+        private System.Windows.Forms.ToolStripMenuItem tlsConfiguraciones;
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.ToolStripMenuItem tlsSalir;
         private System.Windows.Forms.ToolStripMenuItem tlsPacientes;
@@ -239,8 +247,9 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picturebxCerrar;
-        private System.Windows.Forms.ToolStripMenuItem mantenimientoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tlsMantenimiento;
         private System.Windows.Forms.ToolStripMenuItem tlsRespaldo;
+        private System.Windows.Forms.ToolStripMenuItem tlsConsultas;
     }
 }
 

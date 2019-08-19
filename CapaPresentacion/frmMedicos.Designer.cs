@@ -30,10 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtbxBuscMed = new Bunifu.Framework.UI.BunifuTextbox();
             this.dataGridViewMedico = new System.Windows.Forms.DataGridView();
-            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.maskedtxtbxTelefonoMed = new System.Windows.Forms.MaskedTextBox();
             this.maskedtxtbxCedMed = new System.Windows.Forms.MaskedTextBox();
@@ -53,14 +57,13 @@
             this.txtbxDirec = new System.Windows.Forms.TextBox();
             this.combobxSexo = new System.Windows.Forms.ComboBox();
             this.lblIdMedico = new System.Windows.Forms.Label();
-            this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -75,6 +78,34 @@
             this.panel2.Size = new System.Drawing.Size(653, 500);
             this.panel2.TabIndex = 6;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageActive = null;
+            this.btnEliminar.Location = new System.Drawing.Point(88, 450);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 30);
+            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEliminar.TabIndex = 29;
+            this.btnEliminar.TabStop = false;
+            this.btnEliminar.Zoom = 10;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageActive = null;
+            this.btnEditar.Location = new System.Drawing.Point(33, 450);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 30);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditar.TabIndex = 28;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // txtbxBuscMed
             // 
             this.txtbxBuscMed.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -83,9 +114,9 @@
             this.txtbxBuscMed.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxBuscMed.ForeColor = System.Drawing.Color.White;
             this.txtbxBuscMed.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscMed.Icon")));
-            this.txtbxBuscMed.Location = new System.Drawing.Point(32, 59);
+            this.txtbxBuscMed.Location = new System.Drawing.Point(32, 24);
             this.txtbxBuscMed.Name = "txtbxBuscMed";
-            this.txtbxBuscMed.Size = new System.Drawing.Size(262, 30);
+            this.txtbxBuscMed.Size = new System.Drawing.Size(284, 34);
             this.txtbxBuscMed.TabIndex = 16;
             this.txtbxBuscMed.text = "";
             this.txtbxBuscMed.OnTextChange += new System.EventHandler(this.txtbxBuscMed_OnTextChange);
@@ -96,10 +127,44 @@
             this.dataGridViewMedico.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewMedico.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMedico.GridColor = System.Drawing.SystemColors.Window;
-            this.dataGridViewMedico.Location = new System.Drawing.Point(31, 102);
+            this.dataGridViewMedico.Location = new System.Drawing.Point(31, 69);
             this.dataGridViewMedico.Name = "dataGridViewMedico";
-            this.dataGridViewMedico.Size = new System.Drawing.Size(613, 323);
+            this.dataGridViewMedico.Size = new System.Drawing.Size(613, 366);
             this.dataGridViewMedico.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Location = new System.Drawing.Point(633, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(467, 500);
+            this.panel1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(189, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 20);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "MÉDICOS";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnRegistrar);
+            this.panel3.Location = new System.Drawing.Point(33, 455);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(388, 89);
+            this.panel3.TabIndex = 25;
             // 
             // btnRegistrar
             // 
@@ -110,6 +175,7 @@
             this.btnRegistrar.ButtonText = "Registrar";
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
             this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
             this.btnRegistrar.Iconimage_right = null;
@@ -122,32 +188,19 @@
             this.btnRegistrar.IconVisible = true;
             this.btnRegistrar.IconZoom = 50D;
             this.btnRegistrar.IsTab = false;
-            this.btnRegistrar.Location = new System.Drawing.Point(120, 443);
+            this.btnRegistrar.Location = new System.Drawing.Point(0, 0);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
             this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
             this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRegistrar.selected = false;
-            this.btnRegistrar.Size = new System.Drawing.Size(291, 48);
-            this.btnRegistrar.TabIndex = 24;
+            this.btnRegistrar.Size = new System.Drawing.Size(388, 41);
+            this.btnRegistrar.TabIndex = 25;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegistrar.Textcolor = System.Drawing.Color.White;
             this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.Location = new System.Drawing.Point(633, -3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(467, 502);
-            this.panel1.TabIndex = 5;
             // 
             // tableLayoutPanel1
             // 
@@ -172,7 +225,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtbxDirec, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.combobxSexo, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.lblIdMedico, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(30, 15);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(33, 55);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -185,29 +238,29 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(425, 412);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(388, 384);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // maskedtxtbxTelefonoMed
             // 
-            this.maskedtxtbxTelefonoMed.Location = new System.Drawing.Point(155, 228);
+            this.maskedtxtbxTelefonoMed.Location = new System.Drawing.Point(142, 213);
             this.maskedtxtbxTelefonoMed.Mask = "0000 0000";
             this.maskedtxtbxTelefonoMed.Name = "maskedtxtbxTelefonoMed";
-            this.maskedtxtbxTelefonoMed.Size = new System.Drawing.Size(267, 20);
+            this.maskedtxtbxTelefonoMed.Size = new System.Drawing.Size(243, 20);
             this.maskedtxtbxTelefonoMed.TabIndex = 52;
             // 
             // maskedtxtbxCedMed
             // 
-            this.maskedtxtbxCedMed.Location = new System.Drawing.Point(155, 273);
+            this.maskedtxtbxCedMed.Location = new System.Drawing.Point(142, 255);
             this.maskedtxtbxCedMed.Mask = "000-000000-0000?";
             this.maskedtxtbxCedMed.Name = "maskedtxtbxCedMed";
-            this.maskedtxtbxCedMed.Size = new System.Drawing.Size(267, 20);
+            this.maskedtxtbxCedMed.Size = new System.Drawing.Size(243, 20);
             this.maskedtxtbxCedMed.TabIndex = 51;
             // 
             // combobxEspe
             // 
             this.combobxEspe.FormattingEnabled = true;
-            this.combobxEspe.Location = new System.Drawing.Point(155, 138);
+            this.combobxEspe.Location = new System.Drawing.Point(142, 129);
             this.combobxEspe.Name = "combobxEspe";
             this.combobxEspe.Size = new System.Drawing.Size(121, 21);
             this.combobxEspe.TabIndex = 20;
@@ -217,7 +270,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(3, 360);
+            this.label9.Location = new System.Drawing.Point(3, 336);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 17);
             this.label9.TabIndex = 11;
@@ -228,7 +281,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(3, 45);
+            this.label2.Location = new System.Drawing.Point(3, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 17);
             this.label2.TabIndex = 1;
@@ -238,18 +291,18 @@
             // 
             this.txtbxIdMedico.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtbxIdMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxIdMedico.Location = new System.Drawing.Point(155, 3);
+            this.txtbxIdMedico.Location = new System.Drawing.Point(142, 3);
             this.txtbxIdMedico.Name = "txtbxIdMedico";
-            this.txtbxIdMedico.Size = new System.Drawing.Size(267, 22);
+            this.txtbxIdMedico.Size = new System.Drawing.Size(243, 22);
             this.txtbxIdMedico.TabIndex = 3;
             // 
             // txtbxNombM
             // 
             this.txtbxNombM.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtbxNombM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxNombM.Location = new System.Drawing.Point(155, 48);
+            this.txtbxNombM.Location = new System.Drawing.Point(142, 45);
             this.txtbxNombM.Name = "txtbxNombM";
-            this.txtbxNombM.Size = new System.Drawing.Size(267, 22);
+            this.txtbxNombM.Size = new System.Drawing.Size(243, 22);
             this.txtbxNombM.TabIndex = 4;
             // 
             // label3
@@ -257,7 +310,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(3, 315);
+            this.label3.Location = new System.Drawing.Point(3, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 17);
             this.label3.TabIndex = 5;
@@ -268,7 +321,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(3, 225);
+            this.label4.Location = new System.Drawing.Point(3, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(107, 17);
             this.label4.TabIndex = 6;
@@ -279,7 +332,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(3, 135);
+            this.label5.Location = new System.Drawing.Point(3, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 17);
             this.label5.TabIndex = 7;
@@ -290,7 +343,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(3, 180);
+            this.label6.Location = new System.Drawing.Point(3, 168);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 17);
             this.label6.TabIndex = 8;
@@ -301,7 +354,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(3, 270);
+            this.label7.Location = new System.Drawing.Point(3, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 17);
             this.label7.TabIndex = 9;
@@ -312,7 +365,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(3, 90);
+            this.label8.Location = new System.Drawing.Point(3, 84);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 17);
             this.label8.TabIndex = 10;
@@ -321,26 +374,26 @@
             // txtbxApellM
             // 
             this.txtbxApellM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxApellM.Location = new System.Drawing.Point(155, 93);
+            this.txtbxApellM.Location = new System.Drawing.Point(142, 87);
             this.txtbxApellM.Name = "txtbxApellM";
-            this.txtbxApellM.Size = new System.Drawing.Size(267, 21);
+            this.txtbxApellM.Size = new System.Drawing.Size(243, 21);
             this.txtbxApellM.TabIndex = 12;
             // 
             // txtbxCorreo
             // 
             this.txtbxCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxCorreo.Location = new System.Drawing.Point(155, 183);
+            this.txtbxCorreo.Location = new System.Drawing.Point(142, 171);
             this.txtbxCorreo.Name = "txtbxCorreo";
-            this.txtbxCorreo.Size = new System.Drawing.Size(267, 21);
+            this.txtbxCorreo.Size = new System.Drawing.Size(243, 21);
             this.txtbxCorreo.TabIndex = 14;
             // 
             // txtbxDirec
             // 
             this.txtbxDirec.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbxDirec.Location = new System.Drawing.Point(155, 363);
+            this.txtbxDirec.Location = new System.Drawing.Point(142, 339);
             this.txtbxDirec.Multiline = true;
             this.txtbxDirec.Name = "txtbxDirec";
-            this.txtbxDirec.Size = new System.Drawing.Size(267, 41);
+            this.txtbxDirec.Size = new System.Drawing.Size(243, 41);
             this.txtbxDirec.TabIndex = 18;
             // 
             // combobxSexo
@@ -349,7 +402,7 @@
             this.combobxSexo.Items.AddRange(new object[] {
             "Femenino",
             "Masculino"});
-            this.combobxSexo.Location = new System.Drawing.Point(155, 318);
+            this.combobxSexo.Location = new System.Drawing.Point(142, 297);
             this.combobxSexo.Name = "combobxSexo";
             this.combobxSexo.Size = new System.Drawing.Size(121, 21);
             this.combobxSexo.TabIndex = 19;
@@ -364,34 +417,6 @@
             this.lblIdMedico.Size = new System.Drawing.Size(22, 17);
             this.lblIdMedico.TabIndex = 0;
             this.lblIdMedico.Text = "Id:";
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageActive = null;
-            this.btnEliminar.Location = new System.Drawing.Point(86, 436);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(50, 30);
-            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEliminar.TabIndex = 29;
-            this.btnEliminar.TabStop = false;
-            this.btnEliminar.Zoom = 10;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(31, 436);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(50, 30);
-            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEditar.TabIndex = 28;
-            this.btnEditar.TabStop = false;
-            this.btnEditar.Zoom = 10;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // frmMedicos
             // 
@@ -408,12 +433,14 @@
             this.Text = "Médico";
             this.Load += new System.EventHandler(this.frmMedicos_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMedico)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -443,8 +470,10 @@
         private System.Windows.Forms.TextBox txtbxDirec;
         private System.Windows.Forms.ComboBox combobxSexo;
         private System.Windows.Forms.Label lblIdMedico;
-        private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
         private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
         private Bunifu.Framework.UI.BunifuImageButton btnEditar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
     }
 }

@@ -37,10 +37,22 @@ namespace CapaNegocio
         {
             return AC.ValidarCuenta(nom,contra);
         }
+        public string ObtenerTipoUsuario(string nom, string contra)
+        {
+            return AC.ObtenerTipoUsuario(nom, contra);
+        }
         public List<Cuenta> BuscarCuenta(string nom) 
         {
             return AC.BuscarCuenta(nom);
-        }    
+        }
+        public List<Cuenta> ListarCuentaUsuario()
+        {
+            return AC.ListarCuentaUsuario();
+        }
 
+        public int BuscarIdCuenta(string nom)
+        {
+            return AC.BuscarIdCuenta(nom);
+        }
     }
 }

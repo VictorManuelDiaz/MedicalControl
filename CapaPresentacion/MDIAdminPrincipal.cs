@@ -15,9 +15,20 @@ namespace CapaPresentacion
     {
         private int childFormNumber = 0;
         LogicaNegocioRespaldo LNRes = new LogicaNegocioRespaldo();
-        public MDIAdminPrincipal()
+        public MDIAdminPrincipal(string TipoUsuario)
         {
             InitializeComponent();
+            if (TipoUsuario == "Administrador")
+            {
+                tlsConsultas.Visible = false;
+            }
+            else if (TipoUsuario == "Estándar")
+            {
+                tlsMedicos.Visible = false;
+                tlsConfiguraciones.Visible = false;
+                tlsMantenimiento.Visible = false;
+                tlsConsultas.Visible = true;
+            }
         }
 
         private void ShowNewForm(object sender, EventArgs e)
@@ -81,7 +92,6 @@ namespace CapaPresentacion
 
         private void MDIAdminPrincipal_Load(object sender, EventArgs e)
         {
-            Controls.OfType<MDIAdminPrincipal>().FirstOrDefault().BackColor = Color.White;
         }
 
         private void tlsMedicos_Click(object sender, EventArgs e)

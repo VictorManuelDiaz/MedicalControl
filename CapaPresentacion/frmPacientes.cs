@@ -41,35 +41,58 @@ namespace CapaPresentacion
             {
                 if (btnRegistrar.Text == "Registrar")
                 {
-                    Paciente objetoPaciente = new Paciente();
-                    objetoPaciente.NumeroExpediente = txtbxNumExp.Text;
-                    objetoPaciente.CedulaPac = maskedtxtbxCed.Text;
-                    objetoPaciente.NombrePac = txtbxNom.Text;
-                    objetoPaciente.ApellidosPac = txtbxApell.Text;
-                    objetoPaciente.FechaNacimiento = maskedtxtbxFecNac.Text;
-                    objetoPaciente.LugarNacimiento = txtbxNac.Text;
-                    if (cmbbxSexo.Text == "Femenino")
+
+                    if (PreGuardarConfirmation() == System.Windows.Forms.DialogResult.Yes)
                     {
-                        objetoPaciente.SexoPac = "F";
+                        Paciente objetoPaciente = new Paciente();
+                        objetoPaciente.NumeroExpediente = txtbxNumExp.Text;
+                        objetoPaciente.CedulaPac = maskedtxtbxCed.Text;
+                        objetoPaciente.NombrePac = txtbxNom.Text;
+                        objetoPaciente.ApellidosPac = txtbxApell.Text;
+                        objetoPaciente.FechaNacimiento = maskedtxtbxFecNac.Text;
+                        objetoPaciente.LugarNacimiento = txtbxNac.Text;
+                        if (cmbbxSexo.Text == "Femenino")
+                        {
+                            objetoPaciente.SexoPac = "F";
+                        }
+                        else
+                        {
+                            objetoPaciente.SexoPac = "M";
+                        }
+                        objetoPaciente.EdadPac = Convert.ToInt32(txtbxEdad.Text);
+                        objetoPaciente.GrupoEtnico = cmbbxEtnia.Text;
+                        objetoPaciente.DireccionHabitualPac = txtbxDire.Text;
+                        objetoPaciente.NombrePadre = txtbxPadre.Text;
+                        objetoPaciente.NombreMadre = txtbxMadre.Text;
+                        objetoPaciente.ReligionPac = cmbbxRelig.Text;
+                        objetoPaciente.ProcedenciaPac = txtbxProced.Text;
+                        objetoPaciente.TelefonoPac = maskedtxtbxTele.Text;
+                        objetoPaciente.EstadoCivilPac = cmbbxCivil.Text;
+
+                        if (LNPac.InsertarPaciente(objetoPaciente) > 0)
+                        {
+                            MessageBox.Show("Agregado con éxito");
+                            dataGridViewPac.DataSource = LNPac.ListarPaciente();
+                            txtbxNumExp.Text = "";
+                            maskedtxtbxCed.Text = "";
+                            txtbxNom.Text = "";
+                            txtbxApell.Text = "";
+                            maskedtxtbxFecNac.Text = "";
+                            txtbxNac.Text = "";
+                            txtbxEdad.Text = "";
+                            cmbbxEtnia.Text = "";
+                            txtbxDire.Text = "";
+                            txtbxPadre.Text = "";
+                            txtbxMadre.Text = "";
+                            txtbxProced.Text = "";
+                            maskedtxtbxTele.Text = "";
+                            cmbbxCivil.Text = "";
+
+                        }
+                        else { MessageBox.Show("Error al agregar Paciente"); }
                     }
                     else
                     {
-                        objetoPaciente.SexoPac = "M";
-                    }
-                    objetoPaciente.EdadPac = Convert.ToInt32(txtbxEdad.Text);
-                    objetoPaciente.GrupoEtnico = cmbbxEtnia.Text;
-                    objetoPaciente.DireccionHabitualPac = txtbxDire.Text;
-                    objetoPaciente.NombrePadre = txtbxPadre.Text;
-                    objetoPaciente.NombreMadre = txtbxMadre.Text;
-                    objetoPaciente.ReligionPac = cmbbxRelig.Text;
-                    objetoPaciente.ProcedenciaPac = txtbxProced.Text;
-                    objetoPaciente.TelefonoPac = maskedtxtbxTele.Text;
-                    objetoPaciente.EstadoCivilPac = cmbbxCivil.Text;
-
-                    if (LNPac.InsertarPaciente(objetoPaciente) > 0)
-                    {
-                        MessageBox.Show("Agregado con éxito");
-                        dataGridViewPac.DataSource = LNPac.ListarPaciente();
                         txtbxNumExp.Text = "";
                         maskedtxtbxCed.Text = "";
                         txtbxNom.Text = "";
@@ -84,61 +107,88 @@ namespace CapaPresentacion
                         txtbxProced.Text = "";
                         maskedtxtbxTele.Text = "";
                         cmbbxCivil.Text = "";
-
                     }
-                    else { MessageBox.Show("Error al agregar Paciente"); }
+                    
                 }
                 if (btnRegistrar.Text == "Actualizar")
                 {
-                    Paciente objetoPaciente = new Paciente();
-                    objetoPaciente.NumeroExpediente = txtbxNumExp.Text;
-                    objetoPaciente.CedulaPac = maskedtxtbxCed.Text;
-                    objetoPaciente.NombrePac = txtbxNom.Text;
-                    objetoPaciente.ApellidosPac = txtbxApell.Text;
-                    objetoPaciente.FechaNacimiento = maskedtxtbxFecNac.Text;
-                    objetoPaciente.LugarNacimiento = txtbxNac.Text;
-                    if (cmbbxSexo.Text == "Femenino")
+                    if (PreEditarConfirmation() == System.Windows.Forms.DialogResult.Yes)
                     {
-                        objetoPaciente.SexoPac = "F";
+                        Paciente objetoPaciente = new Paciente();
+                        objetoPaciente.NumeroExpediente = txtbxNumExp.Text;
+                        objetoPaciente.CedulaPac = maskedtxtbxCed.Text;
+                        objetoPaciente.NombrePac = txtbxNom.Text;
+                        objetoPaciente.ApellidosPac = txtbxApell.Text;
+                        objetoPaciente.FechaNacimiento = maskedtxtbxFecNac.Text;
+                        objetoPaciente.LugarNacimiento = txtbxNac.Text;
+                        if (cmbbxSexo.Text == "Femenino")
+                        {
+                            objetoPaciente.SexoPac = "F";
+                        }
+                        else
+                        {
+                            objetoPaciente.SexoPac = "M";
+                        }
+                        objetoPaciente.EdadPac = Convert.ToInt32(txtbxEdad.Text);
+                        objetoPaciente.GrupoEtnico = cmbbxEtnia.Text;
+                        objetoPaciente.DireccionHabitualPac = txtbxDire.Text;
+                        objetoPaciente.NombrePadre = txtbxPadre.Text;
+                        objetoPaciente.NombreMadre = txtbxMadre.Text;
+                        objetoPaciente.ReligionPac = cmbbxRelig.Text;
+                        objetoPaciente.ProcedenciaPac = txtbxProced.Text;
+                        objetoPaciente.TelefonoPac = maskedtxtbxTele.Text;
+                        objetoPaciente.EstadoCivilPac = cmbbxCivil.Text;
+
+                        if (LNPac.EditarPaciente(objetoPaciente) > 0)
+                        {
+                            MessageBox.Show("Actualizado con éxito");
+                            dataGridViewPac.DataSource = LNPac.ListarPaciente();
+                            txtbxNumExp.Text = "";
+                            maskedtxtbxCed.Text = "";
+                            txtbxNom.Text = "";
+                            txtbxApell.Text = "";
+                            maskedtxtbxFecNac.Text = "";
+                            txtbxNac.Text = "";
+                            cmbbxSexo.Text = "";
+                            txtbxEdad.Text = "";
+                            cmbbxEtnia.Text = "";
+                            txtbxDire.Text = "";
+                            txtbxPadre.Text = "";
+                            txtbxMadre.Text = "";
+                            cmbbxRelig.Text = "";
+                            txtbxProced.Text = "";
+                            maskedtxtbxTele.Text = "";
+                            cmbbxCivil.Text = "";
+                            lblIdExp.Visible = false;
+                            txtbxIdExp.Visible = false;
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Error al actualizar Paciente");
+                        }
+                        btnRegistrar.Text = "Registrar";
                     }
                     else
                     {
-                        objetoPaciente.SexoPac = "M";
-                    }
-                    objetoPaciente.EdadPac = Convert.ToInt32(txtbxEdad.Text);
-                    objetoPaciente.GrupoEtnico = cmbbxEtnia.Text;
-                    objetoPaciente.DireccionHabitualPac = txtbxDire.Text;
-                    objetoPaciente.NombrePadre = txtbxPadre.Text;
-                    objetoPaciente.NombreMadre = txtbxMadre.Text;
-                    objetoPaciente.ReligionPac = cmbbxRelig.Text;
-                    objetoPaciente.ProcedenciaPac = txtbxProced.Text;
-                    objetoPaciente.TelefonoPac = maskedtxtbxTele.Text;
-                    objetoPaciente.EstadoCivilPac = cmbbxCivil.Text;
-
-                    if (LNPac.EditarPaciente(objetoPaciente) > 0)
-                    {
-                        MessageBox.Show("Actualizado con éxito");
-                        dataGridViewPac.DataSource = LNPac.ListarPaciente();
                         txtbxNumExp.Text = "";
                         maskedtxtbxCed.Text = "";
                         txtbxNom.Text = "";
                         txtbxApell.Text = "";
                         maskedtxtbxFecNac.Text = "";
                         txtbxNac.Text = "";
+                        cmbbxSexo.Text = "";
                         txtbxEdad.Text = "";
                         cmbbxEtnia.Text = "";
                         txtbxDire.Text = "";
                         txtbxPadre.Text = "";
                         txtbxMadre.Text = "";
+                        cmbbxRelig.Text = "";
                         txtbxProced.Text = "";
                         maskedtxtbxTele.Text = "";
-
+                        cmbbxCivil.Text = "";
                     }
-                    else
-                    {
-                        MessageBox.Show("Error al actualizar Paciente");
-                    }
-                    btnRegistrar.Text = "Registrar";
+                    
                 }
             }
             catch
@@ -160,35 +210,74 @@ namespace CapaPresentacion
             txtbxApell.Text = dataGridViewPac.CurrentRow.Cells["ApellidosPac"].Value.ToString();
             maskedtxtbxFecNac.Text = dataGridViewPac.CurrentRow.Cells["FechaNacimiento"].Value.ToString();
             txtbxNac.Text = dataGridViewPac.CurrentRow.Cells["LugarNacimiento"].Value.ToString();
-            cmbbxSexo.SelectedItem = dataGridViewPac.CurrentRow.Cells["SexoPac"].Value;
+            cmbbxSexo.Text = dataGridViewPac.CurrentRow.Cells["SexoPac"].Value.ToString();
             txtbxEdad.Text = dataGridViewPac.CurrentRow.Cells["EdadPac"].Value.ToString();
             cmbbxEtnia.SelectedItem = dataGridViewPac.CurrentRow.Cells["GrupoEtnico"].Value;
             txtbxDire.Text = dataGridViewPac.CurrentRow.Cells["DireccionhabitualPac"].Value.ToString();
             txtbxPadre.Text = dataGridViewPac.CurrentRow.Cells["NombrePadre"].Value.ToString();
             txtbxMadre.Text = dataGridViewPac.CurrentRow.Cells["NombreMadre"].Value.ToString();
-            cmbbxRelig.SelectedItem = dataGridViewPac.CurrentRow.Cells["ReligionPac"].Value;
+            cmbbxRelig.Text = dataGridViewPac.CurrentRow.Cells["ReligionPac"].Value.ToString();
             txtbxProced.Text = dataGridViewPac.CurrentRow.Cells["ProcedenciaPac"].Value.ToString();
             maskedtxtbxTele.Text = dataGridViewPac.CurrentRow.Cells["TelefonoPac"].Value.ToString();
-            cmbbxCivil.SelectedItem = dataGridViewPac.CurrentRow.Cells["EstadoCivilPac"].Value;
+            cmbbxCivil.Text = dataGridViewPac.CurrentRow.Cells["EstadoCivilPac"].Value.ToString();
 
             btnRegistrar.Text = "Actualizar";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int codigoP = Convert.ToInt32(dataGridViewPac.CurrentRow.Cells["IdPaciente"].Value.ToString());
-            try
+            if (PreEliminarConfirmation() == System.Windows.Forms.DialogResult.Yes)
             {
-                if (LNPac.EliminarPaciente(codigoP) > 0)
+                int codigoP = Convert.ToInt32(dataGridViewPac.CurrentRow.Cells["IdPaciente"].Value.ToString());
+                try
                 {
-                    MessageBox.Show("Eliminado con éxito");
-                    dataGridViewPac.DataSource = LNPac.ListarPaciente();
+                    if (LNPac.EliminarPaciente(codigoP) > 0)
+                    {
+                        MessageBox.Show("Eliminado con éxito");
+                        dataGridViewPac.DataSource = LNPac.ListarPaciente();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("ERROR al eliminar Paciente");
                 }
             }
-            catch
-            {
-                MessageBox.Show("ERROR al eliminar Paciente");
-            }
+            
+            
+        }
+
+        private DialogResult PreGuardarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Seguro que quiere registrar este paciente?",
+                "Guardar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
+        private DialogResult PreEliminarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Seguro que quiere eliminar este paciente?",
+                "Eliminar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
+        }
+
+
+        private DialogResult PreEditarConfirmation()
+        {
+            DialogResult res = System.Windows.Forms.MessageBox.Show(
+                "¿Seguro que quiere actualizar este paciente?",
+                "Actualizar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            return res;
         }
     }
 }

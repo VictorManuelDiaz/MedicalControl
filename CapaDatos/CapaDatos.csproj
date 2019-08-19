@@ -53,6 +53,7 @@
     <Compile Include="AccesoDatosPaciente.cs" />
     <Compile Include="AccesoDatosRespaldoBD.cs" />
     <Compile Include="AccesoDatosServicios.cs" />
+    <Compile Include="AccesoDatosUsuario.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
