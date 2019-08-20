@@ -13,7 +13,7 @@ namespace CapaNegocio
 
         AccesoDatosCuenta AC = new AccesoDatosCuenta();
 
-        public int InsertarCuenta(Cuenta cu) 
+        public int InsertarCuenta(Cuenta cu)
         {
             return AC.InsertarCuenta(cu);
         }
@@ -35,13 +35,13 @@ namespace CapaNegocio
 
         public List<Cuenta> ValidarCuenta(string nom, string contra)
         {
-            return AC.ValidarCuenta(nom,contra);
+            return AC.ValidarCuenta(nom, contra);
         }
         public string ObtenerTipoUsuario(string nom, string contra)
         {
             return AC.ObtenerTipoUsuario(nom, contra);
         }
-        public List<Cuenta> BuscarCuenta(string nom) 
+        public List<Cuenta> BuscarCuenta(string nom)
         {
             return AC.BuscarCuenta(nom);
         }

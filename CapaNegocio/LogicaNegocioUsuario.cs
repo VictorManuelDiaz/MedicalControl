@@ -10,7 +10,7 @@ namespace CapaNegocio
 {
     public class LogicaNegocioUsuario
     {
-       AccesoDatosUsuario USU = new AccesoDatosUsuario();
+        AccesoDatosUsuario USU = new AccesoDatosUsuario();
 
         public int InsertarUsuario(Usuario Usu)
         {
@@ -31,6 +31,10 @@ namespace CapaNegocio
         {
             return USU.EditarUsuario(Usu);
         }
-
+        public int ListarIdMedico(int IdCuenta)
+        {
+            return USU.ListarIdMedico(IdCuenta);
+        }
     }
 }
+

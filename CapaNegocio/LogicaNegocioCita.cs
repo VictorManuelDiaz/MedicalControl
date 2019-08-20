@@ -35,6 +35,11 @@ namespace CapaNegocio
         public List<Cita> BuscarCita(string dato)
         {
             return CI.BuscarCita(dato);
-        } 
+        }
+
+        public List<Cita> ListarCitaMedico(int IdMedico)
+        {
+            return CI.ListarCitaMedico(IdMedico);
+        }
     }
 }

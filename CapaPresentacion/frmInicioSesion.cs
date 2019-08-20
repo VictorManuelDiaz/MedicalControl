@@ -15,6 +15,7 @@ namespace CapaPresentacion
     public partial class frmInicioSesion : Form
     {
         LogicaNegocioCuentas LNCuen = new LogicaNegocioCuentas();
+        LogicaNegocioUsuario LNUsu = new LogicaNegocioUsuario();
         public frmInicioSesion()
         {
             InitializeComponent();
@@ -22,16 +23,18 @@ namespace CapaPresentacion
 
         private void frmInicioSesion_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            int IdCuenta = 0;
             try
             {
                 if (LNCuen.ValidarCuenta(txtbxNomCuen.Text, txtbxContrasena.Text).Count > 0)
                 {
-                    ValidarTipoUsuario();
+                    IdCuenta = LNCuen.BuscarIdCuenta(txtbxNomCuen.Text);
+                    ValidarUsuario(IdCuenta);
                 }
                 else
                 {
@@ -74,14 +77,12 @@ namespace CapaPresentacion
             return res;
         }
 
-        private void ValidarTipoUsuario()
+        private void ValidarUsuario(int IdCuenta)
         {
-            MDIAdminPrincipal PrinAdmin = new MDIAdminPrincipal(LNCuen.ObtenerTipoUsuario(txtbxNomCuen.Text, txtbxContrasena.Text));
+            MDIAdminPrincipal PrinAdmin = new MDIAdminPrincipal(LNCuen.ObtenerTipoUsuario(txtbxNomCuen.Text, txtbxContrasena.Text), LNUsu.ListarIdMedico(IdCuenta));
             this.Hide();
             PrinAdmin.ShowDialog();
             this.Close();
         }
-
-       
     }
 }

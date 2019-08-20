@@ -52,11 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Consultas.cs">
+    <Compile Include="frmConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Consultas.Designer.cs">
-      <DependentUpon>Consultas.cs</DependentUpon>
+    <Compile Include="frmConsultas.Designer.cs">
+      <DependentUpon>frmConsultas.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCita.cs">
       <SubType>Form</SubType>
@@ -100,6 +100,12 @@
     <Compile Include="frmMedicos.Designer.cs">
       <DependentUpon>frmMedicos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIAdminPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,8 +114,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Consultas.resx">
-      <DependentUpon>Consultas.cs</DependentUpon>
+    <EmbeddedResource Include="frmConsultas.resx">
+      <DependentUpon>frmConsultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCita.resx">
       <DependentUpon>frmCita.cs</DependentUpon>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMedicos.resx">
       <DependentUpon>frmMedicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIAdminPrincipal.resx">
       <DependentUpon>MDIAdminPrincipal.cs</DependentUpon>

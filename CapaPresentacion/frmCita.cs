@@ -20,17 +20,22 @@ namespace CapaPresentacion
         public frmCita()
         {
             InitializeComponent();
+            dataGridViewCita.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCita.DataSource = LNCita.ListarCita();
+        }
+        public frmCita(int IdMedico)
+        {
+            InitializeComponent();
+            dataGridViewCita.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCita.DataSource = LNCita.ListarCitaMedico(IdMedico);
         }
 
         private void frmCita_Load(object sender, EventArgs e)
         {
-            dataGridViewCita.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCita.DataSource = LNCita.ListarCita();
 
             List<string> Medico = new List<string>();
-            Medico = LNMed.listarMedico().Select(x => x.NombreM+" "+x.ApellidoM).ToList();
+            Medico = LNMed.listarMedico().Select(x => x.NombreM + " " + x.ApellidoM).ToList();
             comboBoxIdMed.DataSource = Medico;
-
             List<int> NumEx = new List<int>();
             NumEx = LNExp.ListarExpediente().Select(x => x.IdExpediente).ToList();
             comboBoxNumExp.DataSource = NumEx;
@@ -39,7 +44,6 @@ namespace CapaPresentacion
 
         private void txtbxBuscar_OnTextChange(object sender, EventArgs e)
         {
-
             List<Cita> listaCita = LNCita.BuscarCita(txtbxBuscar.text);
             dataGridViewCita.DataSource = listaCita;
         }
@@ -128,3 +132,4 @@ namespace CapaPresentacion
         }
     }
 }
+

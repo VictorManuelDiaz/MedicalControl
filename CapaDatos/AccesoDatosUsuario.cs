@@ -19,7 +19,7 @@ namespace CapaDatos
         int indicador = 0; // variable indicador para comprobar CRUD para cargar datos
         SqlDataReader dr = null;
         List<Usuario> listaUsuario = null;
-
+        int IdMedico = 0;
         public int InsertarUsuario(Usuario USU)
         {
             try
@@ -166,5 +166,44 @@ namespace CapaDatos
             }
             return indicador;
         }
+
+        public int ListarIdMedico(int IdCuent)
+        {
+
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();//conectar
+                cm = new SqlCommand("Usuario_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 5);
+                cm.Parameters.AddWithValue("@IdCuenta", IdCuent);
+                cm.Parameters.AddWithValue("@IdMedico", "");
+
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+
+                while (dr.Read()) //Recorre cada registro
+                {
+                    IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
+                }
+
+            }
+
+
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                IdMedico = 0;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return IdMedico;
+
+        }
     }
 }
+

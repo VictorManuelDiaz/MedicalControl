@@ -47,15 +47,15 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.picturebxCerrar = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.picturebxCerrar = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -110,6 +110,7 @@
             this.tlsConsultas.Name = "tlsConsultas";
             this.tlsConsultas.Size = new System.Drawing.Size(71, 20);
             this.tlsConsultas.Text = "Consultas";
+            this.tlsConsultas.Click += new System.EventHandler(this.tlsConsultas_Click);
             // 
             // tlsExpedientes
             // 
@@ -187,27 +188,6 @@
             this.panel1.Size = new System.Drawing.Size(1184, 36);
             this.panel1.TabIndex = 5;
             // 
-            // picturebxCerrar
-            // 
-            this.picturebxCerrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.picturebxCerrar.Image = global::CapaPresentacion.Properties.Resources.cancel1;
-            this.picturebxCerrar.Location = new System.Drawing.Point(1152, 9);
-            this.picturebxCerrar.Name = "picturebxCerrar";
-            this.picturebxCerrar.Size = new System.Drawing.Size(23, 17);
-            this.picturebxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picturebxCerrar.TabIndex = 0;
-            this.picturebxCerrar.TabStop = false;
-            this.picturebxCerrar.Click += new System.EventHandler(this.picturebxCerrar_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.menuStrip);
-            this.panel2.Location = new System.Drawing.Point(-1, 36);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1185, 24);
-            this.panel2.TabIndex = 6;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Logo_White1;
@@ -229,6 +209,27 @@
             this.lblTitulo.TabIndex = 4;
             this.lblTitulo.Text = "Medical control";
             // 
+            // picturebxCerrar
+            // 
+            this.picturebxCerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.picturebxCerrar.Image = global::CapaPresentacion.Properties.Resources.cancel1;
+            this.picturebxCerrar.Location = new System.Drawing.Point(1152, 9);
+            this.picturebxCerrar.Name = "picturebxCerrar";
+            this.picturebxCerrar.Size = new System.Drawing.Size(23, 17);
+            this.picturebxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebxCerrar.TabIndex = 0;
+            this.picturebxCerrar.TabStop = false;
+            this.picturebxCerrar.Click += new System.EventHandler(this.picturebxCerrar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.menuStrip);
+            this.panel2.Location = new System.Drawing.Point(-1, 36);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1185, 24);
+            this.panel2.TabIndex = 6;
+            // 
             // MDIAdminPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,10 +250,10 @@
             this.menuStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

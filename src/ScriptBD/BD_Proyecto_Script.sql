@@ -379,6 +379,9 @@ BEGIN
 	UPDATE Usuario SET Usuario.IdMedico=@IdMedico
 	WHERE Usuario.IdCuenta=@IdCuenta;
 
+	IF @b=5
+	SELECT IdMedico FROM Usuario WHERE Usuario.IdCuenta=@IdCuenta;
+
 END
 GO
 
@@ -395,9 +398,10 @@ BEGIN
 
 	IF @b=1
 	SELECT IdMedico FROM Medico WHERE (Medico.NombreM+' '+Medico.ApellidoM)=@NombreCom;
-
+	
 	IF @b=2
 	SELECT IdMedico FROM Medico WHERE (Medico.NombreM+' '+Medico.ApellidoM)=@NombreCom
+	AND (Medico.IdMedico NOT IN (SELECT IdMedico FROM Usuario));
 
 END
 GO
@@ -748,7 +752,10 @@ BEGIN
 
 	IF @b=5
 	SELECT * FROM Cita WHERE Cita.FechaConsul LIKE '%' + @FechaConsul + '%' 
-	OR Cita.FechaRealCita LIKE '%' + @FechaRealCita
+	OR Cita.FechaRealCita LIKE '%' + @FechaRealCita;
+
+	IF @b=6
+	SELECT * FROM Cita WHERE Cita.IdMedico=@IdMedico;
 
 END
 GO

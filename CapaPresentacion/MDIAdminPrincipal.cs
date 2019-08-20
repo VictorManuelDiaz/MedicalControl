@@ -15,7 +15,10 @@ namespace CapaPresentacion
     {
         private int childFormNumber = 0;
         LogicaNegocioRespaldo LNRes = new LogicaNegocioRespaldo();
-        public MDIAdminPrincipal(string TipoUsuario)
+        LogicaNegocioUsuario LNUsu = new LogicaNegocioUsuario();
+        private int IdMedico = 0;
+        private string TipoUsuario = "";
+        public MDIAdminPrincipal(string TipoUsuario, int IdMedico)
         {
             InitializeComponent();
             if (TipoUsuario == "Administrador")
@@ -28,6 +31,8 @@ namespace CapaPresentacion
                 tlsConfiguraciones.Visible = false;
                 tlsMantenimiento.Visible = false;
                 tlsConsultas.Visible = true;
+                this.TipoUsuario = TipoUsuario;
+                this.IdMedico = IdMedico;
             }
         }
 
@@ -61,7 +66,7 @@ namespace CapaPresentacion
             }
         }
 
-        
+
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.Cascade);
@@ -108,7 +113,7 @@ namespace CapaPresentacion
                 Medicos.Text = "Ventana " + childFormNumber++;
                 Medicos.Show();
             }
-            
+
         }
 
         private void tlsSalir_Click(object sender, EventArgs e)
@@ -121,7 +126,6 @@ namespace CapaPresentacion
                 InicioS.ShowDialog();
                 this.Close();
             }
-
         }
 
         private DialogResult PreLogoutConfirmation()
@@ -156,11 +160,21 @@ namespace CapaPresentacion
             }
             else
             {
-                frmCita Cita = new frmCita();
-                Cita.MdiParent = this;
-                Cita.Show();
+                if (TipoUsuario == "Estándar")
+                {
+                    frmCita Cita = new frmCita(IdMedico);
+                    Cita.MdiParent = this;
+                    Cita.Show();
+                }
+                else
+                {
+                    frmCita Cita = new frmCita();
+                    Cita.MdiParent = this;
+                    Cita.Show();
+                }
+
             }
-            
+
         }
 
         private void tlsInicio_Click(object sender, EventArgs e)
@@ -200,7 +214,7 @@ namespace CapaPresentacion
                 Paci.MdiParent = this;
                 Paci.Show();
             }
-            
+
         }
 
         private void tlsUsuarios_Click(object sender, EventArgs e)
@@ -216,7 +230,7 @@ namespace CapaPresentacion
                 Cuentas.MdiParent = this;
                 Cuentas.Show();
             }
-            
+
         }
 
         private void tlsEspecialidades_Click(object sender, EventArgs e)
@@ -232,7 +246,7 @@ namespace CapaPresentacion
                 Especialidad.MdiParent = this;
                 Especialidad.Show();
             }
-            
+
         }
 
         private void picturebxCerrar_Click(object sender, EventArgs e)
@@ -247,7 +261,7 @@ namespace CapaPresentacion
 
         private void tlsRespaldo_Click(object sender, EventArgs e)
         {
-            string ateriorTitulo=lblTitulo.Text;
+            string ateriorTitulo = lblTitulo.Text;
             lblTitulo.Text = "Respaldo Base de datos";
             try
             {
@@ -261,6 +275,21 @@ namespace CapaPresentacion
             {
 
                 MessageBox.Show("Error al realizar el respaldo");
+            }
+        }
+
+        private void tlsConsultas_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Text = "Consultas";
+            if (Application.OpenForms["frmConsultas"] != null)
+            {
+                Application.OpenForms["frmConsultas"].Activate();
+            }
+            else
+            {
+                frmConsultas Consultas = new frmConsultas();
+                Consultas.MdiParent = this;
+                Consultas.Show();
             }
         }
     }

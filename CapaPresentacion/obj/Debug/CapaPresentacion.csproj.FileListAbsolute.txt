@@ -9,7 +9,6 @@ E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaEntidades.pdb
 E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaNegocio.pdb
 E:\GitHub\MedicalControl\CapaPresentacion\bin\Debug\CapaDatos.pdb
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.csprojResolveAssemblyReference.cache
-E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.Consultas.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmCita.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmCuentas.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmEspecialidad.resources
@@ -22,3 +21,5 @@ E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.Properties.
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.csproj.GenerateResource.Cache
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.exe
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmConsultas.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuarios.resources
