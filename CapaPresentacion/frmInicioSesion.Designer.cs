@@ -59,7 +59,7 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.btnEntrar, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(652, 463);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(672, 484);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -196,7 +196,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Logo_White1;
+            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.logo_white_v2;
             this.pictureBox2.Location = new System.Drawing.Point(10, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(42, 32);

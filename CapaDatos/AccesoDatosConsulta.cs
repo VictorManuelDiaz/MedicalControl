@@ -85,7 +85,7 @@ namespace CapaDatos
 
                     Consulta Consul = new Consulta();
                     Consul.IdConsulta = Convert.ToInt32(dr["IdConsulta"].ToString());
-                    Consul.Fecha = dr["Fecha"].ToString();
+                    Consul.Fecha = Convert.ToDateTime(dr["Fecha"].ToString());
                     Consul.Hora = dr["Hora"].ToString();
                     Consul.Costo = dr["Costo"].ToString();
                     Consul.Sintomas = dr["Sintomas"].ToString();
@@ -218,7 +218,7 @@ namespace CapaDatos
                     Consulta Consul = new Consulta();
 
                     Consul.IdConsulta = Convert.ToInt32(dr["IdConsulta"].ToString());
-                    Consul.Fecha = dr["Fecha"].ToString();
+                    Consul.Fecha = Convert.ToDateTime(dr["Fecha"].ToString());
                     Consul.Hora = dr["Hora"].ToString();
                     Consul.Costo = dr["Costo"].ToString();
                     Consul.Sintomas = dr["Sintomas"].ToString();

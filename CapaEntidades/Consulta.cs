@@ -10,7 +10,7 @@ namespace CapaEntidades
     {
 
         public int IdConsulta { get; set; }
-        public string Fecha { get; set; }
+        public DateTime Fecha { get; set; }
         public string Hora { get; set; }
         public string Costo { get; set; }
         public string Sintomas { get; set; }

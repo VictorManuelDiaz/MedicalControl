@@ -8,7 +8,7 @@ using CapaDatos;
 
 namespace CapaNegocio
 {
-    class LogicaNegocioConsulta
+    public class LogicaNegocioConsulta
     {
 
         AccesoDatosConsulta CON = new AccesoDatosConsulta();
@@ -36,7 +36,7 @@ namespace CapaNegocio
         public List<Consulta> BuscarConsulta(string dato)
         {
             return CON.BuscarConsulta(dato);
-        } 
+        }
 
     }
 }

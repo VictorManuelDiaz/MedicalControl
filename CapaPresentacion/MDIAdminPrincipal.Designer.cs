@@ -30,6 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIAdminPrincipal));
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.picturebxCerrar = new System.Windows.Forms.PictureBox();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.tlsInicio = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsCitas = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,22 +50,65 @@
             this.tlsMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsRespaldo = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.picturebxCerrar = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.lblTitulo);
+            this.panel1.Controls.Add(this.picturebxCerrar);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1184, 36);
+            this.panel1.TabIndex = 5;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.logo_white_v2;
+            this.pictureBox2.Location = new System.Drawing.Point(10, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(42, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(53, 10);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(99, 16);
+            this.lblTitulo.TabIndex = 4;
+            this.lblTitulo.Text = "Medical control";
+            // 
+            // picturebxCerrar
+            // 
+            this.picturebxCerrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.picturebxCerrar.Image = global::CapaPresentacion.Properties.Resources.cancel1;
+            this.picturebxCerrar.Location = new System.Drawing.Point(1152, 9);
+            this.picturebxCerrar.Name = "picturebxCerrar";
+            this.picturebxCerrar.Size = new System.Drawing.Size(23, 17);
+            this.picturebxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturebxCerrar.TabIndex = 0;
+            this.picturebxCerrar.TabStop = false;
+            this.picturebxCerrar.Click += new System.EventHandler(this.picturebxCerrar_Click);
             // 
             // menuStrip
             // 
+            this.menuStrip.BackColor = System.Drawing.Color.DimGray;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsInicio,
             this.tlsCitas,
@@ -70,10 +119,10 @@
             this.tlsConfiguraciones,
             this.tlsMantenimiento,
             this.tlsSalir});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Location = new System.Drawing.Point(0, 36);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1185, 24);
-            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Size = new System.Drawing.Size(1184, 24);
+            this.menuStrip.TabIndex = 8;
             this.menuStrip.Text = "MenuStrip";
             // 
             // tlsInicio
@@ -169,66 +218,6 @@
             this.tlsSalir.Name = "tlsSalir";
             this.tlsSalir.Size = new System.Drawing.Size(41, 20);
             this.tlsSalir.Text = "Salir";
-            this.tlsSalir.Click += new System.EventHandler(this.tlsSalir_Click);
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 5;
-            this.bunifuElipse1.TargetControl = this;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.lblTitulo);
-            this.panel1.Controls.Add(this.picturebxCerrar);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1184, 36);
-            this.panel1.TabIndex = 5;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::CapaPresentacion.Properties.Resources.Logo_White1;
-            this.pictureBox2.Location = new System.Drawing.Point(10, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(42, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(53, 10);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(99, 16);
-            this.lblTitulo.TabIndex = 4;
-            this.lblTitulo.Text = "Medical control";
-            // 
-            // picturebxCerrar
-            // 
-            this.picturebxCerrar.BackColor = System.Drawing.Color.RoyalBlue;
-            this.picturebxCerrar.Image = global::CapaPresentacion.Properties.Resources.cancel1;
-            this.picturebxCerrar.Location = new System.Drawing.Point(1152, 9);
-            this.picturebxCerrar.Name = "picturebxCerrar";
-            this.picturebxCerrar.Size = new System.Drawing.Size(23, 17);
-            this.picturebxCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picturebxCerrar.TabIndex = 0;
-            this.picturebxCerrar.TabStop = false;
-            this.picturebxCerrar.Click += new System.EventHandler(this.picturebxCerrar_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.menuStrip);
-            this.panel2.Location = new System.Drawing.Point(-1, 36);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1185, 24);
-            this.panel2.TabIndex = 6;
             // 
             // MDIAdminPrincipal
             // 
@@ -236,51 +225,46 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1184, 662);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip;
             this.Name = "MDIAdminPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medical Control";
             this.Load += new System.EventHandler(this.MDIAdminPrincipal_Load);
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         #endregion
-
-
+        private System.Windows.Forms.ToolTip toolTip;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox picturebxCerrar;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem tlsMedicos;
+        private System.Windows.Forms.ToolStripMenuItem tlsInicio;
         private System.Windows.Forms.ToolStripMenuItem tlsCitas;
+        private System.Windows.Forms.ToolStripMenuItem tlsMedicos;
+        private System.Windows.Forms.ToolStripMenuItem tlsPacientes;
+        private System.Windows.Forms.ToolStripMenuItem tlsConsultas;
         private System.Windows.Forms.ToolStripMenuItem tlsExpedientes;
         private System.Windows.Forms.ToolStripMenuItem tlsConfiguraciones;
-        private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem tlsSalir;
-        private System.Windows.Forms.ToolStripMenuItem tlsPacientes;
-        private System.Windows.Forms.ToolStripMenuItem tlsInicio;
         private System.Windows.Forms.ToolStripMenuItem tlsEspecialidades;
         private System.Windows.Forms.ToolStripMenuItem tlsServicios;
         private System.Windows.Forms.ToolStripMenuItem tlsUsuarios;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox picturebxCerrar;
         private System.Windows.Forms.ToolStripMenuItem tlsMantenimiento;
         private System.Windows.Forms.ToolStripMenuItem tlsRespaldo;
-        private System.Windows.Forms.ToolStripMenuItem tlsConsultas;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.ToolStripMenuItem tlsSalir;
     }
 }
 

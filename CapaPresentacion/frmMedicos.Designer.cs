@@ -194,7 +194,7 @@
             this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
             this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnRegistrar.selected = false;
-            this.btnRegistrar.Size = new System.Drawing.Size(388, 41);
+            this.btnRegistrar.Size = new System.Drawing.Size(388, 48);
             this.btnRegistrar.TabIndex = 25;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

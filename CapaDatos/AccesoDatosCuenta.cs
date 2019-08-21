@@ -169,7 +169,7 @@ namespace CapaDatos
         }
         //buscar comentarios
 
-        public List<Cuenta> ValidarCuenta(string nom,string contra)
+        public List<Cuenta> ValidarCuenta(string nom, string contra)
         {
             try
             {
@@ -369,3 +369,4 @@ namespace CapaDatos
 
     }
 }
+
