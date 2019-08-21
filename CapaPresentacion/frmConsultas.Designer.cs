@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultas));
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtbxMedi = new System.Windows.Forms.TextBox();
@@ -48,31 +51,69 @@
             this.datetimepickerFecha = new System.Windows.Forms.DateTimePicker();
             this.maskedtxtbxHora = new System.Windows.Forms.MaskedTextBox();
             this.txtbxPresent = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelVista = new System.Windows.Forms.Panel();
             this.dataGridViewConsult = new System.Windows.Forms.DataGridView();
+            this.dataGridViewConsultasHoy = new System.Windows.Forms.DataGridView();
             this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
-            this.panel2.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.panel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelVista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultasHoy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel2
+            // tabControl1
             // 
-            this.panel2.AutoScroll = true;
-            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.tableLayoutPanel2);
-            this.panel2.Location = new System.Drawing.Point(695, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(406, 500);
-            this.panel2.TabIndex = 3;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(-5, -1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1107, 508);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.panelVista);
+            this.tabPage1.Controls.Add(this.panel);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1099, 482);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Consulta";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.tabPage2.Controls.Add(this.dataGridViewConsultasHoy);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1099, 481);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Consultas de hoy";
+            // 
+            // panel
+            // 
+            this.panel.AutoScroll = true;
+            this.panel.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel.Controls.Add(this.panel3);
+            this.panel.Controls.Add(this.tableLayoutPanel2);
+            this.panel.Location = new System.Drawing.Point(688, 0);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(411, 479);
+            this.panel.TabIndex = 5;
             // 
             // panel3
             // 
@@ -273,17 +314,17 @@
             this.txtbxPresent.Size = new System.Drawing.Size(199, 20);
             this.txtbxPresent.TabIndex = 34;
             // 
-            // panel1
+            // panelVista
             // 
-            this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel1.Controls.Add(this.btnEliminar);
-            this.panel1.Controls.Add(this.btnEditar);
-            this.panel1.Controls.Add(this.txtbxBuscar);
-            this.panel1.Controls.Add(this.dataGridViewConsult);
-            this.panel1.Location = new System.Drawing.Point(-6, -1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(702, 501);
-            this.panel1.TabIndex = 2;
+            this.panelVista.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelVista.Controls.Add(this.btnEliminar);
+            this.panelVista.Controls.Add(this.btnEditar);
+            this.panelVista.Controls.Add(this.txtbxBuscar);
+            this.panelVista.Controls.Add(this.dataGridViewConsult);
+            this.panelVista.Location = new System.Drawing.Point(-4, -13);
+            this.panelVista.Name = "panelVista";
+            this.panelVista.Size = new System.Drawing.Size(693, 501);
+            this.panelVista.TabIndex = 4;
             // 
             // dataGridViewConsult
             // 
@@ -294,6 +335,16 @@
             this.dataGridViewConsult.Name = "dataGridViewConsult";
             this.dataGridViewConsult.Size = new System.Drawing.Size(628, 319);
             this.dataGridViewConsult.TabIndex = 22;
+            // 
+            // dataGridViewConsultasHoy
+            // 
+            this.dataGridViewConsultasHoy.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewConsultasHoy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewConsultasHoy.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewConsultasHoy.Location = new System.Drawing.Point(49, 58);
+            this.dataGridViewConsultasHoy.Name = "dataGridViewConsultasHoy";
+            this.dataGridViewConsultasHoy.Size = new System.Drawing.Size(997, 358);
+            this.dataGridViewConsultasHoy.TabIndex = 1;
             // 
             // btnRegistrar
             // 
@@ -329,32 +380,35 @@
             this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnRegistrar.Textcolor = System.Drawing.Color.White;
             this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageActive = null;
-            this.btnEliminar.Location = new System.Drawing.Point(100, 453);
+            this.btnEliminar.Location = new System.Drawing.Point(100, 444);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(50, 30);
             this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEliminar.TabIndex = 30;
             this.btnEliminar.TabStop = false;
             this.btnEliminar.Zoom = 10;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(45, 453);
+            this.btnEditar.Location = new System.Drawing.Point(45, 444);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(50, 30);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 29;
             this.btnEditar.TabStop = false;
             this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtbxBuscar
             // 
@@ -368,26 +422,31 @@
             this.txtbxBuscar.Size = new System.Drawing.Size(305, 32);
             this.txtbxBuscar.TabIndex = 28;
             this.txtbxBuscar.text = "";
+            this.txtbxBuscar.OnTextChange += new System.EventHandler(this.txtbxBuscar_OnTextChange);
             // 
             // frmConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1100, 500);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas";
             this.Load += new System.EventHandler(this.frmConsultas_Load);
-            this.panel2.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.panel.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
+            this.panelVista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsultasHoy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             this.ResumeLayout(false);
@@ -396,30 +455,34 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblIdConsul;
-        private System.Windows.Forms.TextBox txtbxCosto;
-        private System.Windows.Forms.TextBox txtbxSinto;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker datetimepickerFecha;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedtxtbxHora;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridViewConsult;
-        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscar;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox txtbxDiag;
-        private System.Windows.Forms.TextBox txtbxIdConsul;
-        private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
-        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
         private System.Windows.Forms.TextBox txtbxMedi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtbxDiag;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtbxSinto;
+        private System.Windows.Forms.TextBox txtbxCosto;
+        private System.Windows.Forms.TextBox txtbxIdConsul;
+        private System.Windows.Forms.Label lblIdConsul;
+        private System.Windows.Forms.DateTimePicker datetimepickerFecha;
+        private System.Windows.Forms.MaskedTextBox maskedtxtbxHora;
         private System.Windows.Forms.TextBox txtbxPresent;
+        private System.Windows.Forms.Panel panelVista;
+        private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
+        private Bunifu.Framework.UI.BunifuTextbox txtbxBuscar;
+        private System.Windows.Forms.DataGridView dataGridViewConsult;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.DataGridView dataGridViewConsultasHoy;
     }
 }

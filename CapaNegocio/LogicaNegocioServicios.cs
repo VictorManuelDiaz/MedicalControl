@@ -8,7 +8,7 @@ using CapaEntidades;
 
 namespace CapaNegocio
 {
-    class LogicaNegocioServicios
+    public class LogicaNegocioServicios
     {
         
         AccesoDatosServicios SER = new AccesoDatosServicios();

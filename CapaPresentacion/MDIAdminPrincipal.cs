@@ -77,17 +77,7 @@ namespace CapaPresentacion
         private void MDIAdminPrincipal_Load(object sender, EventArgs e)
         {
         }
-        private void tlsSalir_Click(object sender, EventArgs e)
-        {
-
-            if (PreLogoutConfirmation() == System.Windows.Forms.DialogResult.Yes)
-            {
-                frmInicioSesion InicioS = new frmInicioSesion();
-                this.Hide();
-                InicioS.ShowDialog();
-                this.Close();
-            }
-        }
+        
 
         private DialogResult PreLogoutConfirmation()
         {
@@ -244,9 +234,18 @@ namespace CapaPresentacion
             }
             else
             {
-                frmPacientes Paci = new frmPacientes();
-                Paci.MdiParent = this;
-                Paci.Show();
+                if (TipoUsuario == "Estándar")
+                {
+                    frmPacientes Paci = new frmPacientes(IdMedico);
+                    Paci.MdiParent = this;
+                    Paci.Show();
+                }
+                else
+                {
+                    frmPacientes Paci = new frmPacientes();
+                    Paci.MdiParent = this;
+                    Paci.Show();
+                }
             }
         }
 
@@ -288,6 +287,33 @@ namespace CapaPresentacion
                 Medica.MdiParent = this;
                 Medica.Text = "Ventana " + childFormNumber++;
                 Medica.Show();
+            }
+        }
+
+        private void tlsServicios_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Text = "Servicios";
+            if (Application.OpenForms["frmServicio"] != null)
+            {
+                Application.OpenForms["frmServicios"].Activate();
+            }
+            else
+            {
+                frmServicio Service = new frmServicio();
+                Service.MdiParent = this;
+                Service.Text = "Ventana" + childFormNumber++;
+                Service.Show();
+            }
+        }
+
+        private void tlsSalir_Click(object sender, EventArgs e)
+        {
+            if (PreLogoutConfirmation() == System.Windows.Forms.DialogResult.Yes)
+            {
+                frmInicioSesion InicioS = new frmInicioSesion();
+                this.Hide();
+                InicioS.ShowDialog();
+                this.Close();
             }
         }
     }

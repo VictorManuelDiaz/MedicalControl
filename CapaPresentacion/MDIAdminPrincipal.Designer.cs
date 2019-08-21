@@ -46,11 +46,11 @@
             this.tlsConfiguraciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsServicios = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsMedica = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsUsuarios = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsRespaldo = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlsMedica = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
@@ -192,6 +192,14 @@
             this.tlsServicios.Name = "tlsServicios";
             this.tlsServicios.Size = new System.Drawing.Size(204, 22);
             this.tlsServicios.Text = "Servicios";
+            this.tlsServicios.Click += new System.EventHandler(this.tlsServicios_Click);
+            // 
+            // tlsMedica
+            // 
+            this.tlsMedica.Name = "tlsMedica";
+            this.tlsMedica.Size = new System.Drawing.Size(204, 22);
+            this.tlsMedica.Text = "Catálogo medicamentos";
+            this.tlsMedica.Click += new System.EventHandler(this.tlsMedica_Click);
             // 
             // tlsUsuarios
             // 
@@ -211,7 +219,7 @@
             // tlsRespaldo
             // 
             this.tlsRespaldo.Name = "tlsRespaldo";
-            this.tlsRespaldo.Size = new System.Drawing.Size(152, 22);
+            this.tlsRespaldo.Size = new System.Drawing.Size(140, 22);
             this.tlsRespaldo.Text = "Respaldo BD";
             this.tlsRespaldo.Click += new System.EventHandler(this.tlsRespaldo_Click);
             // 
@@ -220,13 +228,7 @@
             this.tlsSalir.Name = "tlsSalir";
             this.tlsSalir.Size = new System.Drawing.Size(41, 20);
             this.tlsSalir.Text = "Salir";
-            // 
-            // tlsMedica
-            // 
-            this.tlsMedica.Name = "tlsMedica";
-            this.tlsMedica.Size = new System.Drawing.Size(204, 22);
-            this.tlsMedica.Text = "Catálogo medicamentos";
-            this.tlsMedica.Click += new System.EventHandler(this.tlsMedica_Click);
+            this.tlsSalir.Click += new System.EventHandler(this.tlsSalir_Click);
             // 
             // MDIAdminPrincipal
             // 

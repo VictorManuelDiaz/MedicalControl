@@ -32,7 +32,6 @@
             this.dataGridViewEspecial = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label6 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.lblIdEspe = new System.Windows.Forms.Label();
@@ -64,7 +63,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
             this.panel1.Location = new System.Drawing.Point(695, 0);
             this.panel1.Name = "panel1";
@@ -105,17 +103,6 @@
             this.btnRegistrar.Textcolor = System.Drawing.Color.White;
             this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(145, 55);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 18);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Especialidad";
             // 
             // tableLayoutPanel2
             // 
@@ -242,7 +229,6 @@
             this.Load += new System.EventHandler(this.frmEspecialidad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEspecial)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -256,7 +242,6 @@
         private Bunifu.Framework.UI.BunifuTextbox txtbxBuscar;
         private System.Windows.Forms.DataGridView dataGridViewEspecial;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblIdEspe;

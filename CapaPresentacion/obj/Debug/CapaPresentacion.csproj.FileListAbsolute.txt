@@ -24,3 +24,4 @@ E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.pdb
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmConsultas.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmUsuarios.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmMedicamentos.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Debug\CapaPresentacion.frmServicio.resources

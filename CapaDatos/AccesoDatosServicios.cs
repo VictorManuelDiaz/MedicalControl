@@ -111,7 +111,7 @@ namespace CapaDatos
 
                 cm = new SqlCommand("Servicios_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 2);
-                cm.Parameters.AddWithValue("@IdConsulta", IdServicio);
+                cm.Parameters.AddWithValue("@IdServicios", IdServicio);
                 cm.Parameters.AddWithValue("@NombreServicio", "");
                 cm.Parameters.AddWithValue("@CostoServicio", "");
 
@@ -145,7 +145,7 @@ namespace CapaDatos
 
                 cm = new SqlCommand("Servicios_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
-                cm.Parameters.AddWithValue("@IdServicio", "");
+                cm.Parameters.AddWithValue("@IdServicios", "");
                 cm.Parameters.AddWithValue("@NombreServicio", se.NombreServicio);
                 cm.Parameters.AddWithValue("@CostoServicio", se.CostoServicio);
 
@@ -178,7 +178,8 @@ namespace CapaDatos
 
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Servicios_Proced", cnx);
-                cm.Parameters.AddWithValue("@IdServicio", "");
+                cm.Parameters.AddWithValue("@b",5);
+                cm.Parameters.AddWithValue("@IdServicios", "");
                 cm.Parameters.AddWithValue("@NombreServicio", dato);
                 cm.Parameters.AddWithValue("@CostoServicio", "");
 
@@ -192,13 +193,14 @@ namespace CapaDatos
                 while (dr.Read()) //Recorre cada registro
                 {
 
-                    Servicios Se = new Servicios();
+                    Servicios Ser = new Servicios();
 
-                    Se.IdServicios = Convert.ToInt32(dr["IdServicio"].ToString());
-                    Se.NombreServicio = dr["NombreServicio"].ToString();
-                    Se.CostoServicio = dr["CostoServicio"].ToString();
+                    Ser.IdServicios = Convert.ToInt32(dr["IdServicios"].ToString());
+                    Ser.NombreServicio = dr["NombreServicio"].ToString();
+                    Ser.CostoServicio = dr["CostoServicio"].ToString();
 
-                    listaServicios.Add(Se); //agergar registros encontrados a la lista
+                    listaServicios.Add(Ser); //agergar registros encontrados a la lista
+
 
                 }
 

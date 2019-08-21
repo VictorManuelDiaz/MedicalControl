@@ -22,12 +22,11 @@ namespace CapaPresentacion
 
             InitializeComponent();
             this.IdMedico = IdMedico;
+            btnEditar.Visible = false;
+            btnEliminar.Visible = false;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
 
         private DialogResult PreGuardarConfirmation()
         {
@@ -63,9 +62,40 @@ namespace CapaPresentacion
             return res;
         }
 
+        private void RegistrarMedicamento()
+        {
+            try
+            {
+
+                Medicamento objetoMedi = new Medicamento();
+                objetoMedi.NombreMedica = txtbxMedi.Text;
+                objetoMedi.PresentacionMedica = txtbxPresent.Text;
+            }
+            catch
+            {
+
+
+            }
+        }
+
+        private void frmConsultas_Load(object sender, EventArgs e)
+        {
+            dataGridViewConsult.DataSource = LNCon.ListarConsultaMedico(IdMedico);
+            dataGridViewConsult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewConsultasHoy.DataSource = LNCon.ListarConsultaMedico(IdMedico);
+            dataGridViewConsultasHoy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            lblIdConsul.Visible = false;
+            txtbxIdConsul.Visible = false;
+        }
+
+        private void txtbxBuscar_OnTextChange(object sender, EventArgs e)
+        {
+            List<Consulta> listaConsult = LNCon.BuscarConsulta(txtbxBuscar.text);
+            dataGridViewConsult.DataSource = listaConsult;
+        }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (btnRegistrar.Text == "Registrar")
@@ -158,13 +188,6 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("ERROR");
             }
-
-        }
-
-        private void txtbxBuscar_OnTextChange(object sender, EventArgs e)
-        {
-            List<Consulta> listaConsult = LNCon.BuscarConsulta(txtbxBuscar.text);
-            dataGridViewConsult.DataSource = listaConsult;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -187,28 +210,9 @@ namespace CapaPresentacion
             }
         }
 
-        private void RegistrarMedicamento()
+        private void btnEditar_Click(object sender, EventArgs e)
         {
-            try
-            {
 
-                Medicamento objetoMedi = new Medicamento();
-                objetoMedi.NombreMedica = txtbxMedi.Text;
-                objetoMedi.PresentacionMedica = txtbxPresent.Text;
-            }
-            catch
-            {
-
-
-            }
-        }
-
-        private void frmConsultas_Load(object sender, EventArgs e)
-        {
-            dataGridViewConsult.DataSource = LNCon.ListarConsultaMedico(IdMedico);
-            dataGridViewConsult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            lblIdConsul.Visible = false;
-            txtbxIdConsul.Visible = false;
         }
     }
 }

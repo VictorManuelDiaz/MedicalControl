@@ -632,14 +632,26 @@ BEGIN
 	SELECT * FROM Expediente WHERE Expediente.NombrePac LIKE '%' + @NombrePac + '%' OR
 	Expediente.CedulaPac LIKE '%' + @CedulaPac + '%';
 
-	IF @b=6
+END
+GO
+
+
+CREATE PROCEDURE PacienteMedico_Proced
+
+	@IdMedico INT
+
+AS
+BEGIN
+	SET NOCOUNT ON;
+
 	SELECT IdExpediente,NumeroExpediente, CedulaPac, NombrePac, ApellidosPac, FechaNacimiento, LugarNacimiento,
 		   SexoPac,EdadPac, GrupoEtnico, DireccionHabitualPac, NombrePadre, NombreMadre, ReligionPac, ProcedenciaPac,
 		   TelefonoPac, EstadoCivilPac
-	FROM Expediente WHERE(Expediente.IdExpediente IN (SELECT IdExpediente FROM Cita));
+	FROM Expediente WHERE(Expediente.IdExpediente IN (SELECT IdExpediente FROM Cita WHERE IdMedico=@IdMedico));
 
 END
 GO
+
 
 --5. Procedimiento almacenda para tabla de servicios
 
@@ -673,8 +685,7 @@ BEGIN
 	WHERE Servicios.IdServicios=@IdServicios;
 
 	IF @b=5
-	SELECT * FROM Servicios WHERE Servicios.NombreServicio LIKE '%' + @NombreServicio + '%' 
-	OR Servicios.CostoServicio LIKE '%' + @CostoServicio
+	SELECT * FROM Servicios WHERE Servicios.NombreServicio LIKE '%' + @NombreServicio + '%'
 
 END
 GO
@@ -718,7 +729,7 @@ GO
 
 --7. procedimiento para tabla cita--
 
-CREATE PROCEDURE Cita_Proced 
+ALTER PROCEDURE Cita_Proced 
 
 	@b INT, 
 	@IdCita INT,
@@ -765,6 +776,9 @@ BEGIN
 
 	IF @b=7
 	SELECT * FROM Cita WHERE CAST(Cita.FechaConsul AS VARCHAR(12))=CAST (GETDATE() AS DATE);
+
+	IF @b=8
+	SELECT * FROM Cita WHERE CAST(Cita.FechaConsul AS VARCHAR(12))=CAST (GETDATE() AS DATE) AND Cita.IdMedico=@IdMedico;
 
 END
 GO

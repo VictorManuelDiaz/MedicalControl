@@ -14,15 +14,22 @@ namespace CapaPresentacion
 {
     public partial class frmPacientes : Form
     {
+        private int IdMedico = 0;
         LogicaNegocioPaciente LNPac = new LogicaNegocioPaciente();
         public frmPacientes()
         {
             InitializeComponent();
+            dataGridViewPac.DataSource = LNPac.ListarPaciente();
+        }
+        public frmPacientes(int IdMedico)
+        {
+            InitializeComponent();
+            this.IdMedico = IdMedico;
+            dataGridViewPac.DataSource = LNPac.PacienteMedico(IdMedico);
         }
 
         private void frmPacientes_Load(object sender, EventArgs e)
         {
-            dataGridViewPac.DataSource = LNPac.ListarPaciente();
             txtbxIdExp.Visible = false;
             lblIdExp.Visible = false;
         }
