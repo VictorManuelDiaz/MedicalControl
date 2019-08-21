@@ -874,12 +874,9 @@ BEGIN
 
 	IF @b=4
 	UPDATE Consulta SET  
-						 Consulta.Fecha=@Fecha, 
-						 Consulta.Hora=@Hora,
 						 Consulta.Costo=@Costo,
 						 Consulta.Sintomas=@Sintomas,
-						 Consulta.Diagnostico=@Diagnostico,
-						 Consulta.IdExpediente=@IdExpediente
+						 Consulta.Diagnostico=@Diagnostico
 	WHERE Consulta.IdConsulta=@IdConsulta;
 
 	IF @b=5

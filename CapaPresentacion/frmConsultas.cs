@@ -18,6 +18,7 @@ namespace CapaPresentacion
 
         private int IdMedico = 0;
         LogicaNegocioConsulta LNCon = new LogicaNegocioConsulta();
+        LogicaNegocioPaciente LNPac = new LogicaNegocioPaciente();
         LogicaNegocioExpediente LNExp = new LogicaNegocioExpediente();
         LogicaNegocioMedicamentos LNMed = new LogicaNegocioMedicamentos();
         public frmConsultas(int IdMedico)
@@ -25,7 +26,6 @@ namespace CapaPresentacion
 
             InitializeComponent();
             this.IdMedico = IdMedico;
-            btnEditar.Visible = false;
             btnEliminar.Visible = false;
         }
 
@@ -34,8 +34,8 @@ namespace CapaPresentacion
         private DialogResult PreGuardarConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere registrar esta nueva consulta?",
-                "Cerrar la Aplicación",
+                "¿Seguro que quiere registrar esta nueva consulta?",
+                "Registrar",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
@@ -45,8 +45,8 @@ namespace CapaPresentacion
         private DialogResult PreEliminarConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere eliminar esta consulta?",
-                "Cerrar la Aplicación",
+                "¿Seguro que quiere eliminar esta consulta?",
+                "Eliminar",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
@@ -57,8 +57,8 @@ namespace CapaPresentacion
         private DialogResult PreEditarConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere guardar los cambios realizados a esta consulta",
-                "Cerrar la Aplicación",
+                "¿Seguro que quiere actualizar la consulta",
+                "Actualizar",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
@@ -93,7 +93,7 @@ namespace CapaPresentacion
             lblIdConsul.Visible = false;
             txtbxIdConsul.Visible = false;
             List<int> NumEx = new List<int>();
-            NumEx = LNCon.ListarConsultaMedico(IdMedico).Select(x => x.IdExpediente).ToList();
+            NumEx = LNPac.PacienteMedico(IdMedico).Select(x => x.IdExpediente).ToList();
             cmbExp.DataSource = NumEx;
         }
 
@@ -155,6 +155,7 @@ namespace CapaPresentacion
                     {
                         Consulta objetoConsulta = new Consulta();
 
+                        objetoConsulta.IdConsulta = Convert.ToInt32(txtbxIdConsul.Text);
                         objetoConsulta.Fecha = datetimepickerFecha.Value;
                         objetoConsulta.Hora = maskedtxtbxHora.Text;
                         objetoConsulta.Costo = txtbxCosto.Text;
@@ -174,10 +175,14 @@ namespace CapaPresentacion
                             txtbxSinto.Text = "";
                             txtbxDiag.Text = "";
                             cmbExp.Text = "";
+                            lblIdConsul.Visible = false;
+                            txtbxIdConsul.Visible = false;
+                            cmbExp.Enabled = true;
+                            maskedtxtbxHora.Enabled = true;
                         }
                         else
                         {
-                            MessageBox.Show("Error al actualizar especialidad");
+                            MessageBox.Show("Error al actualizar consulta");
                         }
                         btnRegistrar.Text = "Registrar";
                     }
@@ -221,7 +226,19 @@ namespace CapaPresentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            txtbxIdConsul.Visible = true;
+            txtbxIdConsul.Enabled = false;
+            cmbExp.Enabled = false;
+            lblIdConsul.Visible = true;
+            maskedtxtbxHora.Enabled = false;
+            dataGridViewConsult.Enabled = false;
+            txtbxIdConsul.Text = dataGridViewConsult.CurrentRow.Cells["IdConsulta"].Value.ToString();
+            datetimepickerFecha.Text = dataGridViewConsult.CurrentRow.Cells["Fecha"].Value.ToString();
+            maskedtxtbxHora.Text = dataGridViewConsult.CurrentRow.Cells["Hora"].Value.ToString();
+            txtbxCosto.Text = dataGridViewConsult.CurrentRow.Cells["Costo"].Value.ToString();
+            txtbxSinto.Text = dataGridViewConsult.CurrentRow.Cells["Sintomas"].Value.ToString();
+            txtbxDiag.Text = dataGridViewConsult.CurrentRow.Cells["Diagnostico"].Value.ToString();
+            btnRegistrar.Text = "Actualizar";
         }
     }
 }

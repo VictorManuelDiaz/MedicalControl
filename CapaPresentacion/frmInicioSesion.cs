@@ -69,7 +69,7 @@ namespace CapaPresentacion
         private DialogResult PreClosingConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere cerrar la aplicación?",
+                "¿Seguro que quiere cerrar la aplicación?",
                 "Cerrar la Aplicación",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);

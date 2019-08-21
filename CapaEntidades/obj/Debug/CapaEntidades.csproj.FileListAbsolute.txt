@@ -1,5 +1,0 @@
-E:\GitHub\MedicalControl\CapaEntidades\bin\Debug\CapaEntidades.dll
-E:\GitHub\MedicalControl\CapaEntidades\bin\Debug\CapaEntidades.pdb
-E:\GitHub\MedicalControl\CapaEntidades\obj\Debug\CapaEntidades.csprojResolveAssemblyReference.cache
-E:\GitHub\MedicalControl\CapaEntidades\obj\Debug\CapaEntidades.dll
-E:\GitHub\MedicalControl\CapaEntidades\obj\Debug\CapaEntidades.pdb

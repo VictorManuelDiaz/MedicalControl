@@ -121,8 +121,8 @@ namespace CapaPresentacion
         private DialogResult PreGuardarConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere registrar esta especialidad?",
-                "Cerrar la Aplicación",
+                "¿Seguro que quiere registrar esta especialidad?",
+                "Registrar",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
@@ -132,8 +132,8 @@ namespace CapaPresentacion
         private DialogResult PreEliminarConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere eliminar esta especialidad?",
-                "Cerrar la Aplicación",
+                "¿Seguro que quiere eliminar esta especialidad?",
+                "Eliminar",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
@@ -144,8 +144,8 @@ namespace CapaPresentacion
         private DialogResult PreEditarConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere guardar los cambios realizados en especialidad?",
-                "Cerrar la Aplicación",
+                "¿Seguro que quiere actualizar la especialidad?",
+                "Actualizar",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 

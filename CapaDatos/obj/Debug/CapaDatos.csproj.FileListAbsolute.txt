@@ -1,7 +1,0 @@
-E:\GitHub\MedicalControl\CapaDatos\bin\Debug\CapaDatos.dll
-E:\GitHub\MedicalControl\CapaDatos\bin\Debug\CapaDatos.pdb
-E:\GitHub\MedicalControl\CapaDatos\bin\Debug\CapaEntidades.dll
-E:\GitHub\MedicalControl\CapaDatos\bin\Debug\CapaEntidades.pdb
-E:\GitHub\MedicalControl\CapaDatos\obj\Debug\CapaDatos.csprojResolveAssemblyReference.cache
-E:\GitHub\MedicalControl\CapaDatos\obj\Debug\CapaDatos.dll
-E:\GitHub\MedicalControl\CapaDatos\obj\Debug\CapaDatos.pdb

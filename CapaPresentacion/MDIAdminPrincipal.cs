@@ -81,8 +81,8 @@ namespace CapaPresentacion
         private DialogResult PreLogoutConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere Cerrar sesión?",
-                "Cerrar la Aplicación",
+                "¿Seguro que quiere Cerrar sesión?",
+                "Cerrar sesión",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);
 
@@ -93,7 +93,7 @@ namespace CapaPresentacion
         private DialogResult PreClosingConfirmation()
         {
             DialogResult res = System.Windows.Forms.MessageBox.Show(
-                "¿Está seguro que quiere cerrar la aplicación?",
+                "¿Seguro que quiere cerrar la aplicación?",
                 "Cerrar la Aplicación",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question);

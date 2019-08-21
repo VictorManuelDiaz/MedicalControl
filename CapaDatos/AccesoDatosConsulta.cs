@@ -160,7 +160,7 @@ namespace CapaDatos
 
                 cm = new SqlCommand("Consulta_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
-                cm.Parameters.AddWithValue("@IdConsulta", "");
+                cm.Parameters.AddWithValue("@IdConsulta", ca.IdConsulta);
                 cm.Parameters.AddWithValue("@Fecha", "");
                 cm.Parameters.AddWithValue("@Hora", "");
                 cm.Parameters.AddWithValue("@Costo", ca.Costo);

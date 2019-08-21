@@ -49,6 +49,8 @@ namespace CapaPresentacion
             List<int> NumEx = new List<int>();
             NumEx = LNExp.ListarExpediente().Select(x => x.IdExpediente).ToList();
             comboBoxNumExp.DataSource = NumEx;
+            txtbxIdCita.Visible = false;
+            lblIdCita.Visible = false;
         }
 
 
@@ -128,6 +130,8 @@ namespace CapaPresentacion
                         dataGridViewCita.DataSource = LNCita.ListarCita();
                         dateTimePickerRealCita.Value = DateTime.Now;
                         maskedTextBoxHoraC.Text = "";
+                        lblIdCita.Visible = false;
+                        txtbxIdCita.Visible = false;
                     }
                     else
                     {
