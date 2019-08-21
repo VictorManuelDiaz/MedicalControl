@@ -81,19 +81,19 @@ namespace CapaPresentacion
                         objetoConsulta.Sintomas = txtbxSinto.Text;
                         objetoConsulta.Diagnostico = txtbxDiag.Text;
                         // obtener medicamento del textbox
-                        objetoConsulta.IdExpediente = Convert.ToInt32(cmbbxIdExpe.Text);
+                        //objetoConsulta.IdExpediente = Convert.ToInt32(cmbbxIdExpe.Text);
                         objetoConsulta.IdMedico = IdMedico;
 
                         if (LNCon.InsertarConsulta(objetoConsulta) > 0)
                         {
                             MessageBox.Show("Agregada con éxito");
-                            dataGridViewConsult.DataSource = LNCon.ListarConsulta();
+                            dataGridViewConsult.DataSource = LNCon.ListarConsultaMedico(IdMedico);
                             datetimepickerFecha.Value = DateTime.Now;
                             maskedtxtbxHora.Text = "";
                             txtbxCosto.Text = "";
                             txtbxSinto.Text = "";
                             txtbxDiag.Text = "";
-                            cmbbxIdExpe.Text = "";
+                            //cmbbxIdExpe.Text = "";
                         }
                         else
                         { MessageBox.Show("Error al agregar la consulta"); }
@@ -105,7 +105,7 @@ namespace CapaPresentacion
                         txtbxCosto.Text = "";
                         txtbxSinto.Text = "";
                         txtbxDiag.Text = "";
-                        cmbbxIdExpe.Text = "";
+                        //cmbbxIdExpe.Text = "";
                     }
 
                 }
@@ -121,7 +121,7 @@ namespace CapaPresentacion
                         objetoConsulta.Costo = txtbxCosto.Text;
                         objetoConsulta.Sintomas = txtbxSinto.Text;
                         objetoConsulta.Diagnostico = txtbxDiag.Text;
-                        objetoConsulta.IdExpediente = Convert.ToInt32(cmbbxIdExpe.Text);
+                        //objetoConsulta.IdExpediente = Convert.ToInt32(cmbbxIdExpe.Text);
                         objetoConsulta.IdMedico = IdMedico;
 
 
@@ -134,7 +134,7 @@ namespace CapaPresentacion
                             txtbxCosto.Text = "";
                             txtbxSinto.Text = "";
                             txtbxDiag.Text = "";
-                            cmbbxIdExpe.Text = "";
+                            //cmbbxIdExpe.Text = "";
                         }
                         else
                         {
@@ -149,7 +149,7 @@ namespace CapaPresentacion
                         txtbxCosto.Text = "";
                         txtbxSinto.Text = "";
                         txtbxDiag.Text = "";
-                        cmbbxIdExpe.Text = "";
+                        //cmbbxIdExpe.Text = "";
                     }
 
                 }
@@ -205,7 +205,7 @@ namespace CapaPresentacion
 
         private void frmConsultas_Load(object sender, EventArgs e)
         {
-            dataGridViewConsult.DataSource = LNCon.ListarConsulta();
+            dataGridViewConsult.DataSource = LNCon.ListarConsultaMedico(IdMedico);
             dataGridViewConsult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             lblIdConsul.Visible = false;
             txtbxIdConsul.Visible = false;

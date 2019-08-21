@@ -41,5 +41,10 @@ namespace CapaNegocio
         {
             return CI.ListarCitaMedico(IdMedico);
         }
+
+        public List<Cita> ListarCitaHoy()
+        {
+            return CI.ListarCitaHoy();
+        }
     }
 }

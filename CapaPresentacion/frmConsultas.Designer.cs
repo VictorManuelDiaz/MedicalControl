@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultas));
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.txtbxMedi = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,20 +48,19 @@
             this.datetimepickerFecha = new System.Windows.Forms.DateTimePicker();
             this.maskedtxtbxHora = new System.Windows.Forms.MaskedTextBox();
             this.txtbxPresent = new System.Windows.Forms.TextBox();
-            this.cmbbxIdExpe = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewConsult = new System.Windows.Forms.DataGridView();
+            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
-            this.dataGridViewConsult = new System.Windows.Forms.DataGridView();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsult)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -79,45 +77,10 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnRegistrar);
-            this.panel3.Location = new System.Drawing.Point(76, 430);
+            this.panel3.Location = new System.Drawing.Point(76, 442);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(274, 97);
             this.panel3.TabIndex = 31;
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
-            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegistrar.BorderRadius = 3;
-            this.btnRegistrar.ButtonText = "Registrar";
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
-            this.btnRegistrar.Iconimage_right = null;
-            this.btnRegistrar.Iconimage_right_Selected = null;
-            this.btnRegistrar.Iconimage_Selected = null;
-            this.btnRegistrar.IconMarginLeft = 0;
-            this.btnRegistrar.IconMarginRight = 0;
-            this.btnRegistrar.IconRightVisible = true;
-            this.btnRegistrar.IconRightZoom = 0D;
-            this.btnRegistrar.IconVisible = true;
-            this.btnRegistrar.IconZoom = 50D;
-            this.btnRegistrar.IsTab = false;
-            this.btnRegistrar.Location = new System.Drawing.Point(0, 0);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
-            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRegistrar.selected = false;
-            this.btnRegistrar.Size = new System.Drawing.Size(274, 52);
-            this.btnRegistrar.TabIndex = 29;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
-            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // tableLayoutPanel2
             // 
@@ -140,8 +103,6 @@
             this.tableLayoutPanel2.Controls.Add(this.datetimepickerFecha, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.maskedtxtbxHora, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.txtbxPresent, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.cmbbxIdExpe, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 8);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(26, 63);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 9;
@@ -312,26 +273,6 @@
             this.txtbxPresent.Size = new System.Drawing.Size(199, 20);
             this.txtbxPresent.TabIndex = 34;
             // 
-            // cmbbxIdExpe
-            // 
-            this.cmbbxIdExpe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbbxIdExpe.FormattingEnabled = true;
-            this.cmbbxIdExpe.Location = new System.Drawing.Point(134, 312);
-            this.cmbbxIdExpe.Name = "cmbbxIdExpe";
-            this.cmbbxIdExpe.Size = new System.Drawing.Size(199, 21);
-            this.cmbbxIdExpe.TabIndex = 33;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(3, 309);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 17);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Id Expediente";
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -343,6 +284,51 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(702, 501);
             this.panel1.TabIndex = 2;
+            // 
+            // dataGridViewConsult
+            // 
+            this.dataGridViewConsult.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewConsult.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewConsult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewConsult.Location = new System.Drawing.Point(45, 104);
+            this.dataGridViewConsult.Name = "dataGridViewConsult";
+            this.dataGridViewConsult.Size = new System.Drawing.Size(628, 319);
+            this.dataGridViewConsult.TabIndex = 22;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegistrar.BorderRadius = 3;
+            this.btnRegistrar.ButtonText = "Registrar";
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
+            this.btnRegistrar.Iconimage_right = null;
+            this.btnRegistrar.Iconimage_right_Selected = null;
+            this.btnRegistrar.Iconimage_Selected = null;
+            this.btnRegistrar.IconMarginLeft = 0;
+            this.btnRegistrar.IconMarginRight = 0;
+            this.btnRegistrar.IconRightVisible = true;
+            this.btnRegistrar.IconRightZoom = 0D;
+            this.btnRegistrar.IconVisible = true;
+            this.btnRegistrar.IconZoom = 50D;
+            this.btnRegistrar.IsTab = false;
+            this.btnRegistrar.Location = new System.Drawing.Point(0, 0);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRegistrar.selected = false;
+            this.btnRegistrar.Size = new System.Drawing.Size(274, 48);
+            this.btnRegistrar.TabIndex = 29;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
+            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnEliminar
             // 
@@ -377,20 +363,11 @@
             this.txtbxBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.txtbxBuscar.ForeColor = System.Drawing.Color.White;
             this.txtbxBuscar.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.Icon")));
-            this.txtbxBuscar.Location = new System.Drawing.Point(45, 43);
+            this.txtbxBuscar.Location = new System.Drawing.Point(45, 52);
             this.txtbxBuscar.Name = "txtbxBuscar";
             this.txtbxBuscar.Size = new System.Drawing.Size(305, 32);
             this.txtbxBuscar.TabIndex = 28;
             this.txtbxBuscar.text = "";
-            // 
-            // dataGridViewConsult
-            // 
-            this.dataGridViewConsult.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewConsult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewConsult.Location = new System.Drawing.Point(45, 104);
-            this.dataGridViewConsult.Name = "dataGridViewConsult";
-            this.dataGridViewConsult.Size = new System.Drawing.Size(628, 319);
-            this.dataGridViewConsult.TabIndex = 22;
             // 
             // frmConsultas
             // 
@@ -410,9 +387,9 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewConsult)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -444,7 +421,5 @@
         private System.Windows.Forms.TextBox txtbxMedi;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtbxPresent;
-        private System.Windows.Forms.ComboBox cmbbxIdExpe;
-        private System.Windows.Forms.Label label8;
     }
 }

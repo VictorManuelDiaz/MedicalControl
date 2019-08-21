@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPacientes));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtbxBuscPaciente = new Bunifu.Framework.UI.BunifuTextbox();
             this.dataGridViewPac = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbbxCivil = new System.Windows.Forms.ComboBox();
@@ -71,14 +72,12 @@
             this.lblIdExp = new System.Windows.Forms.Label();
             this.txtbxIdExp = new System.Windows.Forms.TextBox();
             this.txtbxNumExp = new System.Windows.Forms.TextBox();
-            this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -90,8 +89,36 @@
             this.panel2.Controls.Add(this.dataGridViewPac);
             this.panel2.Location = new System.Drawing.Point(0, -2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(727, 504);
+            this.panel2.Size = new System.Drawing.Size(717, 504);
             this.panel2.TabIndex = 9;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageActive = null;
+            this.btnEliminar.Location = new System.Drawing.Point(83, 448);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(50, 30);
+            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEliminar.TabIndex = 29;
+            this.btnEliminar.TabStop = false;
+            this.btnEliminar.Zoom = 10;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageActive = null;
+            this.btnEditar.Location = new System.Drawing.Point(28, 448);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(50, 30);
+            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEditar.TabIndex = 28;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Zoom = 10;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtbxBuscPaciente
             // 
@@ -101,9 +128,9 @@
             this.txtbxBuscPaciente.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtbxBuscPaciente.ForeColor = System.Drawing.Color.White;
             this.txtbxBuscPaciente.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscPaciente.Icon")));
-            this.txtbxBuscPaciente.Location = new System.Drawing.Point(22, 35);
+            this.txtbxBuscPaciente.Location = new System.Drawing.Point(22, 42);
             this.txtbxBuscPaciente.Name = "txtbxBuscPaciente";
-            this.txtbxBuscPaciente.Size = new System.Drawing.Size(262, 30);
+            this.txtbxBuscPaciente.Size = new System.Drawing.Size(305, 32);
             this.txtbxBuscPaciente.TabIndex = 17;
             this.txtbxBuscPaciente.text = "";
             this.txtbxBuscPaciente.OnTextChange += new System.EventHandler(this.txtbxBuscPaciente_OnTextChange);
@@ -111,11 +138,11 @@
             // dataGridViewPac
             // 
             this.dataGridViewPac.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewPac.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewPac.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewPac.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPac.Location = new System.Drawing.Point(16, 90);
             this.dataGridViewPac.Name = "dataGridViewPac";
-            this.dataGridViewPac.Size = new System.Drawing.Size(694, 343);
+            this.dataGridViewPac.Size = new System.Drawing.Size(669, 343);
             this.dataGridViewPac.TabIndex = 12;
             // 
             // panel1
@@ -124,12 +151,11 @@
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(727, -2);
+            this.panel1.Location = new System.Drawing.Point(703, -2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(374, 504);
+            this.panel1.Size = new System.Drawing.Size(398, 504);
             this.panel1.TabIndex = 8;
             // 
             // btnRegistrar
@@ -153,7 +179,7 @@
             this.btnRegistrar.IconVisible = true;
             this.btnRegistrar.IconZoom = 50D;
             this.btnRegistrar.IsTab = false;
-            this.btnRegistrar.Location = new System.Drawing.Point(47, 689);
+            this.btnRegistrar.Location = new System.Drawing.Point(52, 680);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
             this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
@@ -169,21 +195,10 @@
             // 
             // panel3
             // 
-            this.panel3.Location = new System.Drawing.Point(4, 739);
+            this.panel3.Location = new System.Drawing.Point(24, 730);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(349, 47);
             this.panel3.TabIndex = 18;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(106, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 18);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Agregando Paciente";
             // 
             // tableLayoutPanel1
             // 
@@ -224,7 +239,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblIdExp, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtbxIdExp, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtbxNumExp, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 47);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 32);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 17;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.882008F));
@@ -566,34 +581,6 @@
             this.txtbxNumExp.Size = new System.Drawing.Size(200, 20);
             this.txtbxNumExp.TabIndex = 20;
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageActive = null;
-            this.btnEliminar.Location = new System.Drawing.Point(83, 448);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(50, 30);
-            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEliminar.TabIndex = 29;
-            this.btnEliminar.TabStop = false;
-            this.btnEliminar.Zoom = 10;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
-            this.btnEditar.ImageActive = null;
-            this.btnEditar.Location = new System.Drawing.Point(28, 448);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(50, 30);
-            this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEditar.TabIndex = 28;
-            this.btnEditar.TabStop = false;
-            this.btnEditar.Zoom = 10;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
             // frmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -609,13 +596,12 @@
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.frmPacientes_Load);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -626,7 +612,6 @@
         private Bunifu.Framework.UI.BunifuTextbox txtbxBuscPaciente;
         private System.Windows.Forms.DataGridView dataGridViewPac;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbbxCivil;

@@ -53,7 +53,7 @@
             // dataGridViewEspecial
             // 
             this.dataGridViewEspecial.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewEspecial.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewEspecial.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewEspecial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEspecial.Location = new System.Drawing.Point(29, 92);
             this.dataGridViewEspecial.Name = "dataGridViewEspecial";

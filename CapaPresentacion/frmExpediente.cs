@@ -20,8 +20,13 @@ namespace CapaPresentacion
             InitializeComponent();
 
         }
+        public frmExpediente(int IdMedico)
+        {
+            InitializeComponent();
 
-        
+        }
+
+
 
         private void frmExpediente_Load(object sender, EventArgs e)
         {

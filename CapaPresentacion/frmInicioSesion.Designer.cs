@@ -73,17 +73,17 @@
             this.btnEntrar.color = System.Drawing.Color.RoyalBlue;
             this.btnEntrar.colorActive = System.Drawing.Color.CornflowerBlue;
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.White;
             this.btnEntrar.Image = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Image")));
-            this.btnEntrar.ImagePosition = 21;
+            this.btnEntrar.ImagePosition = 17;
             this.btnEntrar.ImageZoom = 50;
-            this.btnEntrar.LabelPosition = 35;
+            this.btnEntrar.LabelPosition = 28;
             this.btnEntrar.LabelText = "Entrar";
-            this.btnEntrar.Location = new System.Drawing.Point(164, 6);
+            this.btnEntrar.Location = new System.Drawing.Point(103, 6);
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(6);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(128, 44);
+            this.btnEntrar.Size = new System.Drawing.Size(250, 44);
             this.btnEntrar.TabIndex = 0;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 

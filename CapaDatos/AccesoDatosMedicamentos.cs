@@ -147,9 +147,9 @@ namespace CapaDatos
 
                 cm = new SqlCommand("Medicamento_Proced", cnx);
                 cm.Parameters.AddWithValue("@b", 4);
-                cm.Parameters.AddWithValue("@IdServicio", "");
-                cm.Parameters.AddWithValue("@NombreServicio", me.NombreMedica);
-                cm.Parameters.AddWithValue("@CostoServicio", me.PresentacionMedica);
+                cm.Parameters.AddWithValue("@IdMedica", "");
+                cm.Parameters.AddWithValue("@NombreMedica", me.NombreMedica);
+                cm.Parameters.AddWithValue("@PresentacionMedica", me.PresentacionMedica);
 
 
 
@@ -180,6 +180,7 @@ namespace CapaDatos
 
                 SqlConnection cnx = cn.Conectar();
                 cm = new SqlCommand("Medicamento_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 5);
                 cm.Parameters.AddWithValue("@IdMedica", "");
                 cm.Parameters.AddWithValue("@NombreMedica", dato);
                 cm.Parameters.AddWithValue("@PresentacionMedica", "");

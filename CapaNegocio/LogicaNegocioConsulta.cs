@@ -38,5 +38,10 @@ namespace CapaNegocio
             return CON.BuscarConsulta(dato);
         }
 
+        public List<Consulta> ListarConsultaMedico(int Medico)
+        {
+            return CON.ListarConsultaMedico(Medico);
+        }
+
     }
 }

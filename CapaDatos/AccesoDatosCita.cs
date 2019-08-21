@@ -276,5 +276,57 @@ namespace CapaDatos
             return listaCita;
 
         }
+
+        public List<Cita> ListarCitaHoy()
+        {
+
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("Cita_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 7);
+                cm.Parameters.AddWithValue("@IdCita", "");
+                cm.Parameters.AddWithValue("@FechaConsul", "");
+                cm.Parameters.AddWithValue("@FechaRealCita", "");
+                cm.Parameters.AddWithValue("@HoraC", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
+                cm.Parameters.AddWithValue("@IdMedico", "");
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaCita = new List<Cita>();
+
+                while (dr.Read())
+                {
+
+                    Cita Cit = new Cita();
+
+                    Cit.IdCita = Convert.ToInt32(dr["IdCita"].ToString());
+                    Cit.FechaConsul = Convert.ToDateTime(dr["FechaConsul"].ToString());
+                    Cit.FechaRealCita = Convert.ToDateTime(dr["FechaRealCita"].ToString());
+                    Cit.HoraC = dr["HoraC"].ToString();
+                    Cit.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    Cit.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
+                    listaCita.Add(Cit);
+
+                }
+
+            }
+
+
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaCita = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaCita;
+
+        }
     }
 }

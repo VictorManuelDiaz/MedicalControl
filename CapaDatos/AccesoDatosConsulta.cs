@@ -243,5 +243,113 @@ namespace CapaDatos
             }
             return listaConsulta;
         }
+
+
+        public List<Consulta> ListarConsultaMedico(int IdMedico)
+        {
+
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("Consulta_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 6);
+                cm.Parameters.AddWithValue("@IdConsulta", "");
+                cm.Parameters.AddWithValue("@Fecha", "");
+                cm.Parameters.AddWithValue("@Hora", "");
+                cm.Parameters.AddWithValue("@Costo", "");
+                cm.Parameters.AddWithValue("@Sintomas", "");
+                cm.Parameters.AddWithValue("@Diagnostico", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
+                cm.Parameters.AddWithValue("@IdMedico", IdMedico);
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaConsulta = new List<Consulta>();
+
+                while (dr.Read())
+                {
+
+                    Consulta Consul = new Consulta();
+                    Consul.IdConsulta = Convert.ToInt32(dr["IdConsulta"].ToString());
+                    Consul.Fecha = Convert.ToDateTime(dr["Fecha"].ToString());
+                    Consul.Hora = dr["Hora"].ToString();
+                    Consul.Costo = dr["Costo"].ToString();
+                    Consul.Sintomas = dr["Sintomas"].ToString();
+                    Consul.Diagnostico = dr["Diagnostico"].ToString();
+                    Consul.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    Consul.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
+                    listaConsulta.Add(Consul);
+                }
+            }
+
+
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaConsulta = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaConsulta;
+
+        }
+
+        public List<Consulta> ListarConsultaHoy()
+        {
+
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();
+                cm = new SqlCommand("Consulta_Proced", cnx);
+                cm.Parameters.AddWithValue("@b", 7);
+                cm.Parameters.AddWithValue("@IdConsulta", "");
+                cm.Parameters.AddWithValue("@Fecha", "");
+                cm.Parameters.AddWithValue("@Hora", "");
+                cm.Parameters.AddWithValue("@Costo", "");
+                cm.Parameters.AddWithValue("@Sintomas", "");
+                cm.Parameters.AddWithValue("@Diagnostico", "");
+                cm.Parameters.AddWithValue("@IdExpediente", "");
+                cm.Parameters.AddWithValue("@IdMedico", "");
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaConsulta = new List<Consulta>();
+
+                while (dr.Read())
+                {
+
+                    Consulta Consul = new Consulta();
+                    Consul.IdConsulta = Convert.ToInt32(dr["IdConsulta"].ToString());
+                    Consul.Fecha = Convert.ToDateTime(dr["Fecha"].ToString());
+                    Consul.Hora = dr["Hora"].ToString();
+                    Consul.Costo = dr["Costo"].ToString();
+                    Consul.Sintomas = dr["Sintomas"].ToString();
+                    Consul.Diagnostico = dr["Diagnostico"].ToString();
+                    Consul.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    Consul.IdMedico = Convert.ToInt32(dr["IdMedico"].ToString());
+                    listaConsulta.Add(Consul);
+                }
+            }
+
+
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaConsulta = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaConsulta;
+
+        }
+
     }
 }

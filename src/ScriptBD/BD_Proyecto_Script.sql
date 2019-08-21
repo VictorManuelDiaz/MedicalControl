@@ -630,7 +630,13 @@ BEGIN
 
 	IF @b=5
 	SELECT * FROM Expediente WHERE Expediente.NombrePac LIKE '%' + @NombrePac + '%' OR
-	Expediente.CedulaPac LIKE '%' + @CedulaPac + '%'
+	Expediente.CedulaPac LIKE '%' + @CedulaPac + '%';
+
+	IF @b=6
+	SELECT IdExpediente,NumeroExpediente, CedulaPac, NombrePac, ApellidosPac, FechaNacimiento, LugarNacimiento,
+		   SexoPac,EdadPac, GrupoEtnico, DireccionHabitualPac, NombrePadre, NombreMadre, ReligionPac, ProcedenciaPac,
+		   TelefonoPac, EstadoCivilPac
+	FROM Expediente WHERE(Expediente.IdExpediente IN (SELECT IdExpediente FROM Cita));
 
 END
 GO
@@ -757,6 +763,9 @@ BEGIN
 	IF @b=6
 	SELECT * FROM Cita WHERE Cita.IdMedico=@IdMedico;
 
+	IF @b=7
+	SELECT * FROM Cita WHERE CAST(Cita.FechaConsul AS VARCHAR(12))=CAST (GETDATE() AS DATE);
+
 END
 GO
 
@@ -843,7 +852,13 @@ BEGIN
 	WHERE Consulta.IdConsulta=@IdConsulta;
 
 	IF @b=5
-	SELECT * FROM Consulta WHERE Consulta.Fecha LIKE '%' + @Fecha + '%' 
+	SELECT * FROM Consulta WHERE Consulta.Fecha LIKE '%' + @Fecha + '%';
+
+	IF @b=6
+	SELECT * FROM Consulta WHERE Consulta.IdMedico=@IdMedico;
+
+	IF @b=7
+	SELECT * FROM Consulta WHERE CAST(Consulta.Fecha AS VARCHAR(12))=CAST (GETDATE() AS DATE);
 
 END
 GO
@@ -955,11 +970,13 @@ INSERT INTO Expediente VALUES ('1234','Dolor de cabeza','Reposo','121-110909-000
 INSERT INTO Medico VALUES ('Josh','González',1,'tumedico@gmail.com','88888887','121-110909-9900E','M','Casa de habitación'),
 						  ('Gina','Sepulveda',3,'medicogeneral@gmail.com','88899900','121-230912-8811G','F','Barrio Rubén Darío')
 
-INSERT INTO Cita VALUES ('2019-09-09','2019-09-10','10:38:39',1,1),
-						('2019-10-08','2019-10-09','12:40:55',2,2)
 
-INSERT INTO Cita VALUES ('2019-09-09','2019-09-10','10:38:39',1,1),
-						('2019-10-08','2019-10-09','12:40:55',2,2)
+INSERT INTO Usuario VALUES (3,1)
+
+
+INSERT INTO Cita VALUES ('2019-09-09','2019-09-10','10:38:00',1,1),
+						('2019-10-08','2019-10-09','12:40:00',2,2)
+
 
 INSERT INTO Consulta VALUES ('2019-11-09','08:00:23','2500','Dolor de articulaciones','Artritis',2,1),
 							('2019-01-11','12:45:56','4000','Dolor de cabeza','Migraña',1,2)

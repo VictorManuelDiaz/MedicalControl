@@ -110,10 +110,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
-            this.dataGridViewExp = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
+            this.dataGridViewExp = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -127,9 +127,9 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).BeginInit();
             this.SuspendLayout();
             // 
             // labels1
@@ -1136,30 +1136,6 @@
             this.panel2.Size = new System.Drawing.Size(620, 502);
             this.panel2.TabIndex = 8;
             // 
-            // txtbxBuscar
-            // 
-            this.txtbxBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.txtbxBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.BackgroundImage")));
-            this.txtbxBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtbxBuscar.ForeColor = System.Drawing.Color.White;
-            this.txtbxBuscar.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.Icon")));
-            this.txtbxBuscar.Location = new System.Drawing.Point(34, 58);
-            this.txtbxBuscar.Name = "txtbxBuscar";
-            this.txtbxBuscar.Size = new System.Drawing.Size(316, 42);
-            this.txtbxBuscar.TabIndex = 10;
-            this.txtbxBuscar.text = "";
-            this.txtbxBuscar.OnTextChange += new System.EventHandler(this.txtbxBuscar_OnTextChange);
-            // 
-            // dataGridViewExp
-            // 
-            this.dataGridViewExp.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewExp.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewExp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExp.Location = new System.Drawing.Point(30, 118);
-            this.dataGridViewExp.Name = "dataGridViewExp";
-            this.dataGridViewExp.Size = new System.Drawing.Size(566, 281);
-            this.dataGridViewExp.TabIndex = 0;
-            // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -1187,6 +1163,30 @@
             this.btnEditar.TabStop = false;
             this.btnEditar.Zoom = 10;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // txtbxBuscar
+            // 
+            this.txtbxBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.txtbxBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.BackgroundImage")));
+            this.txtbxBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtbxBuscar.ForeColor = System.Drawing.Color.White;
+            this.txtbxBuscar.Icon = ((System.Drawing.Image)(resources.GetObject("txtbxBuscar.Icon")));
+            this.txtbxBuscar.Location = new System.Drawing.Point(34, 71);
+            this.txtbxBuscar.Name = "txtbxBuscar";
+            this.txtbxBuscar.Size = new System.Drawing.Size(305, 32);
+            this.txtbxBuscar.TabIndex = 10;
+            this.txtbxBuscar.text = "";
+            this.txtbxBuscar.OnTextChange += new System.EventHandler(this.txtbxBuscar_OnTextChange);
+            // 
+            // dataGridViewExp
+            // 
+            this.dataGridViewExp.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewExp.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewExp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewExp.Location = new System.Drawing.Point(30, 118);
+            this.dataGridViewExp.Name = "dataGridViewExp";
+            this.dataGridViewExp.Size = new System.Drawing.Size(566, 281);
+            this.dataGridViewExp.TabIndex = 0;
             // 
             // frmExpediente
             // 
@@ -1221,9 +1221,9 @@
             this.tableLayoutPanel1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
             this.ResumeLayout(false);
 
         }

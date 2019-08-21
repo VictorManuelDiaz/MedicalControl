@@ -50,6 +50,7 @@
             this.tlsMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsRespaldo = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsMedica = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
@@ -173,6 +174,7 @@
             this.tlsConfiguraciones.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsEspecialidades,
             this.tlsServicios,
+            this.tlsMedica,
             this.tlsUsuarios});
             this.tlsConfiguraciones.Name = "tlsConfiguraciones";
             this.tlsConfiguraciones.Size = new System.Drawing.Size(106, 20);
@@ -181,20 +183,20 @@
             // tlsEspecialidades
             // 
             this.tlsEspecialidades.Name = "tlsEspecialidades";
-            this.tlsEspecialidades.Size = new System.Drawing.Size(175, 22);
+            this.tlsEspecialidades.Size = new System.Drawing.Size(204, 22);
             this.tlsEspecialidades.Text = "Especialidades";
             this.tlsEspecialidades.Click += new System.EventHandler(this.tlsEspecialidades_Click);
             // 
             // tlsServicios
             // 
             this.tlsServicios.Name = "tlsServicios";
-            this.tlsServicios.Size = new System.Drawing.Size(175, 22);
+            this.tlsServicios.Size = new System.Drawing.Size(204, 22);
             this.tlsServicios.Text = "Servicios";
             // 
             // tlsUsuarios
             // 
             this.tlsUsuarios.Name = "tlsUsuarios";
-            this.tlsUsuarios.Size = new System.Drawing.Size(175, 22);
+            this.tlsUsuarios.Size = new System.Drawing.Size(204, 22);
             this.tlsUsuarios.Text = "Cuentas de usuario";
             this.tlsUsuarios.Click += new System.EventHandler(this.tlsUsuarios_Click);
             // 
@@ -209,7 +211,7 @@
             // tlsRespaldo
             // 
             this.tlsRespaldo.Name = "tlsRespaldo";
-            this.tlsRespaldo.Size = new System.Drawing.Size(140, 22);
+            this.tlsRespaldo.Size = new System.Drawing.Size(152, 22);
             this.tlsRespaldo.Text = "Respaldo BD";
             this.tlsRespaldo.Click += new System.EventHandler(this.tlsRespaldo_Click);
             // 
@@ -218,6 +220,13 @@
             this.tlsSalir.Name = "tlsSalir";
             this.tlsSalir.Size = new System.Drawing.Size(41, 20);
             this.tlsSalir.Text = "Salir";
+            // 
+            // tlsMedica
+            // 
+            this.tlsMedica.Name = "tlsMedica";
+            this.tlsMedica.Size = new System.Drawing.Size(204, 22);
+            this.tlsMedica.Text = "Catálogo medicamentos";
+            this.tlsMedica.Click += new System.EventHandler(this.tlsMedica_Click);
             // 
             // MDIAdminPrincipal
             // 
@@ -265,6 +274,7 @@
         private System.Windows.Forms.ToolStripMenuItem tlsMantenimiento;
         private System.Windows.Forms.ToolStripMenuItem tlsRespaldo;
         private System.Windows.Forms.ToolStripMenuItem tlsSalir;
+        private System.Windows.Forms.ToolStripMenuItem tlsMedica;
     }
 }
 

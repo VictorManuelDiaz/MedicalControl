@@ -31,6 +31,7 @@ namespace CapaPresentacion
                 tlsConfiguraciones.Visible = false;
                 tlsMantenimiento.Visible = false;
                 tlsConsultas.Visible = true;
+                tlsExpedientes.Visible = false;
                 this.TipoUsuario = TipoUsuario;
                 this.IdMedico = IdMedico;
             }
@@ -205,11 +206,17 @@ namespace CapaPresentacion
             {
                 Application.OpenForms["frmExpediente"].Activate();
             }
+            if (TipoUsuario == "Estándar")
+            {
+                frmExpediente Expediente = new frmExpediente(IdMedico);
+                Expediente.MdiParent = this;
+                Expediente.Show();
+            }
             else
             {
-                frmExpediente Cita = new frmExpediente();
-                Cita.MdiParent = this;
-                Cita.Show();
+                frmExpediente Expediente = new frmExpediente();
+                Expediente.MdiParent = this;
+                Expediente.Show();
             }
         }
 
@@ -265,6 +272,22 @@ namespace CapaPresentacion
                 Medicos.MdiParent = this;
                 Medicos.Text = "Ventana " + childFormNumber++;
                 Medicos.Show();
+            }
+        }
+
+        private void tlsMedica_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Text = "Catálogo medicamentos";
+            if (Application.OpenForms["frmMedicamentos"] != null)
+            {
+                Application.OpenForms["frmMedicamentos"].Activate();
+            }
+            else
+            {
+                frmMedicamentos Medica = new frmMedicamentos();
+                Medica.MdiParent = this;
+                Medica.Text = "Ventana " + childFormNumber++;
+                Medica.Show();
             }
         }
     }
