@@ -15,14 +15,23 @@ namespace CapaPresentacion
     public partial class frmExpediente : Form
     {
         LogicaNegocioExpediente LNExp = new LogicaNegocioExpediente();
+        private int Med = 0;
         public frmExpediente()
         {
             InitializeComponent();
+            dataGridViewExp.DataSource = LNExp.ListarExpediente();
+            panelRegistrar.Visible = false;
+            panelVista.Size = new Size(1116, 500);
+            dataGridViewExp.Size = new Size(1039, 343);
+            btnEditar.Visible = false;
 
         }
-        public frmExpediente(int IdMedico)
+        public frmExpediente(int Med)
         {
             InitializeComponent();
+            this.Med = Med;
+            dataGridViewExp.DataSource = LNExp.ListarExpedienteMed(Med);
+            
 
         }
 
@@ -30,7 +39,7 @@ namespace CapaPresentacion
 
         private void frmExpediente_Load(object sender, EventArgs e)
         {
-            dataGridViewExp.DataSource = LNExp.ListarExpediente();
+            
         }
 
        
@@ -357,7 +366,7 @@ namespace CapaPresentacion
                     {
                         MessageBox.Show("Agregado con éxito");
 
-                        dataGridViewExp.DataSource = LNExp.ListarExpediente();
+                        dataGridViewExp.DataSource = LNExp.ListarExpedienteMed(Med);
                         txtbxNumeroExp.Text = "";
                         txtbxMotiConsul.Text = "";
                         txtbxTrataIndiPac.Text = "";
@@ -681,7 +690,7 @@ namespace CapaPresentacion
                     if (LNExp.EditarExpediente(objetoExpediente) > 0)
                     {
                         MessageBox.Show("Actualizado con éxito");
-                        dataGridViewExp.DataSource = LNExp.ListarExpediente();
+                        dataGridViewExp.DataSource = LNExp.ListarExpedienteMed(Med);
                         txtbxNumeroExp.Text = "";
                         txtbxMotiConsul.Text = "";
                         txtbxTrataIndiPac.Text = "";

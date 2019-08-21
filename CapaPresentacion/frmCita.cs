@@ -17,6 +17,7 @@ namespace CapaPresentacion
         LogicaNegocioCita LNCita = new LogicaNegocioCita();
         LogicaNegocioExpediente LNExp = new LogicaNegocioExpediente();
         LogicaNegocioMedico LNMed = new LogicaNegocioMedico();
+        private int IdMedico = 0;
         public frmCita()
         {
             InitializeComponent();
@@ -28,6 +29,7 @@ namespace CapaPresentacion
         public frmCita(int IdMedico)
         {
             InitializeComponent();
+            this.IdMedico = IdMedico;
             dataGridViewCita.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCita.DataSource = LNCita.ListarCitaMedico(IdMedico);
             dataGridViewCitasHoy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

@@ -31,7 +31,6 @@ namespace CapaPresentacion
                 tlsConfiguraciones.Visible = false;
                 tlsMantenimiento.Visible = false;
                 tlsConsultas.Visible = true;
-                tlsExpedientes.Visible = false;
                 this.TipoUsuario = TipoUsuario;
                 this.IdMedico = IdMedico;
             }
@@ -174,20 +173,7 @@ namespace CapaPresentacion
             }
         }
 
-        private void tlsConsultas_Click(object sender, EventArgs e)
-        {
-            lblTitulo.Text = "Consultas";
-            if (Application.OpenForms["frmConsultas"] != null)
-            {
-                Application.OpenForms["frmConsultas"].Activate();
-            }
-            else
-            {
-                frmConsultas Consultas = new frmConsultas(IdMedico);
-                Consultas.MdiParent = this;
-                Consultas.Show();
-            }
-        }
+        
 
         private void tlsExpedientes_Click(object sender, EventArgs e)
         {
@@ -314,6 +300,21 @@ namespace CapaPresentacion
                 this.Hide();
                 InicioS.ShowDialog();
                 this.Close();
+            }
+        }
+
+        private void tlsConsultas_Click(object sender, EventArgs e)
+        {
+            lblTitulo.Text = "Consultas";
+            if (Application.OpenForms["frmConsultas"] != null)
+            {
+                Application.OpenForms["frmConsultas"].Activate();
+            }
+            else
+            {
+                frmConsultas Consultas = new frmConsultas(IdMedico);
+                Consultas.MdiParent = this;
+                Consultas.Show();
             }
         }
     }

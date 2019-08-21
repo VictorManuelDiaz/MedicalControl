@@ -29,68 +29,68 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPacientes));
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelVista = new System.Windows.Forms.Panel();
             this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtbxBuscPaciente = new Bunifu.Framework.UI.BunifuTextbox();
             this.dataGridViewPac = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbbxCivil = new System.Windows.Forms.ComboBox();
-            this.maskedtxtbxTele = new System.Windows.Forms.MaskedTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtbxProced = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cmbbxRelig = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtbxMadre = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtbxPadre = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtbxDire = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbbxEtnia = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtbxEdad = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.cmbbxSexo = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtbxNac = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.maskedtxtbxFecNac = new System.Windows.Forms.MaskedTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtbxApell = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtbxNom = new System.Windows.Forms.TextBox();
-            this.maskedtxtbxCed = new System.Windows.Forms.MaskedTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblIdExp = new System.Windows.Forms.Label();
-            this.txtbxIdExp = new System.Windows.Forms.TextBox();
             this.txtbxNumExp = new System.Windows.Forms.TextBox();
-            this.panel2.SuspendLayout();
+            this.txtbxIdExp = new System.Windows.Forms.TextBox();
+            this.lblIdExp = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.maskedtxtbxCed = new System.Windows.Forms.MaskedTextBox();
+            this.txtbxNom = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtbxApell = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.maskedtxtbxFecNac = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtbxNac = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbbxSexo = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtbxEdad = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbbxEtnia = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtbxDire = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtbxPadre = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtbxMadre = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbbxRelig = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtbxProced = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.maskedtxtbxTele = new System.Windows.Forms.MaskedTextBox();
+            this.cmbbxCivil = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panelRegistrar = new System.Windows.Forms.Panel();
+            this.panelVista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).BeginInit();
-            this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panelRegistrar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel2
+            // panelVista
             // 
-            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.btnEliminar);
-            this.panel2.Controls.Add(this.btnEditar);
-            this.panel2.Controls.Add(this.txtbxBuscPaciente);
-            this.panel2.Controls.Add(this.dataGridViewPac);
-            this.panel2.Location = new System.Drawing.Point(0, -2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(717, 504);
-            this.panel2.TabIndex = 9;
+            this.panelVista.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelVista.Controls.Add(this.btnEliminar);
+            this.panelVista.Controls.Add(this.btnEditar);
+            this.panelVista.Controls.Add(this.txtbxBuscPaciente);
+            this.panelVista.Controls.Add(this.dataGridViewPac);
+            this.panelVista.Location = new System.Drawing.Point(0, -2);
+            this.panelVista.Name = "panelVista";
+            this.panelVista.Size = new System.Drawing.Size(717, 504);
+            this.panelVista.TabIndex = 9;
             // 
             // btnEliminar
             // 
@@ -144,61 +144,6 @@
             this.dataGridViewPac.Name = "dataGridViewPac";
             this.dataGridViewPac.Size = new System.Drawing.Size(669, 343);
             this.dataGridViewPac.TabIndex = 12;
-            // 
-            // panel1
-            // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.tableLayoutPanel1);
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(703, -2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(398, 504);
-            this.panel1.TabIndex = 8;
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
-            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRegistrar.BorderRadius = 3;
-            this.btnRegistrar.ButtonText = "Registrar";
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
-            this.btnRegistrar.Iconimage_right = null;
-            this.btnRegistrar.Iconimage_right_Selected = null;
-            this.btnRegistrar.Iconimage_Selected = null;
-            this.btnRegistrar.IconMarginLeft = 0;
-            this.btnRegistrar.IconMarginRight = 0;
-            this.btnRegistrar.IconRightVisible = true;
-            this.btnRegistrar.IconRightZoom = 0D;
-            this.btnRegistrar.IconVisible = true;
-            this.btnRegistrar.IconZoom = 50D;
-            this.btnRegistrar.IsTab = false;
-            this.btnRegistrar.Location = new System.Drawing.Point(52, 680);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
-            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
-            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRegistrar.selected = false;
-            this.btnRegistrar.Size = new System.Drawing.Size(291, 48);
-            this.btnRegistrar.TabIndex = 25;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
-            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(24, 730);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(349, 47);
-            this.panel3.TabIndex = 18;
             // 
             // tableLayoutPanel1
             // 
@@ -262,137 +207,174 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(338, 582);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label4
+            // txtbxNumExp
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label4.Location = new System.Drawing.Point(3, 544);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 17);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Estado civil";
+            this.txtbxNumExp.Location = new System.Drawing.Point(124, 37);
+            this.txtbxNumExp.Name = "txtbxNumExp";
+            this.txtbxNumExp.Size = new System.Drawing.Size(200, 20);
+            this.txtbxNumExp.TabIndex = 20;
             // 
-            // cmbbxCivil
+            // txtbxIdExp
             // 
-            this.cmbbxCivil.FormattingEnabled = true;
-            this.cmbbxCivil.Items.AddRange(new object[] {
-            "Solter@",
-            "Casad@",
-            "Viud@",
-            "Divorciad@"});
-            this.cmbbxCivil.Location = new System.Drawing.Point(124, 547);
-            this.cmbbxCivil.Name = "cmbbxCivil";
-            this.cmbbxCivil.Size = new System.Drawing.Size(200, 21);
-            this.cmbbxCivil.TabIndex = 18;
+            this.txtbxIdExp.Location = new System.Drawing.Point(124, 3);
+            this.txtbxIdExp.Name = "txtbxIdExp";
+            this.txtbxIdExp.Size = new System.Drawing.Size(200, 20);
+            this.txtbxIdExp.TabIndex = 20;
             // 
-            // maskedtxtbxTele
+            // lblIdExp
             // 
-            this.maskedtxtbxTele.Location = new System.Drawing.Point(124, 513);
-            this.maskedtxtbxTele.Mask = "0000 0000";
-            this.maskedtxtbxTele.Name = "maskedtxtbxTele";
-            this.maskedtxtbxTele.Size = new System.Drawing.Size(200, 20);
-            this.maskedtxtbxTele.TabIndex = 4;
+            this.lblIdExp.AutoSize = true;
+            this.lblIdExp.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.lblIdExp.Location = new System.Drawing.Point(3, 0);
+            this.lblIdExp.Name = "lblIdExp";
+            this.lblIdExp.Size = new System.Drawing.Size(91, 17);
+            this.lblIdExp.TabIndex = 1;
+            this.lblIdExp.Text = "ID Expediente:";
             // 
-            // label10
+            // label17
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label10.Location = new System.Drawing.Point(3, 510);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(59, 17);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Teléfono";
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label17.Location = new System.Drawing.Point(3, 34);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(107, 17);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Num Expediente:";
             // 
-            // txtbxProced
+            // label2
             // 
-            this.txtbxProced.Location = new System.Drawing.Point(124, 479);
-            this.txtbxProced.Name = "txtbxProced";
-            this.txtbxProced.Size = new System.Drawing.Size(200, 20);
-            this.txtbxProced.TabIndex = 16;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label2.Location = new System.Drawing.Point(3, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Cédula";
             // 
-            // label6
+            // maskedtxtbxCed
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label6.Location = new System.Drawing.Point(3, 476);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Procedencia";
+            this.maskedtxtbxCed.Location = new System.Drawing.Point(124, 71);
+            this.maskedtxtbxCed.Mask = "000-000000-0000?";
+            this.maskedtxtbxCed.Name = "maskedtxtbxCed";
+            this.maskedtxtbxCed.Size = new System.Drawing.Size(200, 20);
+            this.maskedtxtbxCed.TabIndex = 19;
             // 
-            // cmbbxRelig
+            // txtbxNom
             // 
-            this.cmbbxRelig.FormattingEnabled = true;
-            this.cmbbxRelig.Items.AddRange(new object[] {
-            "Católica",
-            "Cristiana",
-            "Evangélica",
-            "Otra"});
-            this.cmbbxRelig.Location = new System.Drawing.Point(124, 445);
-            this.cmbbxRelig.Name = "cmbbxRelig";
-            this.cmbbxRelig.Size = new System.Drawing.Size(200, 21);
-            this.cmbbxRelig.TabIndex = 15;
+            this.txtbxNom.Location = new System.Drawing.Point(124, 105);
+            this.txtbxNom.Name = "txtbxNom";
+            this.txtbxNom.Size = new System.Drawing.Size(200, 20);
+            this.txtbxNom.TabIndex = 2;
             // 
-            // label16
+            // label3
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label16.Location = new System.Drawing.Point(3, 442);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 17);
-            this.label16.TabIndex = 11;
-            this.label16.Text = "Religión";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label3.Location = new System.Drawing.Point(3, 102);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nombre";
             // 
-            // txtbxMadre
+            // label5
             // 
-            this.txtbxMadre.Location = new System.Drawing.Point(124, 411);
-            this.txtbxMadre.Name = "txtbxMadre";
-            this.txtbxMadre.Size = new System.Drawing.Size(200, 20);
-            this.txtbxMadre.TabIndex = 14;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label5.Location = new System.Drawing.Point(3, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 17);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Apellidos";
             // 
-            // label15
+            // txtbxApell
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label15.Location = new System.Drawing.Point(3, 408);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 17);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "Nombre madre";
+            this.txtbxApell.Location = new System.Drawing.Point(124, 139);
+            this.txtbxApell.Name = "txtbxApell";
+            this.txtbxApell.Size = new System.Drawing.Size(200, 20);
+            this.txtbxApell.TabIndex = 2;
             // 
-            // txtbxPadre
+            // label8
             // 
-            this.txtbxPadre.Location = new System.Drawing.Point(124, 377);
-            this.txtbxPadre.Name = "txtbxPadre";
-            this.txtbxPadre.Size = new System.Drawing.Size(200, 20);
-            this.txtbxPadre.TabIndex = 13;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label8.Location = new System.Drawing.Point(3, 170);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 17);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Fecha Nacimiento";
             // 
-            // label14
+            // maskedtxtbxFecNac
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label14.Location = new System.Drawing.Point(3, 374);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 17);
-            this.label14.TabIndex = 9;
-            this.label14.Text = "Nombre padre";
+            this.maskedtxtbxFecNac.Location = new System.Drawing.Point(124, 173);
+            this.maskedtxtbxFecNac.Mask = "0000-00-00";
+            this.maskedtxtbxFecNac.Name = "maskedtxtbxFecNac";
+            this.maskedtxtbxFecNac.Size = new System.Drawing.Size(200, 20);
+            this.maskedtxtbxFecNac.TabIndex = 3;
             // 
-            // txtbxDire
+            // label11
             // 
-            this.txtbxDire.Location = new System.Drawing.Point(124, 343);
-            this.txtbxDire.Name = "txtbxDire";
-            this.txtbxDire.Size = new System.Drawing.Size(200, 20);
-            this.txtbxDire.TabIndex = 2;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label11.Location = new System.Drawing.Point(3, 204);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(111, 17);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Lugar Nacimiento";
             // 
-            // label7
+            // txtbxNac
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label7.Location = new System.Drawing.Point(3, 340);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 17);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Dirección actual";
+            this.txtbxNac.Location = new System.Drawing.Point(124, 207);
+            this.txtbxNac.Name = "txtbxNac";
+            this.txtbxNac.Size = new System.Drawing.Size(200, 20);
+            this.txtbxNac.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label9.Location = new System.Drawing.Point(3, 238);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(36, 17);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Sexo";
+            // 
+            // cmbbxSexo
+            // 
+            this.cmbbxSexo.FormattingEnabled = true;
+            this.cmbbxSexo.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.cmbbxSexo.Location = new System.Drawing.Point(124, 241);
+            this.cmbbxSexo.Name = "cmbbxSexo";
+            this.cmbbxSexo.Size = new System.Drawing.Size(200, 21);
+            this.cmbbxSexo.TabIndex = 5;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label12.Location = new System.Drawing.Point(3, 272);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(38, 17);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Edad";
+            // 
+            // txtbxEdad
+            // 
+            this.txtbxEdad.Location = new System.Drawing.Point(124, 275);
+            this.txtbxEdad.Name = "txtbxEdad";
+            this.txtbxEdad.Size = new System.Drawing.Size(200, 20);
+            this.txtbxEdad.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label13.Location = new System.Drawing.Point(3, 306);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(84, 17);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Grupo étnico";
             // 
             // cmbbxEtnia
             // 
@@ -412,174 +394,192 @@
             this.cmbbxEtnia.Size = new System.Drawing.Size(200, 21);
             this.cmbbxEtnia.TabIndex = 12;
             // 
-            // label13
+            // label7
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label13.Location = new System.Drawing.Point(3, 306);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 17);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Grupo étnico";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label7.Location = new System.Drawing.Point(3, 340);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 17);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Dirección actual";
             // 
-            // txtbxEdad
+            // txtbxDire
             // 
-            this.txtbxEdad.Location = new System.Drawing.Point(124, 275);
-            this.txtbxEdad.Name = "txtbxEdad";
-            this.txtbxEdad.Size = new System.Drawing.Size(200, 20);
-            this.txtbxEdad.TabIndex = 2;
+            this.txtbxDire.Location = new System.Drawing.Point(124, 343);
+            this.txtbxDire.Name = "txtbxDire";
+            this.txtbxDire.Size = new System.Drawing.Size(200, 20);
+            this.txtbxDire.TabIndex = 2;
             // 
-            // label12
+            // label14
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label12.Location = new System.Drawing.Point(3, 272);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(38, 17);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Edad";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label14.Location = new System.Drawing.Point(3, 374);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(96, 17);
+            this.label14.TabIndex = 9;
+            this.label14.Text = "Nombre padre";
             // 
-            // cmbbxSexo
+            // txtbxPadre
             // 
-            this.cmbbxSexo.FormattingEnabled = true;
-            this.cmbbxSexo.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino"});
-            this.cmbbxSexo.Location = new System.Drawing.Point(124, 241);
-            this.cmbbxSexo.Name = "cmbbxSexo";
-            this.cmbbxSexo.Size = new System.Drawing.Size(200, 21);
-            this.cmbbxSexo.TabIndex = 5;
+            this.txtbxPadre.Location = new System.Drawing.Point(124, 377);
+            this.txtbxPadre.Name = "txtbxPadre";
+            this.txtbxPadre.Size = new System.Drawing.Size(200, 20);
+            this.txtbxPadre.TabIndex = 13;
             // 
-            // label9
+            // label15
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label9.Location = new System.Drawing.Point(3, 238);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(36, 17);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Sexo";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label15.Location = new System.Drawing.Point(3, 408);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 17);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Nombre madre";
             // 
-            // txtbxNac
+            // txtbxMadre
             // 
-            this.txtbxNac.Location = new System.Drawing.Point(124, 207);
-            this.txtbxNac.Name = "txtbxNac";
-            this.txtbxNac.Size = new System.Drawing.Size(200, 20);
-            this.txtbxNac.TabIndex = 2;
+            this.txtbxMadre.Location = new System.Drawing.Point(124, 411);
+            this.txtbxMadre.Name = "txtbxMadre";
+            this.txtbxMadre.Size = new System.Drawing.Size(200, 20);
+            this.txtbxMadre.TabIndex = 14;
             // 
-            // label11
+            // label16
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label11.Location = new System.Drawing.Point(3, 204);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(111, 17);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "Lugar Nacimiento";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label16.Location = new System.Drawing.Point(3, 442);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 17);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Religión";
             // 
-            // maskedtxtbxFecNac
+            // cmbbxRelig
             // 
-            this.maskedtxtbxFecNac.Location = new System.Drawing.Point(124, 173);
-            this.maskedtxtbxFecNac.Mask = "0000-00-00";
-            this.maskedtxtbxFecNac.Name = "maskedtxtbxFecNac";
-            this.maskedtxtbxFecNac.Size = new System.Drawing.Size(200, 20);
-            this.maskedtxtbxFecNac.TabIndex = 3;
+            this.cmbbxRelig.FormattingEnabled = true;
+            this.cmbbxRelig.Items.AddRange(new object[] {
+            "Católica",
+            "Cristiana",
+            "Evangélica",
+            "Otra"});
+            this.cmbbxRelig.Location = new System.Drawing.Point(124, 445);
+            this.cmbbxRelig.Name = "cmbbxRelig";
+            this.cmbbxRelig.Size = new System.Drawing.Size(200, 21);
+            this.cmbbxRelig.TabIndex = 15;
             // 
-            // label8
+            // label6
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label8.Location = new System.Drawing.Point(3, 170);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 17);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Fecha Nacimiento";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label6.Location = new System.Drawing.Point(3, 476);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 17);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Procedencia";
             // 
-            // txtbxApell
+            // txtbxProced
             // 
-            this.txtbxApell.Location = new System.Drawing.Point(124, 139);
-            this.txtbxApell.Name = "txtbxApell";
-            this.txtbxApell.Size = new System.Drawing.Size(200, 20);
-            this.txtbxApell.TabIndex = 2;
+            this.txtbxProced.Location = new System.Drawing.Point(124, 479);
+            this.txtbxProced.Name = "txtbxProced";
+            this.txtbxProced.Size = new System.Drawing.Size(200, 20);
+            this.txtbxProced.TabIndex = 16;
             // 
-            // label5
+            // label10
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label5.Location = new System.Drawing.Point(3, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Apellidos";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label10.Location = new System.Drawing.Point(3, 510);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(59, 17);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Teléfono";
             // 
-            // label3
+            // maskedtxtbxTele
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label3.Location = new System.Drawing.Point(3, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nombre";
+            this.maskedtxtbxTele.Location = new System.Drawing.Point(124, 513);
+            this.maskedtxtbxTele.Mask = "0000 0000";
+            this.maskedtxtbxTele.Name = "maskedtxtbxTele";
+            this.maskedtxtbxTele.Size = new System.Drawing.Size(200, 20);
+            this.maskedtxtbxTele.TabIndex = 4;
             // 
-            // txtbxNom
+            // cmbbxCivil
             // 
-            this.txtbxNom.Location = new System.Drawing.Point(124, 105);
-            this.txtbxNom.Name = "txtbxNom";
-            this.txtbxNom.Size = new System.Drawing.Size(200, 20);
-            this.txtbxNom.TabIndex = 2;
+            this.cmbbxCivil.FormattingEnabled = true;
+            this.cmbbxCivil.Items.AddRange(new object[] {
+            "Solter@",
+            "Casad@",
+            "Viud@",
+            "Divorciad@"});
+            this.cmbbxCivil.Location = new System.Drawing.Point(124, 547);
+            this.cmbbxCivil.Name = "cmbbxCivil";
+            this.cmbbxCivil.Size = new System.Drawing.Size(200, 21);
+            this.cmbbxCivil.TabIndex = 18;
             // 
-            // maskedtxtbxCed
+            // label4
             // 
-            this.maskedtxtbxCed.Location = new System.Drawing.Point(124, 71);
-            this.maskedtxtbxCed.Mask = "000-000000-0000?";
-            this.maskedtxtbxCed.Name = "maskedtxtbxCed";
-            this.maskedtxtbxCed.Size = new System.Drawing.Size(200, 20);
-            this.maskedtxtbxCed.TabIndex = 19;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
+            this.label4.Location = new System.Drawing.Point(3, 544);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 17);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Estado civil";
             // 
-            // label2
+            // panel3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label2.Location = new System.Drawing.Point(3, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cédula";
+            this.panel3.Location = new System.Drawing.Point(24, 730);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(349, 47);
+            this.panel3.TabIndex = 18;
             // 
-            // label17
+            // btnRegistrar
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.label17.Location = new System.Drawing.Point(3, 34);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(107, 17);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "Num Expediente:";
+            this.btnRegistrar.Activecolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRegistrar.BorderRadius = 3;
+            this.btnRegistrar.ButtonText = "Registrar";
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.DisabledColor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnRegistrar.Iconimage = global::CapaPresentacion.Properties.Resources.save;
+            this.btnRegistrar.Iconimage_right = null;
+            this.btnRegistrar.Iconimage_right_Selected = null;
+            this.btnRegistrar.Iconimage_Selected = null;
+            this.btnRegistrar.IconMarginLeft = 0;
+            this.btnRegistrar.IconMarginRight = 0;
+            this.btnRegistrar.IconRightVisible = true;
+            this.btnRegistrar.IconRightZoom = 0D;
+            this.btnRegistrar.IconVisible = true;
+            this.btnRegistrar.IconZoom = 50D;
+            this.btnRegistrar.IsTab = false;
+            this.btnRegistrar.Location = new System.Drawing.Point(52, 680);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Normalcolor = System.Drawing.Color.MidnightBlue;
+            this.btnRegistrar.OnHovercolor = System.Drawing.Color.DarkBlue;
+            this.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnRegistrar.selected = false;
+            this.btnRegistrar.Size = new System.Drawing.Size(291, 48);
+            this.btnRegistrar.TabIndex = 25;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegistrar.Textcolor = System.Drawing.Color.White;
+            this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // lblIdExp
+            // panelRegistrar
             // 
-            this.lblIdExp.AutoSize = true;
-            this.lblIdExp.Font = new System.Drawing.Font("Segoe UI Symbol", 9.75F);
-            this.lblIdExp.Location = new System.Drawing.Point(3, 0);
-            this.lblIdExp.Name = "lblIdExp";
-            this.lblIdExp.Size = new System.Drawing.Size(91, 17);
-            this.lblIdExp.TabIndex = 1;
-            this.lblIdExp.Text = "ID Expediente:";
-            // 
-            // txtbxIdExp
-            // 
-            this.txtbxIdExp.Location = new System.Drawing.Point(124, 3);
-            this.txtbxIdExp.Name = "txtbxIdExp";
-            this.txtbxIdExp.Size = new System.Drawing.Size(200, 20);
-            this.txtbxIdExp.TabIndex = 20;
-            // 
-            // txtbxNumExp
-            // 
-            this.txtbxNumExp.Location = new System.Drawing.Point(124, 37);
-            this.txtbxNumExp.Name = "txtbxNumExp";
-            this.txtbxNumExp.Size = new System.Drawing.Size(200, 20);
-            this.txtbxNumExp.TabIndex = 20;
+            this.panelRegistrar.AutoScroll = true;
+            this.panelRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panelRegistrar.Controls.Add(this.btnRegistrar);
+            this.panelRegistrar.Controls.Add(this.panel3);
+            this.panelRegistrar.Controls.Add(this.tableLayoutPanel1);
+            this.panelRegistrar.ForeColor = System.Drawing.Color.White;
+            this.panelRegistrar.Location = new System.Drawing.Point(703, -2);
+            this.panelRegistrar.Name = "panelRegistrar";
+            this.panelRegistrar.Size = new System.Drawing.Size(398, 504);
+            this.panelRegistrar.TabIndex = 8;
             // 
             // frmPacientes
             // 
@@ -587,31 +587,32 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1100, 500);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelVista);
+            this.Controls.Add(this.panelRegistrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pacientes";
             this.Load += new System.EventHandler(this.frmPacientes_Load);
-            this.panel2.ResumeLayout(false);
+            this.panelVista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPac)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panelRegistrar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelVista;
         private Bunifu.Framework.UI.BunifuTextbox txtbxBuscPaciente;
         private System.Windows.Forms.DataGridView dataGridViewPac;
-        private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
+        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbbxCivil;
@@ -649,7 +650,6 @@
         private System.Windows.Forms.TextBox txtbxNumExp;
         private System.Windows.Forms.Panel panel3;
         private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
-        private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
-        private Bunifu.Framework.UI.BunifuImageButton btnEditar;
+        private System.Windows.Forms.Panel panelRegistrar;
     }
 }

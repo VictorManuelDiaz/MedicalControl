@@ -12,11 +12,14 @@ using CapaEntidades;
 
 namespace CapaPresentacion
 {
+    
     public partial class frmConsultas : Form
     {
 
         private int IdMedico = 0;
         LogicaNegocioConsulta LNCon = new LogicaNegocioConsulta();
+        LogicaNegocioExpediente LNExp = new LogicaNegocioExpediente();
+        LogicaNegocioMedicamentos LNMed = new LogicaNegocioMedicamentos();
         public frmConsultas(int IdMedico)
         {
 
@@ -66,14 +69,17 @@ namespace CapaPresentacion
         {
             try
             {
-
                 Medicamento objetoMedi = new Medicamento();
                 objetoMedi.NombreMedica = txtbxMedi.Text;
                 objetoMedi.PresentacionMedica = txtbxPresent.Text;
+                if (LNMed.insertarMedicamentos(objetoMedi) > 0)
+                {
+                    txtbxMedi.Text = "";
+                    txtbxPresent.Text = "";
+                }
             }
             catch
             {
-
 
             }
         }
@@ -82,10 +88,13 @@ namespace CapaPresentacion
         {
             dataGridViewConsult.DataSource = LNCon.ListarConsultaMedico(IdMedico);
             dataGridViewConsult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewConsultasHoy.DataSource = LNCon.ListarConsultaMedico(IdMedico);
+            dataGridViewConsultasHoy.DataSource = LNCon.ListarConsultaHoy(IdMedico);
             dataGridViewConsultasHoy.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             lblIdConsul.Visible = false;
             txtbxIdConsul.Visible = false;
+            List<int> NumEx = new List<int>();
+            NumEx = LNCon.ListarConsultaMedico(IdMedico).Select(x => x.IdExpediente).ToList();
+            cmbExp.DataSource = NumEx;
         }
 
         private void txtbxBuscar_OnTextChange(object sender, EventArgs e)
@@ -110,9 +119,9 @@ namespace CapaPresentacion
                         objetoConsulta.Costo = txtbxCosto.Text;
                         objetoConsulta.Sintomas = txtbxSinto.Text;
                         objetoConsulta.Diagnostico = txtbxDiag.Text;
-                        // obtener medicamento del textbox
-                        //objetoConsulta.IdExpediente = Convert.ToInt32(cmbbxIdExpe.Text);
+                        objetoConsulta.IdExpediente = Convert.ToInt32(cmbExp.Text);
                         objetoConsulta.IdMedico = IdMedico;
+                        RegistrarMedicamento();
 
                         if (LNCon.InsertarConsulta(objetoConsulta) > 0)
                         {
@@ -123,7 +132,7 @@ namespace CapaPresentacion
                             txtbxCosto.Text = "";
                             txtbxSinto.Text = "";
                             txtbxDiag.Text = "";
-                            //cmbbxIdExpe.Text = "";
+                            cmbExp.Text = "";
                         }
                         else
                         { MessageBox.Show("Error al agregar la consulta"); }
@@ -135,7 +144,7 @@ namespace CapaPresentacion
                         txtbxCosto.Text = "";
                         txtbxSinto.Text = "";
                         txtbxDiag.Text = "";
-                        //cmbbxIdExpe.Text = "";
+                        cmbExp.Text = "";
                     }
 
                 }
@@ -151,7 +160,7 @@ namespace CapaPresentacion
                         objetoConsulta.Costo = txtbxCosto.Text;
                         objetoConsulta.Sintomas = txtbxSinto.Text;
                         objetoConsulta.Diagnostico = txtbxDiag.Text;
-                        //objetoConsulta.IdExpediente = Convert.ToInt32(cmbbxIdExpe.Text);
+                        objetoConsulta.IdExpediente = Convert.ToInt32(cmbExp.Text);
                         objetoConsulta.IdMedico = IdMedico;
 
 
@@ -164,7 +173,7 @@ namespace CapaPresentacion
                             txtbxCosto.Text = "";
                             txtbxSinto.Text = "";
                             txtbxDiag.Text = "";
-                            //cmbbxIdExpe.Text = "";
+                            cmbExp.Text = "";
                         }
                         else
                         {
@@ -179,7 +188,7 @@ namespace CapaPresentacion
                         txtbxCosto.Text = "";
                         txtbxSinto.Text = "";
                         txtbxDiag.Text = "";
-                        //cmbbxIdExpe.Text = "";
+                        cmbExp.Text = "";
                     }
 
                 }

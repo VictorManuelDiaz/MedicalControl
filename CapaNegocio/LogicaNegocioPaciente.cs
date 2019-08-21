@@ -41,6 +41,10 @@ namespace CapaNegocio
         {
             return Pac.ListarPacienteMedico(dato);
         }
+        public List<Paciente> BuscarPacienteMedico(int dato,string dato2)
+        {
+            return Pac.BuscarPacienteMedico(dato,dato2);
+        }
 
     }
 }

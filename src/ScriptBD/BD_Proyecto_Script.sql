@@ -387,7 +387,7 @@ GO
 
 
 
-alter PROCEDURE IdMedico_Proced
+CREATE PROCEDURE IdMedico_Proced
 
 	@b INT,
 	@NombreCom VARCHAR(70)
@@ -541,6 +541,10 @@ BEGIN
 	SELECT * FROM Expediente WHERE Expediente.NombrePac LIKE '%' + @NombrePac + '%' OR
 	Expediente.CedulaPac LIKE '%' + @CedulaPac + '%'
 
+
+	IF @b=6
+	SELECT * FROM Expediente WHERE IdExpediente=@IdExpediente;
+
 END
 GO
 
@@ -636,18 +640,31 @@ END
 GO
 
 
-CREATE PROCEDURE PacienteMedico_Proced
+alter PROCEDURE PacienteMedico_Proced
 
-	@IdMedico INT
+	@IdMedico INT,
+	@b INT,
+	@NombrePac VARCHAR(50)
 
 AS
 BEGIN
 	SET NOCOUNT ON;
 
+	IF @b=1
 	SELECT IdExpediente,NumeroExpediente, CedulaPac, NombrePac, ApellidosPac, FechaNacimiento, LugarNacimiento,
 		   SexoPac,EdadPac, GrupoEtnico, DireccionHabitualPac, NombrePadre, NombreMadre, ReligionPac, ProcedenciaPac,
 		   TelefonoPac, EstadoCivilPac
 	FROM Expediente WHERE(Expediente.IdExpediente IN (SELECT IdExpediente FROM Cita WHERE IdMedico=@IdMedico));
+
+	IF @b=2
+	SELECT IdExpediente,NumeroExpediente, CedulaPac, NombrePac, ApellidosPac, FechaNacimiento, LugarNacimiento,
+		   SexoPac,EdadPac, GrupoEtnico, DireccionHabitualPac, NombrePadre, NombreMadre, ReligionPac, ProcedenciaPac,
+		   TelefonoPac, EstadoCivilPac
+	FROM Expediente WHERE(Expediente.IdExpediente IN (SELECT IdExpediente FROM Cita WHERE IdMedico=@IdMedico))
+	AND Expediente.NombrePac LIKE '%' + @NombrePac + '%'
+
+	IF @b=3
+	SELECT * FROM Expediente WHERE(Expediente.IdExpediente IN (SELECT IdExpediente FROM Cita WHERE IdMedico=@IdMedico))
 
 END
 GO
@@ -729,7 +746,7 @@ GO
 
 --7. procedimiento para tabla cita--
 
-ALTER PROCEDURE Cita_Proced 
+CREATE PROCEDURE Cita_Proced 
 
 	@b INT, 
 	@IdCita INT,
@@ -872,7 +889,8 @@ BEGIN
 	SELECT * FROM Consulta WHERE Consulta.IdMedico=@IdMedico;
 
 	IF @b=7
-	SELECT * FROM Consulta WHERE CAST(Consulta.Fecha AS VARCHAR(12))=CAST (GETDATE() AS DATE);
+	SELECT * FROM Consulta WHERE CAST(Consulta.Fecha AS VARCHAR(12))=CAST (GETDATE() AS DATE)
+	AND Consulta.IdMedico=@IdMedico;
 
 END
 GO
@@ -907,8 +925,7 @@ BEGIN
 END
 GO
 
-
-ALTER PROCEDURE Cuenta_Proced
+CREATE PROCEDURE Cuenta_Proced
 
 	@b INT, 
 	@IdCuenta INT,
@@ -944,8 +961,6 @@ BEGIN
 
 END
 GO
-
-
 
 CREATE PROCEDURE RespaldoBD_Proced
 	

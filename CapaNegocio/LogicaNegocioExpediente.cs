@@ -38,5 +38,14 @@ namespace CapaNegocio
             return EXP.BuscarExpediente(dato);
         }
 
+        public List<Expediente> ListarExpedienteId(int dato)
+        {
+            return EXP.ListarExpedienteId(dato);
+        }
+        public List<Expediente> ListarExpedienteMed(int dato)
+        {
+            return EXP.ListarExpedienteMed(dato);
+        }
+
     }
 }

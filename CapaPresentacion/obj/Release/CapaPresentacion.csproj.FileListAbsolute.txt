@@ -1,6 +1,5 @@
 E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaPresentacion.exe.config
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.csprojResolveAssemblyReference.cache
-E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.Consultas.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmCita.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmCuentas.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmEspecialidad.resources
@@ -11,3 +10,18 @@ E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmMedico
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.MDIAdminPrincipal.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.Properties.Resources.resources
 E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.csproj.GenerateResource.Cache
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaPresentacion.exe
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaPresentacion.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\Bunifu_UI_v1.52.dll
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaEntidades.dll
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaNegocio.dll
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaDatos.dll
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaEntidades.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaNegocio.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\bin\Release\CapaDatos.pdb
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmConsultas.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmMedicamentos.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmServicio.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.frmUsuarios.resources
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.exe
+E:\GitHub\MedicalControl\CapaPresentacion\obj\Release\CapaPresentacion.pdb

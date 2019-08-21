@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExpediente));
             this.labels1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelRegistrar = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblDatosgenerales = new System.Windows.Forms.Label();
@@ -109,12 +109,11 @@
             this.chkbxDesMentales = new System.Windows.Forms.CheckBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnEliminar = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panelVista = new System.Windows.Forms.Panel();
             this.btnEditar = new Bunifu.Framework.UI.BunifuImageButton();
             this.txtbxBuscar = new Bunifu.Framework.UI.BunifuTextbox();
             this.dataGridViewExp = new System.Windows.Forms.DataGridView();
-            this.panel3.SuspendLayout();
+            this.panelRegistrar.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.PanelDatosPer.SuspendLayout();
@@ -126,8 +125,7 @@
             this.PanelEnfermedadH.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
+            this.panelVista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).BeginInit();
             this.SuspendLayout();
@@ -139,14 +137,14 @@
             this.labels1.Size = new System.Drawing.Size(100, 23);
             this.labels1.TabIndex = 0;
             // 
-            // panel3
+            // panelRegistrar
             // 
-            this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel3.Controls.Add(this.flowLayoutPanel1);
-            this.panel3.Location = new System.Drawing.Point(617, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(485, 502);
-            this.panel3.TabIndex = 7;
+            this.panelRegistrar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panelRegistrar.Controls.Add(this.flowLayoutPanel1);
+            this.panelRegistrar.Location = new System.Drawing.Point(617, 0);
+            this.panelRegistrar.Name = "panelRegistrar";
+            this.panelRegistrar.Size = new System.Drawing.Size(485, 502);
+            this.panelRegistrar.TabIndex = 7;
             // 
             // flowLayoutPanel1
             // 
@@ -1124,31 +1122,16 @@
             this.btnRegistrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // panel2
+            // panelVista
             // 
-            this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.panel2.Controls.Add(this.btnEliminar);
-            this.panel2.Controls.Add(this.btnEditar);
-            this.panel2.Controls.Add(this.txtbxBuscar);
-            this.panel2.Controls.Add(this.dataGridViewExp);
-            this.panel2.Location = new System.Drawing.Point(-2, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(620, 502);
-            this.panel2.TabIndex = 8;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageActive = null;
-            this.btnEliminar.Location = new System.Drawing.Point(89, 409);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(50, 30);
-            this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnEliminar.TabIndex = 29;
-            this.btnEliminar.TabStop = false;
-            this.btnEliminar.Zoom = 10;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.panelVista.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panelVista.Controls.Add(this.btnEditar);
+            this.panelVista.Controls.Add(this.txtbxBuscar);
+            this.panelVista.Controls.Add(this.dataGridViewExp);
+            this.panelVista.Location = new System.Drawing.Point(-2, 0);
+            this.panelVista.Name = "panelVista";
+            this.panelVista.Size = new System.Drawing.Size(620, 502);
+            this.panelVista.TabIndex = 8;
             // 
             // btnEditar
             // 
@@ -1194,15 +1177,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(1100, 500);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelVista);
+            this.Controls.Add(this.panelRegistrar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmExpediente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmExpediente";
             this.Load += new System.EventHandler(this.frmExpediente_Load);
-            this.panel3.ResumeLayout(false);
+            this.panelRegistrar.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1220,8 +1203,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
+            this.panelVista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExp)).EndInit();
             this.ResumeLayout(false);
@@ -1230,7 +1212,7 @@
 
         #endregion
         private System.Windows.Forms.Label labels1;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelRegistrar;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblDatosgenerales;
@@ -1307,12 +1289,11 @@
         private System.Windows.Forms.CheckBox chkbxMusculares;
         private System.Windows.Forms.CheckBox chkbxMalConge;
         private System.Windows.Forms.CheckBox chkbxDesMentales;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelVista;
         private Bunifu.Framework.UI.BunifuTextbox txtbxBuscar;
         private System.Windows.Forms.DataGridView dataGridViewExp;
         private System.Windows.Forms.Panel panel5;
         private Bunifu.Framework.UI.BunifuFlatButton btnRegistrar;
-        private Bunifu.Framework.UI.BunifuImageButton btnEliminar;
         private Bunifu.Framework.UI.BunifuImageButton btnEditar;
     }
 }

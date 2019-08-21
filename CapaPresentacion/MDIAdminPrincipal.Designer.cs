@@ -41,7 +41,6 @@
             this.tlsCitas = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsMedicos = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsPacientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tlsConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsExpedientes = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsConfiguraciones = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsEspecialidades = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +50,7 @@
             this.tlsMantenimiento = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsRespaldo = new System.Windows.Forms.ToolStripMenuItem();
             this.tlsSalir = new System.Windows.Forms.ToolStripMenuItem();
+            this.tlsConsultas = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturebxCerrar)).BeginInit();
@@ -109,13 +109,13 @@
             // 
             // menuStrip
             // 
-            this.menuStrip.BackColor = System.Drawing.Color.DimGray;
+            this.menuStrip.BackColor = System.Drawing.Color.Gainsboro;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tlsInicio,
             this.tlsCitas,
             this.tlsMedicos,
-            this.tlsPacientes,
             this.tlsConsultas,
+            this.tlsPacientes,
             this.tlsExpedientes,
             this.tlsConfiguraciones,
             this.tlsMantenimiento,
@@ -154,13 +154,6 @@
             this.tlsPacientes.Size = new System.Drawing.Size(69, 20);
             this.tlsPacientes.Text = "Pacientes";
             this.tlsPacientes.Click += new System.EventHandler(this.tlsPacientes_Click);
-            // 
-            // tlsConsultas
-            // 
-            this.tlsConsultas.Name = "tlsConsultas";
-            this.tlsConsultas.Size = new System.Drawing.Size(71, 20);
-            this.tlsConsultas.Text = "Consultas";
-            this.tlsConsultas.Click += new System.EventHandler(this.tlsConsultas_Click);
             // 
             // tlsExpedientes
             // 
@@ -219,7 +212,7 @@
             // tlsRespaldo
             // 
             this.tlsRespaldo.Name = "tlsRespaldo";
-            this.tlsRespaldo.Size = new System.Drawing.Size(140, 22);
+            this.tlsRespaldo.Size = new System.Drawing.Size(152, 22);
             this.tlsRespaldo.Text = "Respaldo BD";
             this.tlsRespaldo.Click += new System.EventHandler(this.tlsRespaldo_Click);
             // 
@@ -229,6 +222,13 @@
             this.tlsSalir.Size = new System.Drawing.Size(41, 20);
             this.tlsSalir.Text = "Salir";
             this.tlsSalir.Click += new System.EventHandler(this.tlsSalir_Click);
+            // 
+            // tlsConsultas
+            // 
+            this.tlsConsultas.Name = "tlsConsultas";
+            this.tlsConsultas.Size = new System.Drawing.Size(71, 20);
+            this.tlsConsultas.Text = "Consultas";
+            this.tlsConsultas.Click += new System.EventHandler(this.tlsConsultas_Click);
             // 
             // MDIAdminPrincipal
             // 
@@ -267,7 +267,6 @@
         private System.Windows.Forms.ToolStripMenuItem tlsCitas;
         private System.Windows.Forms.ToolStripMenuItem tlsMedicos;
         private System.Windows.Forms.ToolStripMenuItem tlsPacientes;
-        private System.Windows.Forms.ToolStripMenuItem tlsConsultas;
         private System.Windows.Forms.ToolStripMenuItem tlsExpedientes;
         private System.Windows.Forms.ToolStripMenuItem tlsConfiguraciones;
         private System.Windows.Forms.ToolStripMenuItem tlsEspecialidades;
@@ -277,6 +276,7 @@
         private System.Windows.Forms.ToolStripMenuItem tlsRespaldo;
         private System.Windows.Forms.ToolStripMenuItem tlsSalir;
         private System.Windows.Forms.ToolStripMenuItem tlsMedica;
+        private System.Windows.Forms.ToolStripMenuItem tlsConsultas;
     }
 }
 

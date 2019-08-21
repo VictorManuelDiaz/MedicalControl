@@ -310,6 +310,68 @@ namespace CapaDatos
                 SqlConnection cnx = cn.Conectar();//conectar
                 cm = new SqlCommand("PacienteMedico_Proced", cnx);
                 cm.Parameters.AddWithValue("@IdMedico", IdMedico);
+                cm.Parameters.AddWithValue("@b", 1);
+                cm.Parameters.AddWithValue("@NombrePac", "");
+
+                cm.CommandType = CommandType.StoredProcedure;
+                cnx.Open();
+                dr = cm.ExecuteReader();
+                listaPaciente = new List<Paciente>(); //lista de comentarios
+
+                while (dr.Read()) //Recorre cada registro
+                {
+
+                    Paciente pac = new Paciente();
+
+                    pac.IdExpediente = Convert.ToInt32(dr["IdExpediente"].ToString());
+                    pac.NumeroExpediente = dr["NumeroExpediente"].ToString();
+                    pac.CedulaPac = dr["CedulaPac"].ToString();
+                    pac.NombrePac = dr["NombrePac"].ToString();
+                    pac.ApellidosPac = dr["ApellidosPac"].ToString();
+                    pac.FechaNacimiento = dr["FechaNacimiento"].ToString();
+                    pac.LugarNacimiento = dr["LugarNacimiento"].ToString();
+                    pac.SexoPac = dr["SexoPac"].ToString();
+                    pac.EdadPac = Convert.ToInt32(dr["EdadPac"].ToString());
+                    pac.GrupoEtnico = dr["GrupoEtnico"].ToString();
+                    pac.DireccionHabitualPac = dr["DireccionHabitualPac"].ToString();
+                    pac.NombrePadre = dr["NombrePadre"].ToString();
+                    pac.NombreMadre = dr["NombreMadre"].ToString();
+                    pac.ReligionPac = dr["ReligionPac"].ToString();
+                    pac.ProcedenciaPac = dr["ProcedenciaPac"].ToString();
+                    pac.TelefonoPac = dr["TelefonoPac"].ToString();
+                    pac.EstadoCivilPac = dr["EstadoCivilPac"].ToString();
+
+                    listaPaciente.Add(pac); //agergar registros encontrados a la lista
+
+                }
+
+            }
+
+
+            catch (Exception e)
+            {
+                e.Message.ToString();
+                listaPaciente = null;
+            }
+            finally
+            {
+                cm.Connection.Close();
+            }
+            return listaPaciente; //regresa lista de registros
+
+        }
+
+        public List<Paciente> BuscarPacienteMedico(int IdMedico,string nom)
+        {
+
+            try
+            {
+
+                SqlConnection cnx = cn.Conectar();//conectar
+                cm = new SqlCommand("PacienteMedico_Proced", cnx);
+                cm.Parameters.AddWithValue("@IdMedico", IdMedico);
+                cm.Parameters.AddWithValue("@b", 2);
+                cm.Parameters.AddWithValue("@NombrePac", nom);
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();

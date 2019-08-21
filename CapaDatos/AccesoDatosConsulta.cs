@@ -298,7 +298,7 @@ namespace CapaDatos
 
         }
 
-        public List<Consulta> ListarConsultaHoy()
+        public List<Consulta> ListarConsultaHoy(int Med)
         {
 
             try
@@ -314,7 +314,7 @@ namespace CapaDatos
                 cm.Parameters.AddWithValue("@Sintomas", "");
                 cm.Parameters.AddWithValue("@Diagnostico", "");
                 cm.Parameters.AddWithValue("@IdExpediente", "");
-                cm.Parameters.AddWithValue("@IdMedico", "");
+                cm.Parameters.AddWithValue("@IdMedico", Med);
 
                 cm.CommandType = CommandType.StoredProcedure;
                 cnx.Open();

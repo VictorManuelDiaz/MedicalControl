@@ -26,10 +26,16 @@ namespace CapaPresentacion
             InitializeComponent();
             this.IdMedico = IdMedico;
             dataGridViewPac.DataSource = LNPac.PacienteMedico(IdMedico);
+            panelRegistrar.Visible = false;
+            panelVista.Size = new Size(1116, 500);
+            dataGridViewPac.Size = new Size(1039, 343);
+            btnEditar.Visible = false;
+            btnEliminar.Visible = false;
         }
 
         private void frmPacientes_Load(object sender, EventArgs e)
         {
+           
             txtbxIdExp.Visible = false;
             lblIdExp.Visible = false;
         }
@@ -38,8 +44,17 @@ namespace CapaPresentacion
 
         private void txtbxBuscPaciente_OnTextChange(object sender, EventArgs e)
         {
-            List<Paciente> listaPac = LNPac.BuscarPaciente(txtbxBuscPaciente.text);
-            dataGridViewPac.DataSource = listaPac;
+            if (IdMedico != 0)
+            {
+                List<Paciente> listaPac = LNPac.BuscarPacienteMedico(IdMedico,txtbxBuscPaciente.text);
+                dataGridViewPac.DataSource = listaPac;
+            }
+            else
+            {
+                List<Paciente> listaPac = LNPac.BuscarPaciente(txtbxBuscPaciente.text);
+                dataGridViewPac.DataSource = listaPac;
+            }
+            
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
